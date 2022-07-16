@@ -44,7 +44,6 @@ struct AccountRepository {
                         
                     }
                 }, receiveValue: {accountRes in
-                    print(accountRes)
                     continuation.resume(returning: accountRes)
                 })
         }

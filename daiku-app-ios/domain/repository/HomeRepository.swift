@@ -45,7 +45,6 @@ struct HomeRepository {
                         
                     }
                 }, receiveValue: {homeRes in
-                    print(homeRes)
                     continuation.resume(returning: homeRes)
                 })
         }

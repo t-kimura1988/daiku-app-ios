@@ -85,7 +85,6 @@ struct GoalRepository {
                         
                     }
                 }, receiveValue: {res in
-                    print(res)
                     continuation.resume(returning: res)
                 })
         }
@@ -128,7 +127,6 @@ struct GoalRepository {
                         
                     }
                 }, receiveValue: {res in
-                    print(res)
                     continuation.resume(returning: res)
                 })
         }

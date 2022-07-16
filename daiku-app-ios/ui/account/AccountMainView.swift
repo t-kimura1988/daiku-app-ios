@@ -146,7 +146,7 @@ struct AccountMainView: View {
                         ForEach(accountMainVm.myGoal) { item in
                             NavigationLink{
                                 GoalDetailView(goalId: item.id, createDate: item.createDate)
-                                    .environmentObject(GoalDetailViewModel())
+//                                    .environmentObject(GoalDetailViewModel())
                             } label: {
                                 HStack {
                                     VStack(alignment: .leading) {

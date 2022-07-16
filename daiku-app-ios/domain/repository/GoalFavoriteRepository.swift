@@ -49,4 +49,44 @@ struct GoalFavoriteRepository {
                 })
         }
     }
+    
+    func search(parameter: GoalFavoriteSearchParameter) async throws -> [GoalFavoriteResponse]{
+        
+        var canceller: AnyCancellable?
+        let publisher: AnyPublisher<[GoalFavoriteResponse], ApiError> = try await ApiProvider.provider(service:GoalFavoriteService.favoriteGoalSearch(parameter))
+        
+        return try await withCheckedThrowingContinuation{ continuation in
+            if Task.isCancelled {
+                continuation.resume(throwing: Error.self as! Error)
+            }
+            
+            canceller = publisher
+                .sink(receiveCompletion: {completion in
+                    switch completion {
+                        
+                    case .finished:
+                        canceller?.cancel()
+                        break
+                    case .failure(let error):
+                        let err: ApiError = error
+                        
+                        switch(err) {
+                        case .responseError(let errorCd):
+                            print("response error \(errorCd)")
+                        case .invalidURL:
+                            print("url error")
+                        case .parseError:
+                            print("parse error")
+                        case .unknown:
+                            print("unknown")
+                        }
+                        canceller?.cancel()
+                        continuation.resume(returning: [])
+                        
+                    }
+                }, receiveValue: {res in
+                    continuation.resume(returning: res)
+                })
+        }
+    }
 }

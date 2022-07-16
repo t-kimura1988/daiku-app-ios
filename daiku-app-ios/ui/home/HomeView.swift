@@ -11,21 +11,30 @@ struct HomeView: View {
     @EnvironmentObject var vm: HomeMainViewModel
     var body: some View {
         NavigationView {
-            List{
+            ScrollView(.vertical, showsIndicators: false) {
                 ForEach(vm.homeList) { item in
-                    VStack(alignment: .leading) {
-                        Text(item.title)
-                        Divider()
-                        Text(item.thoughts)
-                            .fixedSize(horizontal: false, vertical: true)
-                            .lineLimit(3)
-                    }
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text(item.title)
+                                .font(.title2)
+                                .fontWeight(.bold)
+                            Text(item.thoughts)
+                                .font(.body)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .lineLimit(3)
+                                .padding(.top, 1)
+                        }
+                        Spacer()
+                    }.padding()
+                    
                     
                     VStack(alignment: .trailing) {
                         HStack {
                             Text(item.accountName())
                         }
                     }.frame(maxWidth: .infinity, alignment: .trailing)
+                        .padding()
+                    Divider()
                 }
             }
             .toolbar {

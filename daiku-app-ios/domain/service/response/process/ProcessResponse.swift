@@ -15,15 +15,24 @@ struct ProcessResponse: Decodable, Identifiable {
     var createdAccountFamilyName: String = ""
     var createdAccountGivenName: String = ""
     var title: String = ""
-    var beforeTitle: String = ""
-    var beforePriority: String = ""
+    var beforeTitle: String? = ""
+    var beforePriority: String? = ""
     var priority: String = ""
-    var beforeProcessStatus: String = ""
+    var beforeProcessStatus: String? = ""
     var processStatus: String = ""
     var body: String = ""
-    var beforeBody: String = ""
-    var beforeProcessStartDate: String = ""
-    var processStartDate: String = ""
-    var beforeProcessEndDate: String = ""
-    var processEndDate: String = ""
+    var beforeBody: String? = ""
+    var beforeProcessStartDate: String? = ""
+    var processStartDate: String? = ""
+    var beforeProcessEndDate: String? = ""
+    var processEndDate: String? = ""
+    
+    func statusToEnum() -> ProcessStatus {
+        
+        return ProcessStatus.init(rawValue: processStatus)
+    }
+    
+    func priorityToEnum() -> ProcessPriority {
+        return ProcessPriority.init(rawValue: priority)
+    }
 }

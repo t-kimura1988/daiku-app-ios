@@ -11,21 +11,28 @@ struct HomeTabBarView: View {
     var body: some View {
         TabView {
             HomeView()
-                .environmentObject(HomeMainViewModel())
                 .tabItem{
                     Text("Home")
                 }
                 .tag(1)
             
-            AccountMainView()
-                .environmentObject(AccountMainViewModel())
+            FavoriteMainView()
                 .tabItem{
-                    Text("Account")
+                    Text("Favorite")
                 }
                 .tag(2)
             
-            
+            AccountMainView()
+                .tabItem{
+                    Text("Account")
+                }
+                .tag(3)
         }
+        .environmentObject(HomeMainViewModel())
+        .environmentObject(AccountMainViewModel())
+        .environmentObject(GoalDetailViewModel())
+        .environmentObject(ProcessDetailViewModel())
+        .environmentObject(FavoriteMainViewModel())
     }
 }
 

@@ -9,6 +9,7 @@ import Foundation
 
 enum GoalFavoriteService: ApiService {
     case changeGoalFavorite(GoalFavoriteCreateRequest)
+    case favoriteGoalSearch(GoalFavoriteSearchParameter)
 }
 
 extension GoalFavoriteService {
@@ -17,6 +18,8 @@ extension GoalFavoriteService {
         switch self {
         case .changeGoalFavorite(let request):
             return .requestBodyToJson(body: request)
+        case .favoriteGoalSearch(let parameter):
+            return .requestParametes(parameters: parameter.params())
         }
     }
     var baseURL: String {
@@ -26,6 +29,8 @@ extension GoalFavoriteService {
         switch self {
         case .changeGoalFavorite:
             return .POST
+        case .favoriteGoalSearch:
+            return .GET
         }
     }
     var isAuth: Bool {
@@ -35,12 +40,17 @@ extension GoalFavoriteService {
         switch self {
         case .changeGoalFavorite:
             return "/api/goal-favorite/change"
+        case .favoriteGoalSearch:
+            return "/api/goal-favorite/search"
+            
         }
     }
     var responseType: Decodable? {
         switch self {
         case .changeGoalFavorite:
             return nil
+        case .favoriteGoalSearch:
+            return GoalFavoriteResponse.self as! Codable
         }
     }
 }
