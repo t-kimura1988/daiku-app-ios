@@ -66,8 +66,6 @@
 		251AAD95287438AF0008CFDE /* GoalDetailParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AAD93287438AF0008CFDE /* GoalDetailParameter.swift */; };
 		251AAD9728746DBE0008CFDE /* ProcessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AAD9628746DBE0008CFDE /* ProcessService.swift */; };
 		251AAD9828746DBE0008CFDE /* ProcessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AAD9628746DBE0008CFDE /* ProcessService.swift */; };
-		251AAD9B28746DFA0008CFDE /* ProcessListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AAD9A28746DFA0008CFDE /* ProcessListParameter.swift */; };
-		251AAD9C28746DFA0008CFDE /* ProcessListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AAD9A28746DFA0008CFDE /* ProcessListParameter.swift */; };
 		251AAD9F28746EE70008CFDE /* ProcessResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AAD9E28746EE70008CFDE /* ProcessResponse.swift */; };
 		251AADA028746EE70008CFDE /* ProcessResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AAD9E28746EE70008CFDE /* ProcessResponse.swift */; };
 		251AADA2287470660008CFDE /* ProcessRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AADA1287470660008CFDE /* ProcessRepository.swift */; };
@@ -84,16 +82,12 @@
 		251AADB42875773B0008CFDE /* ProcessStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AADB22875773B0008CFDE /* ProcessStatus.swift */; };
 		251AADB6287580320008CFDE /* ProcessPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AADB5287580320008CFDE /* ProcessPriority.swift */; };
 		251AADB7287580320008CFDE /* ProcessPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AADB5287580320008CFDE /* ProcessPriority.swift */; };
-		251AADB9287599830008CFDE /* ProcessCreateParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AADB8287599830008CFDE /* ProcessCreateParameter.swift */; };
-		251AADBA287599830008CFDE /* ProcessCreateParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AADB8287599830008CFDE /* ProcessCreateParameter.swift */; };
 		251AADBC2875B7540008CFDE /* TProcessResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AADBB2875B7530008CFDE /* TProcessResponse.swift */; };
 		251AADBD2875B7540008CFDE /* TProcessResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AADBB2875B7530008CFDE /* TProcessResponse.swift */; };
 		25645B192876CA7900A8B334 /* ProcessDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B182876CA7900A8B334 /* ProcessDetailView.swift */; };
 		25645B1B2876CA9700A8B334 /* ProcessDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B1A2876CA9700A8B334 /* ProcessDetailViewModel.swift */; };
 		25645B1C2876CB6900A8B334 /* ProcessDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B182876CA7900A8B334 /* ProcessDetailView.swift */; };
 		25645B1D2876CB7E00A8B334 /* ProcessDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B1A2876CA9700A8B334 /* ProcessDetailViewModel.swift */; };
-		25645B1F2876DACC00A8B334 /* ProcessDetailParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B1E2876DACC00A8B334 /* ProcessDetailParameter.swift */; };
-		25645B202876DACC00A8B334 /* ProcessDetailParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B1E2876DACC00A8B334 /* ProcessDetailParameter.swift */; };
 		25645B222876DE1600A8B334 /* ProcessHistoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B212876DE1600A8B334 /* ProcessHistoryRepository.swift */; };
 		25645B232876DE1600A8B334 /* ProcessHistoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B212876DE1600A8B334 /* ProcessHistoryRepository.swift */; };
 		25645B252876DE4900A8B334 /* ProcessHistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B242876DE4900A8B334 /* ProcessHistoryService.swift */; };
@@ -158,6 +152,159 @@
 		259BE5E2287075FF00098DBC /* GoalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259BE5E0287075FF00098DBC /* GoalResponse.swift */; };
 		259BE5E42871FB5200098DBC /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259BE5E32871FB5200098DBC /* BlurView.swift */; };
 		259BE5E52871FB5200098DBC /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259BE5E32871FB5200098DBC /* BlurView.swift */; };
+		25A05BE02886B29D0077A005 /* GoalUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BDF2886B29D0077A005 /* GoalUpdateRequest.swift */; };
+		25A05BE12886B2DE0077A005 /* GoalUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BDF2886B29D0077A005 /* GoalUpdateRequest.swift */; };
+		25A05BE32887D40B0077A005 /* GoalArchiveCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BE22887D40B0077A005 /* GoalArchiveCreateRequest.swift */; };
+		25A05BE52887D4800077A005 /* GoalArchiveUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BE42887D4800077A005 /* GoalArchiveUpdateRequest.swift */; };
+		25A05BE62887D4C70077A005 /* GoalArchiveCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BE22887D40B0077A005 /* GoalArchiveCreateRequest.swift */; };
+		25A05BE72887D4D70077A005 /* GoalArchiveUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BE42887D4800077A005 /* GoalArchiveUpdateRequest.swift */; };
+		25A05BE92887DF760077A005 /* TGoalsArchiveResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BE82887DF760077A005 /* TGoalsArchiveResponse.swift */; };
+		25A05BEA2887E00E0077A005 /* TGoalsArchiveResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BE82887DF760077A005 /* TGoalsArchiveResponse.swift */; };
+		25A05BEC2887E9120077A005 /* GoalArchiveEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BEB2887E9120077A005 /* GoalArchiveEditView.swift */; };
+		25A05BEE2887F8920077A005 /* GoalArchiveEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BED2887F8920077A005 /* GoalArchiveEditViewModel.swift */; };
+		25A05BEF28880B530077A005 /* GoalArchiveEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BED2887F8920077A005 /* GoalArchiveEditViewModel.swift */; };
+		25A05BF028880B630077A005 /* GoalArchiveEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BEB2887E9120077A005 /* GoalArchiveEditView.swift */; };
+		25A05BF2288948CA0077A005 /* GoalArchiveUpdatingFlgEditRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BF1288948CA0077A005 /* GoalArchiveUpdatingFlgEditRequest.swift */; };
+		25A05BF32889490B0077A005 /* GoalArchiveUpdatingFlgEditRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BF1288948CA0077A005 /* GoalArchiveUpdatingFlgEditRequest.swift */; };
+		25A05BF5288D49650077A005 /* AccountUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BF4288D49650077A005 /* AccountUpdateRequest.swift */; };
+		25A05BF8288E377C0077A005 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BF7288E377C0077A005 /* StringExtension.swift */; };
+		25A05BF9288E39F80077A005 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BF7288E377C0077A005 /* StringExtension.swift */; };
+		25A05C04288E88FB0077A005 /* ProcessCreateParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C01288E88FB0077A005 /* ProcessCreateParameter.swift */; };
+		25A05C05288E88FB0077A005 /* ProcessCreateParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C01288E88FB0077A005 /* ProcessCreateParameter.swift */; };
+		25A05C06288E88FB0077A005 /* ProcessListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C02288E88FB0077A005 /* ProcessListParameter.swift */; };
+		25A05C07288E88FB0077A005 /* ProcessListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C02288E88FB0077A005 /* ProcessListParameter.swift */; };
+		25A05C08288E88FB0077A005 /* ProcessDetailParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C03288E88FB0077A005 /* ProcessDetailParameter.swift */; };
+		25A05C09288E88FB0077A005 /* ProcessDetailParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C03288E88FB0077A005 /* ProcessDetailParameter.swift */; };
+		25A05C0B288E89950077A005 /* ProcessUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C0A288E89950077A005 /* ProcessUpdateRequest.swift */; };
+		25A05C0C288E89950077A005 /* ProcessUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C0A288E89950077A005 /* ProcessUpdateRequest.swift */; };
+		25A05C15288FC34C0077A005 /* PublishLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D690288413D700F8A7EB /* PublishLevel.swift */; };
+		25A05C16288FC34C0077A005 /* PickerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AADAF287559EA0008CFDE /* PickerBase.swift */; };
+		25A05C17288FC34C0077A005 /* UnAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2507F9AD285C4B6F00A14A51 /* UnAuthView.swift */; };
+		25A05C18288FC34C0077A005 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D566E28621F9700D61541 /* URLRequest.swift */; };
+		25A05C19288FC34C0077A005 /* ProcessCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AADA52874A9390008CFDE /* ProcessCreateView.swift */; };
+		25A05C1A288FC34C0077A005 /* GoalArchiveUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BE42887D4800077A005 /* GoalArchiveUpdateRequest.swift */; };
+		25A05C1B288FC34C0077A005 /* GoalArchiveDetailParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D68728831D9200F8A7EB /* GoalArchiveDetailParameter.swift */; };
+		25A05C1C288FC34C0077A005 /* NoBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259BE5D92870174E00098DBC /* NoBody.swift */; };
+		25A05C1D288FC34C0077A005 /* ProcessUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C0A288E89950077A005 /* ProcessUpdateRequest.swift */; };
+		25A05C1E288FC34C0077A005 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BF7288E377C0077A005 /* StringExtension.swift */; };
+		25A05C1F288FC34C0077A005 /* StatusUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D668287FED3800F8A7EB /* StatusUpdateRequest.swift */; };
+		25A05C20288FC34C0077A005 /* ProcessDetailParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C03288E88FB0077A005 /* ProcessDetailParameter.swift */; };
+		25A05C21288FC34C0077A005 /* TermsOfUseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2507F9C2285CE81200A14A51 /* TermsOfUseView.swift */; };
+		25A05C22288FC34C0077A005 /* ProcessListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C02288E88FB0077A005 /* ProcessListParameter.swift */; };
+		25A05C23288FC34C0077A005 /* GoalCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D56A5286DA72D00D61541 /* GoalCreateViewModel.swift */; };
+		25A05C24288FC34C0077A005 /* GoalArchiveUpdatingFlgEditRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BF1288948CA0077A005 /* GoalArchiveUpdatingFlgEditRequest.swift */; };
+		25A05C25288FC34C0077A005 /* GoalArchiveResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D6822882C74500F8A7EB /* GoalArchiveResponse.swift */; };
+		25A05C26288FC34C0077A005 /* ProcessHistoryDetailParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D65E287EC2F900F8A7EB /* ProcessHistoryDetailParameter.swift */; };
+		25A05C27288FC34C0077A005 /* GoalArchiveRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D68C2883200100F8A7EB /* GoalArchiveRepository.swift */; };
+		25A05C28288FC34C0077A005 /* MyGoalLlistParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AAD772872A99C0008CFDE /* MyGoalLlistParameter.swift */; };
+		25A05C29288FC34C0077A005 /* CommentUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D656287EBC7600F8A7EB /* CommentUpdateRequest.swift */; };
+		25A05C2A288FC34C0077A005 /* GoalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AAD89287355BC0008CFDE /* GoalDetailView.swift */; };
+		25A05C2B288FC34C0077A005 /* GoalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259BE5E0287075FF00098DBC /* GoalResponse.swift */; };
+		25A05C2C288FC34C0077A005 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2507F9A2285C238E00A14A51 /* SignInView.swift */; };
+		25A05C2D288FC34C0077A005 /* ApiErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D567C28676BB900D61541 /* ApiErrorResponse.swift */; };
+		25A05C2E288FC34C0077A005 /* GoalArchiveRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D569A286B595E00D61541 /* GoalArchiveRequest.swift */; };
+		25A05C2F288FC34C0077A005 /* TGoalsArchiveResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BE82887DF760077A005 /* TGoalsArchiveResponse.swift */; };
+		25A05C30288FC34C0077A005 /* GoalFavoriteCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AAD802873204B0008CFDE /* GoalFavoriteCreateRequest.swift */; };
+		25A05C31288FC34C0077A005 /* StatusUpdateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D664287FE36800F8A7EB /* StatusUpdateViewModel.swift */; };
+		25A05C32288FC34C0077A005 /* AnyEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D568F286A1E1C00D61541 /* AnyEncoder.swift */; };
+		25A05C33288FC34C0077A005 /* AccountMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259BE5DC287022F600098DBC /* AccountMainViewModel.swift */; };
+		25A05C34288FC34C0077A005 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D5692286B572B00D61541 /* HomeService.swift */; };
+		25A05C35288FC34C0077A005 /* GoalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AAD872873558C0008CFDE /* GoalRouter.swift */; };
+		25A05C36288FC34C0077A005 /* GoalArchiveDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D67F2882C61600F8A7EB /* GoalArchiveDetailViewModel.swift */; };
+		25A05C37288FC34C0077A005 /* GoalArchiveCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BE22887D40B0077A005 /* GoalArchiveCreateRequest.swift */; };
+		25A05C38288FC34C0077A005 /* DaikuPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AADAC287555F90008CFDE /* DaikuPickerView.swift */; };
+		25A05C39288FC34C0077A005 /* MyGoalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AAD792872AA4B0008CFDE /* MyGoalResponse.swift */; };
+		25A05C3A288FC34C0077A005 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D56822869729400D61541 /* LoadingView.swift */; };
+		25A05C3B288FC34C0077A005 /* GoalArchiveDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D67B28829E8B00F8A7EB /* GoalArchiveDetailView.swift */; };
+		25A05C3C288FC34C0077A005 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D56712862BC4400D61541 /* HttpMethod.swift */; };
+		25A05C3D288FC34C0077A005 /* StatusUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D662287FE2F100F8A7EB /* StatusUpdateView.swift */; };
+		25A05C3E288FC34C0077A005 /* AccountCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D568C286A026800D61541 /* AccountCreateRequest.swift */; };
+		25A05C3F288FC34C0077A005 /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D5696286B577700D61541 /* HomeResponse.swift */; };
+		25A05C40288FC34C0077A005 /* ProcessHistoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B212876DE1600A8B334 /* ProcessHistoryRepository.swift */; };
+		25A05C41288FC34C0077A005 /* HomeTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2507F9C5285D918600A14A51 /* HomeTabBarView.swift */; };
+		25A05C42288FC34C0077A005 /* ProcessDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B1A2876CA9700A8B334 /* ProcessDetailViewModel.swift */; };
+		25A05C43288FC34C0077A005 /* FavoriteMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D6702880796700F8A7EB /* FavoriteMainViewModel.swift */; };
+		25A05C44288FC34C0077A005 /* ProcessDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B182876CA7900A8B334 /* ProcessDetailView.swift */; };
+		25A05C45288FC34C0077A005 /* RefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AAD8D2874064E0008CFDE /* RefreshView.swift */; };
+		25A05C46288FC34C0077A005 /* GoalArchiveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D68428831D1E00F8A7EB /* GoalArchiveService.swift */; };
+		25A05C47288FC34C0077A005 /* AccountExistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2507F99B285C175E00A14A51 /* AccountExistViewModel.swift */; };
+		25A05C48288FC34C0077A005 /* GoalArchiveEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BED2887F8920077A005 /* GoalArchiveEditViewModel.swift */; };
+		25A05C49288FC34C0077A005 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2507F9BC285CDE1000A14A51 /* PrivacyPolicyView.swift */; };
+		25A05C4A288FC34C0077A005 /* FavoriteMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D66C2880134300F8A7EB /* FavoriteMainView.swift */; };
+		25A05C4B288FC34C0077A005 /* ProcessHistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B242876DE4900A8B334 /* ProcessHistoryService.swift */; };
+		25A05C4C288FC34C0077A005 /* ProcessHistoryCommentCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D6502879F4D100F8A7EB /* ProcessHistoryCommentCreateViewModel.swift */; };
+		25A05C4D288FC34C0077A005 /* GoalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259BE5D0286FFEBE00098DBC /* GoalService.swift */; };
+		25A05C4E288FC34C0077A005 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D569D286C28E100D61541 /* HomeRepository.swift */; };
+		25A05C4F288FC34C0077A005 /* GoalFavoriteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AAD7D28731EEF0008CFDE /* GoalFavoriteRepository.swift */; };
+		25A05C50288FC34C0077A005 /* GoalFavoriteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D67428807C8700F8A7EB /* GoalFavoriteResponse.swift */; };
+		25A05C51288FC34C0077A005 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D566428619A1B00D61541 /* AccountService.swift */; };
+		25A05C52288FC34C0077A005 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C2B934285BA1F20077B013 /* ContentView.swift */; };
+		25A05C53288FC34C0077A005 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D565C286077D800D61541 /* RequestType.swift */; };
+		25A05C54288FC34C0077A005 /* ProcessStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AADB22875773B0008CFDE /* ProcessStatus.swift */; };
+		25A05C55288FC34C0077A005 /* DaikuWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2507F9B1285C808A00A14A51 /* DaikuWebView.swift */; };
+		25A05C56288FC34C0077A005 /* GoalCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D56A1286D807D00D61541 /* GoalCreateView.swift */; };
+		25A05C57288FC34C0077A005 /* GoalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259BE5D4287013A100098DBC /* GoalRepository.swift */; };
+		25A05C58288FC34C0077A005 /* AccountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D5676286370FF00D61541 /* AccountResponse.swift */; };
+		25A05C59288FC34C0077A005 /* AccountMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2507F9C8285D935400A14A51 /* AccountMainView.swift */; };
+		25A05C5A288FC34C0077A005 /* GoalFavoriteSearchParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D677288080F100F8A7EB /* GoalFavoriteSearchParameter.swift */; };
+		25A05C5B288FC34C0077A005 /* ProcessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AAD9628746DBE0008CFDE /* ProcessService.swift */; };
+		25A05C5C288FC34C0077A005 /* GoalUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BDF2886B29D0077A005 /* GoalUpdateRequest.swift */; };
+		25A05C5D288FC34C0077A005 /* AccountCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D56862869899600D61541 /* AccountCreateViewModel.swift */; };
+		25A05C5E288FC34C0077A005 /* AccountCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2507F9A7285C23DD00A14A51 /* AccountCreateView.swift */; };
+		25A05C5F288FC34C0077A005 /* ProcessHistoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B2C2876DFE300A8B334 /* ProcessHistoryResponse.swift */; };
+		25A05C60288FC34C0077A005 /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D56672861E90D00D61541 /* ApiProvider.swift */; };
+		25A05C61288FC34C0077A005 /* ProcessHistoryCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D64C2879E49300F8A7EB /* ProcessHistoryCommentView.swift */; };
+		25A05C62288FC34C0077A005 /* SignInStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2507F99F285C17BA00A14A51 /* SignInStatus.swift */; };
+		25A05C63288FC34C0077A005 /* DaikuFormEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D56A8286EB47F00D61541 /* DaikuFormEditor.swift */; };
+		25A05C64288FC34C0077A005 /* CommentUpdateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D65C287EC15300F8A7EB /* CommentUpdateViewModel.swift */; };
+		25A05C65288FC34C0077A005 /* AccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D565F28616ACD00D61541 /* AccountRepository.swift */; };
+		25A05C66288FC34C0077A005 /* ProcessResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AAD9E28746EE70008CFDE /* ProcessResponse.swift */; };
+		25A05C67288FC34C0077A005 /* ProcessHistoryListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B272876DEAD00A8B334 /* ProcessHistoryListParameter.swift */; };
+		25A05C68288FC34C0077A005 /* ProcessPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AADB5287580320008CFDE /* ProcessPriority.swift */; };
+		25A05C69288FC34C0077A005 /* TProcessResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AADBB2875B7530008CFDE /* TProcessResponse.swift */; };
+		25A05C6A288FC34C0077A005 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2507F9AA285C23F900A14A51 /* HomeView.swift */; };
+		25A05C6B288FC34C0077A005 /* GoalDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AAD90287435820008CFDE /* GoalDetailViewModel.swift */; };
+		25A05C6C288FC34C0077A005 /* HomeMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2507F9CC285DB02000A14A51 /* HomeMainViewModel.swift */; };
+		25A05C6D288FC34C0077A005 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259BE5E32871FB5200098DBC /* BlurView.swift */; };
+		25A05C6E288FC34C0077A005 /* ProcessCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AADA9287548BB0008CFDE /* ProcessCreateViewModel.swift */; };
+		25A05C6F288FC34C0077A005 /* ProcessHistoryCommentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D6522879F51400F8A7EB /* ProcessHistoryCommentRequest.swift */; };
+		25A05C70288FC34C0077A005 /* GoalCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259BE5D22870015300098DBC /* GoalCreateRequest.swift */; };
+		25A05C71288FC34C0077A005 /* GoalArchiveEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05BEB2887E9120077A005 /* GoalArchiveEditView.swift */; };
+		25A05C72288FC34C0077A005 /* CommentUpdateFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D659287EC03A00F8A7EB /* CommentUpdateFormView.swift */; };
+		25A05C73288FC34C0077A005 /* GoalDetailParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AAD93287438AF0008CFDE /* GoalDetailParameter.swift */; };
+		25A05C74288FC34C0077A005 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D566A2861E9D300D61541 /* ApiService.swift */; };
+		25A05C75288FC34C0077A005 /* GoalFavoriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AAD82287321700008CFDE /* GoalFavoriteService.swift */; };
+		25A05C76288FC34C0077A005 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D567F2868BA7800D61541 /* ApiError.swift */; };
+		25A05C77288FC34C0077A005 /* ProcessCreateParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C01288E88FB0077A005 /* ProcessCreateParameter.swift */; };
+		25A05C78288FC34C0077A005 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2507F9B9285CD61B00A14A51 /* AuthRouter.swift */; };
+		25A05C79288FC34C0077A005 /* ProcessRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AADA1287470660008CFDE /* ProcessRepository.swift */; };
+		25A05C7A288FC34C0077A005 /* AccountExistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2507F996285C168A00A14A51 /* AccountExistView.swift */; };
+		25A05C7B288FC34C0077A005 /* daiku_app_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C2B932285BA1F20077B013 /* daiku_app_iosApp.swift */; };
+		25A05C7D288FC34C0077A005 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 25A05C0E288FC34C0077A005 /* FirebaseAnalytics */; };
+		25A05C7E288FC34C0077A005 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 25A05C10288FC34C0077A005 /* FirebaseAuth */; };
+		25A05C7F288FC34C0077A005 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 25A05C11288FC34C0077A005 /* GoogleSignIn */; };
+		25A05C80288FC34C0077A005 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 25A05C13288FC34C0077A005 /* GoogleSignInSwift */; };
+		25A05C82288FC34C0077A005 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25C2B939285BA1F20077B013 /* Preview Assets.xcassets */; };
+		25A05C83288FC34C0077A005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25C2B936285BA1F20077B013 /* Assets.xcassets */; };
+		25A05C84288FC34C0077A005 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2507F991285C141900A14A51 /* GoogleService-Info.plist */; };
+		25A05C8B2890D3E00077A005 /* DateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C8A2890D3E00077A005 /* DateExtention.swift */; };
+		25A05C8C2890D3E00077A005 /* DateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C8A2890D3E00077A005 /* DateExtention.swift */; };
+		25A05C8D2890D3E00077A005 /* DateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C8A2890D3E00077A005 /* DateExtention.swift */; };
+		25A05C8F289109270077A005 /* MoreText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C8E289109270077A005 /* MoreText.swift */; };
+		25A05C90289109270077A005 /* MoreText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C8E289109270077A005 /* MoreText.swift */; };
+		25A05C91289109270077A005 /* MoreText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C8E289109270077A005 /* MoreText.swift */; };
+		25A05C93289114210077A005 /* ProcessTermUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C92289114210077A005 /* ProcessTermUpdateView.swift */; };
+		25A05C94289114210077A005 /* ProcessTermUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C92289114210077A005 /* ProcessTermUpdateView.swift */; };
+		25A05C95289114210077A005 /* ProcessTermUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C92289114210077A005 /* ProcessTermUpdateView.swift */; };
+		25A05C972891145B0077A005 /* ProcessTermUpdateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C962891145B0077A005 /* ProcessTermUpdateViewModel.swift */; };
+		25A05C982891145B0077A005 /* ProcessTermUpdateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C962891145B0077A005 /* ProcessTermUpdateViewModel.swift */; };
+		25A05C992891145B0077A005 /* ProcessTermUpdateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C962891145B0077A005 /* ProcessTermUpdateViewModel.swift */; };
+		25A05C9B28919D8C0077A005 /* ProcessTermUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C9A28919D8B0077A005 /* ProcessTermUpdateRequest.swift */; };
+		25A05C9C28919D8C0077A005 /* ProcessTermUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C9A28919D8B0077A005 /* ProcessTermUpdateRequest.swift */; };
+		25A05C9D28919D8C0077A005 /* ProcessTermUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C9A28919D8B0077A005 /* ProcessTermUpdateRequest.swift */; };
+		25A05C9F28919E440077A005 /* TProcessHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C9E28919E440077A005 /* TProcessHistory.swift */; };
+		25A05CA028919E440077A005 /* TProcessHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C9E28919E440077A005 /* TProcessHistory.swift */; };
+		25A05CA128919E440077A005 /* TProcessHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A05C9E28919E440077A005 /* TProcessHistory.swift */; };
 		25A9D64D2879E49300F8A7EB /* ProcessHistoryCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D64C2879E49300F8A7EB /* ProcessHistoryCommentView.swift */; };
 		25A9D64E2879E4B900F8A7EB /* ProcessHistoryCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D64C2879E49300F8A7EB /* ProcessHistoryCommentView.swift */; };
 		25A9D6512879F4D100F8A7EB /* ProcessHistoryCommentCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D6502879F4D100F8A7EB /* ProcessHistoryCommentCreateViewModel.swift */; };
@@ -188,6 +335,18 @@
 		25A9D6792880813000F8A7EB /* GoalFavoriteSearchParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D677288080F100F8A7EB /* GoalFavoriteSearchParameter.swift */; };
 		25A9D67C28829E8B00F8A7EB /* GoalArchiveDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D67B28829E8B00F8A7EB /* GoalArchiveDetailView.swift */; };
 		25A9D67D28829EF200F8A7EB /* GoalArchiveDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D67B28829E8B00F8A7EB /* GoalArchiveDetailView.swift */; };
+		25A9D6802882C61600F8A7EB /* GoalArchiveDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D67F2882C61600F8A7EB /* GoalArchiveDetailViewModel.swift */; };
+		25A9D6832882C74500F8A7EB /* GoalArchiveResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D6822882C74500F8A7EB /* GoalArchiveResponse.swift */; };
+		25A9D68528831D1E00F8A7EB /* GoalArchiveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D68428831D1E00F8A7EB /* GoalArchiveService.swift */; };
+		25A9D68828831D9200F8A7EB /* GoalArchiveDetailParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D68728831D9200F8A7EB /* GoalArchiveDetailParameter.swift */; };
+		25A9D68928831DAE00F8A7EB /* GoalArchiveDetailParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D68728831D9200F8A7EB /* GoalArchiveDetailParameter.swift */; };
+		25A9D68A28831F1100F8A7EB /* GoalArchiveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D68428831D1E00F8A7EB /* GoalArchiveService.swift */; };
+		25A9D68B28831F2100F8A7EB /* GoalArchiveResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D6822882C74500F8A7EB /* GoalArchiveResponse.swift */; };
+		25A9D68D2883200100F8A7EB /* GoalArchiveRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D68C2883200100F8A7EB /* GoalArchiveRepository.swift */; };
+		25A9D68E2883204C00F8A7EB /* GoalArchiveRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D68C2883200100F8A7EB /* GoalArchiveRepository.swift */; };
+		25A9D68F288322B500F8A7EB /* GoalArchiveDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D67F2882C61600F8A7EB /* GoalArchiveDetailViewModel.swift */; };
+		25A9D691288413D700F8A7EB /* PublishLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D690288413D700F8A7EB /* PublishLevel.swift */; };
+		25A9D6922884155600F8A7EB /* PublishLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D690288413D700F8A7EB /* PublishLevel.swift */; };
 		25C2B933285BA1F20077B013 /* daiku_app_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C2B932285BA1F20077B013 /* daiku_app_iosApp.swift */; };
 		25C2B935285BA1F20077B013 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C2B934285BA1F20077B013 /* ContentView.swift */; };
 		25C2B937285BA1F20077B013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25C2B936285BA1F20077B013 /* Assets.xcassets */; };
@@ -247,7 +406,6 @@
 		251AAD90287435820008CFDE /* GoalDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailViewModel.swift; sourceTree = "<group>"; };
 		251AAD93287438AF0008CFDE /* GoalDetailParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailParameter.swift; sourceTree = "<group>"; };
 		251AAD9628746DBE0008CFDE /* ProcessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessService.swift; sourceTree = "<group>"; };
-		251AAD9A28746DFA0008CFDE /* ProcessListParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessListParameter.swift; sourceTree = "<group>"; };
 		251AAD9E28746EE70008CFDE /* ProcessResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessResponse.swift; sourceTree = "<group>"; };
 		251AADA1287470660008CFDE /* ProcessRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessRepository.swift; sourceTree = "<group>"; };
 		251AADA52874A9390008CFDE /* ProcessCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessCreateView.swift; sourceTree = "<group>"; };
@@ -256,11 +414,9 @@
 		251AADAF287559EA0008CFDE /* PickerBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerBase.swift; sourceTree = "<group>"; };
 		251AADB22875773B0008CFDE /* ProcessStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessStatus.swift; sourceTree = "<group>"; };
 		251AADB5287580320008CFDE /* ProcessPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessPriority.swift; sourceTree = "<group>"; };
-		251AADB8287599830008CFDE /* ProcessCreateParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessCreateParameter.swift; sourceTree = "<group>"; };
 		251AADBB2875B7530008CFDE /* TProcessResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TProcessResponse.swift; sourceTree = "<group>"; };
 		25645B182876CA7900A8B334 /* ProcessDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessDetailView.swift; sourceTree = "<group>"; };
 		25645B1A2876CA9700A8B334 /* ProcessDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessDetailViewModel.swift; sourceTree = "<group>"; };
-		25645B1E2876DACC00A8B334 /* ProcessDetailParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessDetailParameter.swift; sourceTree = "<group>"; };
 		25645B212876DE1600A8B334 /* ProcessHistoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessHistoryRepository.swift; sourceTree = "<group>"; };
 		25645B242876DE4900A8B334 /* ProcessHistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessHistoryService.swift; sourceTree = "<group>"; };
 		25645B272876DEAD00A8B334 /* ProcessHistoryListParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessHistoryListParameter.swift; sourceTree = "<group>"; };
@@ -293,6 +449,27 @@
 		259BE5DC287022F600098DBC /* AccountMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountMainViewModel.swift; sourceTree = "<group>"; };
 		259BE5E0287075FF00098DBC /* GoalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalResponse.swift; sourceTree = "<group>"; };
 		259BE5E32871FB5200098DBC /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		25A05BDF2886B29D0077A005 /* GoalUpdateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalUpdateRequest.swift; sourceTree = "<group>"; };
+		25A05BE22887D40B0077A005 /* GoalArchiveCreateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalArchiveCreateRequest.swift; sourceTree = "<group>"; };
+		25A05BE42887D4800077A005 /* GoalArchiveUpdateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalArchiveUpdateRequest.swift; sourceTree = "<group>"; };
+		25A05BE82887DF760077A005 /* TGoalsArchiveResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TGoalsArchiveResponse.swift; sourceTree = "<group>"; };
+		25A05BEB2887E9120077A005 /* GoalArchiveEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalArchiveEditView.swift; sourceTree = "<group>"; };
+		25A05BED2887F8920077A005 /* GoalArchiveEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalArchiveEditViewModel.swift; sourceTree = "<group>"; };
+		25A05BF1288948CA0077A005 /* GoalArchiveUpdatingFlgEditRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalArchiveUpdatingFlgEditRequest.swift; sourceTree = "<group>"; };
+		25A05BF4288D49650077A005 /* AccountUpdateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountUpdateRequest.swift; sourceTree = "<group>"; };
+		25A05BF7288E377C0077A005 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		25A05C01288E88FB0077A005 /* ProcessCreateParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessCreateParameter.swift; sourceTree = "<group>"; };
+		25A05C02288E88FB0077A005 /* ProcessListParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessListParameter.swift; sourceTree = "<group>"; };
+		25A05C03288E88FB0077A005 /* ProcessDetailParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessDetailParameter.swift; sourceTree = "<group>"; };
+		25A05C0A288E89950077A005 /* ProcessUpdateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessUpdateRequest.swift; sourceTree = "<group>"; };
+		25A05C88288FC34C0077A005 /* stg-daiku-app-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "stg-daiku-app-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25A05C89288FC34C0077A005 /* stg-daiku-app-ios-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "stg-daiku-app-ios-Info.plist"; path = "/Users/kimuratakeshi/work/mobile-dev/daiku-app-ios/stg-daiku-app-ios-Info.plist"; sourceTree = "<absolute>"; };
+		25A05C8A2890D3E00077A005 /* DateExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtention.swift; sourceTree = "<group>"; };
+		25A05C8E289109270077A005 /* MoreText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreText.swift; sourceTree = "<group>"; };
+		25A05C92289114210077A005 /* ProcessTermUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessTermUpdateView.swift; sourceTree = "<group>"; };
+		25A05C962891145B0077A005 /* ProcessTermUpdateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessTermUpdateViewModel.swift; sourceTree = "<group>"; };
+		25A05C9A28919D8B0077A005 /* ProcessTermUpdateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessTermUpdateRequest.swift; sourceTree = "<group>"; };
+		25A05C9E28919E440077A005 /* TProcessHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TProcessHistory.swift; sourceTree = "<group>"; };
 		25A9D64C2879E49300F8A7EB /* ProcessHistoryCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessHistoryCommentView.swift; sourceTree = "<group>"; };
 		25A9D6502879F4D100F8A7EB /* ProcessHistoryCommentCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessHistoryCommentCreateViewModel.swift; sourceTree = "<group>"; };
 		25A9D6522879F51400F8A7EB /* ProcessHistoryCommentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessHistoryCommentRequest.swift; sourceTree = "<group>"; };
@@ -308,6 +485,12 @@
 		25A9D67428807C8700F8A7EB /* GoalFavoriteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalFavoriteResponse.swift; sourceTree = "<group>"; };
 		25A9D677288080F100F8A7EB /* GoalFavoriteSearchParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalFavoriteSearchParameter.swift; sourceTree = "<group>"; };
 		25A9D67B28829E8B00F8A7EB /* GoalArchiveDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalArchiveDetailView.swift; sourceTree = "<group>"; };
+		25A9D67F2882C61600F8A7EB /* GoalArchiveDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalArchiveDetailViewModel.swift; sourceTree = "<group>"; };
+		25A9D6822882C74500F8A7EB /* GoalArchiveResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalArchiveResponse.swift; sourceTree = "<group>"; };
+		25A9D68428831D1E00F8A7EB /* GoalArchiveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalArchiveService.swift; sourceTree = "<group>"; };
+		25A9D68728831D9200F8A7EB /* GoalArchiveDetailParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalArchiveDetailParameter.swift; sourceTree = "<group>"; };
+		25A9D68C2883200100F8A7EB /* GoalArchiveRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalArchiveRepository.swift; sourceTree = "<group>"; };
+		25A9D690288413D700F8A7EB /* PublishLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishLevel.swift; sourceTree = "<group>"; };
 		25C2B92F285BA1F20077B013 /* daiku-app-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "daiku-app-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C2B932285BA1F20077B013 /* daiku_app_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = daiku_app_iosApp.swift; sourceTree = "<group>"; };
 		25C2B934285BA1F20077B013 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -329,6 +512,17 @@
 				2507F980285BAA6200A14A51 /* FirebaseAuth in Frameworks */,
 				2507F981285BAA6200A14A51 /* GoogleSignIn in Frameworks */,
 				2507F982285BAA6200A14A51 /* GoogleSignInSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25A05C7C288FC34C0077A005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25A05C7D288FC34C0077A005 /* FirebaseAnalytics in Frameworks */,
+				25A05C7E288FC34C0077A005 /* FirebaseAuth in Frameworks */,
+				25A05C7F288FC34C0077A005 /* GoogleSignIn in Frameworks */,
+				25A05C80288FC34C0077A005 /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +609,8 @@
 		2507F999285C173C00A14A51 /* view_model */ = {
 			isa = PBXGroup;
 			children = (
+				25A05BF6288E376C0077A005 /* extensions */,
+				25A9D67E2882C60200F8A7EB /* goal_archive */,
 				25A9D66F2880795400F8A7EB /* favorite */,
 				25A9D64F2879F4BD00F8A7EB /* process_history */,
 				251AADA8287548AA0008CFDE /* process */,
@@ -443,6 +639,7 @@
 				251AADAF287559EA0008CFDE /* PickerBase.swift */,
 				251AADB22875773B0008CFDE /* ProcessStatus.swift */,
 				251AADB5287580320008CFDE /* ProcessPriority.swift */,
+				25A9D690288413D700F8A7EB /* PublishLevel.swift */,
 			);
 			path = enums;
 			sourceTree = "<group>";
@@ -473,6 +670,7 @@
 				259BE5E32871FB5200098DBC /* BlurView.swift */,
 				251AAD8D2874064E0008CFDE /* RefreshView.swift */,
 				251AADAC287555F90008CFDE /* DaikuPickerView.swift */,
+				25A05C8E289109270077A005 /* MoreText.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -503,6 +701,7 @@
 				251AAD7D28731EEF0008CFDE /* GoalFavoriteRepository.swift */,
 				251AADA1287470660008CFDE /* ProcessRepository.swift */,
 				25645B212876DE1600A8B334 /* ProcessHistoryRepository.swift */,
+				25A9D68C2883200100F8A7EB /* GoalArchiveRepository.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
@@ -514,16 +713,6 @@
 				25A9D677288080F100F8A7EB /* GoalFavoriteSearchParameter.swift */,
 			);
 			path = goal_favorite;
-			sourceTree = "<group>";
-		};
-		251AAD9928746DE90008CFDE /* process */ = {
-			isa = PBXGroup;
-			children = (
-				251AAD9A28746DFA0008CFDE /* ProcessListParameter.swift */,
-				251AADB8287599830008CFDE /* ProcessCreateParameter.swift */,
-				25645B1E2876DACC00A8B334 /* ProcessDetailParameter.swift */,
-			);
-			path = process;
 			sourceTree = "<group>";
 		};
 		251AAD9D28746ED60008CFDE /* process */ = {
@@ -540,6 +729,7 @@
 			children = (
 				251AADA52874A9390008CFDE /* ProcessCreateView.swift */,
 				25645B182876CA7900A8B334 /* ProcessDetailView.swift */,
+				25A05C92289114210077A005 /* ProcessTermUpdateView.swift */,
 			);
 			path = process;
 			sourceTree = "<group>";
@@ -549,6 +739,7 @@
 			children = (
 				251AADA9287548BB0008CFDE /* ProcessCreateViewModel.swift */,
 				25645B1A2876CA9700A8B334 /* ProcessDetailViewModel.swift */,
+				25A05C962891145B0077A005 /* ProcessTermUpdateViewModel.swift */,
 			);
 			path = process;
 			sourceTree = "<group>";
@@ -569,6 +760,7 @@
 			isa = PBXGroup;
 			children = (
 				25645B2C2876DFE300A8B334 /* ProcessHistoryResponse.swift */,
+				25A05C9E28919E440077A005 /* TProcessHistory.swift */,
 			);
 			path = process_history;
 			sourceTree = "<group>";
@@ -606,6 +798,7 @@
 				251AAD82287321700008CFDE /* GoalFavoriteService.swift */,
 				251AAD9628746DBE0008CFDE /* ProcessService.swift */,
 				25645B242876DE4900A8B334 /* ProcessHistoryService.swift */,
+				25A9D68428831D1E00F8A7EB /* GoalArchiveService.swift */,
 			);
 			path = div;
 			sourceTree = "<group>";
@@ -613,6 +806,7 @@
 		256D5674286370CD00D61541 /* response */ = {
 			isa = PBXGroup;
 			children = (
+				25A9D6812882C73500F8A7EB /* goal_archive */,
 				25A9D67328807C7300F8A7EB /* favorite */,
 				25645B2B2876DFCF00A8B334 /* process_history */,
 				251AAD9D28746ED60008CFDE /* process */,
@@ -645,8 +839,9 @@
 		256D5689286A023F00D61541 /* request */ = {
 			isa = PBXGroup;
 			children = (
+				25A05C00288E88FB0077A005 /* process */,
+				25A9D68628831D7F00F8A7EB /* goal_archive */,
 				25645B2A2876DFB300A8B334 /* process_history */,
-				251AAD9928746DE90008CFDE /* process */,
 				251AAD7F287320330008CFDE /* goal_favorite */,
 				256D5699286B594900D61541 /* home */,
 				256D568B286A024C00D61541 /* account */,
@@ -661,6 +856,7 @@
 				259BE5D22870015300098DBC /* GoalCreateRequest.swift */,
 				251AAD772872A99C0008CFDE /* MyGoalLlistParameter.swift */,
 				251AAD93287438AF0008CFDE /* GoalDetailParameter.swift */,
+				25A05BDF2886B29D0077A005 /* GoalUpdateRequest.swift */,
 			);
 			path = goal;
 			sourceTree = "<group>";
@@ -669,6 +865,7 @@
 			isa = PBXGroup;
 			children = (
 				256D568C286A026800D61541 /* AccountCreateRequest.swift */,
+				25A05BF4288D49650077A005 /* AccountUpdateRequest.swift */,
 			);
 			path = account;
 			sourceTree = "<group>";
@@ -714,6 +911,27 @@
 				251AAD792872AA4B0008CFDE /* MyGoalResponse.swift */,
 			);
 			path = goal;
+			sourceTree = "<group>";
+		};
+		25A05BF6288E376C0077A005 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				25A05BF7288E377C0077A005 /* StringExtension.swift */,
+				25A05C8A2890D3E00077A005 /* DateExtention.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		25A05C00288E88FB0077A005 /* process */ = {
+			isa = PBXGroup;
+			children = (
+				25A05C01288E88FB0077A005 /* ProcessCreateParameter.swift */,
+				25A05C02288E88FB0077A005 /* ProcessListParameter.swift */,
+				25A05C03288E88FB0077A005 /* ProcessDetailParameter.swift */,
+				25A05C0A288E89950077A005 /* ProcessUpdateRequest.swift */,
+				25A05C9A28919D8B0077A005 /* ProcessTermUpdateRequest.swift */,
+			);
+			path = process;
 			sourceTree = "<group>";
 		};
 		25A9D64B2879E47D00F8A7EB /* process_history */ = {
@@ -764,6 +982,36 @@
 			isa = PBXGroup;
 			children = (
 				25A9D67B28829E8B00F8A7EB /* GoalArchiveDetailView.swift */,
+				25A05BEB2887E9120077A005 /* GoalArchiveEditView.swift */,
+			);
+			path = goal_archive;
+			sourceTree = "<group>";
+		};
+		25A9D67E2882C60200F8A7EB /* goal_archive */ = {
+			isa = PBXGroup;
+			children = (
+				25A9D67F2882C61600F8A7EB /* GoalArchiveDetailViewModel.swift */,
+				25A05BED2887F8920077A005 /* GoalArchiveEditViewModel.swift */,
+			);
+			path = goal_archive;
+			sourceTree = "<group>";
+		};
+		25A9D6812882C73500F8A7EB /* goal_archive */ = {
+			isa = PBXGroup;
+			children = (
+				25A9D6822882C74500F8A7EB /* GoalArchiveResponse.swift */,
+				25A05BE82887DF760077A005 /* TGoalsArchiveResponse.swift */,
+			);
+			path = goal_archive;
+			sourceTree = "<group>";
+		};
+		25A9D68628831D7F00F8A7EB /* goal_archive */ = {
+			isa = PBXGroup;
+			children = (
+				25A9D68728831D9200F8A7EB /* GoalArchiveDetailParameter.swift */,
+				25A05BE22887D40B0077A005 /* GoalArchiveCreateRequest.swift */,
+				25A05BE42887D4800077A005 /* GoalArchiveUpdateRequest.swift */,
+				25A05BF1288948CA0077A005 /* GoalArchiveUpdatingFlgEditRequest.swift */,
 			);
 			path = goal_archive;
 			sourceTree = "<group>";
@@ -777,6 +1025,7 @@
 				25C2B94C285BA1F30077B013 /* daiku-app-iosUITests */,
 				25C2B930285BA1F20077B013 /* Products */,
 				2507F98C285C0F2200A14A51 /* Frameworks */,
+				25A05C89288FC34C0077A005 /* stg-daiku-app-ios-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -787,6 +1036,7 @@
 				25C2B93F285BA1F20077B013 /* daiku-app-iosTests.xctest */,
 				25C2B949285BA1F20077B013 /* daiku-app-iosUITests.xctest */,
 				2507F98A285BAA6200A14A51 /* dev-daiku-app-ios.app */,
+				25A05C88288FC34C0077A005 /* stg-daiku-app-ios.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -857,6 +1107,29 @@
 			);
 			productName = "daiku-app-ios";
 			productReference = 2507F98A285BAA6200A14A51 /* dev-daiku-app-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		25A05C0D288FC34C0077A005 /* stg-daiku-app-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25A05C85288FC34C0077A005 /* Build configuration list for PBXNativeTarget "stg-daiku-app-ios" */;
+			buildPhases = (
+				25A05C14288FC34C0077A005 /* Sources */,
+				25A05C7C288FC34C0077A005 /* Frameworks */,
+				25A05C81288FC34C0077A005 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "stg-daiku-app-ios";
+			packageProductDependencies = (
+				25A05C0E288FC34C0077A005 /* FirebaseAnalytics */,
+				25A05C10288FC34C0077A005 /* FirebaseAuth */,
+				25A05C11288FC34C0077A005 /* GoogleSignIn */,
+				25A05C13288FC34C0077A005 /* GoogleSignInSwift */,
+			);
+			productName = "daiku-app-ios";
+			productReference = 25A05C88288FC34C0077A005 /* stg-daiku-app-ios.app */;
 			productType = "com.apple.product-type.application";
 		};
 		25C2B92E285BA1F20077B013 /* daiku-app-ios */ = {
@@ -962,6 +1235,7 @@
 				25C2B93E285BA1F20077B013 /* daiku-app-iosTests */,
 				25C2B948285BA1F20077B013 /* daiku-app-iosUITests */,
 				2507F971285BAA6200A14A51 /* dev-daiku-app-ios */,
+				25A05C0D288FC34C0077A005 /* stg-daiku-app-ios */,
 			);
 		};
 /* End PBXProject section */
@@ -974,6 +1248,16 @@
 				2507F984285BAA6200A14A51 /* Preview Assets.xcassets in Resources */,
 				2507F985285BAA6200A14A51 /* Assets.xcassets in Resources */,
 				2507F992285C141900A14A51 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25A05C81288FC34C0077A005 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25A05C82288FC34C0077A005 /* Preview Assets.xcassets in Resources */,
+				25A05C83288FC34C0077A005 /* Assets.xcassets in Resources */,
+				25A05C84288FC34C0077A005 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1007,31 +1291,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25A9D6922884155600F8A7EB /* PublishLevel.swift in Sources */,
 				251AADB1287559EA0008CFDE /* PickerBase.swift in Sources */,
 				2507F9AF285C4B6F00A14A51 /* UnAuthView.swift in Sources */,
 				256D567028621F9700D61541 /* URLRequest.swift in Sources */,
 				251AADA72874A9390008CFDE /* ProcessCreateView.swift in Sources */,
+				25A05BE72887D4D70077A005 /* GoalArchiveUpdateRequest.swift in Sources */,
+				25A9D68928831DAE00F8A7EB /* GoalArchiveDetailParameter.swift in Sources */,
 				259BE5DB2870174E00098DBC /* NoBody.swift in Sources */,
+				25A05C0C288E89950077A005 /* ProcessUpdateRequest.swift in Sources */,
+				25A05BF9288E39F80077A005 /* StringExtension.swift in Sources */,
 				25A9D66A287FED6C00F8A7EB /* StatusUpdateRequest.swift in Sources */,
+				25A05C982891145B0077A005 /* ProcessTermUpdateViewModel.swift in Sources */,
+				25A05C90289109270077A005 /* MoreText.swift in Sources */,
+				25A05C09288E88FB0077A005 /* ProcessDetailParameter.swift in Sources */,
 				2507F9C4285CE81200A14A51 /* TermsOfUseView.swift in Sources */,
+				25A05C07288E88FB0077A005 /* ProcessListParameter.swift in Sources */,
 				256D56A7286DA72D00D61541 /* GoalCreateViewModel.swift in Sources */,
+				25A05BF32889490B0077A005 /* GoalArchiveUpdatingFlgEditRequest.swift in Sources */,
+				25A9D68B28831F2100F8A7EB /* GoalArchiveResponse.swift in Sources */,
 				25A9D660287EC35A00F8A7EB /* ProcessHistoryDetailParameter.swift in Sources */,
+				25A9D68E2883204C00F8A7EB /* GoalArchiveRepository.swift in Sources */,
 				251AAD7C2872AAAB0008CFDE /* MyGoalLlistParameter.swift in Sources */,
 				25A9D658287EBCA900F8A7EB /* CommentUpdateRequest.swift in Sources */,
 				251AAD8B287355CD0008CFDE /* GoalDetailView.swift in Sources */,
+				25A05C9C28919D8C0077A005 /* ProcessTermUpdateRequest.swift in Sources */,
 				259BE5E2287075FF00098DBC /* GoalResponse.swift in Sources */,
 				2507F9A4285C238E00A14A51 /* SignInView.swift in Sources */,
 				256D567E28676BB900D61541 /* ApiErrorResponse.swift in Sources */,
 				256D569C286B595E00D61541 /* GoalArchiveRequest.swift in Sources */,
+				25A05BEA2887E00E0077A005 /* TGoalsArchiveResponse.swift in Sources */,
 				251AAD852873230D0008CFDE /* GoalFavoriteCreateRequest.swift in Sources */,
 				25A9D666287FE3C100F8A7EB /* StatusUpdateViewModel.swift in Sources */,
 				256D5691286A1E1C00D61541 /* AnyEncoder.swift in Sources */,
 				259BE5DE287022F600098DBC /* AccountMainViewModel.swift in Sources */,
 				256D5694286B572B00D61541 /* HomeService.swift in Sources */,
 				251AAD8C287356690008CFDE /* GoalRouter.swift in Sources */,
+				25A9D68F288322B500F8A7EB /* GoalArchiveDetailViewModel.swift in Sources */,
+				25A05BE62887D4C70077A005 /* GoalArchiveCreateRequest.swift in Sources */,
 				251AADAE287555F90008CFDE /* DaikuPickerView.swift in Sources */,
 				251AAD7B2872AA800008CFDE /* MyGoalResponse.swift in Sources */,
 				256D56842869729400D61541 /* LoadingView.swift in Sources */,
+				25A05C94289114210077A005 /* ProcessTermUpdateView.swift in Sources */,
 				25A9D67D28829EF200F8A7EB /* GoalArchiveDetailView.swift in Sources */,
 				256D56732862BC4400D61541 /* HttpMethod.swift in Sources */,
 				25A9D667287FE5D400F8A7EB /* StatusUpdateView.swift in Sources */,
@@ -1043,14 +1344,15 @@
 				25A9D6722880797800F8A7EB /* FavoriteMainViewModel.swift in Sources */,
 				25645B1C2876CB6900A8B334 /* ProcessDetailView.swift in Sources */,
 				251AAD8F287407280008CFDE /* RefreshView.swift in Sources */,
+				25A9D68A28831F1100F8A7EB /* GoalArchiveService.swift in Sources */,
+				25A05C8C2890D3E00077A005 /* DateExtention.swift in Sources */,
 				2507F99D285C175E00A14A51 /* AccountExistViewModel.swift in Sources */,
+				25A05BEF28880B530077A005 /* GoalArchiveEditViewModel.swift in Sources */,
 				2507F9BE285CDE1000A14A51 /* PrivacyPolicyView.swift in Sources */,
-				251AAD9C28746DFA0008CFDE /* ProcessListParameter.swift in Sources */,
 				25A9D66E2880135C00F8A7EB /* FavoriteMainView.swift in Sources */,
 				25645B262876DE4900A8B334 /* ProcessHistoryService.swift in Sources */,
 				25A9D655287B308C00F8A7EB /* ProcessHistoryCommentCreateViewModel.swift in Sources */,
 				259BE5D82870159300098DBC /* GoalService.swift in Sources */,
-				251AADBA287599830008CFDE /* ProcessCreateParameter.swift in Sources */,
 				256D569F286C28E100D61541 /* HomeRepository.swift in Sources */,
 				251AAD8628732A740008CFDE /* GoalFavoriteRepository.swift in Sources */,
 				25A9D67628807D4F00F8A7EB /* GoalFavoriteResponse.swift in Sources */,
@@ -1065,6 +1367,7 @@
 				2507F9CA285D935400A14A51 /* AccountMainView.swift in Sources */,
 				25A9D6792880813000F8A7EB /* GoalFavoriteSearchParameter.swift in Sources */,
 				251AAD9828746DBE0008CFDE /* ProcessService.swift in Sources */,
+				25A05BE12886B2DE0077A005 /* GoalUpdateRequest.swift in Sources */,
 				256D56882869899600D61541 /* AccountCreateViewModel.swift in Sources */,
 				2507F9A9285C23DD00A14A51 /* AccountCreateView.swift in Sources */,
 				25645B2E2876DFE300A8B334 /* ProcessHistoryResponse.swift in Sources */,
@@ -1076,21 +1379,23 @@
 				256D566128616ACD00D61541 /* AccountRepository.swift in Sources */,
 				251AADA028746EE70008CFDE /* ProcessResponse.swift in Sources */,
 				25645B292876DEAD00A8B334 /* ProcessHistoryListParameter.swift in Sources */,
-				25645B202876DACC00A8B334 /* ProcessDetailParameter.swift in Sources */,
 				251AADB7287580320008CFDE /* ProcessPriority.swift in Sources */,
 				251AADBD2875B7540008CFDE /* TProcessResponse.swift in Sources */,
 				2507F9AC285C23F900A14A51 /* HomeView.swift in Sources */,
 				251AAD92287435820008CFDE /* GoalDetailViewModel.swift in Sources */,
+				25A05CA028919E440077A005 /* TProcessHistory.swift in Sources */,
 				2507F9CE285DB02000A14A51 /* HomeMainViewModel.swift in Sources */,
 				259BE5E52871FB5200098DBC /* BlurView.swift in Sources */,
 				251AADAB287548BB0008CFDE /* ProcessCreateViewModel.swift in Sources */,
 				25A9D6542879F59200F8A7EB /* ProcessHistoryCommentRequest.swift in Sources */,
 				259BE5D72870156A00098DBC /* GoalCreateRequest.swift in Sources */,
+				25A05BF028880B630077A005 /* GoalArchiveEditView.swift in Sources */,
 				25A9D65B287EC04D00F8A7EB /* CommentUpdateFormView.swift in Sources */,
 				251AAD95287438AF0008CFDE /* GoalDetailParameter.swift in Sources */,
 				256D566C2861E9D300D61541 /* ApiService.swift in Sources */,
 				251AAD84287321C70008CFDE /* GoalFavoriteService.swift in Sources */,
 				256D56812868BA7900D61541 /* ApiError.swift in Sources */,
+				25A05C05288E88FB0077A005 /* ProcessCreateParameter.swift in Sources */,
 				2507F9BB285CD61B00A14A51 /* AuthRouter.swift in Sources */,
 				251AADA3287470660008CFDE /* ProcessRepository.swift in Sources */,
 				2507F998285C169A00A14A51 /* AccountExistView.swift in Sources */,
@@ -1098,22 +1403,147 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		25A05C14288FC34C0077A005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25A05C15288FC34C0077A005 /* PublishLevel.swift in Sources */,
+				25A05C16288FC34C0077A005 /* PickerBase.swift in Sources */,
+				25A05C17288FC34C0077A005 /* UnAuthView.swift in Sources */,
+				25A05C18288FC34C0077A005 /* URLRequest.swift in Sources */,
+				25A05C19288FC34C0077A005 /* ProcessCreateView.swift in Sources */,
+				25A05C1A288FC34C0077A005 /* GoalArchiveUpdateRequest.swift in Sources */,
+				25A05C1B288FC34C0077A005 /* GoalArchiveDetailParameter.swift in Sources */,
+				25A05C1C288FC34C0077A005 /* NoBody.swift in Sources */,
+				25A05C1D288FC34C0077A005 /* ProcessUpdateRequest.swift in Sources */,
+				25A05C1E288FC34C0077A005 /* StringExtension.swift in Sources */,
+				25A05C1F288FC34C0077A005 /* StatusUpdateRequest.swift in Sources */,
+				25A05C992891145B0077A005 /* ProcessTermUpdateViewModel.swift in Sources */,
+				25A05C91289109270077A005 /* MoreText.swift in Sources */,
+				25A05C20288FC34C0077A005 /* ProcessDetailParameter.swift in Sources */,
+				25A05C21288FC34C0077A005 /* TermsOfUseView.swift in Sources */,
+				25A05C22288FC34C0077A005 /* ProcessListParameter.swift in Sources */,
+				25A05C23288FC34C0077A005 /* GoalCreateViewModel.swift in Sources */,
+				25A05C24288FC34C0077A005 /* GoalArchiveUpdatingFlgEditRequest.swift in Sources */,
+				25A05C25288FC34C0077A005 /* GoalArchiveResponse.swift in Sources */,
+				25A05C26288FC34C0077A005 /* ProcessHistoryDetailParameter.swift in Sources */,
+				25A05C27288FC34C0077A005 /* GoalArchiveRepository.swift in Sources */,
+				25A05C28288FC34C0077A005 /* MyGoalLlistParameter.swift in Sources */,
+				25A05C29288FC34C0077A005 /* CommentUpdateRequest.swift in Sources */,
+				25A05C2A288FC34C0077A005 /* GoalDetailView.swift in Sources */,
+				25A05C9D28919D8C0077A005 /* ProcessTermUpdateRequest.swift in Sources */,
+				25A05C2B288FC34C0077A005 /* GoalResponse.swift in Sources */,
+				25A05C2C288FC34C0077A005 /* SignInView.swift in Sources */,
+				25A05C2D288FC34C0077A005 /* ApiErrorResponse.swift in Sources */,
+				25A05C2E288FC34C0077A005 /* GoalArchiveRequest.swift in Sources */,
+				25A05C2F288FC34C0077A005 /* TGoalsArchiveResponse.swift in Sources */,
+				25A05C30288FC34C0077A005 /* GoalFavoriteCreateRequest.swift in Sources */,
+				25A05C31288FC34C0077A005 /* StatusUpdateViewModel.swift in Sources */,
+				25A05C32288FC34C0077A005 /* AnyEncoder.swift in Sources */,
+				25A05C33288FC34C0077A005 /* AccountMainViewModel.swift in Sources */,
+				25A05C34288FC34C0077A005 /* HomeService.swift in Sources */,
+				25A05C35288FC34C0077A005 /* GoalRouter.swift in Sources */,
+				25A05C36288FC34C0077A005 /* GoalArchiveDetailViewModel.swift in Sources */,
+				25A05C37288FC34C0077A005 /* GoalArchiveCreateRequest.swift in Sources */,
+				25A05C38288FC34C0077A005 /* DaikuPickerView.swift in Sources */,
+				25A05C39288FC34C0077A005 /* MyGoalResponse.swift in Sources */,
+				25A05C3A288FC34C0077A005 /* LoadingView.swift in Sources */,
+				25A05C95289114210077A005 /* ProcessTermUpdateView.swift in Sources */,
+				25A05C3B288FC34C0077A005 /* GoalArchiveDetailView.swift in Sources */,
+				25A05C3C288FC34C0077A005 /* HttpMethod.swift in Sources */,
+				25A05C3D288FC34C0077A005 /* StatusUpdateView.swift in Sources */,
+				25A05C3E288FC34C0077A005 /* AccountCreateRequest.swift in Sources */,
+				25A05C3F288FC34C0077A005 /* HomeResponse.swift in Sources */,
+				25A05C40288FC34C0077A005 /* ProcessHistoryRepository.swift in Sources */,
+				25A05C41288FC34C0077A005 /* HomeTabBarView.swift in Sources */,
+				25A05C42288FC34C0077A005 /* ProcessDetailViewModel.swift in Sources */,
+				25A05C43288FC34C0077A005 /* FavoriteMainViewModel.swift in Sources */,
+				25A05C44288FC34C0077A005 /* ProcessDetailView.swift in Sources */,
+				25A05C45288FC34C0077A005 /* RefreshView.swift in Sources */,
+				25A05C46288FC34C0077A005 /* GoalArchiveService.swift in Sources */,
+				25A05C8D2890D3E00077A005 /* DateExtention.swift in Sources */,
+				25A05C47288FC34C0077A005 /* AccountExistViewModel.swift in Sources */,
+				25A05C48288FC34C0077A005 /* GoalArchiveEditViewModel.swift in Sources */,
+				25A05C49288FC34C0077A005 /* PrivacyPolicyView.swift in Sources */,
+				25A05C4A288FC34C0077A005 /* FavoriteMainView.swift in Sources */,
+				25A05C4B288FC34C0077A005 /* ProcessHistoryService.swift in Sources */,
+				25A05C4C288FC34C0077A005 /* ProcessHistoryCommentCreateViewModel.swift in Sources */,
+				25A05C4D288FC34C0077A005 /* GoalService.swift in Sources */,
+				25A05C4E288FC34C0077A005 /* HomeRepository.swift in Sources */,
+				25A05C4F288FC34C0077A005 /* GoalFavoriteRepository.swift in Sources */,
+				25A05C50288FC34C0077A005 /* GoalFavoriteResponse.swift in Sources */,
+				25A05C51288FC34C0077A005 /* AccountService.swift in Sources */,
+				25A05C52288FC34C0077A005 /* ContentView.swift in Sources */,
+				25A05C53288FC34C0077A005 /* RequestType.swift in Sources */,
+				25A05C54288FC34C0077A005 /* ProcessStatus.swift in Sources */,
+				25A05C55288FC34C0077A005 /* DaikuWebView.swift in Sources */,
+				25A05C56288FC34C0077A005 /* GoalCreateView.swift in Sources */,
+				25A05C57288FC34C0077A005 /* GoalRepository.swift in Sources */,
+				25A05C58288FC34C0077A005 /* AccountResponse.swift in Sources */,
+				25A05C59288FC34C0077A005 /* AccountMainView.swift in Sources */,
+				25A05C5A288FC34C0077A005 /* GoalFavoriteSearchParameter.swift in Sources */,
+				25A05C5B288FC34C0077A005 /* ProcessService.swift in Sources */,
+				25A05C5C288FC34C0077A005 /* GoalUpdateRequest.swift in Sources */,
+				25A05C5D288FC34C0077A005 /* AccountCreateViewModel.swift in Sources */,
+				25A05C5E288FC34C0077A005 /* AccountCreateView.swift in Sources */,
+				25A05C5F288FC34C0077A005 /* ProcessHistoryResponse.swift in Sources */,
+				25A05C60288FC34C0077A005 /* ApiProvider.swift in Sources */,
+				25A05C61288FC34C0077A005 /* ProcessHistoryCommentView.swift in Sources */,
+				25A05C62288FC34C0077A005 /* SignInStatus.swift in Sources */,
+				25A05C63288FC34C0077A005 /* DaikuFormEditor.swift in Sources */,
+				25A05C64288FC34C0077A005 /* CommentUpdateViewModel.swift in Sources */,
+				25A05C65288FC34C0077A005 /* AccountRepository.swift in Sources */,
+				25A05C66288FC34C0077A005 /* ProcessResponse.swift in Sources */,
+				25A05C67288FC34C0077A005 /* ProcessHistoryListParameter.swift in Sources */,
+				25A05C68288FC34C0077A005 /* ProcessPriority.swift in Sources */,
+				25A05C69288FC34C0077A005 /* TProcessResponse.swift in Sources */,
+				25A05C6A288FC34C0077A005 /* HomeView.swift in Sources */,
+				25A05C6B288FC34C0077A005 /* GoalDetailViewModel.swift in Sources */,
+				25A05CA128919E440077A005 /* TProcessHistory.swift in Sources */,
+				25A05C6C288FC34C0077A005 /* HomeMainViewModel.swift in Sources */,
+				25A05C6D288FC34C0077A005 /* BlurView.swift in Sources */,
+				25A05C6E288FC34C0077A005 /* ProcessCreateViewModel.swift in Sources */,
+				25A05C6F288FC34C0077A005 /* ProcessHistoryCommentRequest.swift in Sources */,
+				25A05C70288FC34C0077A005 /* GoalCreateRequest.swift in Sources */,
+				25A05C71288FC34C0077A005 /* GoalArchiveEditView.swift in Sources */,
+				25A05C72288FC34C0077A005 /* CommentUpdateFormView.swift in Sources */,
+				25A05C73288FC34C0077A005 /* GoalDetailParameter.swift in Sources */,
+				25A05C74288FC34C0077A005 /* ApiService.swift in Sources */,
+				25A05C75288FC34C0077A005 /* GoalFavoriteService.swift in Sources */,
+				25A05C76288FC34C0077A005 /* ApiError.swift in Sources */,
+				25A05C77288FC34C0077A005 /* ProcessCreateParameter.swift in Sources */,
+				25A05C78288FC34C0077A005 /* AuthRouter.swift in Sources */,
+				25A05C79288FC34C0077A005 /* ProcessRepository.swift in Sources */,
+				25A05C7A288FC34C0077A005 /* AccountExistView.swift in Sources */,
+				25A05C7B288FC34C0077A005 /* daiku_app_iosApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		25C2B92B285BA1F20077B013 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25A9D691288413D700F8A7EB /* PublishLevel.swift in Sources */,
 				251AADB0287559EA0008CFDE /* PickerBase.swift in Sources */,
+				25A05C04288E88FB0077A005 /* ProcessCreateParameter.swift in Sources */,
 				2507F9AE285C4B6F00A14A51 /* UnAuthView.swift in Sources */,
 				256D566F28621F9700D61541 /* URLRequest.swift in Sources */,
+				25A05BF8288E377C0077A005 /* StringExtension.swift in Sources */,
 				251AADA62874A9390008CFDE /* ProcessCreateView.swift in Sources */,
+				25A05BE52887D4800077A005 /* GoalArchiveUpdateRequest.swift in Sources */,
+				25A05C0B288E89950077A005 /* ProcessUpdateRequest.swift in Sources */,
 				259BE5DA2870174E00098DBC /* NoBody.swift in Sources */,
 				25A9D669287FED3800F8A7EB /* StatusUpdateRequest.swift in Sources */,
 				2507F9C3285CE81200A14A51 /* TermsOfUseView.swift in Sources */,
+				25A05BEC2887E9120077A005 /* GoalArchiveEditView.swift in Sources */,
 				256D56A6286DA72D00D61541 /* GoalCreateViewModel.swift in Sources */,
+				25A05BF2288948CA0077A005 /* GoalArchiveUpdatingFlgEditRequest.swift in Sources */,
 				259BE5E1287075FF00098DBC /* GoalResponse.swift in Sources */,
 				25A9D657287EBC7600F8A7EB /* CommentUpdateRequest.swift in Sources */,
+				25A05C8B2890D3E00077A005 /* DateExtention.swift in Sources */,
 				2507F9A3285C238E00A14A51 /* SignInView.swift in Sources */,
 				256D567D28676BB900D61541 /* ApiErrorResponse.swift in Sources */,
+				25A05C08288E88FB0077A005 /* ProcessDetailParameter.swift in Sources */,
 				251AAD7E28731EEF0008CFDE /* GoalFavoriteRepository.swift in Sources */,
 				256D569B286B595E00D61541 /* GoalArchiveRequest.swift in Sources */,
 				251AAD812873204B0008CFDE /* GoalFavoriteCreateRequest.swift in Sources */,
@@ -1121,12 +1551,17 @@
 				25A9D64D2879E49300F8A7EB /* ProcessHistoryCommentView.swift in Sources */,
 				259BE5DD287022F600098DBC /* AccountMainViewModel.swift in Sources */,
 				259BE5D1286FFEBE00098DBC /* GoalService.swift in Sources */,
+				25A05BE92887DF760077A005 /* TGoalsArchiveResponse.swift in Sources */,
 				256D5693286B572B00D61541 /* HomeService.swift in Sources */,
+				25A9D6802882C61600F8A7EB /* GoalArchiveDetailViewModel.swift in Sources */,
+				25A05BF5288D49650077A005 /* AccountUpdateRequest.swift in Sources */,
 				256D56832869729400D61541 /* LoadingView.swift in Sources */,
 				251AADAD287555F90008CFDE /* DaikuPickerView.swift in Sources */,
 				256D56722862BC4400D61541 /* HttpMethod.swift in Sources */,
+				25A05C8F289109270077A005 /* MoreText.swift in Sources */,
 				256D568D286A026800D61541 /* AccountCreateRequest.swift in Sources */,
 				25A9D665287FE36800F8A7EB /* StatusUpdateViewModel.swift in Sources */,
+				25A05BE32887D40B0077A005 /* GoalArchiveCreateRequest.swift in Sources */,
 				25A9D67C28829E8B00F8A7EB /* GoalArchiveDetailView.swift in Sources */,
 				256D5697286B577700D61541 /* HomeResponse.swift in Sources */,
 				25A9D663287FE2F100F8A7EB /* StatusUpdateView.swift in Sources */,
@@ -1137,34 +1572,41 @@
 				25A9D6532879F51400F8A7EB /* ProcessHistoryCommentRequest.swift in Sources */,
 				25A9D6712880796700F8A7EB /* FavoriteMainViewModel.swift in Sources */,
 				251AAD782872A99C0008CFDE /* MyGoalLlistParameter.swift in Sources */,
+				25A05C06288E88FB0077A005 /* ProcessListParameter.swift in Sources */,
 				25645B1B2876CA9700A8B334 /* ProcessDetailViewModel.swift in Sources */,
 				25645B192876CA7900A8B334 /* ProcessDetailView.swift in Sources */,
 				251AAD8E2874064E0008CFDE /* RefreshView.swift in Sources */,
 				2507F99C285C175E00A14A51 /* AccountExistViewModel.swift in Sources */,
+				25A05C972891145B0077A005 /* ProcessTermUpdateViewModel.swift in Sources */,
 				25A9D66D2880134300F8A7EB /* FavoriteMainView.swift in Sources */,
+				25A05C93289114210077A005 /* ProcessTermUpdateView.swift in Sources */,
 				2507F9BD285CDE1000A14A51 /* PrivacyPolicyView.swift in Sources */,
-				251AAD9B28746DFA0008CFDE /* ProcessListParameter.swift in Sources */,
 				25645B252876DE4900A8B334 /* ProcessHistoryService.swift in Sources */,
 				256D569E286C28E100D61541 /* HomeRepository.swift in Sources */,
-				251AADB9287599830008CFDE /* ProcessCreateParameter.swift in Sources */,
+				25A9D68D2883200100F8A7EB /* GoalArchiveRepository.swift in Sources */,
 				256D566528619A1B00D61541 /* AccountService.swift in Sources */,
 				25A9D67528807C8700F8A7EB /* GoalFavoriteResponse.swift in Sources */,
 				25C2B935285BA1F20077B013 /* ContentView.swift in Sources */,
+				25A05C9B28919D8C0077A005 /* ProcessTermUpdateRequest.swift in Sources */,
+				25A9D68528831D1E00F8A7EB /* GoalArchiveService.swift in Sources */,
 				256D565D286077D800D61541 /* RequestType.swift in Sources */,
 				2507F9B2285C808A00A14A51 /* DaikuWebView.swift in Sources */,
 				256D56A2286D807D00D61541 /* GoalCreateView.swift in Sources */,
 				251AADB32875773B0008CFDE /* ProcessStatus.swift in Sources */,
 				25A9D65A287EC03A00F8A7EB /* CommentUpdateFormView.swift in Sources */,
 				256D5677286370FF00D61541 /* AccountResponse.swift in Sources */,
+				25A9D68828831D9200F8A7EB /* GoalArchiveDetailParameter.swift in Sources */,
 				2507F9C9285D935400A14A51 /* AccountMainView.swift in Sources */,
 				256D56872869899600D61541 /* AccountCreateViewModel.swift in Sources */,
 				25A9D678288080F100F8A7EB /* GoalFavoriteSearchParameter.swift in Sources */,
 				251AAD8A287355BC0008CFDE /* GoalDetailView.swift in Sources */,
 				251AAD882873558C0008CFDE /* GoalRouter.swift in Sources */,
+				25A05BE02886B29D0077A005 /* GoalUpdateRequest.swift in Sources */,
 				251AAD9728746DBE0008CFDE /* ProcessService.swift in Sources */,
 				259BE5D5287013A100098DBC /* GoalRepository.swift in Sources */,
 				2507F9A8285C23DD00A14A51 /* AccountCreateView.swift in Sources */,
 				25A9D6512879F4D100F8A7EB /* ProcessHistoryCommentCreateViewModel.swift in Sources */,
+				25A9D6832882C74500F8A7EB /* GoalArchiveResponse.swift in Sources */,
 				25645B2D2876DFE300A8B334 /* ProcessHistoryResponse.swift in Sources */,
 				256D56682861E90D00D61541 /* ApiProvider.swift in Sources */,
 				2507F9A0285C17BA00A14A51 /* SignInStatus.swift in Sources */,
@@ -1173,9 +1615,10 @@
 				256D566028616ACD00D61541 /* AccountRepository.swift in Sources */,
 				251AAD9F28746EE70008CFDE /* ProcessResponse.swift in Sources */,
 				25645B282876DEAD00A8B334 /* ProcessHistoryListParameter.swift in Sources */,
-				25645B1F2876DACC00A8B334 /* ProcessDetailParameter.swift in Sources */,
 				251AADB6287580320008CFDE /* ProcessPriority.swift in Sources */,
+				25A05BEE2887F8920077A005 /* GoalArchiveEditViewModel.swift in Sources */,
 				251AADBC2875B7540008CFDE /* TProcessResponse.swift in Sources */,
+				25A05C9F28919E440077A005 /* TProcessHistory.swift in Sources */,
 				2507F9AB285C23F900A14A51 /* HomeView.swift in Sources */,
 				251AAD91287435820008CFDE /* GoalDetailViewModel.swift in Sources */,
 				2507F9CD285DB02000A14A51 /* HomeMainViewModel.swift in Sources */,
@@ -1231,10 +1674,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "http://127.0.0.1:8080";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"daiku-app-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = G442G6U3MC;
+				DOMAIN = aaaaaaaa;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "dev-daiku-app-ios-Info.plist";
@@ -1253,6 +1698,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				domain_aaaa = a;
 			};
 			name = Debug;
 		};
@@ -1261,13 +1707,78 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "http://127.0.0.1:8080";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"daiku-app-ios/Preview Content\"";
+				DEVELOPMENT_TEAM = G442G6U3MC;
+				DOMAIN = aaaaaaaa;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "dev-daiku-app-ios-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goen.daiku-app-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				domain_aaaa = a;
+			};
+			name = Release;
+		};
+		25A05C86288FC34C0077A005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_API = "https://daiku-app.dev.goenway.com";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"daiku-app-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = G442G6U3MC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "dev-daiku-app-ios-Info.plist";
+				INFOPLIST_FILE = "stg-daiku-app-ios-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goen.daiku-app-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		25A05C87288FC34C0077A005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_API = "https://daiku-app.dev.goenway.com";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"daiku-app-ios/Preview Content\"";
+				DEVELOPMENT_TEAM = G442G6U3MC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "stg-daiku-app-ios-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1336,6 +1847,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_PREPROCESS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1390,6 +1902,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_PREPROCESS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -1546,6 +2059,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		25A05C85288FC34C0077A005 /* Build configuration list for PBXNativeTarget "stg-daiku-app-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25A05C86288FC34C0077A005 /* Debug */,
+				25A05C87288FC34C0077A005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		25C2B92A285BA1F20077B013 /* Build configuration list for PBXProject "daiku-app-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1601,6 +2123,22 @@
 				minimumVersion = 6.0.0;
 			};
 		};
+		25A05C0F288FC34C0077A005 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		25A05C12288FC34C0077A005 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 		25C2B95C285BA7990077B013 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -1638,6 +2176,26 @@
 		2507F977285BAA6200A14A51 /* GoogleSignInSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2507F976285BAA6200A14A51 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		25A05C0E288FC34C0077A005 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25A05C0F288FC34C0077A005 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		25A05C10288FC34C0077A005 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25A05C0F288FC34C0077A005 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		25A05C11288FC34C0077A005 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25A05C12288FC34C0077A005 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		25A05C13288FC34C0077A005 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25A05C12288FC34C0077A005 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
 		};
 		25C2B95D285BA7990077B013 /* FirebaseAnalytics */ = {
