@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 class ProcessHistoryCommentCreateViewModel: ObservableObject {
     
@@ -16,14 +17,21 @@ class ProcessHistoryCommentCreateViewModel: ObservableObject {
     
     @Published var formType: ProcessHisotryFormType = .Not
     
+    @Published var isSaveButton: Bool = false
+    
+    @Published var isSending: Bool = false
+    
     private var processId: Int = 0
     
     private var processHisotryRepository: ProcessHistoryRepository = ProcessHistoryRepository()
     func saveComment( completion: @escaping (ProcessHistoryResponse) -> Void) {
+        isSending = true
         Task {
             
             let res = try await processHisotryRepository.commentSave(request: .init(processId: processId, comment: comment, processStatus: selectedProcessStatus.code, priority: selectedProcessPriority.code))
-            
+            DispatchQueue.main.async {
+                self.isSending = false
+            }
             completion(res)
         }
     }
@@ -56,6 +64,17 @@ class ProcessHistoryCommentCreateViewModel: ObservableObject {
             comment = String(text.prefix(textCount()))
         }
         isFormSheet = false
+    }
+    
+    func initVali() {
+        let commentVali = $comment.map({ !$0.isEmpty && !$0.moreGreater(size: 3000) }).eraseToAnyPublisher()
+        
+        commentVali
+            .map {
+                return $0
+            }
+            .assign(to: &$isSaveButton)
+        
     }
 }
 

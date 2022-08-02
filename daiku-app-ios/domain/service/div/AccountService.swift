@@ -11,18 +11,20 @@ enum AccountService: ApiService {
     
     case existAccount
     case createAccount(AccountCreateRequest)
+    case updateAccount(AccountCreateRequest)
+    case deleteAccount
 }
 
 extension AccountService {
     var baseURL: String {
-        return "http://127.0.0.1:8080"
+        return Bundle.main.object(forInfoDictionaryKey: "BASE_API") as! String
     }
     
     var httpMethod: HttpMethod {
         switch self {
         case .existAccount:
             return .GET
-        case .createAccount:
+        case .createAccount, .updateAccount, .deleteAccount:
             return .POST
         }
     }
@@ -33,7 +35,7 @@ extension AccountService {
     
     var responseType: Decodable? {
         switch self {
-        case .existAccount, .createAccount:
+        case .existAccount, .createAccount, .updateAccount, .deleteAccount:
             return AccountResponse.self as! Codable
         }
     }
@@ -44,6 +46,10 @@ extension AccountService {
             return "/api/account/show"
         case .createAccount:
             return "/api/account/create"
+        case .updateAccount:
+            return "/api/account/update"
+        case .deleteAccount:
+            return "/api/account/delete"
         }
     }
     
@@ -53,6 +59,10 @@ extension AccountService {
                return .requestParametes(parameters: [])
         case let .createAccount(encodable):
             return .requestBodyToJson(body: encodable)
+        case let .updateAccount(request):
+            return .requestBodyToJson(body: request)
+        case .deleteAccount:
+            return .request
         }
     }
 }

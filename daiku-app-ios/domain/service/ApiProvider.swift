@@ -20,6 +20,10 @@ struct ApiProvider {
         
         let (token) = try? await firebaseIdToken().value
         
+        if token == nil {
+            throw ApiError.responseError("E0002")
+        }
+        
         let sessionConfig = URLSessionConfiguration.default
         if service.isAuth {
             sessionConfig.httpAdditionalHeaders = [
@@ -33,8 +37,9 @@ struct ApiProvider {
             .tryMap { element -> Data in
                 guard let httpResponse = element.response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
                     let erroObj = try decoder.decode(ApiErrorResponse.self, from: element.data)
+                    print(erroObj)
                     let errorCd = erroObj.errorCd
-                    throw ApiError.responseError(errorCd: errorCd)
+                    throw ApiError.responseError(errorCd)
                 }
                 return element.data
             }
@@ -81,6 +86,9 @@ extension ApiProvider {
             return request.encoded(parameters: parameters)
         case .requestBodyToJson(body: let body):
             return try request.encoded(body: body)
+        case .request:
+            return request
+            
         }
     }
     

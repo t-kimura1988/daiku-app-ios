@@ -9,10 +9,10 @@ import Foundation
 import Combine
 
 struct GoalRepository {
-    func saveGoal(request: GoalCreateRequest) async throws -> NoBody{
+    func saveGoal(request: GoalCreateRequest) async throws -> GoalResponse{
         
         var canceller: AnyCancellable?
-        let publisher: AnyPublisher<NoBody, ApiError> = try await ApiProvider.provider(service: GoalService.createGoal(request))
+        let publisher: AnyPublisher<GoalResponse, ApiError> = try await ApiProvider.provider(service: GoalService.createGoal(request))
         
         return try await withCheckedThrowingContinuation{ continuation in
             if Task.isCancelled {
@@ -40,12 +40,52 @@ struct GoalRepository {
                             print("unknown")
                         }
                         canceller?.cancel()
-                        continuation.resume(returning: NoBody())
+                        continuation.resume(returning: GoalResponse())
                         
                     }
                 }, receiveValue: {accountRes in
                     
                     continuation.resume(returning: accountRes)
+                })
+        }
+    }
+    
+    func updateGoal(request: GoalUpdateRequest) async throws -> GoalResponse{
+        
+        var canceller: AnyCancellable?
+        let publisher: AnyPublisher<GoalResponse, ApiError> = try await ApiProvider.provider(service: GoalService.updateGoal(request))
+        
+        return try await withCheckedThrowingContinuation{ continuation in
+            if Task.isCancelled {
+                continuation.resume(throwing: Error.self as! Error)
+            }
+            
+            canceller = publisher
+                .sink(receiveCompletion: {completion in
+                    switch completion {
+                        
+                    case .finished:
+                        canceller?.cancel()
+                        break
+                    case .failure(let error):
+                        let err: ApiError = error
+                        
+                        switch(err) {
+                        case .responseError(let errorCd):
+                            print("response error \(errorCd)")
+                        case .invalidURL:
+                            print("url error")
+                        case .parseError:
+                            print("parse error")
+                        case .unknown:
+                            print("unknown")
+                        }
+                        canceller?.cancel()
+                        continuation.resume(returning: GoalResponse())
+                    }
+                }, receiveValue: {goalRes in
+                    
+                    continuation.resume(returning: goalRes)
                 })
         }
     }

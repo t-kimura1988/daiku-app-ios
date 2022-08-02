@@ -201,7 +201,6 @@ struct ProcessHistoryRepository {
                         
                     }
                 }, receiveValue: {res in
-                    print(res)
                     continuation.resume(returning: res)
                 })
         }

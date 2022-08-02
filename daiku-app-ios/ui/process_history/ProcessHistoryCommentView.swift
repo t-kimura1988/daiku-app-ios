@@ -112,6 +112,7 @@ struct ProcessHistoryCommentView: View {
                     }, label: {
                         Text("保存")
                     })
+                    .disabled(!pHCommentCreateVM.isSaveButton || pHCommentCreateVM.isSending)
                 }
             }
             .onAppear {
@@ -119,6 +120,8 @@ struct ProcessHistoryCommentView: View {
                     status: processDetailVM.process.statusToEnum(),
                     priority: processDetailVM.process.priorityToEnum(),
                     processId: processDetailVM.process.id)
+                
+                pHCommentCreateVM.initVali()
             }
         }
     }

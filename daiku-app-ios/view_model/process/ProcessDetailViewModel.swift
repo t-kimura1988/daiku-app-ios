@@ -14,10 +14,15 @@ class ProcessDetailViewModel: ObservableObject {
     @Published var isCommentCreateSheet: Bool = false
     @Published var isCommentUpdateSheet: Bool = false
     @Published var isStatusUpdateSheet: Bool = false
+    @Published var isTermUpdateSheet: Bool = false
     @Published var processHistoryId: Int = 0
     
     private var processRepository: ProcessRepository = ProcessRepository()
     private var processHistoryRepository: ProcessHistoryRepository = ProcessHistoryRepository()
+    
+    func initItem() {
+        processHistoryList = [ProcessHistoryResponse]()
+    }
     
     func getProcessDetail(processId: Int, goalCreateDate: String, goalId: Int) {
         Task {
@@ -49,5 +54,9 @@ class ProcessDetailViewModel: ObservableObject {
     
     func changeStatusUpdateSheet() {
         self.isStatusUpdateSheet = !self.isStatusUpdateSheet
+    }
+    
+    func changeTermUpdateSheet() {
+        self.isTermUpdateSheet = !isTermUpdateSheet
     }
 }

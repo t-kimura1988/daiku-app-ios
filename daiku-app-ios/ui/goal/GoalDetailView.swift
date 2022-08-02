@@ -12,9 +12,11 @@ struct GoalDetailView: View {
     var createDate: String = ""
     
     @EnvironmentObject var goalDetailVM: GoalDetailViewModel
+    @EnvironmentObject var homeVM: HomeMainViewModel
     @Environment(\.dismiss) var dismiss
+    @Environment(\.colorScheme) var colorScheme
     
-    @State var offset: CGFloat = 0
+    @State var buttonOffset: CGFloat = 0
     
     init(goalId: Int, createDate: String) {
         self.goalId = goalId
@@ -23,79 +25,142 @@ struct GoalDetailView: View {
     
     var body: some View {
         ScrollView (.vertical, showsIndicators: false) {
+            // goal Deital Area
             HStack {
                 // Goal Detail
                 VStack(alignment: .leading, spacing: 18) {
                     Text("目標")
                         .font(.title2)
-                    Text(goalDetailVM.goalDetail.title)
-                        .fontWeight(.bold)
-                        .font(.title2)
-                        .padding(.leading, 8)
+                    MoreText(text: goalDetailVM.goalDetail.title)
                     Text("なぜ.")
                         .font(.title2)
-                    Text(goalDetailVM.goalDetail.purpose)
-                        .fontWeight(.bold)
-                        .font(.body)
-                        .padding(.leading, 8)
+                    MoreText(text: goalDetailVM.goalDetail.purpose)
                     Text("どのように.")
                         .font(.title2)
-                    Text(goalDetailVM.goalDetail.aim)
-                        .fontWeight(.bold)
-                        .font(.body)
-                        .padding(.leading, 8)
+                    MoreText(text: goalDetailVM.goalDetail.aim)
                 }
                 Spacer()
                 
                 
             }.padding(8)
-            Divider()
-            VStack {
-                // ProcessList
-                VStack(alignment: .leading, spacing: 18) {
-                    ForEach(goalDetailVM.processList) {process in
-                        NavigationLink{
-                            ProcessDetailView(
-                                processId: process.id,
-                                goalCreateDate: process.goalCreateDate,
-                                goalId: process.goalId
-                            )
-                        } label: {
-                            VStack(alignment: .leading, spacing: 8) {
-                                HStack(alignment: .center, spacing: 8) {
-                                    Text(process.statusToEnum().title)
-                                        .fontWeight(.bold)
-                                        .padding(8)
-                                        .background(process.statusToEnum().backColor())
-                                        .cornerRadius(15)
-                                        .compositingGroup()
-                                        .shadow(color: .gray, radius: 3, x: 1, y: 1)
-                                    Text(process.priorityToEnum().title)
-                                        .fontWeight(.bold)
-                                        .padding(8)
-                                        .background(process.priorityToEnum().backColor())
-                                        .cornerRadius(15)
-                                        .compositingGroup()
-                                        .shadow(color: .gray, radius: 3, x: 1, y: 1)
-                                    
-                                    Text(process.title)
-                                        .fontWeight(.bold)
-                                    Spacer()
-                                }
-                                .padding(.leading, 8)
-                                Text(process.body)
-                                    .font(.body)
-                                    .padding(.leading, 16)
-                                    .lineLimit(3)
-                                Divider()
-                            }
-                            .contentShape(Rectangle())
-                            .foregroundColor(.primary)
-                        }
+            
+        
+            VStack(alignment: .center, spacing: 0) {
+                HStack(alignment: .center, spacing: 8) {
+                    // ボタン表示条件
+                    if goalDetailVM.goalDetail.editable() {
+                        
+                        Button(action: {
+                            goalDetailVM.changeArchiveSheetFlg()
+                        }, label: {
+                            Text("目標達成！")
+                        })
+                        .frame(width:80)
+                        .foregroundColor(.yellow)
+                        .padding(8)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.yellow, lineWidth: 1))
+                        
+                        Button(action: {
+                            goalDetailVM.changeSheetFlg()
+                        }, label: {
+                            Text("工程追加")
+                        })
+                        .frame(width:80)
+                        .foregroundColor(.blue)
+                        .padding(8)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.blue, lineWidth: 1))
+                        .padding(.leading, 50)
+                    } else {
+                        Button(action: {
+                            goalDetailVM.editUpdatingFlg(completing: {goal in
+                                goalDetailVM.getGoalDetail(goalId: goal.id, createDate: goal.createDate)
+                            })
+                        }, label: {
+                            Text("達成取消")
+                        })
+                        .frame(width:80)
+                        .foregroundColor(.red)
+                        .padding(8)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.blue, lineWidth: 1))
+                        .padding(.leading, 50)
                     }
                 }
+                .padding()
+                
                 Divider()
             }
+            .padding(.top, 20)
+            .background(colorScheme == .dark ? Color.black : Color.white)
+            .offset(y: buttonOffset < 80 ? -buttonOffset + 80 : 0)
+            .overlay(
+                GeometryReader{reader -> Color in
+                    let minY = reader.frame(in: .global).minY
+                    DispatchQueue.main.async {
+                        buttonOffset = minY
+                    }
+                    
+                    
+                    return Color.clear
+                }
+            )
+            .zIndex(1)
+            
+            
+            // ProcessList
+            ForEach(goalDetailVM.processList) {process in
+                
+                NavigationLink{
+                    ProcessDetailView(
+                        processId: process.id,
+                        goalCreateDate: process.goalCreateDate,
+                        goalId: process.goalId
+                    )
+                } label: {
+                    LazyVStack(alignment: .leading, spacing: 8) {
+                        
+                            
+                        Text(process.title)
+                            .fontWeight(.bold)
+                            .multilineTextAlignment(.leading)
+                        HStack(spacing: 8) {
+                            Text(process.statusToEnum().title)
+                                .fontWeight(.bold)
+                                .padding(8)
+                                .background(process.statusToEnum().backColor())
+                                .cornerRadius(15)
+                                .compositingGroup()
+                                .shadow(color: .gray, radius: 3, x: 1, y: 1)
+                            Text(process.priorityToEnum().title)
+                                .fontWeight(.bold)
+                                .padding(8)
+                                .background(process.priorityToEnum().backColor())
+                                .cornerRadius(15)
+                                .compositingGroup()
+                                .shadow(color: .gray, radius: 3, x: 1, y: 1)
+                            Spacer()
+                        }
+                        .padding(.leading, 8)
+                        HStack {
+                            
+                            Text(process.body)
+                                .font(.body)
+                                .padding(.leading, 16)
+                                .lineLimit(3)
+                                .multilineTextAlignment(.leading)
+                            Spacer()
+                        }
+                        Divider()
+                    }
+                    .contentShape(Rectangle())
+                    .foregroundColor(.primary)
+                    
+                }
+            }
+            Divider()
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarTitleDisplayMode(.inline)
@@ -109,13 +174,14 @@ struct GoalDetailView: View {
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
-                    goalDetailVM.changeSheetFlg()
+                    homeVM.createGoalSheet()
                 }, label: {
-                    Text("工程追加")
+                    Image(systemName: "pencil")
                 })
             }
         }
         .onAppear() {
+            goalDetailVM.initItem()
             goalDetailVM.getGoalDetail(goalId: goalId, createDate: createDate)
         }
         .fullScreenCover(isPresented: $goalDetailVM.isSheet){
@@ -124,12 +190,27 @@ struct GoalDetailView: View {
             })
                 .environmentObject(ProcessCreateViewModel())
         }
-    }
-    
-    func blurViewOpacity() -> Double {
-        let progress =  -(offset + 80) / 150
-        
-        return Double(-offset > 80 ? progress : 0)
+        .fullScreenCover(isPresented: $homeVM.isSheet) {
+            GoalCreateView(
+                goalId: self.goalId,
+                createDate: self.createDate,
+                title: goalDetailVM.goalDetail.title,
+                purpose: goalDetailVM.goalDetail.purpose,
+                aim: goalDetailVM.goalDetail.aim,
+                dueDate: goalDetailVM.goalDetail.dueDate
+            )
+            .environmentObject(GoalCreateViewModel())
+        }
+        .fullScreenCover(isPresented: $goalDetailVM.isArchiveSheet) {
+            GoalArchiveEditView(
+                closeSheet: {
+                    goalDetailVM.changeArchiveSheetFlg()
+                },
+                goalId: self.goalId,
+                createDate: self.createDate
+            )
+            .environmentObject(GoalArchiveEditViewModel())
+        }
     }
 }
 

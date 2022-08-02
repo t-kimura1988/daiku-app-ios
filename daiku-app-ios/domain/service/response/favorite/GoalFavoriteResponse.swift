@@ -33,6 +33,8 @@ struct GoalFavoriteResponse: Decodable, Identifiable {
     }
 
     func dueDateFormat() -> String {
+        print("A")
+        print(dueDate)
         let date = toDate(date: dueDate)
 
         let formatter = DateFormatter()
@@ -43,6 +45,8 @@ struct GoalFavoriteResponse: Decodable, Identifiable {
     }
     
     func favoriteAddDateFormat() -> String {
+        print("b")
+        print(favoriteAddDate)
         let date = toDate(date: favoriteAddDate)
 
         let formatter = DateFormatter()

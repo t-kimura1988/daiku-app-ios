@@ -10,7 +10,7 @@ import Foundation
 
 enum ApiError: Error {
     case invalidURL,
-         responseError(errorCd: String),
+         responseError(String),
          parseError,
          unknown
     

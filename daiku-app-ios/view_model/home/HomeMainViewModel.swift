@@ -24,9 +24,16 @@ class HomeMainViewModel: ObservableObject {
         }
     }
     
-    func createGoalSheet() {
+    func getHomeList() {
         Task {
-            self.isSheet = !self.isSheet
+            let list = try await homeReposiroty.getGoalArchiveList(body: .init(year: "2022", pageCount: "10"))
+            DispatchQueue.main.sync {
+                homeList = list
+            }
         }
+    }
+    
+    func createGoalSheet() {
+        self.isSheet = !self.isSheet
     }
 }

@@ -10,6 +10,7 @@ import Foundation
 class StatusUpdteViewModel: ObservableObject {
     @Published var processStatus: ProcessStatus = .New
     @Published var priority: ProcessPriority = .Low
+    @Published var isSending: Bool = false
     private var processId: Int = 0
     private var goalCreateDate: String = ""
     private var processHistoryRepository: ProcessHistoryRepository = ProcessHistoryRepository()
@@ -22,8 +23,12 @@ class StatusUpdteViewModel: ObservableObject {
     
     
     func updateStatus(completion: @escaping (ProcessHistoryResponse) -> Void) {
+        isSending = true
         Task {
             let res = try await processHistoryRepository.statusUpdate(request: .init(processId: processId, processStatus: processStatus.code, priority: priority.code))
+            DispatchQueue.main.async {
+                self.isSending = false
+            }
             completion(res)
         }
     }

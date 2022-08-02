@@ -9,7 +9,6 @@ import SwiftUI
 
 struct UnAuthView: View {
     var route: AuthRouter = AuthRouter()
-    
     var body: some View {
         NavigationView {
             DaikuWebView(url: "http://localhost:3000/unauth")

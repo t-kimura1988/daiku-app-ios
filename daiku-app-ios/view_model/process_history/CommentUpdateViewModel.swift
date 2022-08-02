@@ -12,6 +12,8 @@ class CommentUpdateViewModel: ObservableObject {
     @Published var processHistoryDetail: ProcessHistoryResponse = ProcessHistoryResponse()
     @Published var isFormSheet: Bool = false
     @Published var formType: ProcessHisotryFormType = .Not
+    @Published var isSaveButton: Bool = false
+    @Published var isSending: Bool = false
     
     private var processHistoryRepository: ProcessHistoryRepository = ProcessHistoryRepository()
     
@@ -29,8 +31,13 @@ class CommentUpdateViewModel: ObservableObject {
     }
     
     func updateComment(completion: @escaping (ProcessHistoryResponse) -> Void) {
+        isSending = true
         Task {
             let res = try await processHistoryRepository.commentUpdate(request: .init(processHistoryId: processHistoryId, comment: comment))
+            
+            DispatchQueue.main.async {
+                self.isSending = false
+            }
             completion(res)
         }
     }
@@ -64,4 +71,13 @@ class CommentUpdateViewModel: ObservableObject {
         isFormSheet = false
     }
     
+    
+    func initVali() {
+        let commentVali = $comment.map({ !$0.isEmpty && !$0.moreGreater(size: 3000) }).eraseToAnyPublisher()
+        
+        commentVali
+            .map{return $0}
+            .assign(to: &$isSaveButton)
+        
+    }
 }

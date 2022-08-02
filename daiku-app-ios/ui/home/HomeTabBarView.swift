@@ -12,19 +12,22 @@ struct HomeTabBarView: View {
         TabView {
             HomeView()
                 .tabItem{
-                    Text("Home")
+                    Image(systemName: "house")
+                    Text("達成")
                 }
                 .tag(1)
             
             FavoriteMainView()
                 .tabItem{
-                    Text("Favorite")
+                    Image(systemName: "bookmark.fill")
+                    Text("ブックマーク")
                 }
                 .tag(2)
             
             AccountMainView()
                 .tabItem{
-                    Text("Account")
+                    Image(systemName: "person")
+                    Text("アカウント")
                 }
                 .tag(3)
         }
@@ -33,6 +36,7 @@ struct HomeTabBarView: View {
         .environmentObject(GoalDetailViewModel())
         .environmentObject(ProcessDetailViewModel())
         .environmentObject(FavoriteMainViewModel())
+        .environmentObject(GoalArchiveDetailViewModel())
     }
 }
 

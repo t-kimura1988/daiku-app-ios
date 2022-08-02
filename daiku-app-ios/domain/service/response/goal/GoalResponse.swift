@@ -9,16 +9,37 @@ import Foundation
 
 struct GoalResponse: Decodable, Identifiable {
     var id: Int = 0
+    var createDate: String = ""
+    var accountId: Int = 0
+    var createdAccountFamilyName: String = ""
+    var createdAccountGivenName: String = ""
+    var createdAccountImg: String? = ""
     var title: String = ""
     var purpose: String = ""
     var aim: String = ""
     var dueDate: String = ""
     var favoriteId: Int? = 0
-    var createDate: String = ""
+    var updatingFlg: String? = ""
+    var archiveId: Int? = 0
     
     func isFavorite() -> Bool {
         
         return favoriteId != nil
+    }
+    
+    func isArchive() -> Bool {
+        if let _ = archiveId {
+            return true
+        }
+        
+        return false
+    }
+    
+    func editable() -> Bool {
+        if let updatingFlg = updatingFlg {
+            return updatingFlg == "1"
+        }
+        return true
     }
     
     private func dueDateToDate() -> Date {
@@ -36,5 +57,9 @@ struct GoalResponse: Decodable, Identifiable {
         
         return formatter.string(from: date)
         
+    }
+    
+    func accountName() -> String {
+        return createdAccountFamilyName + " " + createdAccountGivenName
     }
 }

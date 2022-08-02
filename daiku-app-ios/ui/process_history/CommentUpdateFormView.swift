@@ -82,11 +82,13 @@ struct CommentUpdateFormView: View {
                     }, label: {
                         Text("保存")
                     })
+                    .disabled(!commentUpdateVM.isSaveButton || commentUpdateVM.isSending)
                 }
             }
             .onAppear {
                 commentUpdateVM.initItem(processHistoryId: processHistoryId, goalCreateDate: goalCreateDate)
                 commentUpdateVM.detail()
+                commentUpdateVM.initVali()
             }
         }
     }

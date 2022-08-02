@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProcessDetailView: View {
     @EnvironmentObject var processDetailVM: ProcessDetailViewModel
+    @EnvironmentObject var goalDetailVM: GoalDetailViewModel
     @Environment(\.dismiss) var dismiss
     
     private var processId: Int = 0
@@ -23,19 +24,34 @@ struct ProcessDetailView: View {
     
     var body: some View {
         ScrollView {
-            HStack {
-                VStack(alignment: .leading, spacing: 8) {
-                    Text(processDetailVM.process.title)
-                        .fontWeight(.bold)
-                        .font(.title2)
-                        .padding(.leading, 8)
-                    Text(processDetailVM.process.body)
-                        .font(.body)
-                        .padding(.leading, 8)
+            // Goal Detail
+            
+            VStack(alignment: .leading, spacing: 8) {
+                Text(processDetailVM.process.title)
+                    .fontWeight(.bold)
+                    .font(.title2)
+                    .padding(.leading, 8)
+                MoreText(text: processDetailVM.process.body)
+            }
+            
+            // Term
+            HStack(alignment: .center, spacing: 8) {
+                if processDetailVM.process.processStartDate == nil {
+                    Text("期間設定なし（タップして編集）")
+                        .foregroundColor(.gray)
+                } else {
+                    Text("期間: \(processDetailVM.process.startDisp()) 〜 \(processDetailVM.process.endDisp())" )
+                        .padding(8)
+                    
                 }
                 Spacer()
             }
+            .frame(maxWidth: .infinity)
+            .onTapGesture {
+                processDetailVM.changeTermUpdateSheet()
+            }
             
+            // Status
             LazyHStack(alignment: .center, spacing: 8) {
                 Text(processDetailVM.process.statusToEnum().title)
                     .fontWeight(.bold)
@@ -58,8 +74,10 @@ struct ProcessDetailView: View {
             .onTapGesture {
                 processDetailVM.changeStatusUpdateSheet()
             }
+            
             Divider()
             
+            // Process history List
             ForEach(processDetailVM.processHistoryList) { item in
                 
                 HStack {
@@ -79,10 +97,14 @@ struct ProcessDetailView: View {
                         
                         if !item.processStatusComment().isEmpty {
                             Text(item.processStatusComment())
+                                .foregroundColor(.gray)
+                                .font(.body)
                         }
                         
                         if !item.priorityComment().isEmpty {
                             Text(item.priorityComment())
+                                .foregroundColor(.gray)
+                                .font(.body)
                         }
                         
                         if !item.titleComment().isEmpty {
@@ -108,6 +130,13 @@ struct ProcessDetailView: View {
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
+                    goalDetailVM.changeSheetFlg()
+                }, label: {
+                    Image(systemName: "pencil")
+                })
+            }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: {
                     processDetailVM.changeCommentSheet()
                 }, label: {
                     Text("コメント")
@@ -115,7 +144,7 @@ struct ProcessDetailView: View {
             }
         }
         .onAppear() {
-            print("aaaaa")
+            processDetailVM.initItem()
             processDetailVM.getProcessDetail(
                 processId: self.processId,
                 goalCreateDate: self.goalCreateDate,
@@ -142,6 +171,30 @@ struct ProcessDetailView: View {
                 priority: processDetailVM.process.priorityToEnum()
             )
             .environmentObject(StatusUpdteViewModel())
+        }
+        .fullScreenCover(isPresented: $goalDetailVM.isSheet){
+            ProcessCreateView(
+                process: {
+                    processDetailVM.getProcessDetail(processId: processId, goalCreateDate: goalCreateDate, goalId: goalId)
+                },
+                processId: processId,
+                title: processDetailVM.process.title,
+                body: processDetailVM.process.body,
+                processStatus: processDetailVM.process.processStatus,
+                priority: processDetailVM.process.priority
+                
+            )
+                .environmentObject(ProcessCreateViewModel())
+        }
+        .fullScreenCover(isPresented: $processDetailVM.isTermUpdateSheet) {
+            ProcessTermUpdateView(
+                start: processDetailVM.process.start(),
+                end: processDetailVM.process.end(),
+                processId: processDetailVM.process.id,
+                goalCreateDate: processDetailVM.process.goalCreateDate,
+                goalId: processDetailVM.process.goalId
+            )
+            .environmentObject(ProcessTermUpdateViewModel())
         }
         
     }

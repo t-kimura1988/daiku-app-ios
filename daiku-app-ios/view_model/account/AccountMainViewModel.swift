@@ -17,15 +17,20 @@ class AccountMainViewModel: ObservableObject {
     
     @Published var currentTab: String = TabButtonTitle.MyGoal.rawValue
     @Published var isBookmark: Bool = false
+    @Published var isUpdateAccount: Bool = false
     
     init() {
+    }
+    
+    func changeUpdateAccount() {
+        isUpdateAccount = !isUpdateAccount
     }
     
     func onApperLoadData() {
         Task {
             let accountRes = try await accountRepository.getAccount()
             DispatchQueue.main.sync {
-                account = accountRes!
+                account = accountRes
             }
         }
         
@@ -47,6 +52,14 @@ class AccountMainViewModel: ObservableObject {
     func changeGoalFavorite(request: GoalFavoriteCreateRequest, completion: @escaping () -> Void) {
         Task {
             _ = try await goalFavoriteRepository.changeGoalFavorite(request: request)
+            
+            completion()
+        }
+    }
+    
+    func deleteAccount(completion: @escaping () -> Void) {
+        Task {
+            _ = try await accountRepository.deleteAccount()
             
             completion()
         }

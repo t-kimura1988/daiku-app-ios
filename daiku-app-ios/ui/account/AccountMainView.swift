@@ -10,6 +10,7 @@ import AVFoundation
 
 struct AccountMainView: View {
     @EnvironmentObject var accountMainVm: AccountMainViewModel
+    @EnvironmentObject var accountExistVM: AccountExistViewModel
     @State var offset: CGFloat = 0
     @State var tabBarOffset: CGFloat = 0
     @State var titleOffet: CGFloat = 0
@@ -23,7 +24,7 @@ struct AccountMainView: View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
                 RefreshView(coodinateSpaceName: "RefreshView", onRefresh: {
-                    print("REFRESH!!!")
+                    accountMainVm.onApperLoadData()
                 })
                 VStack(spacing: 15) {
                     // header
@@ -80,7 +81,9 @@ struct AccountMainView: View {
                                 .scaleEffect(getScale())
                             
                             Spacer()
-                            Button(action: {}, label: {
+                            Button(action: {
+                                accountMainVm.changeUpdateAccount()
+                            }, label: {
                                 Text("編集")
                                     .padding(.vertical, 10)
                                     .padding(.horizontal)
@@ -98,6 +101,19 @@ struct AccountMainView: View {
                                     .fontWeight(.bold)
                                 Text(accountMainVm.account.nickName)
                                     .foregroundColor(.gray)
+                                
+                                Button(action: {
+                                    accountExistVM.logout()
+                                }, label: {
+                                    Text("ログアウト")
+                                        .padding(.vertical, 10)
+                                        .padding(.horizontal)
+                                        .background(
+                                            Capsule()
+                                                .stroke(Color.blue, lineWidth: 1.5)
+                                        )
+                                })
+                                
                             }
                             Spacer()
                         }.overlay(
@@ -126,7 +142,7 @@ struct AccountMainView: View {
                         Divider()
                     }
                     .padding(.top, 30)
-                    .background(Color.white)
+                    .background(colorScheme == .dark ? Color.black : Color.white)
                     .offset(y: tabBarOffset < 90 ? -tabBarOffset + 90 : 0)
                     .overlay(
                         GeometryReader{reader -> Color in
@@ -146,7 +162,6 @@ struct AccountMainView: View {
                         ForEach(accountMainVm.myGoal) { item in
                             NavigationLink{
                                 GoalDetailView(goalId: item.id, createDate: item.createDate)
-//                                    .environmentObject(GoalDetailViewModel())
                             } label: {
                                 HStack {
                                     VStack(alignment: .leading) {
@@ -154,6 +169,16 @@ struct AccountMainView: View {
                                             .font(.title)
                                             .lineLimit(1)
                                             .foregroundColor(.primary)
+                                        if item.isArchive() {
+                                            Text("達成済")
+                                                .fontWeight(.bold)
+                                                .padding(8)
+                                                .background(.green)
+                                                .foregroundColor(.primary)
+                                                .cornerRadius(15)
+                                                .compositingGroup()
+                                                .shadow(color: .gray, radius: 3, x: 1, y: 1)
+                                        }
                                         HStack {
                                             (
                                                 Text("期日:\(item.dueDateFormat())")
@@ -165,6 +190,7 @@ struct AccountMainView: View {
                                             .lineLimit(3)
                                             .padding(.top, 8)
                                             .foregroundColor(.primary)
+                                            .multilineTextAlignment(.leading)
                                     }
                                     .padding(8)
                                     Spacer()
@@ -192,8 +218,22 @@ struct AccountMainView: View {
             .ignoresSafeArea(.all, edges: .top)
             .navigationBarHidden(true)
         }
+        .navigationViewStyle(.stack)
         .onAppear{
             accountMainVm.onApperLoadData()
+        }
+        .fullScreenCover(isPresented: $accountMainVm.isUpdateAccount) {
+            AccountCreateView(
+                accountId: accountMainVm.account.id,
+                familyName: accountMainVm.account.familyName,
+                givenName: accountMainVm.account.givenName,
+                nickName: accountMainVm.account.nickName,
+                closeSheet: {
+                    accountMainVm.onApperLoadData()
+                    accountMainVm.changeUpdateAccount()
+                },
+                isClose: true)
+                .environmentObject(AccountCreateViewModel())
         }
     }
     
@@ -226,6 +266,8 @@ struct AccountMainView: View {
 struct AccountMainView_Previews: PreviewProvider {
     static var previews: some View {
         AccountMainView()
+            .environmentObject(AccountMainViewModel())
+            .environmentObject(AccountExistViewModel())
     }
 }
 

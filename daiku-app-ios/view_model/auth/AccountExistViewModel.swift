@@ -4,7 +4,7 @@
 //
 //  Created by 木村猛 on 2022/06/17.
 //
-
+import Foundation
 import Combine
 import Firebase
 import GoogleSignIn
@@ -18,20 +18,41 @@ class AccountExistViewModel: ObservableObject {
     var accountRepository: AccountRepository = AccountRepository()
     
     init() {
+        
         listener = Auth.auth().addStateDidChangeListener{auth, user in
             Task {
-                let account = try await self.accountRepository.getAccount()
                 
-                if account == nil {
-                    DispatchQueue.main.async {
-                        self.state = .SignIn_NoExist
-                    }
-                } else {
-                    if let _ = user {
+                if let _ = user {
+                    do {
+                        
+                        let account = try await self.accountRepository.getAccount()
+
                         DispatchQueue.main.async {
+                            self.account = account
                             self.state = .SignIn
                         }
+                    } catch ApiError.responseError(let code) {
+                        if code == "E0003" {
+                            // アカウントタイプエラー
+                            self.logout()
+                            DispatchQueue.main.async {
+                                self.state = .SignOut
+                            }
+                        }
+                        if code == "E0004" {
+                            // アカウント存在しないエラー
+                            DispatchQueue.main.async {
+                                self.state = .SignIn_NoExist
+                            }
+                        }
                     }
+                    
+                } else {
+                    
+                    DispatchQueue.main.async {
+                        self.state = .SignOut
+                    }
+                    
                 }
             }
         }
@@ -47,7 +68,6 @@ class AccountExistViewModel: ObservableObject {
         GIDSignIn.sharedInstance.signIn(with: config, presenting: vc) { user, error in
             
             if let error = error {
-                print(error.localizedDescription)
               return
             }
 
@@ -63,8 +83,7 @@ class AccountExistViewModel: ObservableObject {
             
             Auth.auth().signIn(with: credential) {res, err in
                 
-                if let err = err {
-                    print(err.localizedDescription)
+                if let _ = err {
                   return
                 }
                 
@@ -77,6 +96,16 @@ class AccountExistViewModel: ObservableObject {
     func loginStateToSignIn() {
         DispatchQueue.main.async {
             self.state = .SignIn
+        }
+    }
+    
+    func logout() {
+        let firebaseAuth = Auth.auth()
+        
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print("Sign out error!!! \(signOutError.userInfo)")
         }
     }
 }

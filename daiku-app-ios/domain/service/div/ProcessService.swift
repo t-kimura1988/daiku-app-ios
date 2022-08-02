@@ -11,6 +11,8 @@ enum ProcessService: ApiService {
     case processList(ProcessListParameter)
     case processDetail(ProcessDetailParameter)
     case createProcess(ProcessCreateRequest)
+    case updateProcess(ProcessUpdateRequest)
+    case updateTerm(ProcessTermRequest)
 }
 
 extension ProcessService {
@@ -22,16 +24,20 @@ extension ProcessService {
             return .requestParametes(parameters: parameters.params())
         case .createProcess(let body):
             return .requestBodyToJson(body: body)
+        case .updateProcess(let body):
+            return .requestBodyToJson(body: body)
+        case .updateTerm(let body):
+            return .requestBodyToJson(body: body)
         }
     }
     var baseURL: String {
-        return "http://127.0.0.1:8080"
+        return Bundle.main.object(forInfoDictionaryKey: "BASE_API") as! String
     }
     var httpMethod: HttpMethod {
         switch self {
         case .processList, .processDetail:
             return .GET
-        case .createProcess:
+        case .createProcess, .updateProcess, .updateTerm:
             return .POST
         }
     }
@@ -46,14 +52,18 @@ extension ProcessService {
             return "/api/process/detail"
         case .createProcess:
             return "/api/process/create"
+        case .updateProcess:
+            return "/api/process/update"
+        case .updateTerm:
+            return "/api/process/update/process-date"
         }
     }
     var responseType: Decodable? {
         switch self {
-        case .processList, .processDetail:
+        case .processList, .processDetail, .updateTerm:
             return ProcessResponse.self as! Codable
-        case .createProcess:
-            return NoBody.self as! Codable
+        case .createProcess, .updateProcess:
+            return TProcessResponse.self as! Codable
         }
     }
     

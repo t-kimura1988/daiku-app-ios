@@ -27,4 +27,8 @@ struct HomeResponse: Decodable, Identifiable {
     func accountName() -> String{
         return self.familyName + " " + self.givenName
     }
+    
+    func getPublish() -> PublishLevel {
+        return PublishLevel.init(rowValue: publish)
+    }
 }

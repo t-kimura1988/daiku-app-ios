@@ -13,8 +13,19 @@ struct ProcessCreateView: View {
     
     var process: () -> Void
     
-    init(process: @escaping () -> Void) {
+    private var processId: Int = 0
+    private var title: String = ""
+    private var processBody: String = ""
+    private var processStatus: String = ""
+    private var priority: String = ""
+    
+    init(process: @escaping () -> Void = {}, processId: Int = 0, title: String = "", body: String = "", processStatus: String = "", priority: String = "") {
         self.process = process
+        self.processId = processId
+        self.title = title
+        self.processBody = body
+        self.processStatus = processStatus
+        self.priority = priority
     }
     
     var body: some View {
@@ -131,7 +142,7 @@ struct ProcessCreateView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
-                        processCreateVM.saveProcess(goalId: goalDetailVM.goalDetail.id, goalCreateDate: goalDetailVM.goalDetail.createDate) {
+                        processCreateVM.saveProcess() {
                             
                             goalDetailVM.changeSheetFlg()
                             
@@ -141,7 +152,12 @@ struct ProcessCreateView: View {
                     }, label: {
                         Text("保存")
                     })
+                    .disabled(!processCreateVM.isSaveButton || processCreateVM.isSending)
                 }
+            }
+            .onAppear{
+                processCreateVM.initItem(processId: processId, goalId: goalDetailVM.goalDetail.id, goalCreateDate: goalDetailVM.goalDetail.createDate, title: self.title, body: self.processBody, process: self.processStatus, priority: self.priority)
+                processCreateVM.initVali()
             }
         }
     }

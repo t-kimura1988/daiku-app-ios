@@ -35,4 +35,38 @@ struct ProcessResponse: Decodable, Identifiable {
     func priorityToEnum() -> ProcessPriority {
         return ProcessPriority.init(rawValue: priority)
     }
+    
+    func startDisp() -> String {
+        if let processStartDate = processStartDate {
+            return processStartDate.toFormatter()
+        }
+        
+        return Date().toString(format: "yyyy年MM月dd日")
+    }
+    
+    func endDisp() -> String {
+        if let processEndDate = processEndDate {
+            return processEndDate.toFormatter()
+        }
+        
+        return Date().toString(format: "yyyy年MM月dd日")
+    }
+    
+    func start() -> Date {
+        if let processStartDate = processStartDate {
+            return processStartDate.toDate()
+        }
+        
+        return Date()
+    }
+    
+    func end() -> Date {
+        if let processEndDate = processEndDate {
+            return processEndDate.toDate()
+        }
+        
+        return Date()
+    }
 }
+
+

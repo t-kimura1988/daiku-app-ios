@@ -51,11 +51,12 @@ struct FavoriteMainView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
-            .navigationBarTitle(Text("お気に入り"))
+            .navigationBarTitle(Text("ブックマーク"))
         }
         .onAppear{
             favoriteMainVM.search()
         }
+        .navigationViewStyle(.stack)
     }
 }
 
