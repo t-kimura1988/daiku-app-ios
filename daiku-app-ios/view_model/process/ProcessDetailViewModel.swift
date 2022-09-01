@@ -44,7 +44,9 @@ class ProcessDetailViewModel: ObservableObject {
     }
     
     func changeCommentSheet() {
-        self.isCommentCreateSheet = !self.isCommentCreateSheet
+        DispatchQueue.main.async {
+            self.isCommentCreateSheet = !self.isCommentCreateSheet
+        }
     }
     
     func changeCommentUpdateSheet(processHistoryId: Int) {
@@ -53,10 +55,14 @@ class ProcessDetailViewModel: ObservableObject {
     }
     
     func changeStatusUpdateSheet() {
-        self.isStatusUpdateSheet = !self.isStatusUpdateSheet
+        DispatchQueue.main.async {
+            self.isStatusUpdateSheet = !self.isStatusUpdateSheet
+        }
     }
     
     func changeTermUpdateSheet() {
-        self.isTermUpdateSheet = !isTermUpdateSheet
+        DispatchQueue.main.async {
+            self.isTermUpdateSheet = !self.isTermUpdateSheet
+        }
     }
 }

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BASE_API</key>
-	<string>https://daiku-app.dev.goenway.com</string>
+	<string>https://daiku-app.prd.goenway.com</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -11,11 +11,11 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.77378983566-g5njp7e6f271rt2sn3egkv47dmmurdpb</string>
+				<string>com.googleusercontent.apps.661878451793-jto865gapbvc7kvpeuchfun8dg2939ot</string>
 			</array>
 		</dict>
 	</array>
 	<key>HOME_PAGE_URL</key>
-	<string>https://dev.goenway.com</string>
+	<string>https://goenway.com</string>
 </dict>
 </plist>

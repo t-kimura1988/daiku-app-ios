@@ -1,18 +1,17 @@
 //
-//  HomeResponse.swift
+//  GoalArchiveInfoResponse.swift
 //  daiku-app-ios
 //
-//  Created by 木村猛 on 2022/06/29.
+//  Created by 木村猛 on 2022/08/15.
 //
 
 import Foundation
 
-struct HomeResponse: Decodable, Identifiable {
+struct GoalArchiveInfoResponse: Decodable, Identifiable {
     var id: Int = 0
     var archivesCreateDate: String = ""
     var publish: String = ""
     var thoughts: String = ""
-    var updatingFlg: String? = ""
     var goalId: Int  = 0
     var goalCreateDate: String = ""
     var title: String = ""
@@ -24,6 +23,8 @@ struct HomeResponse: Decodable, Identifiable {
     var nickName: String = ""
     var userImage: String? = ""
     var processCount: Int = 0
+    var updatingFlg: String? = ""
+    var goalCreateAccountId: Int = 0
     
     func accountName() -> String{
         return self.familyName + " " + self.givenName
@@ -31,5 +32,12 @@ struct HomeResponse: Decodable, Identifiable {
     
     func getPublish() -> PublishLevel {
         return PublishLevel.init(rowValue: publish)
+    }
+    
+    func isUpdating() -> Bool {
+        if let updatingFlg = updatingFlg {
+            return updatingFlg == "1"
+        }
+        return false
     }
 }

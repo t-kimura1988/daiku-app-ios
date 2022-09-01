@@ -18,28 +18,33 @@ struct ApiProvider {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         decoder.dateDecodingStrategy = .iso8601
         
-        let (token) = try? await firebaseIdToken().value
-        
-        if token == nil {
-            throw ApiError.responseError("E0002")
-        }
-        
         let sessionConfig = URLSessionConfiguration.default
         if service.isAuth {
+            
+            let (token) = try? await firebaseIdToken().value
+            
+            
+            if token == nil {
+                throw ApiError.responseError("E0002")
+            }
+            
             sessionConfig.httpAdditionalHeaders = [
                 "Authorization": "Bearer \(token!)"
             ]
         }
         let session = URLSession(configuration: sessionConfig)
         return session
-            .dataTaskPublisher(for: try self.urlRequest(service: service, token: token))
+            .dataTaskPublisher(for: try self.urlRequest(service: service))
             .receive(on: DispatchQueue.main)
             .tryMap { element -> Data in
                 guard let httpResponse = element.response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-                    let erroObj = try decoder.decode(ApiErrorResponse.self, from: element.data)
-                    print(erroObj)
-                    let errorCd = erroObj.errorCd
-                    throw ApiError.responseError(errorCd)
+                    
+                    let errorObj = try decoder.decode(ApiErrorResponse.self, from: element.data)
+                    if let error = errorObj.errorCd {
+                        throw ApiError.responseError(error)
+                    }
+                    
+                    throw ApiError.httpError(errorObj.code)
                 }
                 return element.data
             }
@@ -67,7 +72,7 @@ struct ApiProvider {
 }
 
 extension ApiProvider {
-    static func urlRequest<T: ApiService>(service: T, token: String?) throws -> URLRequest {
+    static func urlRequest<T: ApiService>(service: T) throws -> URLRequest {
         
         let url: String = service.baseURL
         let path: String = service.path

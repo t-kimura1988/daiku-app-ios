@@ -13,7 +13,7 @@ struct GoalArchiveRequest {
     func params() -> [URLQueryItem] {
         let queryItems = [
             URLQueryItem(name: "year", value: year),
-            URLQueryItem(name: "pageCount", value: pageCount)
+            URLQueryItem(name: "page", value: pageCount)
         ]
         
         return queryItems

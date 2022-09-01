@@ -10,6 +10,8 @@ import SwiftUI
 struct GoalDetailView: View {
     var goalId: Int = 0
     var createDate: String = ""
+    var archiveId: Int = 0
+    var archiveCreateDate: String = ""
     
     @EnvironmentObject var goalDetailVM: GoalDetailViewModel
     @EnvironmentObject var homeVM: HomeMainViewModel
@@ -18,9 +20,11 @@ struct GoalDetailView: View {
     
     @State var buttonOffset: CGFloat = 0
     
-    init(goalId: Int, createDate: String) {
+    init(goalId: Int, createDate: String, archiveId: Int, archiveCreateDate: String) {
         self.goalId = goalId
         self.createDate = createDate
+        self.archiveId = archiveId
+        self.archiveCreateDate = archiveCreateDate
     }
     
     var body: some View {
@@ -126,6 +130,10 @@ struct GoalDetailView: View {
                         Text(process.title)
                             .fontWeight(.bold)
                             .multilineTextAlignment(.leading)
+                        
+                        Text("\(process.startDisp()) 〜 \(process.endDisp()) ")
+                            .foregroundColor(.gray)
+                            .multilineTextAlignment(.leading)
                         HStack(spacing: 8) {
                             Text(process.statusToEnum().title)
                                 .fontWeight(.bold)
@@ -159,8 +167,8 @@ struct GoalDetailView: View {
                     .foregroundColor(.primary)
                     
                 }
+                Divider()
             }
-            Divider()
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarTitleDisplayMode(.inline)
@@ -177,11 +185,10 @@ struct GoalDetailView: View {
                     homeVM.createGoalSheet()
                 }, label: {
                     Image(systemName: "pencil")
-                })
+                }).disabled(!goalDetailVM.goalDetail.editable())
             }
         }
         .onAppear() {
-            goalDetailVM.initItem()
             goalDetailVM.getGoalDetail(goalId: goalId, createDate: createDate)
         }
         .fullScreenCover(isPresented: $goalDetailVM.isSheet){
@@ -207,7 +214,9 @@ struct GoalDetailView: View {
                     goalDetailVM.changeArchiveSheetFlg()
                 },
                 goalId: self.goalId,
-                createDate: self.createDate
+                createDate: self.createDate,
+                archiveId: self.archiveId,
+                archiveCreateDate: self.archiveCreateDate
             )
             .environmentObject(GoalArchiveEditViewModel())
         }
@@ -216,6 +225,6 @@ struct GoalDetailView: View {
 
 struct GoalDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        GoalDetailView(goalId: 1, createDate: "2022-07-30")
+        GoalDetailView(goalId: 1, createDate: "2022-07-30", archiveId: 1, archiveCreateDate: "2022-07-30")
     }
 }

@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct PrivacyPolicyView: View {
+    var daikuHomePageUrl: String = Bundle.main.object(forInfoDictionaryKey: "HOME_PAGE_URL") as! String
     var body: some View {
-        DaikuWebView(url: "http://localhost:3000/privacy-policy")
+        DaikuWebView(url: "\(daikuHomePageUrl)/privacy-policy")
             .navigationTitle("D-Aic")
     }
 }

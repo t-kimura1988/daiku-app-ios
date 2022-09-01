@@ -29,7 +29,6 @@ struct MoreText: View {
                     .padding()
                     .onPreferenceChange(SizePreference.self) { textSize in
                         if self.isFirst == true {
-                            print(textSize.height)
                             if textSize.height > 80 {
                                 self.textHeight = 80
                                 self.isFold = true

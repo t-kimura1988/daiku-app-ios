@@ -17,6 +17,7 @@ class AccountCreateViewModel: ObservableObject {
     
     @Published var isSaveButton: Bool = false
     @Published var isSending: Bool = false
+    @Published var isDeleteAlert: Bool = false
     
     private var accountRepository: AccountRepository = AccountRepository()
     
@@ -25,6 +26,14 @@ class AccountCreateViewModel: ObservableObject {
         self.familyName = familyName
         self.givenName = givenName
         self.nickName = nickName
+    }
+    
+    func openDeleteAlert() {
+        isDeleteAlert = true
+    }
+    
+    func closeDeleteAlert() {
+        isDeleteAlert = false
     }
     
     func isSave() -> Bool {
@@ -52,10 +61,22 @@ class AccountCreateViewModel: ObservableObject {
         }
     }
     
+    func deleteAccount(completion: @escaping (AccountResponse) -> Void) {
+        isSending = true
+        
+        Task {
+            let account = try await accountRepository.deleteAccount()
+            DispatchQueue.main.async {
+                self.isSending = false
+            }
+            completion(account!)
+        }
+    }
+    
     func initVali() {
         let familyNameVali = $familyName.map({ !$0.isEmpty && !$0.moreGreater(size: 100) }).eraseToAnyPublisher()
         let givenNameVali = $givenName.map({ !$0.isEmpty && !$0.moreGreater(size: 100)}).eraseToAnyPublisher()
-        let nickNameVali = $nickName.map({ !$0.isEmpty && !$0.moreGreater(size: 100) }).eraseToAnyPublisher()
+        let nickNameVali = $nickName.map({ !$0.moreGreater(size: 100) }).eraseToAnyPublisher()
         
         Publishers.CombineLatest3(familyNameVali, givenNameVali, nickNameVali)
             .map({ [$0.0, $0.1, $0.2] })

@@ -17,17 +17,18 @@ struct GoalArchiveDetailView: View {
     
     private var archiveId: Int = 0
     private var archiveCreateDate: String = ""
+    private var goalCreateAccountId: Int = 0
     
-    init(archiveId: Int, archiveCreateDate: String) {
+    init(archiveId: Int, archiveCreateDate: String, goalCreateAccountId: Int = 0) {
         self.archiveId = archiveId
         self.archiveCreateDate = archiveCreateDate
+        self.goalCreateAccountId = goalCreateAccountId
     }
     
     var body: some View {
         let archive = goalArchiveDetailVM.archive
         let goal = goalArchiveDetailVM.goal
         let processList = goalArchiveDetailVM.processList
-        let account = accountVM.account
         ScrollView {
             HStack {
                 VStack(alignment: .leading, spacing: 8) {
@@ -38,7 +39,7 @@ struct GoalArchiveDetailView: View {
                             .foregroundColor(.gray)
                     }
                     
-                    if goal.accountId == account.id {
+                    if goalArchiveDetailVM.isEditButton {
                         
                         Button(action: {
                             goalArchiveDetailVM.changeArchiveEditSheet()
@@ -62,9 +63,14 @@ struct GoalArchiveDetailView: View {
                     Text(goal.title)
                         .font(.title2)
                         .fontWeight(.bold)
+                    
+                    Text("なぜ.")
+                        .font(.title2)
                     Text(goal.purpose)
                         .font(.body)
                         .padding(8)
+                    Text("どのように実現するか.")
+                        .font(.title2)
                     Text(goal.aim)
                         .font(.body)
                         .padding(8)
@@ -103,7 +109,7 @@ struct GoalArchiveDetailView: View {
             // tab content
             switch goalArchiveDetailVM.tab() {
             case .Process:
-                if archive.getPublish() == .All {
+                if processList.count > 0 {
                     ForEach(processList) { process in
                         HStack {
                             VStack(alignment: .leading, spacing: 8) {
@@ -139,9 +145,9 @@ struct GoalArchiveDetailView: View {
             }
         }
         .onAppear{
-            goalArchiveDetailVM.initItem(archiveId: archiveId, archiveCreateDate: archiveCreateDate)
+            goalArchiveDetailVM.initItem(archiveId: archiveId, archiveCreateDate: archiveCreateDate, goalCreateAccountId: goalCreateAccountId)
             
-            goalArchiveDetailVM.detail()
+            goalArchiveDetailVM.detail(accountId: accountVM.account.id)
         }
         .fullScreenCover(isPresented: $goalArchiveDetailVM.isEditSheet) {
             GoalArchiveEditView(

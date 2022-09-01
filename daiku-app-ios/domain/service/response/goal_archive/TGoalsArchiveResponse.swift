@@ -14,8 +14,8 @@ struct TGoalsArchiveResponse: Decodable, Identifiable {
     var thoughts: String = ""
     var updatingFlg: String = ""
     var publish: String = ""
-    var createBy: Int = 0
-    var createdAt: String = ""
-    var updatedAt: String = ""
-    var updatedBy: Int = 0
+    var createBy: Int? = 0
+    var createdAt: String? = ""
+    var updatedAt: String? = ""
+    var updatedBy: Int? = 0
 }

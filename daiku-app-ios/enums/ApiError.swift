@@ -11,6 +11,7 @@ import Foundation
 enum ApiError: Error {
     case invalidURL,
          responseError(String),
+         httpError(Int),
          parseError,
          unknown
     

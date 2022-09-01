@@ -73,7 +73,6 @@ struct AccountMainView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 75, height: 75)
-                                .clipShape(Circle())
                                 .padding(8)
                                 .background(colorScheme == .dark ? Color.black : Color.white)
                                 .clipShape(Circle())
@@ -157,62 +156,196 @@ struct AccountMainView: View {
                     )
                     .zIndex(1)
                 
-                    // Goal List
-                    VStack(alignment: .leading, spacing: 8) {
-                        ForEach(accountMainVm.myGoal) { item in
-                            NavigationLink{
-                                GoalDetailView(goalId: item.id, createDate: item.createDate)
-                            } label: {
-                                HStack {
-                                    VStack(alignment: .leading) {
-                                        Text(item.title)
-                                            .font(.title)
-                                            .lineLimit(1)
-                                            .foregroundColor(.primary)
-                                        if item.isArchive() {
-                                            Text("達成済")
+                    if accountMainVm.currentTab == TabButtonTitle.MyGoal.rawValue {
+                        // Goal List
+                        VStack(alignment: .leading, spacing: 8) {
+                            ForEach(accountMainVm.myGoal) { item in
+                                NavigationLink{
+                                    GoalDetailView(goalId: item.id, createDate: item.createDate, archiveId: item.getArchiveId(), archiveCreateDate: item.getArchiveCreateDate())
+                                } label: {
+                                    HStack {
+                                        VStack(alignment: .leading) {
+                                            Text(item.title)
                                                 .fontWeight(.bold)
-                                                .padding(8)
-                                                .background(.green)
+                                                .lineLimit(1)
                                                 .foregroundColor(.primary)
-                                                .cornerRadius(15)
-                                                .compositingGroup()
-                                                .shadow(color: .gray, radius: 3, x: 1, y: 1)
+                                            if item.isArchive() {
+                                                Text("達成済")
+                                                    .fontWeight(.bold)
+                                                    .padding(8)
+                                                    .background(.green)
+                                                    .foregroundColor(.primary)
+                                                    .cornerRadius(15)
+                                                    .compositingGroup()
+                                                    .shadow(color: .gray, radius: 3, x: 1, y: 1)
+                                            }
+                                            HStack {
+                                                (
+                                                    Text("期日:\(item.dueDateFormat())")
+                                                        .foregroundColor(Color.gray)
+                                                )
+                                            }
+                                            Text(item.purpose)
+                                                .font(.body)
+                                                .lineLimit(5)
+                                                .padding(.top, 8)
+                                                .foregroundColor(.primary)
+                                                .multilineTextAlignment(.leading)
                                         }
-                                        HStack {
-                                            (
-                                                Text("期日:\(item.dueDateFormat())")
-                                                    .foregroundColor(Color.gray)
-                                            )
-                                        }
-                                        Text(item.purpose)
-                                            .font(.body)
-                                            .lineLimit(3)
-                                            .padding(.top, 8)
-                                            .foregroundColor(.primary)
-                                            .multilineTextAlignment(.leading)
+                                        .padding(8)
+                                        Spacer()
                                     }
-                                    .padding(8)
-                                    Spacer()
+                                    .contentShape(Rectangle())
                                 }
-                                .contentShape(Rectangle())
+                                
+                                
+                                VStack(alignment: .center, spacing: 0) {
+                                    FavoriteButton(goal: item, changeFavorite: { goalId, createDate in
+                                        
+                                        accountMainVm.changeGoalFavorite(request: .init(goalId: goalId, goalCreateDate: createDate)) {
+                                            
+                                        }
+                                    })
+                                }.padding(.top, 10)
+                                
+                                Divider()
+                                    .frame(maxWidth: .infinity)
                             }
                             
-                            
-                            VStack(alignment: .center, spacing: 0) {
-                                FavoriteButton(goal: item, changeFavorite: { goalId, createDate in
-                                    
-                                    accountMainVm.changeGoalFavorite(request: .init(goalId: goalId, goalCreateDate: createDate)) {
-                                        
-                                    }
+                        
+                            if accountMainVm.goalListLoadFlg {
+                                Button(action: {
+                                    accountMainVm.getMyGoal()
+                                }, label: {
+                                    Text("もっと見る")
                                 })
-                            }.padding(.top, 10)
+                            }
+                        }
+                        .zIndex(0)
+                        .onAppear{
+                            if !accountMainVm.isGoalListLoading {
+                                accountMainVm.getInitMyGoal()
+                            }
+                        }
+                        
+                    } else if accountMainVm.currentTab == TabButtonTitle.Archive.rawValue{
+                        // goal archive list
+                        VStack(alignment: .leading, spacing: 8) {
+                            ForEach(accountMainVm.myGoalArchiveList) { item in
+                                NavigationLink{
+                                    GoalArchiveDetailView(archiveId: item.id, archiveCreateDate: item.archivesCreateDate, goalCreateAccountId: item.goalCreateAccountId)
+                                } label: {
+                                    HStack {
+                                        VStack(alignment: .leading) {
+                                            Text(item.title)
+                                                .fontWeight(.bold)
+                                                .lineLimit(1)
+                                                .foregroundColor(.primary)
+                                            Text(item.thoughts)
+                                                .font(.body)
+                                                .lineLimit(3)
+                                                .foregroundColor(.primary)
+                                                .multilineTextAlignment(.leading)
+                                            HStack {
+                                                Text(item.getPublish().title)
+                                                    .fontWeight(.bold)
+                                                    .padding(8)
+                                                    .background(.green)
+                                                    .foregroundColor(.primary)
+                                                    .cornerRadius(15)
+                                                    .compositingGroup()
+                                                    .shadow(color: .gray, radius: 3, x: 1, y: 1)
+                                                if item.isUpdating() {
+                                                    Text("更新中")
+                                                        .fontWeight(.bold)
+                                                        .padding(8)
+                                                        .background(.red)
+                                                        .foregroundColor(.primary)
+                                                        .cornerRadius(15)
+                                                        .compositingGroup()
+                                                        .shadow(color: .gray, radius: 3, x: 1, y: 1)
+                                                }
+                                            }
+                                        }
+                                        .padding(8)
+                                        Spacer()
+                                    }
+                                }
+                                
+                                Divider()
+                                    .frame(maxWidth: .infinity)
+                            }
+                            if accountMainVm.goalArvhiveListLoadFlg {
+                                Button(action: {
+                                    accountMainVm.getMyGoalArchive()
+                                }, label: {
+                                    Text("もっと見る")
+                                })
+                            }
+                        }
+                        .zIndex(0)
+                        .onAppear{
+                            if !accountMainVm.isGoalArchiveListLoading {
+                                accountMainVm.getInitMyGoalArchive()
+                            }
+                        }
+                        
+                    } else if accountMainVm.currentTab == TabButtonTitle.BookMark.rawValue {
+                        //Bookmark list
+                        VStack(alignment: .leading, spacing: 8) {
                             
-                            Divider()
-                                .frame(maxWidth: .infinity)
+                            ForEach(accountMainVm.goalFavoriteList) { item in
+                                
+                                NavigationLink {
+                                    GoalDetailView(goalId: item.goalId, createDate: item.goalCreateDate, archiveId: item.getArchiveId(), archiveCreateDate: item.getArchiveCreateDate())
+                                } label: {
+                                    HStack {
+                                        VStack(alignment: .leading) {
+                                            Text(item.title)
+                                                .fontWeight(.bold)
+                                                .lineLimit(1)
+                                                .foregroundColor(.primary)
+                                            
+                                            Text("追加日:\(item.favoriteAddDateFormat())")
+                                            .foregroundColor(Color.gray)
+                                            Text("期日:\(item.dueDateFormat())")
+                                                .foregroundColor(Color.gray)
+                                            Text(item.purpose)
+                                                .font(.body)
+                                                .lineLimit(3)
+                                                .padding(.top, 8)
+                                                .foregroundColor(.primary)
+                                                .multilineTextAlignment(.leading)
+                                            
+                                            HStack {
+                                                Spacer()
+                                                Text("目標作成:\(item.goalCreateAccount())")
+                                                    .foregroundColor(Color.gray)
+                                            }
+                                        }
+                                        .padding(8)
+                                        Spacer()
+                                    }
+                                    .contentShape(Rectangle())
+                                }
+                                
+                                Divider()
+                            }
+                            if accountMainVm.bookMarkListLoadFlg {
+                                Button(action: {
+                                    accountMainVm.getBookMarkList()
+                                }, label: {
+                                    Text("もっと見る")
+                                })
+                            }
+                        }
+                        .zIndex(0)
+                        .onAppear {
+                            if !accountMainVm.isBookMarkListLoading {
+                                accountMainVm.getInitBookMarkList()
+                            }
                         }
                     }
-                    .zIndex(0)
                 }
             }
             .ignoresSafeArea(.all, edges: .top)

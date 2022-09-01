@@ -48,7 +48,9 @@ struct ProcessDetailView: View {
             }
             .frame(maxWidth: .infinity)
             .onTapGesture {
-                processDetailVM.changeTermUpdateSheet()
+                if goalDetailVM.goalDetail.editable() {
+                    processDetailVM.changeTermUpdateSheet()
+                }
             }
             
             // Status
@@ -72,7 +74,9 @@ struct ProcessDetailView: View {
             }
             .frame(maxWidth: .infinity)
             .onTapGesture {
-                processDetailVM.changeStatusUpdateSheet()
+                if goalDetailVM.goalDetail.editable() {
+                    processDetailVM.changeStatusUpdateSheet()
+                }
             }
             
             Divider()
@@ -134,6 +138,7 @@ struct ProcessDetailView: View {
                 }, label: {
                     Image(systemName: "pencil")
                 })
+                .disabled(!goalDetailVM.goalDetail.editable())
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
@@ -141,6 +146,7 @@ struct ProcessDetailView: View {
                 }, label: {
                     Text("コメント")
                 })
+                .disabled(!goalDetailVM.goalDetail.editable())
             }
         }
         .onAppear() {

@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct TermsOfUseView: View {
+    var daikuHomePageUrl: String = Bundle.main.object(forInfoDictionaryKey: "HOME_PAGE_URL") as! String
     var body: some View {
-        DaikuWebView(url: "http://localhost:3000/terms-of-use")
+        DaikuWebView(url: "\(daikuHomePageUrl)/terms-of-use")
             .navigationTitle("D-Aic")
     }
 }

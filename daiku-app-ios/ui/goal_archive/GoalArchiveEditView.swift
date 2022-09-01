@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GoalArchiveEditView: View {
     @EnvironmentObject var goalArchiveEditVM: GoalArchiveEditViewModel
+    @EnvironmentObject var goalDetailVM: GoalDetailViewModel
     private var closeSheet: () -> Void
     private var goalId: Int = 0
     private var createDate: String = ""
@@ -98,12 +99,13 @@ struct GoalArchiveEditView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
                         goalArchiveEditVM.createArchive {
+                            goalDetailVM.getGoalDetail(goalId: goalId, createDate: createDate)
                             closeSheet()
                         }
                     }, label: {
                         Text("保存")
                     })
-                    .disabled(!goalArchiveEditVM.isSaveButton)
+                    .disabled(!goalArchiveEditVM.isSaveButton || goalArchiveEditVM.isSending)
                 }
             }
         }

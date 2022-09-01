@@ -24,7 +24,7 @@ struct AuthRouter {
     }
     func toTermsOfUseView() -> some View {
         return NavigationLink{
-            PrivacyPolicyView()
+            TermsOfUseView()
         } label: {
             Text("利用規約")
         }

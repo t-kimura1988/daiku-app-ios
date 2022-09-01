@@ -9,6 +9,48 @@ import Foundation
 import Combine
 
 struct GoalArchiveRepository {
+    
+    func myGoalArchive(parameter: GoalArchiveRequest) async throws -> [GoalArchiveInfoResponse] {
+        
+        var canceller: AnyCancellable?
+        let publisher: AnyPublisher<[GoalArchiveInfoResponse], ApiError> = try await ApiProvider.provider(service: GoalArchiveService.myGoalArchiveList(parameter))
+        
+        return try await withCheckedThrowingContinuation{ continuation in
+            if Task.isCancelled {
+                continuation.resume(throwing: Error.self as! Error)
+            }
+            
+            canceller = publisher
+                .sink(receiveCompletion: {completion in
+                    switch completion {
+                        
+                    case .finished:
+                        canceller?.cancel()
+                        break
+                    case .failure(let error):
+                        let err: ApiError = error
+                        
+                        switch(err) {
+                        case .responseError(let errorCd):
+                            continuation.resume(throwing: ApiError.responseError(errorCd))
+                        case .invalidURL:
+                            continuation.resume(throwing: ApiError.invalidURL)
+                        case .parseError:
+                            continuation.resume(throwing: ApiError.parseError)
+                        case .unknown:
+                            continuation.resume(throwing: ApiError.unknown)
+                        case .httpError(let code):
+                            continuation.resume(throwing: ApiError.httpError(code))
+                        }
+                        canceller?.cancel()
+                        
+                    }
+                }, receiveValue: {res in
+                    continuation.resume(returning: res)
+                })
+        }
+        
+    }
     func detail(parameter: GoalArchiveDetailParameter) async throws -> GoalArchiveResponse {
         
         var canceller: AnyCancellable?
@@ -31,16 +73,17 @@ struct GoalArchiveRepository {
                         
                         switch(err) {
                         case .responseError(let errorCd):
-                            print("response error \(errorCd)")
+                            continuation.resume(throwing: ApiError.responseError(errorCd))
                         case .invalidURL:
-                            print("url error")
+                            continuation.resume(throwing: ApiError.invalidURL)
                         case .parseError:
-                            print("parse error")
+                            continuation.resume(throwing: ApiError.parseError)
                         case .unknown:
-                            print("unknown")
+                            continuation.resume(throwing: ApiError.unknown)
+                        case .httpError(let code):
+                            continuation.resume(throwing: ApiError.httpError(code))
                         }
                         canceller?.cancel()
-                        continuation.resume(returning: GoalArchiveResponse())
                         
                     }
                 }, receiveValue: {res in
@@ -49,13 +92,11 @@ struct GoalArchiveRepository {
         }
         
     }
-    
-    
-    func create(request: GoalArchiveCreateRequest) async throws -> TGoalsArchiveResponse {
+    func myDetail(parameter: GoalArchiveDetailParameter) async throws -> GoalArchiveResponse {
         
         var canceller: AnyCancellable?
-        let publisher: AnyPublisher<TGoalsArchiveResponse, ApiError> = try await ApiProvider.provider(service: GoalArchiveService.create(request))
-        print(request)
+        let publisher: AnyPublisher<GoalArchiveResponse, ApiError> = try await ApiProvider.provider(service: GoalArchiveService.myDetail(parameter))
+        
         return try await withCheckedThrowingContinuation{ continuation in
             if Task.isCancelled {
                 continuation.resume(throwing: Error.self as! Error)
@@ -73,16 +114,100 @@ struct GoalArchiveRepository {
                         
                         switch(err) {
                         case .responseError(let errorCd):
-                            print("response error \(errorCd)")
+                            continuation.resume(throwing: ApiError.responseError(errorCd))
                         case .invalidURL:
-                            print("url error")
+                            continuation.resume(throwing: ApiError.invalidURL)
                         case .parseError:
-                            print("parse error")
+                            continuation.resume(throwing: ApiError.parseError)
                         case .unknown:
-                            print("unknown")
+                            continuation.resume(throwing: ApiError.unknown)
+                        case .httpError(let code):
+                            continuation.resume(throwing: ApiError.httpError(code))
                         }
                         canceller?.cancel()
-                        continuation.resume(returning: TGoalsArchiveResponse())
+                        
+                    }
+                }, receiveValue: {res in
+                    continuation.resume(returning: res)
+                })
+        }
+        
+    }
+    func editDisp(parameter: GoalArchiveDetailParameter) async throws -> GoalArchiveInfoResponse {
+        
+        var canceller: AnyCancellable?
+        let publisher: AnyPublisher<GoalArchiveInfoResponse, ApiError> = try await ApiProvider.provider(service: GoalArchiveService.editDisp(parameter))
+        
+        return try await withCheckedThrowingContinuation{ continuation in
+            if Task.isCancelled {
+                continuation.resume(throwing: Error.self as! Error)
+            }
+            
+            canceller = publisher
+                .sink(receiveCompletion: {completion in
+                    switch completion {
+                        
+                    case .finished:
+                        canceller?.cancel()
+                        break
+                    case .failure(let error):
+                        let err: ApiError = error
+                        
+                        switch(err) {
+                        case .responseError(let errorCd):
+                            continuation.resume(throwing: ApiError.responseError(errorCd))
+                        case .invalidURL:
+                            continuation.resume(throwing: ApiError.invalidURL)
+                        case .parseError:
+                            continuation.resume(throwing: ApiError.parseError)
+                        case .httpError(let code):
+                            continuation.resume(throwing: ApiError.httpError(code))
+                        case .unknown:
+                            continuation.resume(throwing: ApiError.unknown)
+                        }
+                        canceller?.cancel()
+                        
+                    }
+                }, receiveValue: {res in
+                    continuation.resume(returning: res)
+                })
+        }
+        
+    }
+    
+    
+    func create(request: GoalArchiveCreateRequest) async throws -> TGoalsArchiveResponse {
+        
+        var canceller: AnyCancellable?
+        let publisher: AnyPublisher<TGoalsArchiveResponse, ApiError> = try await ApiProvider.provider(service: GoalArchiveService.create(request))
+        return try await withCheckedThrowingContinuation{ continuation in
+            if Task.isCancelled {
+                continuation.resume(throwing: Error.self as! Error)
+            }
+            
+            canceller = publisher
+                .sink(receiveCompletion: {completion in
+                    switch completion {
+                        
+                    case .finished:
+                        canceller?.cancel()
+                        break
+                    case .failure(let error):
+                        let err: ApiError = error
+                        switch(err) {
+                        case .responseError(let errorCd):
+                            
+                            continuation.resume(throwing: ApiError.responseError(errorCd))
+                        case .invalidURL:
+                            continuation.resume(throwing: ApiError.invalidURL)
+                        case .parseError:
+                            continuation.resume(throwing: ApiError.parseError)
+                        case .unknown:
+                            continuation.resume(throwing: ApiError.unknown)
+                        case .httpError(let code):
+                            continuation.resume(throwing: ApiError.httpError(code))
+                        }
+                        canceller?.cancel()
                         
                     }
                 }, receiveValue: {res in
@@ -114,13 +239,15 @@ struct GoalArchiveRepository {
                         
                         switch(err) {
                         case .responseError(let errorCd):
-                            print("response error \(errorCd)")
+                            continuation.resume(throwing: ApiError.responseError(errorCd))
                         case .invalidURL:
-                            print("url error")
+                            continuation.resume(throwing: ApiError.invalidURL)
                         case .parseError:
-                            print("parse error")
+                            continuation.resume(throwing: ApiError.parseError)
                         case .unknown:
-                            print("unknown")
+                            continuation.resume(throwing: ApiError.unknown)
+                        case .httpError(let code):
+                            continuation.resume(throwing: ApiError.httpError(code))
                         }
                         canceller?.cancel()
                         continuation.resume(returning: TGoalsArchiveResponse())
@@ -139,7 +266,6 @@ struct GoalArchiveRepository {
         
         var canceller: AnyCancellable?
         let publisher: AnyPublisher<GoalResponse, ApiError> = try await ApiProvider.provider(service: GoalArchiveService.updatingFlg(request))
-        print(request)
         return try await withCheckedThrowingContinuation{ continuation in
             if Task.isCancelled {
                 continuation.resume(throwing: Error.self as! Error)
@@ -157,13 +283,15 @@ struct GoalArchiveRepository {
                         
                         switch(err) {
                         case .responseError(let errorCd):
-                            print("response error \(errorCd)")
+                            continuation.resume(throwing: ApiError.responseError(errorCd))
                         case .invalidURL:
-                            print("url error")
+                            continuation.resume(throwing: ApiError.invalidURL)
                         case .parseError:
-                            print("parse error")
+                            continuation.resume(throwing: ApiError.parseError)
                         case .unknown:
-                            print("unknown")
+                            continuation.resume(throwing: ApiError.unknown)
+                        case .httpError(let code):
+                            continuation.resume(throwing: ApiError.httpError(code))
                         }
                         canceller?.cancel()
                         continuation.resume(returning: GoalResponse())

@@ -69,12 +69,25 @@ class GoalArchiveEditViewModel: ObservableObject {
     }
     
     func initItem(archiveId: Int, archiveCreateDate: String, goalId: Int, createDate: String, thoughts: String, publish: PublishLevel) {
-        self.goalId = goalId
-        self.createDate = createDate
-        self.thoughts = thoughts
-        self.publish = publish
-        self.archiveId = archiveId
-        self.archiveCreateDate = archiveCreateDate
+        
+            
+        Task {
+            do {
+                let res = try await goalArchiveRepository.editDisp(parameter: .init(archiveId: archiveId, archiveCreateDate: archiveCreateDate))
+                DispatchQueue.main.async {
+                    self.goalId = res.goalId == 0 ? goalId : res.goalId
+                    self.createDate = res.goalCreateDate == "" ? createDate : res.goalCreateDate
+                    self.archiveId = res.id
+                    self.archiveCreateDate = res.archivesCreateDate
+                    self.thoughts = res.thoughts
+                    self.publish = res.getPublish()
+                }
+                
+            } catch ApiError.httpError(_) {
+                self.goalId = goalId
+                self.createDate = createDate
+            }
+        }
     }
     
     func initVali() {

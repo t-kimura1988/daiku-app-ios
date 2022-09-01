@@ -11,9 +11,11 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.77378983566-p1lvr3mjfo87f33r6k8gvvegsghqcmbh</string>
+				<string>com.googleusercontent.apps.77378983566-g5njp7e6f271rt2sn3egkv47dmmurdpb</string>
 			</array>
 		</dict>
 	</array>
+	<key>HOME_PAGE_URL</key>
+	<string>http://127.0.0.1:3000</string>
 </dict>
 </plist>

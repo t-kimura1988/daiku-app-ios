@@ -17,19 +17,12 @@ struct HomeTabBarView: View {
                 }
                 .tag(1)
             
-            FavoriteMainView()
-                .tabItem{
-                    Image(systemName: "bookmark.fill")
-                    Text("ブックマーク")
-                }
-                .tag(2)
-            
             AccountMainView()
                 .tabItem{
                     Image(systemName: "person")
                     Text("アカウント")
                 }
-                .tag(3)
+                .tag(2)
         }
         .environmentObject(HomeMainViewModel())
         .environmentObject(AccountMainViewModel())

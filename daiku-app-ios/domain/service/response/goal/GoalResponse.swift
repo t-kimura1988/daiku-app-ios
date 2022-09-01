@@ -21,6 +21,7 @@ struct GoalResponse: Decodable, Identifiable {
     var favoriteId: Int? = 0
     var updatingFlg: String? = ""
     var archiveId: Int? = 0
+    var archivesCreateDate: String? = ""
     
     func isFavorite() -> Bool {
         
@@ -33,6 +34,22 @@ struct GoalResponse: Decodable, Identifiable {
         }
         
         return false
+    }
+    
+    func getArchiveId() -> Int{
+        if let archiveId = archiveId {
+            return archiveId
+        }
+        
+        return 0
+    }
+    
+    func getArchiveCreateDate()->String {
+        if let archiveCreateDate = archivesCreateDate {
+            return archiveCreateDate
+        }
+        
+        return ""
     }
     
     func editable() -> Bool {

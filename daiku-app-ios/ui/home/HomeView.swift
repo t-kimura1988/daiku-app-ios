@@ -14,29 +14,47 @@ struct HomeView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 
                 HomeRefreshView(coodinateSpaceName: "RefreshView", onRefresh: {
-                    vm.getHomeList()
+                    vm.getInitHomeList()
                 })
                 ForEach(vm.homeList) { item in
                     NavigationLink {
                         GoalArchiveDetailView(archiveId: item.id, archiveCreateDate: item.archivesCreateDate)
                     } label: {
-                        VStack {
+                        LazyVStack(alignment: .leading, spacing: 8) {
                             
                             HStack {
                                 VStack(alignment: .leading) {
-                                    Text(item.title)
-                                        .font(.title2)
-                                        .fontWeight(.bold)
-                                        .foregroundColor(.primary)
                                     Text(item.thoughts)
+                                        .font(.body)
+                                        .fontWeight(.bold)
+                                        .fixedSize(horizontal: false, vertical: true)
+                                        .lineLimit(3)
+                                        .padding(.top, 1)
+                                        .foregroundColor(.primary)
+                                        .multilineTextAlignment(.leading)
+                                    Text("【目標】\(item.title)")
                                         .font(.body)
                                         .fixedSize(horizontal: false, vertical: true)
                                         .lineLimit(3)
                                         .padding(.top, 1)
                                         .foregroundColor(.primary)
+                                        .multilineTextAlignment(.leading)
+                                    if item.getPublish() == .All {
+                                        Text("プロセス数:\(item.processCount)")
+                                            .font(.body)
+                                            .foregroundColor(.gray)
+                                            .fixedSize(horizontal: false, vertical: true)
+                                            .lineLimit(3)
+                                            .padding(.top, 1)
+                                            .foregroundColor(.primary)
+                                            .multilineTextAlignment(.leading)
+                                        
+                                    }
                                 }
                                 Spacer()
-                            }.padding()
+                            }
+                            .contentShape(Rectangle())
+                            .padding()
                             
                             
                             VStack(alignment: .trailing) {
@@ -49,6 +67,20 @@ struct HomeView: View {
                         }
                     }
                     Divider()
+                }
+                
+                if vm.homeListLoadFlg {
+                    Button(action: {
+                        vm.getHomeList()
+                    }, label: {
+                        Text("もっと見る")
+                    })
+                }
+            }
+            .onAppear {
+                
+                if !vm.isHomeListLoading {
+                    vm.getInitHomeList()
                 }
             }
             .navigationBarTitleDisplayMode(.inline)

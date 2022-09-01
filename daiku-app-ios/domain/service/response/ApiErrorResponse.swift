@@ -10,5 +10,5 @@ import Foundation
 struct ApiErrorResponse: Decodable, Error {
     var code: Int = 0
     var message: String = ""
-    var errorCd: String = ""
+    var errorCd: String? = ""
 }

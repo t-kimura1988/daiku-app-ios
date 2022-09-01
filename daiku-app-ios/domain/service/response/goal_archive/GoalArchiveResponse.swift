@@ -14,5 +14,13 @@ struct GoalArchiveResponse: Decodable {
     
     var goalInfo: GoalResponse = GoalResponse()
     
-    var processInfo: [ProcessResponse] = [ProcessResponse]()
+    var processInfo: [ProcessResponse]? = [ProcessResponse]()
+    
+    func getProcessList() -> [ProcessResponse] {
+        if let processInfo = processInfo {
+            return processInfo
+        }
+        
+        return [ProcessResponse]()
+    }
 }

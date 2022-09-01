@@ -24,6 +24,8 @@ struct GoalFavoriteResponse: Decodable, Identifiable {
     var favoriteAddAccountGivenName: String = ""
     var favoriteAddAccountNickName: String = ""
     var favoriteAddAccountImg: String? = ""
+    var archiveId: Int? = 0
+    var archivesCreateDate: String? = ""
     
     private func toDate(date: String) -> Date {
         let formatter = DateFormatter()
@@ -31,10 +33,24 @@ struct GoalFavoriteResponse: Decodable, Identifiable {
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter.date(from: date)!
     }
+    
+    func getArchiveId() -> Int {
+        if let archiveId = archiveId {
+            return archiveId
+        }
+        
+        return 0
+    }
+    
+    func getArchiveCreateDate() -> String {
+        if let archiveCreateDate = archivesCreateDate {
+            return archiveCreateDate
+        }
+        
+        return ""
+    }
 
     func dueDateFormat() -> String {
-        print("A")
-        print(dueDate)
         let date = toDate(date: dueDate)
 
         let formatter = DateFormatter()
@@ -45,8 +61,6 @@ struct GoalFavoriteResponse: Decodable, Identifiable {
     }
     
     func favoriteAddDateFormat() -> String {
-        print("b")
-        print(favoriteAddDate)
         let date = toDate(date: favoriteAddDate)
 
         let formatter = DateFormatter()

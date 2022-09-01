@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>77378983566-g5njp7e6f271rt2sn3egkv47dmmurdpb.apps.googleusercontent.com</string>
+	<string>661878451793-jto865gapbvc7kvpeuchfun8dg2939ot.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.77378983566-g5njp7e6f271rt2sn3egkv47dmmurdpb</string>
-	<key>ANDROID_CLIENT_ID</key>
-	<string>77378983566-4k2ebqdp4mfac4ehei8pietik7qeaob8.apps.googleusercontent.com</string>
+	<string>com.googleusercontent.apps.661878451793-jto865gapbvc7kvpeuchfun8dg2939ot</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCFCkfXJ7CmKY4RCksNDe_Sm0KYr8XZCcw</string>
+	<string>AIzaSyA_elbG71RFIu38ltoTKK_J5a83HGtXmJM</string>
 	<key>GCM_SENDER_ID</key>
-	<string>77378983566</string>
+	<string>661878451793</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.goen.dev-daiku-app-ios</string>
+	<string>com.goen.daiku-app-ios</string>
 	<key>PROJECT_ID</key>
-	<string>goen-dev-new</string>
+	<string>daiku-app-c5b17</string>
 	<key>STORAGE_BUCKET</key>
-	<string>goen-dev-new.appspot.com</string>
+	<string>daiku-app-c5b17.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,8 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:77378983566:ios:9b17092444e6e55dd8dbdf</string>
-	<key>DATABASE_URL</key>
-	<string>https://goen-dev-new.firebaseio.com</string>
+	<string>1:661878451793:ios:e31ab90e35452ff5459270</string>
 </dict>
 </plist>

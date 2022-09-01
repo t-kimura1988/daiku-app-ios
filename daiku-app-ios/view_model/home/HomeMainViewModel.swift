@@ -13,27 +13,42 @@ class HomeMainViewModel: ObservableObject {
     @Published var homeList: [HomeResponse] = [HomeResponse()]
     @Published var isSheet: Bool = false
     
-    init() {
-        Task {
-            let list = try await homeReposiroty.getGoalArchiveList(body: .init(year: "2022", pageCount: "10"))
-            DispatchQueue.main.sync {
-                homeList = list
-            }
-            
-            
-        }
+    
+    @Published var homeListPage: Int = 10
+    @Published var homeListLoadFlg: Bool = false
+    @Published var isHomeListLoading: Bool = false
+    
+    func getInitHomeList() {
+        self.isHomeListLoading = true
+        loadHome()
     }
     
     func getHomeList() {
+        self.isHomeListLoading = true
+        self.homeListPage += 10
+        loadHome()
+    }
+    
+    private func loadHome() {
         Task {
-            let list = try await homeReposiroty.getGoalArchiveList(body: .init(year: "2022", pageCount: "10"))
+            let list = try await homeReposiroty.getGoalArchiveList(body: .init(year: "2022", pageCount: String(homeListPage)))
             DispatchQueue.main.sync {
                 homeList = list
+                if list.count == self.homeListPage {
+                    self.homeListLoadFlg = true
+                } else {
+                    self.homeListLoadFlg = false
+                }
+                
+                self.isHomeListLoading = false
             }
         }
+        
     }
     
     func createGoalSheet() {
-        self.isSheet = !self.isSheet
+        DispatchQueue.main.async {
+            self.isSheet = !self.isSheet
+        }
     }
 }
