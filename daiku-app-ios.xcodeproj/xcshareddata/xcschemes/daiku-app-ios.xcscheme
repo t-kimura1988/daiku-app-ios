@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "25C2B92E285BA1F20077B013"
-               BuildableName = "daiku-app-ios.app"
+               BuildableName = "D-Aic.app"
                BlueprintName = "daiku-app-ios"
                ReferencedContainer = "container:daiku-app-ios.xcodeproj">
             </BuildableReference>
@@ -64,21 +64,12 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2507F971285BAA6200A14A51"
-            BuildableName = "dev-daiku-app-ios.app"
-            BlueprintName = "dev-daiku-app-ios"
-            ReferencedContainer = "container:daiku-app-ios.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
             BlueprintIdentifier = "25C2B92E285BA1F20077B013"
-            BuildableName = "daiku-app-ios.app"
+            BuildableName = "D-Aic.app"
             BlueprintName = "daiku-app-ios"
             ReferencedContainer = "container:daiku-app-ios.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -91,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "25C2B92E285BA1F20077B013"
-            BuildableName = "daiku-app-ios.app"
+            BuildableName = "D-Aic.app"
             BlueprintName = "daiku-app-ios"
             ReferencedContainer = "container:daiku-app-ios.xcodeproj">
          </BuildableReference>
