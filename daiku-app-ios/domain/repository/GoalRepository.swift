@@ -9,10 +9,10 @@ import Foundation
 import Combine
 
 struct GoalRepository {
-    func saveGoal(request: GoalCreateRequest) async throws -> NoBody{
+    func saveGoal(request: GoalCreateRequest) async throws -> GoalResponse{
         
         var canceller: AnyCancellable?
-        let publisher: AnyPublisher<NoBody, ApiError> = try await ApiProvider.provider(service: GoalService.createGoal(request))
+        let publisher: AnyPublisher<GoalResponse, ApiError> = try await ApiProvider.provider(service: GoalService.createGoal(request))
         
         return try await withCheckedThrowingContinuation{ continuation in
             if Task.isCancelled {
@@ -31,16 +31,18 @@ struct GoalRepository {
                         
                         switch(err) {
                         case .responseError(let errorCd):
-                            print("response error \(errorCd)")
+                            continuation.resume(throwing: ApiError.responseError(errorCd))
                         case .invalidURL:
-                            print("url error")
+                            continuation.resume(throwing: ApiError.invalidURL)
                         case .parseError:
-                            print("parse error")
+                            continuation.resume(throwing: ApiError.parseError)
                         case .unknown:
-                            print("unknown")
+                            continuation.resume(throwing: ApiError.unknown)
+                        case .httpError(let code):
+                            continuation.resume(throwing: ApiError.httpError(code))
                         }
                         canceller?.cancel()
-                        continuation.resume(returning: NoBody())
+                        continuation.resume(returning: GoalResponse())
                         
                     }
                 }, receiveValue: {accountRes in
@@ -50,8 +52,49 @@ struct GoalRepository {
         }
     }
     
-    func myGoalList(parameter: MyGoalListParameter) async throws -> [GoalResponse] {
+    func updateGoal(request: GoalUpdateRequest) async throws -> GoalResponse{
         
+        var canceller: AnyCancellable?
+        let publisher: AnyPublisher<GoalResponse, ApiError> = try await ApiProvider.provider(service: GoalService.updateGoal(request))
+        
+        return try await withCheckedThrowingContinuation{ continuation in
+            if Task.isCancelled {
+                continuation.resume(throwing: Error.self as! Error)
+            }
+            
+            canceller = publisher
+                .sink(receiveCompletion: {completion in
+                    switch completion {
+                        
+                    case .finished:
+                        canceller?.cancel()
+                        break
+                    case .failure(let error):
+                        let err: ApiError = error
+                        
+                        switch(err) {
+                        case .responseError(let errorCd):
+                            continuation.resume(throwing: ApiError.responseError(errorCd))
+                        case .invalidURL:
+                            continuation.resume(throwing: ApiError.invalidURL)
+                        case .parseError:
+                            continuation.resume(throwing: ApiError.parseError)
+                        case .unknown:
+                            continuation.resume(throwing: ApiError.unknown)
+                        case .httpError(let code):
+                            continuation.resume(throwing: ApiError.httpError(code))
+                        }
+                        canceller?.cancel()
+                        continuation.resume(returning: GoalResponse())
+                    }
+                }, receiveValue: {goalRes in
+                    
+                    continuation.resume(returning: goalRes)
+                })
+        }
+    }
+    
+    func myGoalList(parameter: MyGoalListParameter) async throws -> [GoalResponse] {
         var canceller: AnyCancellable?
         let publisher: AnyPublisher<[GoalResponse], ApiError> = try await ApiProvider.provider(service: GoalService.myGoalList(parameter))
         
@@ -69,23 +112,22 @@ struct GoalRepository {
                         break
                     case .failure(let error):
                         let err: ApiError = error
-                        
                         switch(err) {
                         case .responseError(let errorCd):
-                            print("response error \(errorCd)")
+                            continuation.resume(throwing: ApiError.responseError(errorCd))
                         case .invalidURL:
-                            print("url error")
+                            continuation.resume(throwing: ApiError.invalidURL)
                         case .parseError:
-                            print("parse error")
+                            continuation.resume(throwing: ApiError.parseError)
                         case .unknown:
-                            print("unknown")
+                            continuation.resume(throwing: ApiError.unknown)
+                        case .httpError(let code):
+                            continuation.resume(throwing: ApiError.httpError(code))
                         }
                         canceller?.cancel()
-                        continuation.resume(returning: [])
                         
                     }
                 }, receiveValue: {res in
-                    print(res)
                     continuation.resume(returning: res)
                 })
         }
@@ -115,20 +157,20 @@ struct GoalRepository {
                         
                         switch(err) {
                         case .responseError(let errorCd):
-                            print("response error \(errorCd)")
+                            continuation.resume(throwing: ApiError.responseError(errorCd))
                         case .invalidURL:
-                            print("url error")
+                            continuation.resume(throwing: ApiError.invalidURL)
                         case .parseError:
-                            print("parse error")
+                            continuation.resume(throwing: ApiError.parseError)
                         case .unknown:
-                            print("unknown")
+                            continuation.resume(throwing: ApiError.unknown)
+                        case .httpError(let code):
+                            continuation.resume(throwing: ApiError.httpError(code))
                         }
                         canceller?.cancel()
-                        continuation.resume(returning: GoalResponse())
                         
                     }
                 }, receiveValue: {res in
-                    print(res)
                     continuation.resume(returning: res)
                 })
         }

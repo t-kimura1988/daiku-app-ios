@@ -10,4 +10,5 @@ import Foundation
 enum RequestType {
     case requestParametes(parameters: [URLQueryItem])
     case requestBodyToJson(body: Encodable)
+    case request
 }

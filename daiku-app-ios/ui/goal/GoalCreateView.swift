@@ -10,6 +10,24 @@ import SwiftUI
 struct GoalCreateView: View {
     @EnvironmentObject var vm: HomeMainViewModel
     @EnvironmentObject var goalCreateVm: GoalCreateViewModel
+    @EnvironmentObject var goalDetailVM: GoalDetailViewModel
+    
+    private var goalId: Int = 0
+    private var createDate: String = ""
+    private var title: String = ""
+    private var purpose: String = ""
+    private var aim: String = ""
+    private var dueDate: String = ""
+    
+    
+    init(goalId: Int = 0, createDate: String = "", title: String = "", purpose: String = "", aim: String = "", dueDate: String = "") {
+        self.goalId = goalId
+        self.createDate = createDate
+        self.title = title
+        self.purpose = purpose
+        self.aim = aim
+        self.dueDate = dueDate
+    }
     
     var body: some View {
         NavigationView {
@@ -66,6 +84,25 @@ struct GoalCreateView: View {
                     goalCreateVm.openAimForm()
                 }
                 
+                Divider()
+                    .frame(maxWidth: .infinity)
+                
+                ZStack(alignment: .leading) {
+                    
+                    HStack {
+                        Text("期間: ")
+                            .foregroundColor(.gray)
+                        DatePicker("", selection: $goalCreateVm.selectedDueDate, displayedComponents: .date)
+                            .environment(\.locale, Locale(identifier: "ja_JP"))
+                        Spacer()
+                    }
+                    .frame(maxWidth: .infinity)
+                    
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
+                .contentShape(Rectangle())
+                
             }
             .fullScreenCover(isPresented: $goalCreateVm.isFormSheet) {
                 switch goalCreateVm.formType {
@@ -109,13 +146,19 @@ struct GoalCreateView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
-                        goalCreateVm.saveGoal {
+                        goalCreateVm.saveGoal { goalResponse in
+                            goalDetailVM.getGoalDetail(goalId: goalResponse.id, createDate: goalResponse.createDate)
                             vm.createGoalSheet()
                         }
                     }, label: {Text("保存")})
+                    .disabled(!goalCreateVm.isSaveButton || goalCreateVm.isSending)
                 }
             }
             
+        }
+        .onAppear{
+            goalCreateVm.initUpdate(goalId: goalId, createDate: createDate, title: title, purpose: purpose, aim: aim, dueDate: dueDate)
+            goalCreateVm.initVali()
         }
     }
 }

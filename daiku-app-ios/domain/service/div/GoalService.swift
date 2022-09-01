@@ -9,6 +9,7 @@ import Foundation
 
 enum GoalService: ApiService {
     case createGoal(GoalCreateRequest)
+    case updateGoal(GoalUpdateRequest)
     case myGoalList(MyGoalListParameter)
     case goalDetail(GoalDetailParameter)
 }
@@ -19,6 +20,8 @@ extension GoalService {
         switch self {
         case let .createGoal(encodable):
             return .requestBodyToJson(body: encodable)
+        case let .updateGoal(encodable):
+            return .requestBodyToJson(body: encodable)
         case let .myGoalList(parameter):
             return .requestParametes(parameters: parameter.params())
         case let .goalDetail(parameter):
@@ -26,11 +29,11 @@ extension GoalService {
         }
     }
     var baseURL: String {
-        return "http://127.0.0.1:8080"
+        return Bundle.main.object(forInfoDictionaryKey: "BASE_API") as! String
     }
     var httpMethod: HttpMethod {
         switch self {
-        case .createGoal:
+        case .createGoal, .updateGoal:
             return .POST
         case .myGoalList , .goalDetail:
             return .GET
@@ -49,13 +52,15 @@ extension GoalService {
             return "/api/goal/search"
         case .goalDetail:
             return "/api/goal/detail"
+        case .updateGoal:
+            return "/api/goal/update"
         }
     }
     var responseType: Decodable? {
         switch self {
         case .createGoal:
             return nil
-        case .myGoalList, .goalDetail:
+        case .myGoalList, .goalDetail, .updateGoal:
             return GoalResponse.self as! Codable
         }
     }

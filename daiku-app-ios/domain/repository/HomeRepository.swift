@@ -29,23 +29,22 @@ struct HomeRepository {
                         break
                     case .failure(let error):
                         let err: ApiError = error
-                        
                         switch(err) {
                         case .responseError(let errorCd):
-                            print("response error \(errorCd)")
+                            continuation.resume(throwing: ApiError.responseError(errorCd))
                         case .invalidURL:
-                            print("url error")
+                            continuation.resume(throwing: ApiError.invalidURL)
                         case .parseError:
-                            print("parse error")
+                            continuation.resume(throwing: ApiError.parseError)
                         case .unknown:
-                            print("unknown")
+                            continuation.resume(throwing: ApiError.unknown)
+                        case .httpError(let code):
+                            continuation.resume(throwing: ApiError.httpError(code))
+                            
                         }
                         canceller?.cancel()
-                        continuation.resume(returning: [])
-                        
                     }
                 }, receiveValue: {homeRes in
-                    print(homeRes)
                     continuation.resume(returning: homeRes)
                 })
         }

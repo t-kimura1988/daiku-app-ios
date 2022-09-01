@@ -12,6 +12,7 @@ struct HomeResponse: Decodable, Identifiable {
     var archivesCreateDate: String = ""
     var publish: String = ""
     var thoughts: String = ""
+    var updatingFlg: String? = ""
     var goalId: Int  = 0
     var goalCreateDate: String = ""
     var title: String = ""
@@ -26,5 +27,9 @@ struct HomeResponse: Decodable, Identifiable {
     
     func accountName() -> String{
         return self.familyName + " " + self.givenName
+    }
+    
+    func getPublish() -> PublishLevel {
+        return PublishLevel.init(rowValue: publish)
     }
 }

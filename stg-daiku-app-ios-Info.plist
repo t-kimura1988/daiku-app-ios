@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BASE_API</key>
+	<string>https://daiku-app.dev.goenway.com</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.77378983566-g5njp7e6f271rt2sn3egkv47dmmurdpb</string>
+			</array>
+		</dict>
+	</array>
+	<key>HOME_PAGE_URL</key>
+	<string>https://dev.goenway.com</string>
+</dict>
+</plist>
