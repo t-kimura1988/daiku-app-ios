@@ -19,4 +19,27 @@ struct AccountResponse: Decodable {
     func accountName() -> String {
         return "\(familyName)  \(givenName) "
     }
+    
+    func userImageDate() throws -> Data? {
+        guard let userImage = userImage else {
+            return nil
+        }
+        
+        guard let imageUrl = URL(string: userImage) else {
+            return nil
+        }
+        
+        return try Data(contentsOf: imageUrl)
+
+    }
+    
+    func getUserImage() -> String {
+        guard let userImage = userImage else {
+            return ""
+        }
+        
+        return userImage
+
+    }
+    
 }

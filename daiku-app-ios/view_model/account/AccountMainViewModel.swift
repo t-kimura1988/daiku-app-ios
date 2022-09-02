@@ -34,6 +34,8 @@ class AccountMainViewModel: ObservableObject {
     @Published var bookMarkListLoadFlg: Bool = false
     @Published var isBookMarkListLoading: Bool = false
     
+    @Published var isImagePreView: Bool = false
+    
     
     func changeUpdateAccount() {
         DispatchQueue.main.async {
@@ -159,6 +161,14 @@ class AccountMainViewModel: ObservableObject {
             
             completion()
         }
+    }
+    
+    func openImagePreView() {
+        isImagePreView = true
+    }
+    
+    func closeImagePreView() {
+        isImagePreView = false
     }
 }
 

@@ -353,6 +353,18 @@
 		25BD6C8628B8B0D2002085F8 /* SignInWithAppleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BD6C8328B8AB24002085F8 /* SignInWithAppleButtonView.swift */; };
 		25BD6C9028B92919002085F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25BD6C8F28B92919002085F8 /* GoogleService-Info.plist */; };
 		25BD6C9128B92919002085F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25BD6C8F28B92919002085F8 /* GoogleService-Info.plist */; };
+		25BF37BF28C0AB25002614FE /* ImagePreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF37BE28C0AB25002614FE /* ImagePreView.swift */; };
+		25BF37C028C0AC10002614FE /* ImagePreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF37BE28C0AB25002614FE /* ImagePreView.swift */; };
+		25BF37C128C0AC10002614FE /* ImagePreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF37BE28C0AB25002614FE /* ImagePreView.swift */; };
+		25BF37C428C11779002614FE /* ImagePreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF37C328C11779002614FE /* ImagePreViewModel.swift */; };
+		25BF37C528C11796002614FE /* ImagePreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF37C328C11779002614FE /* ImagePreViewModel.swift */; };
+		25BF37C628C11797002614FE /* ImagePreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF37C328C11779002614FE /* ImagePreViewModel.swift */; };
+		25BF37C828C204E7002614FE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF37C728C204E7002614FE /* ImagePicker.swift */; };
+		25BF37CB28C2097A002614FE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF37C728C204E7002614FE /* ImagePicker.swift */; };
+		25BF37CC28C2097A002614FE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF37C728C204E7002614FE /* ImagePicker.swift */; };
+		25BF37CE28C20B41002614FE /* ImageSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF37CD28C20B41002614FE /* ImageSourceType.swift */; };
+		25BF37CF28C20B5C002614FE /* ImageSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF37CD28C20B41002614FE /* ImageSourceType.swift */; };
+		25BF37D028C20B5C002614FE /* ImageSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF37CD28C20B41002614FE /* ImageSourceType.swift */; };
 		25C2B933285BA1F20077B013 /* daiku_app_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C2B932285BA1F20077B013 /* daiku_app_iosApp.swift */; };
 		25C2B935285BA1F20077B013 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C2B934285BA1F20077B013 /* ContentView.swift */; };
 		25C2B937285BA1F20077B013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25C2B936285BA1F20077B013 /* Assets.xcassets */; };
@@ -506,6 +518,10 @@
 		25BD6C8328B8AB24002085F8 /* SignInWithAppleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButtonView.swift; sourceTree = "<group>"; };
 		25BD6C8B28B91E36002085F8 /* dev-daiku-app-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "dev-daiku-app-ios.entitlements"; sourceTree = "<group>"; };
 		25BD6C8F28B92919002085F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		25BF37BE28C0AB25002614FE /* ImagePreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreView.swift; sourceTree = "<group>"; };
+		25BF37C328C11779002614FE /* ImagePreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreViewModel.swift; sourceTree = "<group>"; };
+		25BF37C728C204E7002614FE /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		25BF37CD28C20B41002614FE /* ImageSourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSourceType.swift; sourceTree = "<group>"; };
 		25C2B92F285BA1F20077B013 /* D-Aic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "D-Aic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C2B932285BA1F20077B013 /* daiku_app_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = daiku_app_iosApp.swift; sourceTree = "<group>"; };
 		25C2B934285BA1F20077B013 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -599,6 +615,7 @@
 		2507F994285C166F00A14A51 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				25BF37BD28C0AB0E002614FE /* photo */,
 				25A9D67A28829E7400F8A7EB /* goal_archive */,
 				25A9D66B2880133300F8A7EB /* favorite */,
 				25A9D64B2879E47D00F8A7EB /* process_history */,
@@ -629,6 +646,7 @@
 		2507F999285C173C00A14A51 /* view_model */ = {
 			isa = PBXGroup;
 			children = (
+				25BF37C228C11757002614FE /* photo */,
 				25A05BF6288E376C0077A005 /* extensions */,
 				25A9D67E2882C60200F8A7EB /* goal_archive */,
 				25A9D66F2880795400F8A7EB /* favorite */,
@@ -660,6 +678,7 @@
 				251AADB22875773B0008CFDE /* ProcessStatus.swift */,
 				251AADB5287580320008CFDE /* ProcessPriority.swift */,
 				25A9D690288413D700F8A7EB /* PublishLevel.swift */,
+				25BF37CD28C20B41002614FE /* ImageSourceType.swift */,
 			);
 			path = enums;
 			sourceTree = "<group>";
@@ -1038,6 +1057,23 @@
 			path = goal_archive;
 			sourceTree = "<group>";
 		};
+		25BF37BD28C0AB0E002614FE /* photo */ = {
+			isa = PBXGroup;
+			children = (
+				25BF37BE28C0AB25002614FE /* ImagePreView.swift */,
+				25BF37C728C204E7002614FE /* ImagePicker.swift */,
+			);
+			path = photo;
+			sourceTree = "<group>";
+		};
+		25BF37C228C11757002614FE /* photo */ = {
+			isa = PBXGroup;
+			children = (
+				25BF37C328C11779002614FE /* ImagePreViewModel.swift */,
+			);
+			path = photo;
+			sourceTree = "<group>";
+		};
 		25C2B926285BA1F20077B013 = {
 			isa = PBXGroup;
 			children = (
@@ -1380,6 +1416,7 @@
 				25A9D6722880797800F8A7EB /* FavoriteMainViewModel.swift in Sources */,
 				25645B1C2876CB6900A8B334 /* ProcessDetailView.swift in Sources */,
 				256A5A7028BDEB9B00E32A8D /* AccountReUpdateRequest.swift in Sources */,
+				25BF37CF28C20B5C002614FE /* ImageSourceType.swift in Sources */,
 				251AAD8F287407280008CFDE /* RefreshView.swift in Sources */,
 				25A9D68A28831F1100F8A7EB /* GoalArchiveService.swift in Sources */,
 				25A05C8C2890D3E00077A005 /* DateExtention.swift in Sources */,
@@ -1400,6 +1437,7 @@
 				2507F9B3285C808A00A14A51 /* DaikuWebView.swift in Sources */,
 				256D56A3286D807D00D61541 /* GoalCreateView.swift in Sources */,
 				259BE5D6287014B000098DBC /* GoalRepository.swift in Sources */,
+				25BF37C528C11796002614FE /* ImagePreViewModel.swift in Sources */,
 				256D5678286370FF00D61541 /* AccountResponse.swift in Sources */,
 				2507F9CA285D935400A14A51 /* AccountMainView.swift in Sources */,
 				25A9D6792880813000F8A7EB /* GoalFavoriteSearchParameter.swift in Sources */,
@@ -1407,6 +1445,8 @@
 				25A05BE12886B2DE0077A005 /* GoalUpdateRequest.swift in Sources */,
 				256D56882869899600D61541 /* AccountCreateViewModel.swift in Sources */,
 				2507F9A9285C23DD00A14A51 /* AccountCreateView.swift in Sources */,
+				25BF37CB28C2097A002614FE /* ImagePicker.swift in Sources */,
+				25BF37C028C0AC10002614FE /* ImagePreView.swift in Sources */,
 				25645B2E2876DFE300A8B334 /* ProcessHistoryResponse.swift in Sources */,
 				256D56692861E90D00D61541 /* ApiProvider.swift in Sources */,
 				25A9D64E2879E4B900F8A7EB /* ProcessHistoryCommentView.swift in Sources */,
@@ -1499,6 +1539,7 @@
 				25A05C43288FC34C0077A005 /* FavoriteMainViewModel.swift in Sources */,
 				25A05C44288FC34C0077A005 /* ProcessDetailView.swift in Sources */,
 				256A5A7128BDEB9C00E32A8D /* AccountReUpdateRequest.swift in Sources */,
+				25BF37D028C20B5C002614FE /* ImageSourceType.swift in Sources */,
 				25A05C45288FC34C0077A005 /* RefreshView.swift in Sources */,
 				25A05C46288FC34C0077A005 /* GoalArchiveService.swift in Sources */,
 				25A05C8D2890D3E00077A005 /* DateExtention.swift in Sources */,
@@ -1519,6 +1560,7 @@
 				25A05C55288FC34C0077A005 /* DaikuWebView.swift in Sources */,
 				25A05C56288FC34C0077A005 /* GoalCreateView.swift in Sources */,
 				25A05C57288FC34C0077A005 /* GoalRepository.swift in Sources */,
+				25BF37C628C11797002614FE /* ImagePreViewModel.swift in Sources */,
 				25A05C58288FC34C0077A005 /* AccountResponse.swift in Sources */,
 				25A05C59288FC34C0077A005 /* AccountMainView.swift in Sources */,
 				25A05C5A288FC34C0077A005 /* GoalFavoriteSearchParameter.swift in Sources */,
@@ -1526,6 +1568,8 @@
 				25A05C5C288FC34C0077A005 /* GoalUpdateRequest.swift in Sources */,
 				25A05C5D288FC34C0077A005 /* AccountCreateViewModel.swift in Sources */,
 				25A05C5E288FC34C0077A005 /* AccountCreateView.swift in Sources */,
+				25BF37CC28C2097A002614FE /* ImagePicker.swift in Sources */,
+				25BF37C128C0AC10002614FE /* ImagePreView.swift in Sources */,
 				25A05C5F288FC34C0077A005 /* ProcessHistoryResponse.swift in Sources */,
 				25A05C60288FC34C0077A005 /* ApiProvider.swift in Sources */,
 				25A05C61288FC34C0077A005 /* ProcessHistoryCommentView.swift in Sources */,
@@ -1581,9 +1625,11 @@
 				25A05BF2288948CA0077A005 /* GoalArchiveUpdatingFlgEditRequest.swift in Sources */,
 				259BE5E1287075FF00098DBC /* GoalResponse.swift in Sources */,
 				25A9D657287EBC7600F8A7EB /* CommentUpdateRequest.swift in Sources */,
+				25BF37C828C204E7002614FE /* ImagePicker.swift in Sources */,
 				25A05C8B2890D3E00077A005 /* DateExtention.swift in Sources */,
 				2507F9A3285C238E00A14A51 /* SignInView.swift in Sources */,
 				256D567D28676BB900D61541 /* ApiErrorResponse.swift in Sources */,
+				25BF37BF28C0AB25002614FE /* ImagePreView.swift in Sources */,
 				25A05C08288E88FB0077A005 /* ProcessDetailParameter.swift in Sources */,
 				251AAD7E28731EEF0008CFDE /* GoalFavoriteRepository.swift in Sources */,
 				256D569B286B595E00D61541 /* GoalArchiveRequest.swift in Sources */,
@@ -1594,6 +1640,7 @@
 				259BE5D1286FFEBE00098DBC /* GoalService.swift in Sources */,
 				25A05BE92887DF760077A005 /* TGoalsArchiveResponse.swift in Sources */,
 				256D5693286B572B00D61541 /* HomeService.swift in Sources */,
+				25BF37CE28C20B41002614FE /* ImageSourceType.swift in Sources */,
 				25A9D6802882C61600F8A7EB /* GoalArchiveDetailViewModel.swift in Sources */,
 				25A05BF5288D49650077A005 /* AccountUpdateRequest.swift in Sources */,
 				256D56832869729400D61541 /* LoadingView.swift in Sources */,
@@ -1612,6 +1659,7 @@
 				25645B222876DE1600A8B334 /* ProcessHistoryRepository.swift in Sources */,
 				25A9D65F287EC2F900F8A7EB /* ProcessHistoryDetailParameter.swift in Sources */,
 				25A9D6532879F51400F8A7EB /* ProcessHistoryCommentRequest.swift in Sources */,
+				25BF37C428C11779002614FE /* ImagePreViewModel.swift in Sources */,
 				25A9D6712880796700F8A7EB /* FavoriteMainViewModel.swift in Sources */,
 				251AAD782872A99C0008CFDE /* MyGoalLlistParameter.swift in Sources */,
 				25A05C06288E88FB0077A005 /* ProcessListParameter.swift in Sources */,

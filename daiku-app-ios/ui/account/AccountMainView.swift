@@ -69,8 +69,14 @@ struct AccountMainView: View {
                     // account profile
                     VStack {
                         HStack{
-                            Image("samurai")
-                                .resizable()
+                            
+                            AsyncImage(url: URL(string: accountMainVm.account.getUserImage())) { image in
+                                image
+                                    .resizable()
+                            } placeholder: {
+                                Image("samurai")
+                                    .resizable()
+                            }
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 75, height: 75)
                                 .padding(8)
@@ -78,6 +84,19 @@ struct AccountMainView: View {
                                 .clipShape(Circle())
                                 .offset(y: offset < 0 ? getOffset() - 20 : -20)
                                 .scaleEffect(getScale())
+                                .overlay{
+                                    Image(systemName: "camera.viewfinder")
+                                        .resizable()
+                                        .frame(width: 40, height: 40, alignment: .bottom)
+                                        .padding(8)
+                                        .clipShape(Circle())
+                                        .offset(y: offset < 0 ? getOffset() - 5 : -5)
+                                        .scaleEffect(getScale())
+                                        .opacity(0.5)
+                                }
+                                .onTapGesture{
+                                    accountMainVm.openImagePreView()
+                                }
                             
                             Spacer()
                             Button(action: {
@@ -367,6 +386,13 @@ struct AccountMainView: View {
                 },
                 isClose: true)
                 .environmentObject(AccountCreateViewModel())
+        }
+        .fullScreenCover(isPresented: $accountMainVm.isImagePreView) {
+            ImagePreView(
+                type: .accountMain,
+                userImage: accountMainVm.account.userImage,
+                accountId: accountMainVm.account.id)
+                .environmentObject(ImagePreViewModel())
         }
     }
     
