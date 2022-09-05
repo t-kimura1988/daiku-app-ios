@@ -15,22 +15,10 @@ struct AccountResponse: Decodable {
     var nickName: String = ""
     var userImage: String? = ""
     var email: String = ""
-//    
+    var profileBackImage: String? = ""
+    
     func accountName() -> String {
         return "\(familyName)  \(givenName) "
-    }
-    
-    func userImageDate() throws -> Data? {
-        guard let userImage = userImage else {
-            return nil
-        }
-        
-        guard let imageUrl = URL(string: userImage) else {
-            return nil
-        }
-        
-        return try Data(contentsOf: imageUrl)
-
     }
     
     func getUserImage() -> String {

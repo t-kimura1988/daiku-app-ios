@@ -12,12 +12,12 @@ struct ImagePreView: View {
     @EnvironmentObject var accountMainVM: AccountMainViewModel
     private var type: ImagePreType = .accountMain
     private var userImage: String? = ""
-    private var accountId: Int = 0
+    private var uid: String = ""
     
-    init(type: ImagePreType, userImage: String?, accountId: Int) {
+    init(type: ImagePreType, userImage: String?, uid: String) {
         self.type = type
         self.userImage = userImage
-        self.accountId = accountId
+        self.uid = uid
     }
     
     var body: some View {
@@ -25,19 +25,28 @@ struct ImagePreView: View {
             VStack {
                 switch type {
                 case .accountMain:
-                    if let image = imagePreViewModel.image {
-                        Image(uiImage: image)
-                    } else {
-                        AccountMainImageView()
-                    }
-                case .accountTop:
-                    AccountTopImageView()
+                    
+                    AccountMainImageView()
+                case .profileBackImage:
+                    ProfileBackImageView()
                 }
                 Button(action: {
                     imagePreViewModel.openPhotoSelectSheet()
                 }, label: {
                     Text("写真を選択する")
                 })
+                Spacer()
+                Button(action: {
+                    imagePreViewModel.saveImage(completion: {
+                        accountMainVM.closeImagePreView()
+                    })
+                }, label: {
+                    Text("保存")
+                        .foregroundColor(imagePreViewModel.getChangeImageFlg() ? .white : .gray)
+                })
+                .disabled(!imagePreViewModel.getChangeImageFlg())
+                .frame(maxWidth: .infinity, minHeight: 44.0)
+                .background(Color.orange.ignoresSafeArea(edges: .bottom))
                 
             }
             .navigationBarTitleDisplayMode(.inline)
@@ -51,19 +60,20 @@ struct ImagePreView: View {
                 }
             }
             .sheet(isPresented: $imagePreViewModel.isImagePicker) {
-                ImagePicker(sourceType: imagePreViewModel.sourceType, imageUrl: $imagePreViewModel.userImage)
+                ImagePicker(sourceType: imagePreViewModel.sourceType, imageUrl: $imagePreViewModel.userImage, image: $imagePreViewModel.image, changeImageFlg: $imagePreViewModel.changeImageFlg)
             }
             
         }
         .navigationViewStyle(.stack)
         .onAppear {
+            imagePreViewModel.initItem(userImage: userImage, uid: uid, type: type)
         }
         .actionSheet(isPresented: $imagePreViewModel.isPhotoSelectSheet) {
             var message: String = ""
             switch imagePreViewModel.screenType {
             case .accountMain:
                 message = "アカウントのアイコンに設定する写真を選択しましょう"
-            case .accountTop:
+            case .profileBackImage:
                 message = "アカウントトップの写真を選択しましょう"
             }
             return ActionSheet(title: Text("写真選択"), message: Text(message), buttons: [
@@ -85,34 +95,53 @@ struct AccountMainImageView: View {
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
-        
-        let imageURL = URL(string: imagePreViewModel.getUserImage())
-        AsyncImage(url: imageURL) { image in
-            image
-                .resizable()
-        } placeholder: {
-            Image("samurai")
-                .resizable()
-        }
-        .aspectRatio(contentMode: .fill)
-        .frame(width: 200, height: 200)
-        .background(colorScheme == .dark ? Color.black : Color.white)
-        .clipShape(Circle())
+        Image(uiImage: imagePreViewModel.image == nil ? UIImage(named: "samurai")! : imagePreViewModel.image!)
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .frame(width: 200, height: 200)
+            .background(colorScheme == .dark ? Color.black : Color.white)
+            .clipShape(Circle())
     }
 }
 
-fileprivate struct AccountTopImageView: View {
+fileprivate struct ProfileBackImageView: View {
     
     @EnvironmentObject var imagePreViewModel: ImagePreViewModel
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
-        Text("Account TOP !!!!")
+        if let image = imagePreViewModel.image {
+            Image(uiImage: image)
+                .resizable()
+                .background(colorScheme == .dark ? Color.black : Color.white)
+                .frame(
+                    width: getRect().width,
+                    height: 250,
+                    alignment: .center)
+                .aspectRatio(contentMode: .fill)
+                .padding(10)
+        } else {
+            
+                Color(.green)
+                .aspectRatio(contentMode: .fill)
+                .frame(
+                    width: getRect().width,
+                    height: 250,
+                    alignment: .center)
+                .cornerRadius(0)
+        }
+    }
+}
+
+
+extension ProfileBackImageView {
+    func getRect()->CGRect {
+        return UIScreen.main.bounds
     }
 }
 
 struct ImagePreView_Previews: PreviewProvider {
     static var previews: some View {
-        ImagePreView(type: .accountMain, userImage: nil, accountId: 0)
+        ImagePreView(type: .accountMain, userImage: nil, uid: "test")
     }
 }
