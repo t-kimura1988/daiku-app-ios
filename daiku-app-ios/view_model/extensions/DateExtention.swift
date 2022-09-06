@@ -15,4 +15,18 @@ extension Date {
         formatter.dateFormat = format
         return formatter.string(from: self)
     }
+    
+    func compareNowAscending() -> Bool {
+        return self.compare(Date()) == .orderedAscending
+    }
+    
+    func compareNowSame() -> Bool {
+        let now = Date().toString(format: "yyyyMMdd")
+        let target = self.toString(format: "yyyyMMdd")
+        return now == target
+    }
+    
+    func compareNowDescending() -> Bool {
+        return self.compare(Date()) == .orderedDescending
+    }
 }
