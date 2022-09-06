@@ -12,6 +12,7 @@ class AccountMainViewModel: ObservableObject {
     private var goalRepository: GoalRepository = GoalRepository()
     private var goalFavoriteRepository: GoalFavoriteRepository = GoalFavoriteRepository()
     private var goalArchiveRepository: GoalArchiveRepository = GoalArchiveRepository()
+    private var firebaseRepository: FirebaseRepository = FirebaseRepository()
     
     @Published var account: AccountResponse = AccountResponse()
     @Published var myGoal: [GoalResponse] = [GoalResponse]()
@@ -34,6 +35,12 @@ class AccountMainViewModel: ObservableObject {
     @Published var bookMarkListLoadFlg: Bool = false
     @Published var isBookMarkListLoading: Bool = false
     
+    @Published var isImagePreView: Bool = false
+    @Published var userImageURL: URL?
+    @Published var profileBackURL: URL?
+    @Published var imagePreViewScreenType: ImagePreType = .accountMain
+    
+    @Published var imagePath: String?
     
     func changeUpdateAccount() {
         DispatchQueue.main.async {
@@ -46,6 +53,8 @@ class AccountMainViewModel: ObservableObject {
             let accountRes = try await accountRepository.getAccount()
             DispatchQueue.main.sync {
                 account = accountRes
+                getUserImage()
+                getProfileBackImage()
             }
         }
         
@@ -158,6 +167,48 @@ class AccountMainViewModel: ObservableObject {
             _ = try await accountRepository.deleteAccount()
             
             completion()
+        }
+    }
+    
+    func openAccountMainImagePreView() {
+        isImagePreView = true
+        imagePath = account.userImage
+        imagePreViewScreenType = .accountMain
+    }
+    
+    func openProfileBackImagePreView() {
+        isImagePreView = true
+        imagePath = account.profileBackImage
+        imagePreViewScreenType = .profileBackImage
+    }
+    
+    func closeImagePreView() {
+        isImagePreView = false
+    }
+    
+    func getUserImage() {
+        Task {
+            guard let userImagePath = account.userImage else {
+                return
+            }
+            let url = try await firebaseRepository.getDownloadURL(storagePath: userImagePath)
+            
+            DispatchQueue.main.async {
+                self.userImageURL = url
+            }
+        }
+    }
+    
+    func getProfileBackImage() {
+        Task {
+            guard let profileBackImage = account.profileBackImage else {
+                return
+            }
+            let url = try await firebaseRepository.getDownloadURL(storagePath: profileBackImage)
+            
+            DispatchQueue.main.async {
+                self.profileBackURL = url
+            }
         }
     }
 }
