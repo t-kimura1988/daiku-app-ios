@@ -2069,13 +2069,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "daiku-app-ios/daiku-app-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.3;
+				CURRENT_PROJECT_VERSION = 1.1.0;
 				DEVELOPMENT_ASSET_PATHS = "\"daiku-app-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = R2XS7CKCJS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "daiku-app-ios/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-Aic";
+				INFOPLIST_KEY_NSCameraUsageDescription = "カメラを使用します。";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "写真の選択を行うため、アクセスします。";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "フォトライブラリを使用します。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -2085,7 +2088,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.goen.daiku-app-ios";
 				PRODUCT_NAME = "D-Aic";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -2101,13 +2104,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "daiku-app-ios/daiku-app-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.3;
+				CURRENT_PROJECT_VERSION = 1.1.0;
 				DEVELOPMENT_ASSET_PATHS = "\"daiku-app-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = R2XS7CKCJS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "daiku-app-ios/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-Aic";
+				INFOPLIST_KEY_NSCameraUsageDescription = "カメラを使用します。";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "写真の選択を行うため、アクセスします。";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "フォトライブラリを使用します。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -2117,7 +2123,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.goen.daiku-app-ios";
 				PRODUCT_NAME = "D-Aic";
 				SWIFT_EMIT_LOC_STRINGS = YES;
