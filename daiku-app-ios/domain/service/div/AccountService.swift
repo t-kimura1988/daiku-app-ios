@@ -14,6 +14,7 @@ enum AccountService: ApiService {
     case updateAccount(AccountCreateRequest)
     case deleteAccount
     case reUpdateAccount
+    case uploadImage(AccountUploadImageRequest)
 }
 
 extension AccountService {
@@ -25,7 +26,7 @@ extension AccountService {
         switch self {
         case .existAccount:
             return .GET
-        case .createAccount, .updateAccount, .deleteAccount, .reUpdateAccount:
+        case .createAccount, .updateAccount, .deleteAccount, .reUpdateAccount, .uploadImage:
             return .POST
         }
     }
@@ -36,7 +37,7 @@ extension AccountService {
     
     var responseType: Decodable? {
         switch self {
-        case .existAccount, .createAccount, .updateAccount, .deleteAccount, .reUpdateAccount:
+        case .existAccount, .createAccount, .updateAccount, .deleteAccount, .reUpdateAccount, .uploadImage:
             return AccountResponse.self as! Codable
         }
     }
@@ -53,6 +54,8 @@ extension AccountService {
             return "/api/account/delete"
         case .reUpdateAccount:
             return "/api/account/re-update"
+        case .uploadImage:
+            return "/api/account/upload"
         }
     }
     
@@ -68,6 +71,8 @@ extension AccountService {
             return .request
         case .reUpdateAccount:
             return .request
+        case let .uploadImage(request):
+            return .requestBodyToJson(body: request)
         }
     }
 }

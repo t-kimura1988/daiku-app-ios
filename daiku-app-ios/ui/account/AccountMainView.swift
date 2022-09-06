@@ -36,13 +36,32 @@ struct AccountMainView: View {
                         }
                         return AnyView (
                             ZStack {
-                                Color(.green)
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(
-                                        width: getRect().width,
-                                        height: minY > 0 ? 180 + minY: 180,
-                                        alignment: .center)
-                                    .cornerRadius(0)
+                                
+                                AsyncImage(url: accountMainVm.profileBackURL) { image in
+                                    image
+                                        .resizable()
+                                } placeholder: {
+                                    Color(.green)
+                                }
+                                .aspectRatio(contentMode: .fill)
+                                .frame(
+                                    width: getRect().width,
+                                    height: minY > 0 ? 180 + minY: 180,
+                                    alignment: .center)
+                                .overlay{
+                                    Image(systemName: "camera.viewfinder")
+                                        .resizable()
+                                        .frame(width: 40, height: 40, alignment: .bottomLeading)
+                                        .padding(8)
+                                        .clipShape(Circle())
+                                        .offset(y: offset < 0 ? getOffset() - 5 : -5)
+                                        .scaleEffect(getScale())
+                                        .opacity(0.5)
+                                        .onTapGesture {
+                                            accountMainVm.openProfileBackImagePreView()
+                                        }
+                                }
+                                .cornerRadius(0)
                                 
                                 BlurView()
                                     .opacity(blurViewOpacity())
@@ -69,15 +88,33 @@ struct AccountMainView: View {
                     // account profile
                     VStack {
                         HStack{
-                            Image("samurai")
-                                .resizable()
+                            
+                            AsyncImage(url: accountMainVm.userImageURL) { image in
+                                image
+                                    .resizable()
+                            } placeholder: {
+                                Image("samurai")
+                                    .resizable()
+                            }
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 75, height: 75)
-                                .padding(8)
                                 .background(colorScheme == .dark ? Color.black : Color.white)
                                 .clipShape(Circle())
                                 .offset(y: offset < 0 ? getOffset() - 20 : -20)
                                 .scaleEffect(getScale())
+                                .overlay{
+                                    Image(systemName: "camera.viewfinder")
+                                        .resizable()
+                                        .frame(width: 40, height: 40, alignment: .bottom)
+                                        .padding(8)
+                                        .clipShape(Circle())
+                                        .offset(y: offset < 0 ? getOffset() - 5 : -5)
+                                        .scaleEffect(getScale())
+                                        .opacity(0.5)
+                                }
+                                .onTapGesture{
+                                    accountMainVm.openAccountMainImagePreView()
+                                }
                             
                             Spacer()
                             Button(action: {
@@ -367,6 +404,14 @@ struct AccountMainView: View {
                 },
                 isClose: true)
                 .environmentObject(AccountCreateViewModel())
+        }
+        .fullScreenCover(isPresented: $accountMainVm.isImagePreView) {
+            ImagePreView(
+                type: accountMainVm.imagePreViewScreenType,
+                userImage: accountMainVm.imagePath,
+                uid: accountMainVm.account.uid
+            )
+            .environmentObject(ImagePreViewModel())
         }
     }
     
