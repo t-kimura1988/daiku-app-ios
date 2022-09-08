@@ -95,6 +95,15 @@ class ImagePreViewModel: ObservableObject {
             }
         })
     }
+    
+    func getPhotoSelectDialogTitle() -> String {
+        switch screenType {
+        case .accountMain:
+            return "アカウントのアイコンに設定する写真を選択しましょう"
+        case .profileBackImage:
+            return "アカウントトップの写真を選択しましょう"
+        }
+    }
 }
 
 

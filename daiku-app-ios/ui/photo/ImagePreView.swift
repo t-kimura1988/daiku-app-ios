@@ -35,6 +35,20 @@ struct ImagePreView: View {
                 }, label: {
                     Text("写真を選択する")
                 })
+                .confirmationDialog(imagePreViewModel.getPhotoSelectDialogTitle(), isPresented: $imagePreViewModel.isPhotoSelectSheet, actions: {
+                    Button(action: {
+                        imagePreViewModel.openImagePicker(type: .camera)
+                        
+                    }, label: {
+                        Text("写真を撮る")
+                    })
+                    Button(action: {
+                        imagePreViewModel.openImagePicker(type: .photoLibrary)
+                        
+                    }, label: {
+                        Text("フォトライブラリから選択")
+                    })
+                })
                 Spacer()
                 Button(action: {
                     imagePreViewModel.saveImage(completion: {
@@ -67,24 +81,6 @@ struct ImagePreView: View {
         .navigationViewStyle(.stack)
         .onAppear {
             imagePreViewModel.initItem(userImage: userImage, uid: uid, type: type)
-        }
-        .actionSheet(isPresented: $imagePreViewModel.isPhotoSelectSheet) {
-            var message: String = ""
-            switch imagePreViewModel.screenType {
-            case .accountMain:
-                message = "アカウントのアイコンに設定する写真を選択しましょう"
-            case .profileBackImage:
-                message = "アカウントトップの写真を選択しましょう"
-            }
-            return ActionSheet(title: Text("写真選択"), message: Text(message), buttons: [
-                .default(Text("写真を撮る")) {
-                    imagePreViewModel.openImagePicker(type: .camera)
-                },
-                .default(Text("フォトライブラリから選択")) {
-                    imagePreViewModel.openImagePicker(type: .photoLibrary)
-                },
-                .cancel()
-            ])
         }
     }
 }
