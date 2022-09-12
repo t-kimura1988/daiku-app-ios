@@ -25,6 +25,7 @@ class AccountExistViewModel: ObservableObject {
     @Published var isFirebaseAccountDel: Bool = false
     
     var accountRepository: AccountRepository = AccountRepository()
+    private var firebaseRepository: FirebaseRepository = FirebaseRepository()
     
     init() {
         
@@ -33,6 +34,23 @@ class AccountExistViewModel: ObservableObject {
                 if let _ = user {
                     do {
                         let account = try await self.accountRepository.getAccount()
+                        if let userImage = account.userImage, let profileBackImage = account.profileBackImage {
+                            if !userImage.contains("https://") || !profileBackImage.contains("https://") {
+                                let userImageURL = try await self.firebaseRepository.getDownloadURL(storagePath: userImage)
+                                let accountRes1 = try await self.accountRepository.uploadImage(body: .init(imagePath: userImageURL.absoluteString, imageType: ImagePreType.accountMain.code))!
+                                DispatchQueue.main.async {
+                                    self.account = accountRes1
+                                    self.state = .SignIn
+                                }
+                                let profileURL = try await self.firebaseRepository.getDownloadURL(storagePath: profileBackImage)
+                                let accountRes2 = try await self.accountRepository.uploadImage(body: .init(imagePath: profileURL.absoluteString, imageType: ImagePreType.profileBackImage.code))!
+                                DispatchQueue.main.async {
+                                    self.account = accountRes2
+                                    self.state = .SignIn
+                                }
+                                return
+                            }
+                        }
                         DispatchQueue.main.async {
                             self.account = account
                             self.state = .SignIn

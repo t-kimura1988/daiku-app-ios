@@ -37,7 +37,7 @@ struct AccountMainView: View {
                         return AnyView (
                             ZStack {
                                 
-                                AsyncImage(url: accountMainVm.profileBackURL) { image in
+                                AsyncImage(url: URL(string: accountMainVm.account.getProfileBackImage())) { image in
                                     image
                                         .resizable()
                                 } placeholder: {
@@ -89,7 +89,7 @@ struct AccountMainView: View {
                     VStack {
                         HStack{
                             
-                            AsyncImage(url: accountMainVm.userImageURL) { image in
+                            AsyncImage(url: URL(string: accountMainVm.account.getUserImage())) { image in
                                 image
                                     .resizable()
                             } placeholder: {

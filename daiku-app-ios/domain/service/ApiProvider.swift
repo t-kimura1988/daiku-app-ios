@@ -28,8 +28,16 @@ struct ApiProvider {
                 throw ApiError.responseError("E0002")
             }
             
+            let apiKey = Env["API_KEY"]
+            
+            guard let apiKey = apiKey else {
+                throw ApiError.responseError("E0006")
+            }
+
+            
             sessionConfig.httpAdditionalHeaders = [
-                "Authorization": "Bearer \(token!)"
+                "Authorization": "Bearer \(token!)",
+                "X-SPOC-API-KEY": apiKey
             ]
         }
         let session = URLSession(configuration: sessionConfig)

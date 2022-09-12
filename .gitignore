@@ -1,0 +1,6 @@
+.env
+.env.stg
+.env.dev
+/daiku-app-ios/config/stg/Environment.swift
+/daiku-app-ios/config/prd/Environment.swift
+/daiku-app-ios/config/dev/Environment.swift

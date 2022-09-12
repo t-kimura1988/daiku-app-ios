@@ -41,7 +41,8 @@ struct ProcessDetailView: View {
                         .foregroundColor(.gray)
                 } else {
                     Text("期間: \(processDetailVM.process.startDisp()) 〜 \(processDetailVM.process.endDisp())" )
-                        .padding(8)
+                        .padding(.top, 8)
+                        .foregroundColor(.gray)
                     
                 }
                 Spacer()
@@ -51,6 +52,14 @@ struct ProcessDetailView: View {
                 if goalDetailVM.goalDetail.editable() {
                     processDetailVM.changeTermUpdateSheet()
                 }
+            }
+            
+            
+            if processDetailVM.process.endDate().compare(goalDetailVM.goalDetail.dueDateToDate()) == .orderedDescending && !goalDetailVM.goalDetail.editable() {
+                Text("工程終了予定日が目標達成予定日を超えています。目標達成予定日を見直しましょう。")
+                    .fontWeight(.bold)
+                    .foregroundColor(.red)
+                    .padding(.top, 8)
             }
             
             // Status
@@ -194,8 +203,8 @@ struct ProcessDetailView: View {
         }
         .fullScreenCover(isPresented: $processDetailVM.isTermUpdateSheet) {
             ProcessTermUpdateView(
-                start: processDetailVM.process.start(),
-                end: processDetailVM.process.end(),
+                start: processDetailVM.process.startDate(),
+                end: processDetailVM.process.endDate(),
                 processId: processDetailVM.process.id,
                 goalCreateDate: processDetailVM.process.goalCreateDate,
                 goalId: processDetailVM.process.goalId
