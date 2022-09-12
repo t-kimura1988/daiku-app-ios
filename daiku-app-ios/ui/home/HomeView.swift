@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var vm: HomeMainViewModel
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
@@ -16,7 +17,8 @@ struct HomeView: View {
                 HomeRefreshView(coodinateSpaceName: "RefreshView", onRefresh: {
                     vm.getInitHomeList()
                 })
-                ForEach(vm.homeList) { item in
+                ForEach(0..<vm.homeList.count, id: \.self) { index in
+                    let item = vm.homeList[index]
                     NavigationLink {
                         GoalArchiveDetailView(archiveId: item.id, archiveCreateDate: item.archivesCreateDate)
                     } label: {
@@ -59,6 +61,17 @@ struct HomeView: View {
                             
                             VStack(alignment: .trailing) {
                                 HStack {
+                                    AsyncImage(url: URL(string: item.getUserImage())) { image in
+                                        image
+                                            .resizable()
+                                    } placeholder: {
+                                        Image("samurai")
+                                            .resizable()
+                                    }
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 50, height: 50)
+                                        .background(colorScheme == .dark ? Color.black : Color.white)
+                                        .clipShape(Circle())
                                     Text(item.accountName())
                                         .foregroundColor(.gray)
                                 }

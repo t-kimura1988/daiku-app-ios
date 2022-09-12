@@ -14,9 +14,9 @@
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
-                     BlueprintIdentifier = "2507F971285BAA6200A14A51"
-                     BuildableName = "dev-daiku-app-ios.app"
-                     BlueprintName = "dev-daiku-app-ios"
+                     BlueprintIdentifier = "25A05C0D288FC34C0077A005"
+                     BuildableName = "stg-daiku-app-ios.app"
+                     BlueprintName = "stg-daiku-app-ios"
                      ReferencedContainer = "container:daiku-app-ios.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>
@@ -49,6 +49,20 @@
                BlueprintIdentifier = "25A05C0D288FC34C0077A005"
                BuildableName = "stg-daiku-app-ios.app"
                BlueprintName = "stg-daiku-app-ios"
+               ReferencedContainer = "container:daiku-app-ios.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "25C2B92E285BA1F20077B013"
+               BuildableName = "D-Aic.app"
+               BlueprintName = "daiku-app-ios"
                ReferencedContainer = "container:daiku-app-ios.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

@@ -102,9 +102,10 @@ class GoalCreateViewModel: ObservableObject {
         let titleVali = $title.map({ !$0.isEmpty && !$0.moreGreater(size: 300) }).eraseToAnyPublisher()
         let purposeVali = $purpose.map({ !$0.moreGreater(size: 5000)}).eraseToAnyPublisher()
         let aimVali = $aim.map({ !$0.moreGreater(size: 5000) }).eraseToAnyPublisher()
+        let dueDateVali = $selectedDueDate.map({ $0.compareNowSame() || $0.compareNowDescending() }).eraseToAnyPublisher()
         
-        Publishers.CombineLatest3(titleVali, purposeVali, aimVali)
-            .map({ [$0.0, $0.1, $0.2] })
+        Publishers.CombineLatest4(titleVali, purposeVali, aimVali, dueDateVali)
+            .map({ [$0.0, $0.1, $0.2, $0.3] })
             .map({ $0.allSatisfy{ $0 }})
             .assign(to: &$isSaveButton)
         

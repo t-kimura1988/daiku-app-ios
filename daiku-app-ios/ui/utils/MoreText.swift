@@ -26,7 +26,6 @@ struct MoreText: View {
                     .background(GeometryReader { geo in
                         Color.clear.preference(key: SizePreference.self, value: geo.size)
                     })
-                    .padding()
                     .onPreferenceChange(SizePreference.self) { textSize in
                         if self.isFirst == true {
                             if textSize.height > 80 {

@@ -30,4 +30,13 @@ struct AccountResponse: Decodable {
 
     }
     
+    func getProfileBackImage() -> String {
+        guard let profileBackImage = profileBackImage else {
+            return ""
+        }
+        
+        return profileBackImage
+
+    }
+    
 }

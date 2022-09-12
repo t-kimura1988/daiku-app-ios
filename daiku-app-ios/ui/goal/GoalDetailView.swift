@@ -35,13 +35,24 @@ struct GoalDetailView: View {
                 VStack(alignment: .leading, spacing: 18) {
                     Text("目標")
                         .font(.title2)
+                        .fontWeight(.bold)
                     MoreText(text: goalDetailVM.goalDetail.title)
+                        .foregroundColor(.gray)
                     Text("なぜ.")
                         .font(.title2)
+                        .fontWeight(.bold)
                     MoreText(text: goalDetailVM.goalDetail.purpose)
+                        .foregroundColor(.gray)
                     Text("どのように.")
                         .font(.title2)
+                        .fontWeight(.bold)
                     MoreText(text: goalDetailVM.goalDetail.aim)
+                        .foregroundColor(.gray)
+                    Text("達成予定日")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                    Text(goalDetailVM.goalDetail.dueDateFormat())
+                        .foregroundColor(.gray)
                 }
                 Spacer()
                 
@@ -131,9 +142,22 @@ struct GoalDetailView: View {
                             .fontWeight(.bold)
                             .multilineTextAlignment(.leading)
                         
-                        Text("\(process.startDisp()) 〜 \(process.endDisp()) ")
-                            .foregroundColor(.gray)
-                            .multilineTextAlignment(.leading)
+                        HStack(spacing: 8) {
+                            Text("\(process.startDisp()) 〜 \(process.endDisp()) ")
+                                .foregroundColor(.gray)
+                                .multilineTextAlignment(.leading)
+                            if process.endDate().compare(goalDetailVM.goalDetail.dueDateToDate()) == .orderedDescending {
+                                Text("遅")
+                                    .fontWeight(.bold)
+                                    .padding(8)
+                                    .background(.red)
+                                    .cornerRadius(15)
+                                    .compositingGroup()
+                                    .shadow(color: .gray, radius: 3, x: 1, y: 1)
+                                
+                            }
+                            
+                        }
                         HStack(spacing: 8) {
                             Text(process.statusToEnum().title)
                                 .fontWeight(.bold)

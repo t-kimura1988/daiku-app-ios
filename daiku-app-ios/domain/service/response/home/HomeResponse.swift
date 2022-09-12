@@ -32,4 +32,13 @@ struct HomeResponse: Decodable, Identifiable {
     func getPublish() -> PublishLevel {
         return PublishLevel.init(rowValue: publish)
     }
+    
+    func getUserImage() -> String {
+        guard let userImage = userImage else {
+            return ""
+        }
+        
+        return userImage
+
+    }
 }
