@@ -142,7 +142,6 @@
 		256D56AA286EB47F00D61541 /* DaikuFormEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D56A8286EB47F00D61541 /* DaikuFormEditor.swift */; };
 		2589877C28CB02D50004B3DA /* buildEnv-stg.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2589877B28CB02D50004B3DA /* buildEnv-stg.sh */; };
 		2589877E28CB03010004B3DA /* .env.stg in Resources */ = {isa = PBXBuildFile; fileRef = 2589877D28CB03010004B3DA /* .env.stg */; };
-		2589878028CB033D0004B3DA /* .env.dev in Resources */ = {isa = PBXBuildFile; fileRef = 2589877828CB01370004B3DA /* .env.dev */; };
 		2589878128CB03410004B3DA /* buildEnv-dev.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2589877628CB00700004B3DA /* buildEnv-dev.sh */; };
 		2589878328CB03570004B3DA /* buildEnv.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2589878228CB03570004B3DA /* buildEnv.sh */; };
 		2589878528CB037E0004B3DA /* .env in Resources */ = {isa = PBXBuildFile; fileRef = 2589878428CB037E0004B3DA /* .env */; };
@@ -357,6 +356,7 @@
 		25A9D68F288322B500F8A7EB /* GoalArchiveDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D67F2882C61600F8A7EB /* GoalArchiveDetailViewModel.swift */; };
 		25A9D691288413D700F8A7EB /* PublishLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D690288413D700F8A7EB /* PublishLevel.swift */; };
 		25A9D6922884155600F8A7EB /* PublishLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D690288413D700F8A7EB /* PublishLevel.swift */; };
+		25B521F628CF615100B48663 /* .env.dev in Resources */ = {isa = PBXBuildFile; fileRef = 25B521F528CF615100B48663 /* .env.dev */; };
 		25BD6C8428B8AB24002085F8 /* SignInWithAppleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BD6C8328B8AB24002085F8 /* SignInWithAppleButtonView.swift */; };
 		25BD6C8528B8B0D1002085F8 /* SignInWithAppleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BD6C8328B8AB24002085F8 /* SignInWithAppleButtonView.swift */; };
 		25BD6C8628B8B0D2002085F8 /* SignInWithAppleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BD6C8328B8AB24002085F8 /* SignInWithAppleButtonView.swift */; };
@@ -493,7 +493,6 @@
 		256D56A8286EB47F00D61541 /* DaikuFormEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaikuFormEditor.swift; sourceTree = "<group>"; };
 		2589877528CB00060004B3DA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2589877628CB00700004B3DA /* buildEnv-dev.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "buildEnv-dev.sh"; sourceTree = "<group>"; };
-		2589877828CB01370004B3DA /* .env.dev */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.dev; sourceTree = "<group>"; };
 		2589877B28CB02D50004B3DA /* buildEnv-stg.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "buildEnv-stg.sh"; sourceTree = "<group>"; };
 		2589877D28CB03010004B3DA /* .env.stg */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.stg; sourceTree = "<group>"; };
 		2589878228CB03570004B3DA /* buildEnv.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = buildEnv.sh; sourceTree = "<group>"; };
@@ -550,6 +549,7 @@
 		25A9D68728831D9200F8A7EB /* GoalArchiveDetailParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalArchiveDetailParameter.swift; sourceTree = "<group>"; };
 		25A9D68C2883200100F8A7EB /* GoalArchiveRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalArchiveRepository.swift; sourceTree = "<group>"; };
 		25A9D690288413D700F8A7EB /* PublishLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishLevel.swift; sourceTree = "<group>"; };
+		25B521F528CF615100B48663 /* .env.dev */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.dev; sourceTree = "<group>"; };
 		25BD6C8228B85DCB002085F8 /* daiku-app-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "daiku-app-ios.entitlements"; sourceTree = "<group>"; };
 		25BD6C8328B8AB24002085F8 /* SignInWithAppleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButtonView.swift; sourceTree = "<group>"; };
 		25BD6C8B28B91E36002085F8 /* dev-daiku-app-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "dev-daiku-app-ios.entitlements"; sourceTree = "<group>"; };
@@ -1138,11 +1138,11 @@
 		25C2B926285BA1F20077B013 = {
 			isa = PBXGroup;
 			children = (
+				25B521F528CF615100B48663 /* .env.dev */,
 				2589878428CB037E0004B3DA /* .env */,
 				2589878228CB03570004B3DA /* buildEnv.sh */,
 				2589877D28CB03010004B3DA /* .env.stg */,
 				2589877B28CB02D50004B3DA /* buildEnv-stg.sh */,
-				2589877828CB01370004B3DA /* .env.dev */,
 				2589877628CB00700004B3DA /* buildEnv-dev.sh */,
 				2589877528CB00060004B3DA /* .gitignore */,
 				254F4FAE28BFBBFA0094D206 /* stg-daiku-app-ios.entitlements */,
@@ -1398,7 +1398,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2589878028CB033D0004B3DA /* .env.dev in Resources */,
+				25B521F628CF615100B48663 /* .env.dev in Resources */,
 				2507F984285BAA6200A14A51 /* Preview Assets.xcassets in Resources */,
 				2507F985285BAA6200A14A51 /* Assets.xcassets in Resources */,
 				25BD6C9028B92919002085F8 /* GoogleService-Info.plist in Resources */,
@@ -2181,7 +2181,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "daiku-app-ios/daiku-app-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.3;
+				CURRENT_PROJECT_VERSION = 1.2.1;
 				DEVELOPMENT_ASSET_PATHS = "\"daiku-app-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = R2XS7CKCJS;
 				ENABLE_PREVIEWS = YES;
@@ -2199,7 +2199,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.goen.daiku-app-ios";
 				PRODUCT_NAME = "D-Aic";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -2215,7 +2215,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "daiku-app-ios/daiku-app-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.3;
+				CURRENT_PROJECT_VERSION = 1.2.1;
 				DEVELOPMENT_ASSET_PATHS = "\"daiku-app-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = R2XS7CKCJS;
 				ENABLE_PREVIEWS = YES;
@@ -2233,7 +2233,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.goen.daiku-app-ios";
 				PRODUCT_NAME = "D-Aic";
 				SWIFT_EMIT_LOC_STRINGS = YES;
