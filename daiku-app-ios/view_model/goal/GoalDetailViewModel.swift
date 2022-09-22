@@ -49,7 +49,9 @@ class GoalDetailViewModel: ObservableObject {
         self.isArchiveSheet = !self.isArchiveSheet
     }
     func changeSheetFlg() {
-        self.isSheet = !self.isSheet
+        DispatchQueue.main.async {
+            self.isSheet = !self.isSheet
+        }
     }
     func changeGoalEditFlg() {
         self.isGoalEditSheet = !self.isGoalEditSheet

@@ -13,4 +13,5 @@ struct GoalCreateRequest: Encodable {
     var purpose: String
     var aim: String
     var dueDate: String
+    var makiId: Int
 }

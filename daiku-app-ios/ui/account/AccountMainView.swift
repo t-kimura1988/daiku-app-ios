@@ -37,19 +37,14 @@ struct AccountMainView: View {
                         return AnyView (
                             ZStack {
                                 
-                                AsyncImage(url: URL(string: accountMainVm.account.getProfileBackImage())) { image in
-                                    image
-                                        .resizable()
-                                } placeholder: {
-                                    Color(.green)
-                                }
-                                .aspectRatio(contentMode: .fill)
-                                .frame(
-                                    width: getRect().width,
-                                    height: minY > 0 ? 180 + minY: 180,
-                                    alignment: .center)
-                                .overlay{
-                                    Image(systemName: "camera.viewfinder")
+                                UserImageView(userImage: accountMainVm.account.getProfileBackImage(), placeholderType: .color)
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(
+                                        width: getRect().width,
+                                        height: minY > 0 ? 180 + minY: 180,
+                                        alignment: .center)
+                                    .overlay{
+                                        Image(systemName: "camera.viewfinder")
                                         .resizable()
                                         .frame(width: 40, height: 40, alignment: .bottomLeading)
                                         .padding(8)
@@ -88,14 +83,7 @@ struct AccountMainView: View {
                     // account profile
                     VStack {
                         HStack{
-                            
-                            AsyncImage(url: URL(string: accountMainVm.account.getUserImage())) { image in
-                                image
-                                    .resizable()
-                            } placeholder: {
-                                Image("samurai")
-                                    .resizable()
-                            }
+                            UserImageView(userImage: accountMainVm.account.getUserImage(), placeholderType: .samurai)
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 75, height: 75)
                                 .background(colorScheme == .dark ? Color.black : Color.white)
@@ -197,68 +185,9 @@ struct AccountMainView: View {
                         // Goal List
                         VStack(alignment: .leading, spacing: 8) {
                             ForEach(accountMainVm.myGoal) { item in
-                                NavigationLink{
-                                    GoalDetailView(goalId: item.id, createDate: item.createDate, archiveId: item.getArchiveId(), archiveCreateDate: item.getArchiveCreateDate())
-                                } label: {
-                                    HStack {
-                                        VStack(alignment: .leading) {
-                                            Text(item.title)
-                                                .fontWeight(.bold)
-                                                .lineLimit(1)
-                                                .foregroundColor(.primary)
-                                            if item.isArchive() {
-                                                Text("達成済")
-                                                    .fontWeight(.bold)
-                                                    .padding(8)
-                                                    .background(.green)
-                                                    .foregroundColor(.primary)
-                                                    .cornerRadius(15)
-                                                    .compositingGroup()
-                                                    .shadow(color: .gray, radius: 3, x: 1, y: 1)
-                                            }
-                                            HStack {
-                                                (
-                                                    Text("期日:\(item.dueDateFormat())")
-                                                        .foregroundColor(Color.gray)
-                                                )
-                                            }
-                                            Text(item.purpose)
-                                                .font(.body)
-                                                .lineLimit(5)
-                                                .padding(.top, 8)
-                                                .foregroundColor(.primary)
-                                                .multilineTextAlignment(.leading)
-                                        }
-                                        .padding(8)
-                                        Spacer()
-                                    }
-                                    .contentShape(Rectangle())
-                                }
-                                
-                                
-                                VStack(alignment: .center, spacing: 0) {
-                                    FavoriteButton(goal: item, changeFavorite: { goalId, createDate in
-                                        
-                                        accountMainVm.changeGoalFavorite(request: .init(goalId: goalId, goalCreateDate: createDate)) {
-                                            
-                                        }
-                                    })
-                                }.padding(.top, 10)
-                                
-                                Divider()
-                                    .frame(maxWidth: .infinity)
-                            }
-                            
-                        
-                            if accountMainVm.goalListLoadFlg {
-                                Button(action: {
-                                    accountMainVm.getMyGoal()
-                                }, label: {
-                                    Text("もっと見る")
-                                })
+                                GoalListParts(item: item)
                             }
                         }
-                        .zIndex(0)
                         .onAppear{
                             if !accountMainVm.isGoalListLoading {
                                 accountMainVm.getInitMyGoal()
@@ -380,6 +309,49 @@ struct AccountMainView: View {
                         .onAppear {
                             if !accountMainVm.isBookMarkListLoading {
                                 accountMainVm.getInitBookMarkList()
+                            }
+                        }
+                    } else if accountMainVm.currentTab == TabButtonTitle.Maki.rawValue {
+                        // 書のリスト
+                        VStack(alignment: .leading) {
+                            ForEach(accountMainVm.makiList) { item in
+                                NavigationLink {
+                                    MakiDetailView(makiId: item.id)
+                                } label: {
+                                    VStack(alignment: .leading) {
+                                        HStack {
+                                            UserImageView(userImage: item.getAccountImageURL(), placeholderType: .samurai)
+                                                .aspectRatio(contentMode: .fill)
+                                                .frame(width: 40, height: 40)
+                                                .background(colorScheme == .dark ? Color.black : Color.white)
+                                                .clipShape(Circle())
+                                            Text("\(item.createdAccountFamilyName) \(item.createdAccountGivenName)")
+                                                .foregroundColor(.primary)
+                                            Spacer()
+                                        }
+                                        .padding(.bottom, 8)
+                                        Text(item.makiTitle)
+                                            .fontWeight(.bold)
+                                            .foregroundColor(.primary)
+                                        Text(item.makiKey)
+                                            .foregroundColor(.gray)
+                                        Text(item.makiDesc)
+                                            .font(.caption)
+                                            .lineLimit(3)
+                                            .padding(.top, 4)
+                                            .multilineTextAlignment(.leading)
+                                            .foregroundColor(.primary)
+                                        
+                                    }
+                                    .padding(6)
+                                }
+                                Divider()
+                            }
+                        }
+                        .zIndex(0)
+                        .onAppear {
+                            if !accountMainVm.isMakiListLoading {
+                                accountMainVm.getInitMakiList()
                             }
                         }
                     }

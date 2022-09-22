@@ -10,7 +10,9 @@ import SwiftUI
 struct UnAuthView: View {
     @EnvironmentObject var vm: AccountExistViewModel
     var route: AuthRouter = AuthRouter()
-    var daikuHomePageUrl: String = Bundle.main.object(forInfoDictionaryKey: "HOME_PAGE_URL") as! String
+    
+    var daikuHomePageUrl: String = Env["HOME_PAGE_URL"]!
+    
     var body: some View {
         NavigationView {
             DaikuWebView(url: "\(daikuHomePageUrl)/unauth")

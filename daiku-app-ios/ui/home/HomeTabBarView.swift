@@ -30,6 +30,7 @@ struct HomeTabBarView: View {
         .environmentObject(ProcessDetailViewModel())
         .environmentObject(FavoriteMainViewModel())
         .environmentObject(GoalArchiveDetailViewModel())
+        .environmentObject(MakiDetailViewModel())
     }
 }
 
