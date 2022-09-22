@@ -12,13 +12,13 @@ import FirebaseStorage
 struct FirebaseRepository {
     private var storage: Storage = Storage.storage()
     
-    func uploadStorage(path: String, image: UIImage, completion: @escaping (String?) -> Void) {
+    func uploadStorage(path: String, image: UIImage, completion: @escaping (URL) -> Void) {
         let storageRef = storage.reference().child(path)
 
         let data = image.jpegData(compressionQuality: 0.2)
         let metadata = StorageMetadata()
         metadata.contentType = "image/jpeg"
-        
+        metadata.cacheControl = "public"
         
         if let data = data {
             let putData = storageRef.putData(data, metadata: metadata)
@@ -31,8 +31,9 @@ struct FirebaseRepository {
                 print(error)
             }
             putData.observe(.success) { snapshot in
-                if let path = snapshot.metadata?.path {
-                    completion(path)
+                Task {
+                    let url = try await storageRef.downloadURL()
+                    completion(url)
                 }
             }
             

@@ -59,7 +59,10 @@ struct GoalResponse: Decodable, Identifiable {
         return true
     }
     
-    private func dueDateToDate() -> Date {
+    func dueDateToDate() -> Date {
+        if dueDate.isEmpty {
+            return Date()
+        }
         let formatter = DateFormatter()
         formatter.calendar = Calendar(identifier: .iso8601)
         formatter.dateFormat = "yyyy-MM-dd"

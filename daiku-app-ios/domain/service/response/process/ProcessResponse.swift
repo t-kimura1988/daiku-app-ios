@@ -52,7 +52,7 @@ struct ProcessResponse: Decodable, Identifiable {
         return Date().toString(format: "yyyy年MM月dd日")
     }
     
-    func start() -> Date {
+    func startDate() -> Date {
         if let processStartDate = processStartDate {
             return processStartDate.toDate()
         }
@@ -60,7 +60,7 @@ struct ProcessResponse: Decodable, Identifiable {
         return Date()
     }
     
-    func end() -> Date {
+    func endDate() -> Date {
         if let processEndDate = processEndDate {
             return processEndDate.toDate()
         }

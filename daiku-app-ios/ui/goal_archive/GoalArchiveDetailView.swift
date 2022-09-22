@@ -32,12 +32,23 @@ struct GoalArchiveDetailView: View {
         ScrollView {
             HStack {
                 VStack(alignment: .leading, spacing: 8) {
-                    MoreText(text: archive.thoughts)
                     HStack {
-                        Spacer()
+                        AsyncImage(url: URL(string: archive.getUserImage())) { image in
+                            image
+                                .resizable()
+                        } placeholder: {
+                            Image("samurai")
+                                .resizable()
+                        }
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 50, height: 50)
+                            .background(colorScheme == .dark ? Color.black : Color.white)
+                            .clipShape(Circle())
+                        
                         Text(archive.accountName())
                             .foregroundColor(.gray)
                     }
+                    MoreText(text: archive.thoughts)
                     
                     if goalArchiveDetailVM.isEditButton {
                         
@@ -74,11 +85,6 @@ struct GoalArchiveDetailView: View {
                     Text(goal.aim)
                         .font(.body)
                         .padding(8)
-                    HStack {
-                        Spacer()
-                        Text(goal.accountName())
-                            .foregroundColor(.gray)
-                    }
                 }
                 Spacer()
             }

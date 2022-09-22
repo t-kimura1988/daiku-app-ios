@@ -53,8 +53,6 @@ class AccountMainViewModel: ObservableObject {
             let accountRes = try await accountRepository.getAccount()
             DispatchQueue.main.sync {
                 account = accountRes
-                getUserImage()
-                getProfileBackImage()
             }
         }
         
@@ -184,32 +182,6 @@ class AccountMainViewModel: ObservableObject {
     
     func closeImagePreView() {
         isImagePreView = false
-    }
-    
-    func getUserImage() {
-        Task {
-            guard let userImagePath = account.userImage else {
-                return
-            }
-            let url = try await firebaseRepository.getDownloadURL(storagePath: userImagePath)
-            
-            DispatchQueue.main.async {
-                self.userImageURL = url
-            }
-        }
-    }
-    
-    func getProfileBackImage() {
-        Task {
-            guard let profileBackImage = account.profileBackImage else {
-                return
-            }
-            let url = try await firebaseRepository.getDownloadURL(storagePath: profileBackImage)
-            
-            DispatchQueue.main.async {
-                self.profileBackURL = url
-            }
-        }
     }
 }
 

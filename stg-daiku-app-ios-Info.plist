@@ -2,12 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>フォトライブラリを使用します。</string>
-	<key>NSCameraUsageDescription</key>
-	<string>カメラを使用します。</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>写真の選択を行うため、アクセスします。</string>
 	<key>BASE_API</key>
 	<string>https://daiku-app.dev.goenway.com</string>
 	<key>CFBundleURLTypes</key>

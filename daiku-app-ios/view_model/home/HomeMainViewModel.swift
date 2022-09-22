@@ -10,6 +10,7 @@ import Foundation
 
 class HomeMainViewModel: ObservableObject {
     private var homeReposiroty: HomeRepository = HomeRepository()
+    private var firebaseRepository: FirebaseRepository = FirebaseRepository()
     @Published var homeList: [HomeResponse] = [HomeResponse()]
     @Published var isSheet: Bool = false
     

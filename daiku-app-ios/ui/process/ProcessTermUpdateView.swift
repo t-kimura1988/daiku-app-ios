@@ -10,6 +10,7 @@ import SwiftUI
 struct ProcessTermUpdateView: View {
     @EnvironmentObject var processTermUpdateVM: ProcessTermUpdateViewModel
     @EnvironmentObject var processDetailVM: ProcessDetailViewModel
+    @EnvironmentObject var goalDetailVM: GoalDetailViewModel
     private var start: Date = Date()
     private var end: Date = Date()
     
@@ -33,10 +34,8 @@ struct ProcessTermUpdateView: View {
                     ZStack(alignment: .leading) {
                         
                         HStack {
-                            Text("開始: ")
-                                .foregroundColor(.gray)
                                 
-                            DatePicker("開始", selection: $processTermUpdateVM.start, displayedComponents: .date)
+                            DatePicker("開始予定", selection: $processTermUpdateVM.start, displayedComponents: .date)
                                 .environment(\.locale, Locale(identifier: "ja_JP"))
                             Spacer()
                         }
@@ -49,10 +48,8 @@ struct ProcessTermUpdateView: View {
                     ZStack(alignment: .leading) {
                         
                         HStack {
-                            Text("完了: ")
-                                .foregroundColor(.gray)
                                 
-                            DatePicker("完了", selection: $processTermUpdateVM.end, displayedComponents: .date)
+                            DatePicker("終了予定", selection: $processTermUpdateVM.end, displayedComponents: .date)
                                 .environment(\.locale, Locale(identifier: "ja_JP"))
                             Spacer()
                         }
@@ -62,6 +59,13 @@ struct ProcessTermUpdateView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
                     .contentShape(Rectangle())
+                    if processTermUpdateVM.end.compare(goalDetailVM.goalDetail.dueDateToDate()) == .orderedDescending {
+                        
+                        Text("工程終了予定日が目標達成予定日を超えています。目標達成予定日を見直しましょう。")
+                            .fontWeight(.bold)
+                            .foregroundColor(.red)
+                            .padding(.top, 8)
+                    }
                 }
             }
             .navigationBarBackButtonHidden(true)
@@ -83,6 +87,7 @@ struct ProcessTermUpdateView: View {
                     }, label: {
                         Text("保存")
                     })
+                    .disabled(!processTermUpdateVM.isSaveButton)
                 }
             }
         }

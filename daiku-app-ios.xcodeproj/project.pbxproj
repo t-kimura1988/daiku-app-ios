@@ -140,6 +140,14 @@
 		256D56A7286DA72D00D61541 /* GoalCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D56A5286DA72D00D61541 /* GoalCreateViewModel.swift */; };
 		256D56A9286EB47F00D61541 /* DaikuFormEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D56A8286EB47F00D61541 /* DaikuFormEditor.swift */; };
 		256D56AA286EB47F00D61541 /* DaikuFormEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D56A8286EB47F00D61541 /* DaikuFormEditor.swift */; };
+		2589877C28CB02D50004B3DA /* buildEnv-stg.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2589877B28CB02D50004B3DA /* buildEnv-stg.sh */; };
+		2589877E28CB03010004B3DA /* .env.stg in Resources */ = {isa = PBXBuildFile; fileRef = 2589877D28CB03010004B3DA /* .env.stg */; };
+		2589878128CB03410004B3DA /* buildEnv-dev.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2589877628CB00700004B3DA /* buildEnv-dev.sh */; };
+		2589878328CB03570004B3DA /* buildEnv.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2589878228CB03570004B3DA /* buildEnv.sh */; };
+		2589878528CB037E0004B3DA /* .env in Resources */ = {isa = PBXBuildFile; fileRef = 2589878428CB037E0004B3DA /* .env */; };
+		2589878928CB0FE80004B3DA /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2589878828CB0FE80004B3DA /* Environment.swift */; };
+		2589878D28CB100B0004B3DA /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2589878C28CB100B0004B3DA /* Environment.swift */; };
+		2595829C28CB1569008ED59D /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2595829B28CB1569008ED59D /* Environment.swift */; };
 		259BE5D1286FFEBE00098DBC /* GoalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259BE5D0286FFEBE00098DBC /* GoalService.swift */; };
 		259BE5D32870015300098DBC /* GoalCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259BE5D22870015300098DBC /* GoalCreateRequest.swift */; };
 		259BE5D5287013A100098DBC /* GoalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259BE5D4287013A100098DBC /* GoalRepository.swift */; };
@@ -348,6 +356,7 @@
 		25A9D68F288322B500F8A7EB /* GoalArchiveDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D67F2882C61600F8A7EB /* GoalArchiveDetailViewModel.swift */; };
 		25A9D691288413D700F8A7EB /* PublishLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D690288413D700F8A7EB /* PublishLevel.swift */; };
 		25A9D6922884155600F8A7EB /* PublishLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9D690288413D700F8A7EB /* PublishLevel.swift */; };
+		25B521F628CF615100B48663 /* .env.dev in Resources */ = {isa = PBXBuildFile; fileRef = 25B521F528CF615100B48663 /* .env.dev */; };
 		25BD6C8428B8AB24002085F8 /* SignInWithAppleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BD6C8328B8AB24002085F8 /* SignInWithAppleButtonView.swift */; };
 		25BD6C8528B8B0D1002085F8 /* SignInWithAppleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BD6C8328B8AB24002085F8 /* SignInWithAppleButtonView.swift */; };
 		25BD6C8628B8B0D2002085F8 /* SignInWithAppleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BD6C8328B8AB24002085F8 /* SignInWithAppleButtonView.swift */; };
@@ -482,6 +491,15 @@
 		256D56A1286D807D00D61541 /* GoalCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCreateView.swift; sourceTree = "<group>"; };
 		256D56A5286DA72D00D61541 /* GoalCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCreateViewModel.swift; sourceTree = "<group>"; };
 		256D56A8286EB47F00D61541 /* DaikuFormEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaikuFormEditor.swift; sourceTree = "<group>"; };
+		2589877528CB00060004B3DA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		2589877628CB00700004B3DA /* buildEnv-dev.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "buildEnv-dev.sh"; sourceTree = "<group>"; };
+		2589877B28CB02D50004B3DA /* buildEnv-stg.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "buildEnv-stg.sh"; sourceTree = "<group>"; };
+		2589877D28CB03010004B3DA /* .env.stg */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.stg; sourceTree = "<group>"; };
+		2589878228CB03570004B3DA /* buildEnv.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = buildEnv.sh; sourceTree = "<group>"; };
+		2589878428CB037E0004B3DA /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
+		2589878828CB0FE80004B3DA /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		2589878C28CB100B0004B3DA /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		2595829B28CB1569008ED59D /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		259BE5D0286FFEBE00098DBC /* GoalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalService.swift; sourceTree = "<group>"; };
 		259BE5D22870015300098DBC /* GoalCreateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCreateRequest.swift; sourceTree = "<group>"; };
 		259BE5D4287013A100098DBC /* GoalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalRepository.swift; sourceTree = "<group>"; };
@@ -531,6 +549,7 @@
 		25A9D68728831D9200F8A7EB /* GoalArchiveDetailParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalArchiveDetailParameter.swift; sourceTree = "<group>"; };
 		25A9D68C2883200100F8A7EB /* GoalArchiveRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalArchiveRepository.swift; sourceTree = "<group>"; };
 		25A9D690288413D700F8A7EB /* PublishLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishLevel.swift; sourceTree = "<group>"; };
+		25B521F528CF615100B48663 /* .env.dev */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.dev; sourceTree = "<group>"; };
 		25BD6C8228B85DCB002085F8 /* daiku-app-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "daiku-app-ios.entitlements"; sourceTree = "<group>"; };
 		25BD6C8328B8AB24002085F8 /* SignInWithAppleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButtonView.swift; sourceTree = "<group>"; };
 		25BD6C8B28B91E36002085F8 /* dev-daiku-app-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "dev-daiku-app-ios.entitlements"; sourceTree = "<group>"; };
@@ -628,6 +647,7 @@
 		2507F98F285C13E600A14A51 /* config */ = {
 			isa = PBXGroup;
 			children = (
+				2589878728CB05D20004B3DA /* stg */,
 				25F41EE7289CF0F900F3D163 /* prd */,
 				2507F990285C140700A14A51 /* dev */,
 			);
@@ -637,6 +657,7 @@
 		2507F990285C140700A14A51 /* dev */ = {
 			isa = PBXGroup;
 			children = (
+				2589878C28CB100B0004B3DA /* Environment.swift */,
 				25BD6C8F28B92919002085F8 /* GoogleService-Info.plist */,
 			);
 			path = dev;
@@ -976,6 +997,14 @@
 			path = goal;
 			sourceTree = "<group>";
 		};
+		2589878728CB05D20004B3DA /* stg */ = {
+			isa = PBXGroup;
+			children = (
+				2589878828CB0FE80004B3DA /* Environment.swift */,
+			);
+			path = stg;
+			sourceTree = "<group>";
+		};
 		259BE5DF287075E900098DBC /* goal */ = {
 			isa = PBXGroup;
 			children = (
@@ -1109,6 +1138,13 @@
 		25C2B926285BA1F20077B013 = {
 			isa = PBXGroup;
 			children = (
+				25B521F528CF615100B48663 /* .env.dev */,
+				2589878428CB037E0004B3DA /* .env */,
+				2589878228CB03570004B3DA /* buildEnv.sh */,
+				2589877D28CB03010004B3DA /* .env.stg */,
+				2589877B28CB02D50004B3DA /* buildEnv-stg.sh */,
+				2589877628CB00700004B3DA /* buildEnv-dev.sh */,
+				2589877528CB00060004B3DA /* .gitignore */,
 				254F4FAE28BFBBFA0094D206 /* stg-daiku-app-ios.entitlements */,
 				25BD6C8B28B91E36002085F8 /* dev-daiku-app-ios.entitlements */,
 				2507F993285C144100A14A51 /* dev-daiku-app-ios-Info.plist */,
@@ -1180,6 +1216,7 @@
 		25F41EE7289CF0F900F3D163 /* prd */ = {
 			isa = PBXGroup;
 			children = (
+				2595829B28CB1569008ED59D /* Environment.swift */,
 				25F41EE8289CF11400F3D163 /* GoogleService-Info.plist */,
 			);
 			path = prd;
@@ -1192,6 +1229,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2507F986285BAA6200A14A51 /* Build configuration list for PBXNativeTarget "dev-daiku-app-ios" */;
 			buildPhases = (
+				2589877728CB00BC0004B3DA /* Run Script */,
 				2507F97A285BAA6200A14A51 /* Sources */,
 				2507F97D285BAA6200A14A51 /* Frameworks */,
 				2507F983285BAA6200A14A51 /* Resources */,
@@ -1217,6 +1255,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25A05C85288FC34C0077A005 /* Build configuration list for PBXNativeTarget "stg-daiku-app-ios" */;
 			buildPhases = (
+				2589877F28CB03230004B3DA /* ShellScript */,
 				25A05C14288FC34C0077A005 /* Sources */,
 				25A05C7C288FC34C0077A005 /* Frameworks */,
 				25A05C81288FC34C0077A005 /* Resources */,
@@ -1242,6 +1281,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25C2B953285BA1F30077B013 /* Build configuration list for PBXNativeTarget "daiku-app-ios" */;
 			buildPhases = (
+				2589878628CB03EF0004B3DA /* ShellScript */,
 				25C2B92B285BA1F20077B013 /* Sources */,
 				25C2B92C285BA1F20077B013 /* Frameworks */,
 				25C2B92D285BA1F20077B013 /* Resources */,
@@ -1358,9 +1398,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25B521F628CF615100B48663 /* .env.dev in Resources */,
 				2507F984285BAA6200A14A51 /* Preview Assets.xcassets in Resources */,
 				2507F985285BAA6200A14A51 /* Assets.xcassets in Resources */,
 				25BD6C9028B92919002085F8 /* GoogleService-Info.plist in Resources */,
+				2589878128CB03410004B3DA /* buildEnv-dev.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1368,6 +1410,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2589877E28CB03010004B3DA /* .env.stg in Resources */,
+				2589877C28CB02D50004B3DA /* buildEnv-stg.sh in Resources */,
 				25A05C82288FC34C0077A005 /* Preview Assets.xcassets in Resources */,
 				25A05C83288FC34C0077A005 /* Assets.xcassets in Resources */,
 				25BD6C9128B92919002085F8 /* GoogleService-Info.plist in Resources */,
@@ -1378,7 +1422,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2589878528CB037E0004B3DA /* .env in Resources */,
 				25C2B93A285BA1F20077B013 /* Preview Assets.xcassets in Resources */,
+				2589878328CB03570004B3DA /* buildEnv.sh in Resources */,
 				25C2B937285BA1F20077B013 /* Assets.xcassets in Resources */,
 				25F41EEE28A2413600F3D163 /* GoogleService-Info.plist in Resources */,
 			);
@@ -1399,6 +1445,61 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2589877728CB00BC0004B3DA /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${SRCROOT}/buildEnv-dev.sh\" \"${SRCROOT}/.env.dev\" \"${SRCROOT}/${PROJECT}\"\n";
+		};
+		2589877F28CB03230004B3DA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${SRCROOT}/buildEnv-stg.sh\" \"${SRCROOT}/.env.stg\" \"${SRCROOT}/${PROJECT}\"\n";
+		};
+		2589878628CB03EF0004B3DA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${SRCROOT}/buildEnv.sh\" \"${SRCROOT}/.env\" \"${SRCROOT}/${PROJECT}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2507F97A285BAA6200A14A51 /* Sources */ = {
@@ -1506,6 +1607,7 @@
 				2507F9AC285C23F900A14A51 /* HomeView.swift in Sources */,
 				251AAD92287435820008CFDE /* GoalDetailViewModel.swift in Sources */,
 				25A05CA028919E440077A005 /* TProcessHistory.swift in Sources */,
+				2589878D28CB100B0004B3DA /* Environment.swift in Sources */,
 				2507F9CE285DB02000A14A51 /* HomeMainViewModel.swift in Sources */,
 				259BE5E52871FB5200098DBC /* BlurView.swift in Sources */,
 				251AADAB287548BB0008CFDE /* ProcessCreateViewModel.swift in Sources */,
@@ -1631,6 +1733,7 @@
 				25A05C6A288FC34C0077A005 /* HomeView.swift in Sources */,
 				25A05C6B288FC34C0077A005 /* GoalDetailViewModel.swift in Sources */,
 				25A05CA128919E440077A005 /* TProcessHistory.swift in Sources */,
+				2589878928CB0FE80004B3DA /* Environment.swift in Sources */,
 				25A05C6C288FC34C0077A005 /* HomeMainViewModel.swift in Sources */,
 				25A05C6D288FC34C0077A005 /* BlurView.swift in Sources */,
 				25A05C6E288FC34C0077A005 /* ProcessCreateViewModel.swift in Sources */,
@@ -1704,6 +1807,7 @@
 				2507F9C6285D918600A14A51 /* HomeTabBarView.swift in Sources */,
 				251AAD83287321700008CFDE /* GoalFavoriteService.swift in Sources */,
 				25645B222876DE1600A8B334 /* ProcessHistoryRepository.swift in Sources */,
+				2595829C28CB1569008ED59D /* Environment.swift in Sources */,
 				25A9D65F287EC2F900F8A7EB /* ProcessHistoryDetailParameter.swift in Sources */,
 				25A9D6532879F51400F8A7EB /* ProcessHistoryCommentRequest.swift in Sources */,
 				25BF37C428C11779002614FE /* ImagePreViewModel.swift in Sources */,
@@ -1818,7 +1922,7 @@
 				BASE_URL = "http://127.0.0.1:8080";
 				CODE_SIGN_ENTITLEMENTS = "dev-daiku-app-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.1.3;
 				DEVELOPMENT_ASSET_PATHS = "\"daiku-app-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = R2XS7CKCJS;
 				DOMAIN = aaaaaaaa;
@@ -1826,6 +1930,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "dev-daiku-app-ios-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-Aic_dev";
+				INFOPLIST_KEY_NSCameraUsageDescription = "アカウント画面に設定する画像を撮るために許可が必要です。";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "アカウント画面に設定する画像を選択ために許可が必要です。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1835,7 +1941,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.goen.dev-daiku-app-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1853,7 +1959,7 @@
 				BASE_URL = "http://127.0.0.1:8080";
 				CODE_SIGN_ENTITLEMENTS = "dev-daiku-app-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.1.3;
 				DEVELOPMENT_ASSET_PATHS = "\"daiku-app-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = R2XS7CKCJS;
 				DOMAIN = aaaaaaaa;
@@ -1861,6 +1967,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "dev-daiku-app-ios-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-Aic_dev";
+				INFOPLIST_KEY_NSCameraUsageDescription = "アカウント画面に設定する画像を撮るために許可が必要です。";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "アカウント画面に設定する画像を選択ために許可が必要です。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1870,7 +1978,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.goen.dev-daiku-app-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1888,13 +1996,15 @@
 				BASE_API = "https://daiku-app.dev.goenway.com";
 				CODE_SIGN_ENTITLEMENTS = "stg-daiku-app-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.1.3;
 				DEVELOPMENT_ASSET_PATHS = "\"daiku-app-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = R2XS7CKCJS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "stg-daiku-app-ios-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-Aic_stg";
+				INFOPLIST_KEY_NSCameraUsageDescription = "アカウント画面に設定する画像を撮るために許可が必要です。";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "アカウント画面に設定する画像を選択ために許可が必要です。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1904,7 +2014,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.goen.dev2-daiku-app-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1921,13 +2031,15 @@
 				BASE_API = "https://daiku-app.dev.goenway.com";
 				CODE_SIGN_ENTITLEMENTS = "stg-daiku-app-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.1.3;
 				DEVELOPMENT_ASSET_PATHS = "\"daiku-app-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = R2XS7CKCJS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "stg-daiku-app-ios-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-Aic_stg";
+				INFOPLIST_KEY_NSCameraUsageDescription = "アカウント画面に設定する画像を撮るために許可が必要です。";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "アカウント画面に設定する画像を選択ために許可が必要です。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1937,7 +2049,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.goen.dev2-daiku-app-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -2069,16 +2181,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "daiku-app-ios/daiku-app-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.0;
+				CURRENT_PROJECT_VERSION = 1.2.1;
 				DEVELOPMENT_ASSET_PATHS = "\"daiku-app-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = R2XS7CKCJS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "daiku-app-ios/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-Aic";
-				INFOPLIST_KEY_NSCameraUsageDescription = "カメラを使用します。";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "写真の選択を行うため、アクセスします。";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "フォトライブラリを使用します。";
+				INFOPLIST_KEY_NSCameraUsageDescription = "アカウント画面に設定する画像を撮るために許可が必要です。";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "アカウント画面に設定する画像を選択ために許可が必要です。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -2088,7 +2199,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.goen.daiku-app-ios";
 				PRODUCT_NAME = "D-Aic";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -2104,16 +2215,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "daiku-app-ios/daiku-app-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.0;
+				CURRENT_PROJECT_VERSION = 1.2.1;
 				DEVELOPMENT_ASSET_PATHS = "\"daiku-app-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = R2XS7CKCJS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "daiku-app-ios/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-Aic";
-				INFOPLIST_KEY_NSCameraUsageDescription = "カメラを使用します。";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "写真の選択を行うため、アクセスします。";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "フォトライブラリを使用します。";
+				INFOPLIST_KEY_NSCameraUsageDescription = "アカウント画面に設定する画像を撮るために許可が必要です。";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "アカウント画面に設定する画像を選択ために許可が必要です。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -2123,7 +2233,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.goen.daiku-app-ios";
 				PRODUCT_NAME = "D-Aic";
 				SWIFT_EMIT_LOC_STRINGS = YES;

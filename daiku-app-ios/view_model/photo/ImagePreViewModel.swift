@@ -24,19 +24,14 @@ class ImagePreViewModel: ObservableObject {
     func initItem(userImage: String?, uid: String, type: ImagePreType) {
         self.uid = uid
         self.screenType = type
-        Task {
-            if let userImage = userImage {
-                let url = try await firebaseRepository.getDownloadURL(storagePath: userImage)
-                do {
-                    let data = try Data(contentsOf: url)
-                    DispatchQueue.main.async {
-                        self.image = UIImage(data: data)
-                    }
-                } catch _ {
-                    image = nil
-                }
+        if let userImage = userImage {
+            let url = URL(string: userImage)!
+            do {
+                let data = try Data(contentsOf: url)
+                self.image = UIImage(data: data)
+            } catch _ {
+                image = nil
             }
-            
         }
     }
     
@@ -79,13 +74,10 @@ class ImagePreViewModel: ObservableObject {
             return
         }
 
-        firebaseRepository.uploadStorage(path: "account/\(uid)/\(screenType.rawValue)_400.jpeg", image: image, completion: { path in
-            guard let path = path else {
-                return
-            }
+        firebaseRepository.uploadStorage(path: "account/\(uid)/\(screenType.rawValue)_400.jpeg", image: image, completion: { url in
             Task {
                 do {
-                    let _ = try await self.accountRepository.uploadImage(body: .init(imagePath: path, imageType: self.screenType.code))
+                    let _ = try await self.accountRepository.uploadImage(body: .init(imagePath: url.absoluteString, imageType: self.screenType.code))
                     
                     completion()
                     
@@ -94,6 +86,15 @@ class ImagePreViewModel: ObservableObject {
                 }
             }
         })
+    }
+    
+    func getPhotoSelectDialogTitle() -> String {
+        switch screenType {
+        case .accountMain:
+            return "アカウントのアイコンに設定する写真を選択しましょう"
+        case .profileBackImage:
+            return "アカウントトップの写真を選択しましょう"
+        }
     }
 }
 
