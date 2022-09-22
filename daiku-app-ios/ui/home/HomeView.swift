@@ -99,22 +99,64 @@ struct HomeView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {vm.createGoalSheet()}, label: {Text("目標作成")})
+                    Button(action: {
+                        vm.openGoalCreateMenuSheet()
+                        
+                    }, label: {Text("目標作成")})
                 }
             }
             .fullScreenCover(isPresented: $vm.isSheet) {
-                GoalCreateView()
-                    .environmentObject(GoalCreateViewModel())
+                GoalCreateView(closeSheet: {
+                    vm.closeGoalSheet()
+                })
+                .environmentObject(GoalCreateViewModel())
+            }
+            .fullScreenCover(isPresented: $vm.isProjectSheet) {
+                MakiCreateView()
+                    .environmentObject(MakiCreateViewModel())
+            }
+            .sheet(isPresented: $vm.isGoalCreateMenuSheet) {
+                
+                GoalCreateMenuView()
+//                    .presentationDetents([.medium])
             }
             .navigationTitle("みんなの目標")
         }
         .navigationViewStyle(.stack)
+        
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+    }
+}
+
+fileprivate struct GoalCreateMenuView: View {
+    @EnvironmentObject var homeMainViewModel: HomeMainViewModel
+    var body: some View {
+        List {
+            ForEach(GoalCreateMenuList.allCases, id: \.self) { item in
+                HStack {
+                    Text(item.title)
+                    Spacer()
+                }
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    switch item {
+                    case .GoalCreate:
+                        homeMainViewModel.closeGoalCreateMenuSheet(completion: {
+                            homeMainViewModel.openGoalSheet()
+                        })
+                    case .ProjectCreate:
+                        homeMainViewModel.closeGoalCreateMenuSheet(completion: {
+                            homeMainViewModel.openProjectSheet()
+                        })
+                    }
+                }
+            }
+        }
     }
 }
 

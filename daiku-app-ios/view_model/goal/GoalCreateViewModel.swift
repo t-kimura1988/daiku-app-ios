@@ -13,6 +13,7 @@ class GoalCreateViewModel: ObservableObject {
     @Published var purpose: String = ""
     @Published var aim: String = ""
     @Published var goalId: Int = 0
+    @Published var makiId: Int = 0
     @Published var createDate: String = ""
     @Published var selectedDueDate: Date = Date()
     
@@ -23,18 +24,14 @@ class GoalCreateViewModel: ObservableObject {
     
     private var goalRepository: GoalRepository = GoalRepository()
     
-    func initUpdate(goalId: Int, createDate: String, title: String, purpose: String, aim: String, dueDate: String) {
+    func initUpdate(goalId: Int, createDate: String, title: String, purpose: String, aim: String, dueDate: String, makiId: Int) {
         self.goalId = goalId
         self.createDate = createDate
         self.title = title
         self.purpose = purpose
         self.aim = aim
         self.selectedDueDate = dueDate.toDate()
-    }
-    
-    func openTitleForm() {
-        isFormSheet = true
-        formType = .Title
+        self.makiId = makiId
     }
     func openPurposeForm() {
         isFormSheet = true
@@ -49,8 +46,6 @@ class GoalCreateViewModel: ObservableObject {
         switch formType {
         case .Not:
             break
-        case .Title:
-            title = String(text.prefix(textCount()))
         case .Purpose:
             purpose = text
         case .Aim:
@@ -63,8 +58,6 @@ class GoalCreateViewModel: ObservableObject {
         switch formType {
         case .Not:
             return 0
-        case .Title:
-            return 300
         case .Purpose:
             return 5000
         case .Aim:
@@ -72,11 +65,17 @@ class GoalCreateViewModel: ObservableObject {
         }
     }
     
+    func chkTitle(text: String) {
+        if text.count > 300 {
+            title = String(text.prefix(300))
+        }
+    }
+    
     func saveGoal(completion: @escaping (GoalResponse) -> Void) {
         isSending = true
         if goalId == 0 {
             Task {
-                let res = try await goalRepository.saveGoal(request: .init(title: title, purpose: purpose, aim: aim, dueDate: selectedDueDate.toString(format: "yyyy-MM-dd")))
+                let res = try await goalRepository.saveGoal(request: .init(title: title, purpose: purpose, aim: aim, dueDate: selectedDueDate.toString(format: "yyyy-MM-dd"), makiId: makiId))
                 
                 DispatchQueue.main.async {
                     self.isSending = false
@@ -115,7 +114,6 @@ class GoalCreateViewModel: ObservableObject {
 
 enum FormType {
     case Not
-    case Title
     case Purpose
     case Aim
 }

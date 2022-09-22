@@ -71,7 +71,9 @@ class ProcessCreateViewModel: ObservableObject {
             Task {
                 do {
                     let _ = try await processRepository.saveProcess(request: .init(goalId: goalId, goalCreateDate: goalCreateDate, title: title, body: body, processStatus: selectedProcessStatus.code, priority: selectedProcessPriority.code))
-                    self.isSending = false
+                    DispatchQueue.main.async {
+                        self.isSending = false
+                    }
                     completion()
                 } catch ApiError.responseError {
                 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GoalResponse: Decodable, Identifiable {
+struct GoalResponse: Decodable, Identifiable, Hashable {
     var id: Int = 0
     var createDate: String = ""
     var accountId: Int = 0
@@ -22,6 +22,9 @@ struct GoalResponse: Decodable, Identifiable {
     var updatingFlg: String? = ""
     var archiveId: Int? = 0
     var archivesCreateDate: String? = ""
+    var makiRelationId: Int? = 0
+    var sortNum: Int? = 0
+    var makiKey: String? = ""
     
     func isFavorite() -> Bool {
         
@@ -81,5 +84,21 @@ struct GoalResponse: Decodable, Identifiable {
     
     func accountName() -> String {
         return createdAccountFamilyName + " " + createdAccountGivenName
+    }
+    
+    func makiSort() -> String {
+        if let sortNum = sortNum {
+            return "\(sortNum)巻"
+        }
+        
+        return ""
+    }
+    
+    func getMakiKey() -> String {
+        if let makiKey = makiKey {
+            return makiKey
+        }
+        
+        return ""
     }
 }

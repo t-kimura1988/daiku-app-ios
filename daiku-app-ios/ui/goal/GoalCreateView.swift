@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct GoalCreateView: View {
     @EnvironmentObject var vm: HomeMainViewModel
@@ -18,36 +19,30 @@ struct GoalCreateView: View {
     private var purpose: String = ""
     private var aim: String = ""
     private var dueDate: String = ""
+    private var makiId: Int = 0
+    private var closeSheet: () -> Void
     
     
-    init(goalId: Int = 0, createDate: String = "", title: String = "", purpose: String = "", aim: String = "", dueDate: String = "") {
+    init(goalId: Int = 0, createDate: String = "", title: String = "", purpose: String = "", aim: String = "", dueDate: String = "", makiId: Int = 0, closeSheet: @escaping () -> Void = {}) {
         self.goalId = goalId
         self.createDate = createDate
         self.title = title
         self.purpose = purpose
         self.aim = aim
         self.dueDate = dueDate
+        self.makiId = makiId
+        self.closeSheet = closeSheet
     }
     
     var body: some View {
         NavigationView {
             
             VStack(alignment: .leading, spacing: 50) {
-                ZStack(alignment: .leading) {
-                    if goalCreateVm.title.isEmpty {
-                        Text("題名を入力しましょう")
-                            .foregroundColor(.gray)
-                    }else {
-                        Text(goalCreateVm.title)
+                TextField("目標タイトル", text: $goalCreateVm.title)
+                    .padding()
+                    .onReceive(Just($goalCreateVm.title)) {_ in
+                        goalCreateVm.chkTitle(text: goalCreateVm.title)
                     }
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding()
-                .contentShape(Rectangle())
-                .onTapGesture {
-                    goalCreateVm.openTitleForm()
-                }
-                
                 Divider()
                     .frame(maxWidth: .infinity)
                 
@@ -106,13 +101,6 @@ struct GoalCreateView: View {
             }
             .fullScreenCover(isPresented: $goalCreateVm.isFormSheet) {
                 switch goalCreateVm.formType {
-                case .Title:
-                    DaikuFormEditor(
-                        text: goalCreateVm.title,
-                        maxSize: goalCreateVm.textCount()) { text in
-                        goalCreateVm.changeText(text: text)
-                        
-                    }
                 case .Purpose:
                     DaikuFormEditor(
                         text: goalCreateVm.purpose,
@@ -142,13 +130,15 @@ struct GoalCreateView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {vm.createGoalSheet()}, label: {Text("閉じる")})
+                    Button(action: {
+                        closeSheet()
+                    }, label: {Text("閉じる")})
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
                         goalCreateVm.saveGoal { goalResponse in
                             goalDetailVM.getGoalDetail(goalId: goalResponse.id, createDate: goalResponse.createDate)
-                            vm.createGoalSheet()
+                            closeSheet()
                         }
                     }, label: {Text("保存")})
                     .disabled(!goalCreateVm.isSaveButton || goalCreateVm.isSending)
@@ -157,7 +147,7 @@ struct GoalCreateView: View {
             
         }
         .onAppear{
-            goalCreateVm.initUpdate(goalId: goalId, createDate: createDate, title: title, purpose: purpose, aim: aim, dueDate: dueDate)
+            goalCreateVm.initUpdate(goalId: goalId, createDate: createDate, title: title, purpose: purpose, aim: aim, dueDate: dueDate, makiId: makiId)
             goalCreateVm.initVali()
         }
     }

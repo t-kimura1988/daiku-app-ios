@@ -41,4 +41,8 @@ extension String {
         
         return toStringFormat.string(from: date)
     }
+    
+    func isAlpaNumSym() -> Bool {
+        return self.range(of: "[^a-zA-Z0-9]", options: .regularExpression) == nil
+    }
 }
