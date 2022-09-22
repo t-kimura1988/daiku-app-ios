@@ -38,65 +38,68 @@ struct GoalCreateView: View {
         NavigationView {
             
             VStack(alignment: .leading, spacing: 50) {
-                TextField("目標タイトル", text: $goalCreateVm.title)
+                ScrollView(.vertical, showsIndicators: false) {
+                    
+                    TextField("目標タイトル", text: $goalCreateVm.title)
+                        .padding()
+                        .onReceive(Just($goalCreateVm.title)) {_ in
+                            goalCreateVm.chkTitle(text: goalCreateVm.title)
+                        }
+                    Divider()
+                        .frame(maxWidth: .infinity)
+                    
+                    ZStack {
+                        if goalCreateVm.purpose.isEmpty {
+                            Text("目的を入力しましょう")
+                                .foregroundColor(.gray)
+                        }else {
+                            Text(goalCreateVm.purpose)
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
-                    .onReceive(Just($goalCreateVm.title)) {_ in
-                        goalCreateVm.chkTitle(text: goalCreateVm.title)
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        goalCreateVm.openPurposeForm()
                     }
-                Divider()
-                    .frame(maxWidth: .infinity)
-                
-                ZStack {
-                    if goalCreateVm.purpose.isEmpty {
-                        Text("目的を入力しましょう")
-                            .foregroundColor(.gray)
-                    }else {
-                        Text(goalCreateVm.purpose)
-                    }
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding()
-                .contentShape(Rectangle())
-                .onTapGesture {
-                    goalCreateVm.openPurposeForm()
-                }
-                
-                Divider()
-                    .frame(maxWidth: .infinity)
-                
-                ZStack {
-                    if goalCreateVm.aim.isEmpty {
-                        Text("どのように目標を達成するか入力しましょう")
-                            .foregroundColor(.gray)
-                    }else {
-                        Text(goalCreateVm.aim)
-                    }
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding()
-                .contentShape(Rectangle())
-                .onTapGesture {
-                    goalCreateVm.openAimForm()
-                }
-                
-                Divider()
-                    .frame(maxWidth: .infinity)
-                
-                ZStack(alignment: .leading) {
                     
-                    HStack {
-                        Text("期間: ")
-                            .foregroundColor(.gray)
-                        DatePicker("", selection: $goalCreateVm.selectedDueDate, displayedComponents: .date)
-                            .environment(\.locale, Locale(identifier: "ja_JP"))
-                        Spacer()
-                    }
-                    .frame(maxWidth: .infinity)
+                    Divider()
+                        .frame(maxWidth: .infinity)
                     
+                    ZStack {
+                        if goalCreateVm.aim.isEmpty {
+                            Text("どのように目標を達成するか入力しましょう")
+                                .foregroundColor(.gray)
+                        }else {
+                            Text(goalCreateVm.aim)
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding()
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        goalCreateVm.openAimForm()
+                    }
+                    
+                    Divider()
+                        .frame(maxWidth: .infinity)
+                    
+                    ZStack(alignment: .leading) {
+                        
+                        HStack {
+                            Text("期間: ")
+                                .foregroundColor(.gray)
+                            DatePicker("", selection: $goalCreateVm.selectedDueDate, displayedComponents: .date)
+                                .environment(\.locale, Locale(identifier: "ja_JP"))
+                            Spacer()
+                        }
+                        .frame(maxWidth: .infinity)
+                        
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding()
+                    .contentShape(Rectangle())
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding()
-                .contentShape(Rectangle())
                 
             }
             .fullScreenCover(isPresented: $goalCreateVm.isFormSheet) {

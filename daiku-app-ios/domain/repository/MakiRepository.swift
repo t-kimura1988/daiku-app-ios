@@ -216,7 +216,6 @@ struct MakiRepository {
                         break
                     case .failure(let error):
                         let err: ApiError = error
-                        print(err)
                         switch(err) {
                         case .responseError(let errorCd):
                             continuation.resume(throwing: ApiError.responseError(errorCd))

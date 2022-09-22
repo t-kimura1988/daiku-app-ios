@@ -66,10 +66,6 @@ class MakiCreateViewModel: ObservableObject {
         if text.count > 20 {
             makiKey = String(text.prefix(20))
         }
-        print(text)
-        if text.isAlpaNumSym() {
-//            makiKeyErrMsg = "巻キーは半角英数字記号で記載してください。"
-        }
     }
     
     func changeMakiDescText(text: String) {

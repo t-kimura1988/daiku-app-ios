@@ -42,10 +42,6 @@ struct DaikuFormEditor: View {
                             Button(action: {changeText(text)}, label: {Text("反映")})
                         }
                     }
-                    .onSubmit {
-                        print(text)
-                    }
-                    .submitLabel(.return)
             }
             .navigationTitle(Text("編集"))
         }.onAppear{
