@@ -167,7 +167,6 @@ class AccountMainViewModel: ObservableObject {
     private func loadMaki() {
         Task {
             let list = try await makiRepository.searchMyMaki(parameter: .init(page: String(makiListPage)))
-            print(list)
             DispatchQueue.main.async {
                 self.makiList = list
                 

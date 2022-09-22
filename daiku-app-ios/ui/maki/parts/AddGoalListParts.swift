@@ -18,7 +18,6 @@ struct AddGoalListParts: View {
                 Button(action: {
                     makiDetailVM.closeAddGoalSheetNextStep {
                         makiDetailVM.openGoalCreateSheet()
-                        makiDetailVM.loadMakiList()
                     }
                 }, label: {
                     Text("新規目標作成")

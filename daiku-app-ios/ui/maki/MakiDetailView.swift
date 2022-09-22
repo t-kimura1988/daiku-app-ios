@@ -95,7 +95,10 @@ struct MakiDetailView: View {
         .fullScreenCover(isPresented: $makiDetailVM.isMakiGoalCreateSheet) {
             GoalCreateView(
                 makiId: makiId,
-                closeSheet: {makiDetailVM.closeGoalCreateSheet()}
+                closeSheet: {
+                    makiDetailVM.closeGoalCreateSheet()
+                    makiDetailVM.getMakiGoalList()
+                }
             )
             .environmentObject(GoalCreateViewModel())
         }

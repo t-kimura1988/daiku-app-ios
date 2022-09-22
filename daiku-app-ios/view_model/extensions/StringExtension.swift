@@ -43,6 +43,6 @@ extension String {
     }
     
     func isAlpaNumSym() -> Bool {
-        return self.range(of: "[^a-zA-Z0-9]", options: .regularExpression) == nil
+        return self.range(of: "[^a-zA-Z0-9$]", options: .regularExpression) == nil
     }
 }

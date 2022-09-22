@@ -27,10 +27,10 @@ struct MakiCreateView: View {
                     .onReceive(Just($makiCreateVM.makiKey)) {_ in
                         makiCreateVM.chkMakiKeyText(text: makiCreateVM.makiKey)
                     }
-                
-                Text(makiCreateVM.makiKeyErrMsg)
-                    .padding()
-                    .foregroundColor(.red)
+                Text("※巻のキーは巻の別名です。半角英数字でわかりやすい名称で入力すると良いです。")
+                    .padding(.leading)
+                    .font(.caption)
+                    .foregroundColor(.orange)
                 
                 ZStack(alignment: .leading) {
                     if makiCreateVM.makiDesc.isEmpty {

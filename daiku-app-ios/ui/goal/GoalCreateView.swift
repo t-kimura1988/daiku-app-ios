@@ -21,6 +21,7 @@ struct GoalCreateView: View {
     private var dueDate: String = ""
     private var makiId: Int = 0
     private var closeSheet: () -> Void
+//    private var loadData: () -> Void
     
     
     init(goalId: Int = 0, createDate: String = "", title: String = "", purpose: String = "", aim: String = "", dueDate: String = "", makiId: Int = 0, closeSheet: @escaping () -> Void = {}) {
@@ -39,7 +40,6 @@ struct GoalCreateView: View {
             
             VStack(alignment: .leading, spacing: 50) {
                 ScrollView(.vertical, showsIndicators: false) {
-                    
                     TextField("目標タイトル", text: $goalCreateVm.title)
                         .padding()
                         .onReceive(Just($goalCreateVm.title)) {_ in
@@ -100,6 +100,10 @@ struct GoalCreateView: View {
                     .padding()
                     .contentShape(Rectangle())
                 }
+                .onAppear{
+                    goalCreateVm.initUpdate(goalId: goalId, createDate: createDate, title: title, purpose: purpose, aim: aim, dueDate: dueDate, makiId: makiId)
+                    goalCreateVm.initVali()
+                }
                 
             }
             .fullScreenCover(isPresented: $goalCreateVm.isFormSheet) {
@@ -148,10 +152,6 @@ struct GoalCreateView: View {
                 }
             }
             
-        }
-        .onAppear{
-            goalCreateVm.initUpdate(goalId: goalId, createDate: createDate, title: title, purpose: purpose, aim: aim, dueDate: dueDate, makiId: makiId)
-            goalCreateVm.initVali()
         }
     }
 }

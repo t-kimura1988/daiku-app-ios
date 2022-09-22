@@ -74,7 +74,7 @@ class MakiCreateViewModel: ObservableObject {
     func initValidate() {
         
         let makiTitleVali = $makiTitle.map({ !$0.isEmpty }).eraseToAnyPublisher()
-        let makiKeyVali = $makiKey.map({ !$0.isEmpty }).eraseToAnyPublisher()
+        let makiKeyVali = $makiKey.map({ !$0.isEmpty && $0.isAlpaNumSym() }).eraseToAnyPublisher()
         let makiDescVali = $makiDesc.map({ !$0.isEmpty }).eraseToAnyPublisher()
         
         Publishers.CombineLatest3(makiTitleVali, makiKeyVali,makiDescVali)
