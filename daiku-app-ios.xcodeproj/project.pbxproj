@@ -140,6 +140,84 @@
 		256D56A7286DA72D00D61541 /* GoalCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D56A5286DA72D00D61541 /* GoalCreateViewModel.swift */; };
 		256D56A9286EB47F00D61541 /* DaikuFormEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D56A8286EB47F00D61541 /* DaikuFormEditor.swift */; };
 		256D56AA286EB47F00D61541 /* DaikuFormEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D56A8286EB47F00D61541 /* DaikuFormEditor.swift */; };
+		256D6C8A28D05FF400825569 /* GoalCreateMenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6C8928D05FF400825569 /* GoalCreateMenuList.swift */; };
+		256D6C8B28D05FF400825569 /* GoalCreateMenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6C8928D05FF400825569 /* GoalCreateMenuList.swift */; };
+		256D6C8C28D05FF400825569 /* GoalCreateMenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6C8928D05FF400825569 /* GoalCreateMenuList.swift */; };
+		256D6C8F28D08B4200825569 /* MakiCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6C8E28D08B4200825569 /* MakiCreateView.swift */; };
+		256D6C9028D08B4200825569 /* MakiCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6C8E28D08B4200825569 /* MakiCreateView.swift */; };
+		256D6C9128D08B4200825569 /* MakiCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6C8E28D08B4200825569 /* MakiCreateView.swift */; };
+		256D6C9428D0E21600825569 /* MakiCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6C9328D0E21600825569 /* MakiCreateViewModel.swift */; };
+		256D6C9528D0E21600825569 /* MakiCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6C9328D0E21600825569 /* MakiCreateViewModel.swift */; };
+		256D6C9628D0E21600825569 /* MakiCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6C9328D0E21600825569 /* MakiCreateViewModel.swift */; };
+		256D6C9828D0E6E300825569 /* MakiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6C9728D0E6E300825569 /* MakiService.swift */; };
+		256D6C9928D0E6E300825569 /* MakiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6C9728D0E6E300825569 /* MakiService.swift */; };
+		256D6C9A28D0E6E300825569 /* MakiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6C9728D0E6E300825569 /* MakiService.swift */; };
+		256D6C9D28D0E70B00825569 /* MakiCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6C9C28D0E70B00825569 /* MakiCreateRequest.swift */; };
+		256D6C9E28D0E70B00825569 /* MakiCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6C9C28D0E70B00825569 /* MakiCreateRequest.swift */; };
+		256D6C9F28D0E70B00825569 /* MakiCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6C9C28D0E70B00825569 /* MakiCreateRequest.swift */; };
+		256D6CA228D0E83400825569 /* TMakiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CA128D0E83400825569 /* TMakiResponse.swift */; };
+		256D6CA328D0E83400825569 /* TMakiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CA128D0E83400825569 /* TMakiResponse.swift */; };
+		256D6CA428D0E83400825569 /* TMakiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CA128D0E83400825569 /* TMakiResponse.swift */; };
+		256D6CA628D0E8AB00825569 /* MakiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CA528D0E8AB00825569 /* MakiRepository.swift */; };
+		256D6CA728D0E8AB00825569 /* MakiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CA528D0E8AB00825569 /* MakiRepository.swift */; };
+		256D6CA828D0E8AB00825569 /* MakiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CA528D0E8AB00825569 /* MakiRepository.swift */; };
+		256D6CAA28D23F1300825569 /* MyMakiListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CA928D23F1300825569 /* MyMakiListParameter.swift */; };
+		256D6CAB28D23F1300825569 /* MyMakiListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CA928D23F1300825569 /* MyMakiListParameter.swift */; };
+		256D6CAC28D23F1300825569 /* MyMakiListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CA928D23F1300825569 /* MyMakiListParameter.swift */; };
+		256D6CAE28D23FAB00825569 /* MakiSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CAD28D23FAB00825569 /* MakiSearchResponse.swift */; };
+		256D6CAF28D23FAB00825569 /* MakiSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CAD28D23FAB00825569 /* MakiSearchResponse.swift */; };
+		256D6CB028D23FAB00825569 /* MakiSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CAD28D23FAB00825569 /* MakiSearchResponse.swift */; };
+		256D6CB328D30D5900825569 /* UserImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CB228D30D5900825569 /* UserImageView.swift */; };
+		256D6CB428D30D5900825569 /* UserImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CB228D30D5900825569 /* UserImageView.swift */; };
+		256D6CB528D30D5900825569 /* UserImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CB228D30D5900825569 /* UserImageView.swift */; };
+		256D6CB728D30F3200825569 /* ImagePlaceholderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CB628D30F3200825569 /* ImagePlaceholderType.swift */; };
+		256D6CB828D30F3200825569 /* ImagePlaceholderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CB628D30F3200825569 /* ImagePlaceholderType.swift */; };
+		256D6CB928D30F3200825569 /* ImagePlaceholderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CB628D30F3200825569 /* ImagePlaceholderType.swift */; };
+		256D6CBB28D31AD800825569 /* MakiDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CBA28D31AD800825569 /* MakiDetailView.swift */; };
+		256D6CBC28D31AD800825569 /* MakiDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CBA28D31AD800825569 /* MakiDetailView.swift */; };
+		256D6CBD28D31AD800825569 /* MakiDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CBA28D31AD800825569 /* MakiDetailView.swift */; };
+		256D6CBF28D3217600825569 /* MakiDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CBE28D3217600825569 /* MakiDetailViewModel.swift */; };
+		256D6CC028D3217600825569 /* MakiDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CBE28D3217600825569 /* MakiDetailViewModel.swift */; };
+		256D6CC128D3217600825569 /* MakiDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CBE28D3217600825569 /* MakiDetailViewModel.swift */; };
+		256D6CC328D32A6D00825569 /* MyMakiDetailParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CC228D32A6D00825569 /* MyMakiDetailParameter.swift */; };
+		256D6CC428D32A6D00825569 /* MyMakiDetailParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CC228D32A6D00825569 /* MyMakiDetailParameter.swift */; };
+		256D6CC528D32A6D00825569 /* MyMakiDetailParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CC228D32A6D00825569 /* MyMakiDetailParameter.swift */; };
+		256D6CC828D44C3200825569 /* MakiDetailTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CC728D44C3200825569 /* MakiDetailTabView.swift */; };
+		256D6CC928D44C3200825569 /* MakiDetailTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CC728D44C3200825569 /* MakiDetailTabView.swift */; };
+		256D6CCA28D44C3200825569 /* MakiDetailTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CC728D44C3200825569 /* MakiDetailTabView.swift */; };
+		256D6CCC28D44D4500825569 /* MakiDetailGoalParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CCB28D44D4500825569 /* MakiDetailGoalParts.swift */; };
+		256D6CCD28D44D4500825569 /* MakiDetailGoalParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CCB28D44D4500825569 /* MakiDetailGoalParts.swift */; };
+		256D6CCE28D44D4500825569 /* MakiDetailGoalParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CCB28D44D4500825569 /* MakiDetailGoalParts.swift */; };
+		256D6CD128D4515300825569 /* GoalListParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CD028D4515300825569 /* GoalListParts.swift */; };
+		256D6CD228D4515300825569 /* GoalListParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CD028D4515300825569 /* GoalListParts.swift */; };
+		256D6CD328D4515300825569 /* GoalListParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D6CD028D4515300825569 /* GoalListParts.swift */; };
+		25761D3D28D471760030C59D /* MakiGoalListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25761D3C28D471760030C59D /* MakiGoalListParameter.swift */; };
+		25761D3E28D471760030C59D /* MakiGoalListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25761D3C28D471760030C59D /* MakiGoalListParameter.swift */; };
+		25761D3F28D471760030C59D /* MakiGoalListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25761D3C28D471760030C59D /* MakiGoalListParameter.swift */; };
+		25761D4128D58D660030C59D /* MakiAddGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25761D4028D58D660030C59D /* MakiAddGoalView.swift */; };
+		25761D4228D58D660030C59D /* MakiAddGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25761D4028D58D660030C59D /* MakiAddGoalView.swift */; };
+		25761D4328D58D660030C59D /* MakiAddGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25761D4028D58D660030C59D /* MakiAddGoalView.swift */; };
+		25761D4528D5A6320030C59D /* MakiAddGoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25761D4428D5A6320030C59D /* MakiAddGoalViewModel.swift */; };
+		25761D4628D5A6320030C59D /* MakiAddGoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25761D4428D5A6320030C59D /* MakiAddGoalViewModel.swift */; };
+		25761D4728D5A6320030C59D /* MakiAddGoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25761D4428D5A6320030C59D /* MakiAddGoalViewModel.swift */; };
+		25761D4928D5A6820030C59D /* MakiAddGoalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25761D4828D5A6820030C59D /* MakiAddGoalItem.swift */; };
+		25761D4A28D5A6820030C59D /* MakiAddGoalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25761D4828D5A6820030C59D /* MakiAddGoalItem.swift */; };
+		25761D4B28D5A6820030C59D /* MakiAddGoalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25761D4828D5A6820030C59D /* MakiAddGoalItem.swift */; };
+		25761D4D28D5A8110030C59D /* MakiAddGoalListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25761D4C28D5A8110030C59D /* MakiAddGoalListParameter.swift */; };
+		25761D4E28D5A8110030C59D /* MakiAddGoalListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25761D4C28D5A8110030C59D /* MakiAddGoalListParameter.swift */; };
+		25761D4F28D5A8110030C59D /* MakiAddGoalListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25761D4C28D5A8110030C59D /* MakiAddGoalListParameter.swift */; };
+		2583142728D6E89100EE8C8C /* AddGoalListParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2583142628D6E89100EE8C8C /* AddGoalListParts.swift */; };
+		2583142828D6E89100EE8C8C /* AddGoalListParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2583142628D6E89100EE8C8C /* AddGoalListParts.swift */; };
+		2583142928D6E89100EE8C8C /* AddGoalListParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2583142628D6E89100EE8C8C /* AddGoalListParts.swift */; };
+		2583142B28D741CF00EE8C8C /* MakiAddGoalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2583142A28D741CF00EE8C8C /* MakiAddGoalRequest.swift */; };
+		2583142C28D741CF00EE8C8C /* MakiAddGoalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2583142A28D741CF00EE8C8C /* MakiAddGoalRequest.swift */; };
+		2583142D28D741CF00EE8C8C /* MakiAddGoalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2583142A28D741CF00EE8C8C /* MakiAddGoalRequest.swift */; };
+		2583142F28D7816300EE8C8C /* MakiAddGoalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2583142E28D7816300EE8C8C /* MakiAddGoalResponse.swift */; };
+		2583143028D7816300EE8C8C /* MakiAddGoalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2583142E28D7816300EE8C8C /* MakiAddGoalResponse.swift */; };
+		2583143128D7816300EE8C8C /* MakiAddGoalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2583142E28D7816300EE8C8C /* MakiAddGoalResponse.swift */; };
+		2583143428D99C1700EE8C8C /* ProcessListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2583143328D99C1700EE8C8C /* ProcessListItemView.swift */; };
+		2583143528D99C1700EE8C8C /* ProcessListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2583143328D99C1700EE8C8C /* ProcessListItemView.swift */; };
+		2583143628D99C1700EE8C8C /* ProcessListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2583143328D99C1700EE8C8C /* ProcessListItemView.swift */; };
 		2589877C28CB02D50004B3DA /* buildEnv-stg.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2589877B28CB02D50004B3DA /* buildEnv-stg.sh */; };
 		2589877E28CB03010004B3DA /* .env.stg in Resources */ = {isa = PBXBuildFile; fileRef = 2589877D28CB03010004B3DA /* .env.stg */; };
 		2589878128CB03410004B3DA /* buildEnv-dev.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2589877628CB00700004B3DA /* buildEnv-dev.sh */; };
@@ -491,6 +569,32 @@
 		256D56A1286D807D00D61541 /* GoalCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCreateView.swift; sourceTree = "<group>"; };
 		256D56A5286DA72D00D61541 /* GoalCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCreateViewModel.swift; sourceTree = "<group>"; };
 		256D56A8286EB47F00D61541 /* DaikuFormEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaikuFormEditor.swift; sourceTree = "<group>"; };
+		256D6C8928D05FF400825569 /* GoalCreateMenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCreateMenuList.swift; sourceTree = "<group>"; };
+		256D6C8E28D08B4200825569 /* MakiCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakiCreateView.swift; sourceTree = "<group>"; };
+		256D6C9328D0E21600825569 /* MakiCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakiCreateViewModel.swift; sourceTree = "<group>"; };
+		256D6C9728D0E6E300825569 /* MakiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakiService.swift; sourceTree = "<group>"; };
+		256D6C9C28D0E70B00825569 /* MakiCreateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakiCreateRequest.swift; sourceTree = "<group>"; };
+		256D6CA128D0E83400825569 /* TMakiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMakiResponse.swift; sourceTree = "<group>"; };
+		256D6CA528D0E8AB00825569 /* MakiRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakiRepository.swift; sourceTree = "<group>"; };
+		256D6CA928D23F1300825569 /* MyMakiListParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMakiListParameter.swift; sourceTree = "<group>"; };
+		256D6CAD28D23FAB00825569 /* MakiSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakiSearchResponse.swift; sourceTree = "<group>"; };
+		256D6CB228D30D5900825569 /* UserImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageView.swift; sourceTree = "<group>"; };
+		256D6CB628D30F3200825569 /* ImagePlaceholderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePlaceholderType.swift; sourceTree = "<group>"; };
+		256D6CBA28D31AD800825569 /* MakiDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakiDetailView.swift; sourceTree = "<group>"; };
+		256D6CBE28D3217600825569 /* MakiDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakiDetailViewModel.swift; sourceTree = "<group>"; };
+		256D6CC228D32A6D00825569 /* MyMakiDetailParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMakiDetailParameter.swift; sourceTree = "<group>"; };
+		256D6CC728D44C3200825569 /* MakiDetailTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakiDetailTabView.swift; sourceTree = "<group>"; };
+		256D6CCB28D44D4500825569 /* MakiDetailGoalParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakiDetailGoalParts.swift; sourceTree = "<group>"; };
+		256D6CD028D4515300825569 /* GoalListParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalListParts.swift; sourceTree = "<group>"; };
+		25761D3C28D471760030C59D /* MakiGoalListParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakiGoalListParameter.swift; sourceTree = "<group>"; };
+		25761D4028D58D660030C59D /* MakiAddGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakiAddGoalView.swift; sourceTree = "<group>"; };
+		25761D4428D5A6320030C59D /* MakiAddGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakiAddGoalViewModel.swift; sourceTree = "<group>"; };
+		25761D4828D5A6820030C59D /* MakiAddGoalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakiAddGoalItem.swift; sourceTree = "<group>"; };
+		25761D4C28D5A8110030C59D /* MakiAddGoalListParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakiAddGoalListParameter.swift; sourceTree = "<group>"; };
+		2583142628D6E89100EE8C8C /* AddGoalListParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalListParts.swift; sourceTree = "<group>"; };
+		2583142A28D741CF00EE8C8C /* MakiAddGoalRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakiAddGoalRequest.swift; sourceTree = "<group>"; };
+		2583142E28D7816300EE8C8C /* MakiAddGoalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakiAddGoalResponse.swift; sourceTree = "<group>"; };
+		2583143328D99C1700EE8C8C /* ProcessListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessListItemView.swift; sourceTree = "<group>"; };
 		2589877528CB00060004B3DA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2589877628CB00700004B3DA /* buildEnv-dev.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "buildEnv-dev.sh"; sourceTree = "<group>"; };
 		2589877B28CB02D50004B3DA /* buildEnv-stg.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "buildEnv-stg.sh"; sourceTree = "<group>"; };
@@ -666,6 +770,8 @@
 		2507F994285C166F00A14A51 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				256D6CB128D30D2A00825569 /* parts */,
+				256D6C8D28D08B2800825569 /* maki */,
 				25BF37BD28C0AB0E002614FE /* photo */,
 				25A9D67A28829E7400F8A7EB /* goal_archive */,
 				25A9D66B2880133300F8A7EB /* favorite */,
@@ -697,6 +803,7 @@
 		2507F999285C173C00A14A51 /* view_model */ = {
 			isa = PBXGroup;
 			children = (
+				256D6C9228D0E20300825569 /* maki */,
 				25BF37C228C11757002614FE /* photo */,
 				25A05BF6288E376C0077A005 /* extensions */,
 				25A9D67E2882C60200F8A7EB /* goal_archive */,
@@ -730,6 +837,8 @@
 				251AADB5287580320008CFDE /* ProcessPriority.swift */,
 				25A9D690288413D700F8A7EB /* PublishLevel.swift */,
 				25BF37CD28C20B41002614FE /* ImageSourceType.swift */,
+				256D6C8928D05FF400825569 /* GoalCreateMenuList.swift */,
+				256D6CB628D30F3200825569 /* ImagePlaceholderType.swift */,
 			);
 			path = enums;
 			sourceTree = "<group>";
@@ -746,6 +855,7 @@
 		2507F9A6285C23BC00A14A51 /* account */ = {
 			isa = PBXGroup;
 			children = (
+				256D6CCF28D4512500825569 /* parts */,
 				2507F9A7285C23DD00A14A51 /* AccountCreateView.swift */,
 				2507F9C8285D935400A14A51 /* AccountMainView.swift */,
 			);
@@ -793,6 +903,7 @@
 				25645B212876DE1600A8B334 /* ProcessHistoryRepository.swift */,
 				25A9D68C2883200100F8A7EB /* GoalArchiveRepository.swift */,
 				25BF37D128C32BD5002614FE /* FirebaseRepository.swift */,
+				256D6CA528D0E8AB00825569 /* MakiRepository.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
@@ -890,6 +1001,7 @@
 				251AAD9628746DBE0008CFDE /* ProcessService.swift */,
 				25645B242876DE4900A8B334 /* ProcessHistoryService.swift */,
 				25A9D68428831D1E00F8A7EB /* GoalArchiveService.swift */,
+				256D6C9728D0E6E300825569 /* MakiService.swift */,
 			);
 			path = div;
 			sourceTree = "<group>";
@@ -897,6 +1009,7 @@
 		256D5674286370CD00D61541 /* response */ = {
 			isa = PBXGroup;
 			children = (
+				256D6CA028D0E81B00825569 /* maki */,
 				25A9D6812882C73500F8A7EB /* goal_archive */,
 				25A9D67328807C7300F8A7EB /* favorite */,
 				25645B2B2876DFCF00A8B334 /* process_history */,
@@ -930,6 +1043,7 @@
 		256D5689286A023F00D61541 /* request */ = {
 			isa = PBXGroup;
 			children = (
+				256D6C9B28D0E6FD00825569 /* maki */,
 				25A05C00288E88FB0077A005 /* process */,
 				25A9D68628831D7F00F8A7EB /* goal_archive */,
 				25645B2A2876DFB300A8B334 /* process_history */,
@@ -982,6 +1096,7 @@
 		256D56A0286D806C00D61541 /* goal */ = {
 			isa = PBXGroup;
 			children = (
+				2583143228D99BFC00EE8C8C /* parts */,
 				256D56A1286D807D00D61541 /* GoalCreateView.swift */,
 				251AAD89287355BC0008CFDE /* GoalDetailView.swift */,
 			);
@@ -995,6 +1110,85 @@
 				251AAD90287435820008CFDE /* GoalDetailViewModel.swift */,
 			);
 			path = goal;
+			sourceTree = "<group>";
+		};
+		256D6C8D28D08B2800825569 /* maki */ = {
+			isa = PBXGroup;
+			children = (
+				256D6CC628D44C1C00825569 /* parts */,
+				256D6C8E28D08B4200825569 /* MakiCreateView.swift */,
+				25761D4028D58D660030C59D /* MakiAddGoalView.swift */,
+				256D6CBA28D31AD800825569 /* MakiDetailView.swift */,
+			);
+			path = maki;
+			sourceTree = "<group>";
+		};
+		256D6C9228D0E20300825569 /* maki */ = {
+			isa = PBXGroup;
+			children = (
+				256D6C9328D0E21600825569 /* MakiCreateViewModel.swift */,
+				256D6CBE28D3217600825569 /* MakiDetailViewModel.swift */,
+				25761D4428D5A6320030C59D /* MakiAddGoalViewModel.swift */,
+			);
+			path = maki;
+			sourceTree = "<group>";
+		};
+		256D6C9B28D0E6FD00825569 /* maki */ = {
+			isa = PBXGroup;
+			children = (
+				256D6C9C28D0E70B00825569 /* MakiCreateRequest.swift */,
+				256D6CA928D23F1300825569 /* MyMakiListParameter.swift */,
+				256D6CC228D32A6D00825569 /* MyMakiDetailParameter.swift */,
+				25761D3C28D471760030C59D /* MakiGoalListParameter.swift */,
+				25761D4C28D5A8110030C59D /* MakiAddGoalListParameter.swift */,
+				2583142A28D741CF00EE8C8C /* MakiAddGoalRequest.swift */,
+			);
+			path = maki;
+			sourceTree = "<group>";
+		};
+		256D6CA028D0E81B00825569 /* maki */ = {
+			isa = PBXGroup;
+			children = (
+				256D6CA128D0E83400825569 /* TMakiResponse.swift */,
+				256D6CAD28D23FAB00825569 /* MakiSearchResponse.swift */,
+				25761D4828D5A6820030C59D /* MakiAddGoalItem.swift */,
+				2583142E28D7816300EE8C8C /* MakiAddGoalResponse.swift */,
+			);
+			path = maki;
+			sourceTree = "<group>";
+		};
+		256D6CB128D30D2A00825569 /* parts */ = {
+			isa = PBXGroup;
+			children = (
+				256D6CB228D30D5900825569 /* UserImageView.swift */,
+			);
+			path = parts;
+			sourceTree = "<group>";
+		};
+		256D6CC628D44C1C00825569 /* parts */ = {
+			isa = PBXGroup;
+			children = (
+				256D6CC728D44C3200825569 /* MakiDetailTabView.swift */,
+				256D6CCB28D44D4500825569 /* MakiDetailGoalParts.swift */,
+				2583142628D6E89100EE8C8C /* AddGoalListParts.swift */,
+			);
+			path = parts;
+			sourceTree = "<group>";
+		};
+		256D6CCF28D4512500825569 /* parts */ = {
+			isa = PBXGroup;
+			children = (
+				256D6CD028D4515300825569 /* GoalListParts.swift */,
+			);
+			path = parts;
+			sourceTree = "<group>";
+		};
+		2583143228D99BFC00EE8C8C /* parts */ = {
+			isa = PBXGroup;
+			children = (
+				2583143328D99C1700EE8C8C /* ProcessListItemView.swift */,
+			);
+			path = parts;
 			sourceTree = "<group>";
 		};
 		2589878728CB05D20004B3DA /* stg */ = {
@@ -1517,11 +1711,14 @@
 				25A05C0C288E89950077A005 /* ProcessUpdateRequest.swift in Sources */,
 				25A05BF9288E39F80077A005 /* StringExtension.swift in Sources */,
 				25A9D66A287FED6C00F8A7EB /* StatusUpdateRequest.swift in Sources */,
+				256D6CBC28D31AD800825569 /* MakiDetailView.swift in Sources */,
+				256D6CC428D32A6D00825569 /* MyMakiDetailParameter.swift in Sources */,
 				25A05C982891145B0077A005 /* ProcessTermUpdateViewModel.swift in Sources */,
 				25A05C90289109270077A005 /* MoreText.swift in Sources */,
 				25A05C09288E88FB0077A005 /* ProcessDetailParameter.swift in Sources */,
 				2507F9C4285CE81200A14A51 /* TermsOfUseView.swift in Sources */,
 				25BD6C8528B8B0D1002085F8 /* SignInWithAppleButtonView.swift in Sources */,
+				25761D4628D5A6320030C59D /* MakiAddGoalViewModel.swift in Sources */,
 				25A05C07288E88FB0077A005 /* ProcessListParameter.swift in Sources */,
 				256D56A7286DA72D00D61541 /* GoalCreateViewModel.swift in Sources */,
 				25A05BF32889490B0077A005 /* GoalArchiveUpdatingFlgEditRequest.swift in Sources */,
@@ -1532,6 +1729,8 @@
 				25A9D658287EBCA900F8A7EB /* CommentUpdateRequest.swift in Sources */,
 				251AAD8B287355CD0008CFDE /* GoalDetailView.swift in Sources */,
 				25A05C9C28919D8C0077A005 /* ProcessTermUpdateRequest.swift in Sources */,
+				256D6CAF28D23FAB00825569 /* MakiSearchResponse.swift in Sources */,
+				2583143528D99C1700EE8C8C /* ProcessListItemView.swift in Sources */,
 				259BE5E2287075FF00098DBC /* GoalResponse.swift in Sources */,
 				2507F9A4285C238E00A14A51 /* SignInView.swift in Sources */,
 				256D567E28676BB900D61541 /* ApiErrorResponse.swift in Sources */,
@@ -1540,13 +1739,18 @@
 				25A05BEA2887E00E0077A005 /* TGoalsArchiveResponse.swift in Sources */,
 				251AAD852873230D0008CFDE /* GoalFavoriteCreateRequest.swift in Sources */,
 				25BF37D328C3BCF2002614FE /* FirebaseRepository.swift in Sources */,
+				256D6CC928D44C3200825569 /* MakiDetailTabView.swift in Sources */,
 				25A9D666287FE3C100F8A7EB /* StatusUpdateViewModel.swift in Sources */,
+				256D6C8B28D05FF400825569 /* GoalCreateMenuList.swift in Sources */,
+				25761D4A28D5A6820030C59D /* MakiAddGoalItem.swift in Sources */,
 				256D5691286A1E1C00D61541 /* AnyEncoder.swift in Sources */,
 				259BE5DE287022F600098DBC /* AccountMainViewModel.swift in Sources */,
 				256D5694286B572B00D61541 /* HomeService.swift in Sources */,
+				256D6CA728D0E8AB00825569 /* MakiRepository.swift in Sources */,
 				251AAD8C287356690008CFDE /* GoalRouter.swift in Sources */,
 				25A9D68F288322B500F8A7EB /* GoalArchiveDetailViewModel.swift in Sources */,
 				25A05BE62887D4C70077A005 /* GoalArchiveCreateRequest.swift in Sources */,
+				2583143028D7816300EE8C8C /* MakiAddGoalResponse.swift in Sources */,
 				251AADAE287555F90008CFDE /* DaikuPickerView.swift in Sources */,
 				251AAD7B2872AA800008CFDE /* MyGoalResponse.swift in Sources */,
 				256D56842869729400D61541 /* LoadingView.swift in Sources */,
@@ -1563,9 +1767,13 @@
 				25645B1C2876CB6900A8B334 /* ProcessDetailView.swift in Sources */,
 				256A5A7028BDEB9B00E32A8D /* AccountReUpdateRequest.swift in Sources */,
 				25BF37CF28C20B5C002614FE /* ImageSourceType.swift in Sources */,
+				25761D3E28D471760030C59D /* MakiGoalListParameter.swift in Sources */,
+				256D6C9928D0E6E300825569 /* MakiService.swift in Sources */,
 				251AAD8F287407280008CFDE /* RefreshView.swift in Sources */,
 				25A9D68A28831F1100F8A7EB /* GoalArchiveService.swift in Sources */,
+				256D6CB828D30F3200825569 /* ImagePlaceholderType.swift in Sources */,
 				25A05C8C2890D3E00077A005 /* DateExtention.swift in Sources */,
+				2583142828D6E89100EE8C8C /* AddGoalListParts.swift in Sources */,
 				2507F99D285C175E00A14A51 /* AccountExistViewModel.swift in Sources */,
 				25A05BEF28880B530077A005 /* GoalArchiveEditViewModel.swift in Sources */,
 				2507F9BE285CDE1000A14A51 /* PrivacyPolicyView.swift in Sources */,
@@ -1583,15 +1791,20 @@
 				2507F9B3285C808A00A14A51 /* DaikuWebView.swift in Sources */,
 				256D56A3286D807D00D61541 /* GoalCreateView.swift in Sources */,
 				259BE5D6287014B000098DBC /* GoalRepository.swift in Sources */,
+				256D6C9028D08B4200825569 /* MakiCreateView.swift in Sources */,
 				25BF37C528C11796002614FE /* ImagePreViewModel.swift in Sources */,
 				256D5678286370FF00D61541 /* AccountResponse.swift in Sources */,
+				256D6CAB28D23F1300825569 /* MyMakiListParameter.swift in Sources */,
 				2507F9CA285D935400A14A51 /* AccountMainView.swift in Sources */,
+				256D6CD228D4515300825569 /* GoalListParts.swift in Sources */,
 				25A9D6792880813000F8A7EB /* GoalFavoriteSearchParameter.swift in Sources */,
 				251AAD9828746DBE0008CFDE /* ProcessService.swift in Sources */,
 				25A05BE12886B2DE0077A005 /* GoalUpdateRequest.swift in Sources */,
 				256D56882869899600D61541 /* AccountCreateViewModel.swift in Sources */,
 				2507F9A9285C23DD00A14A51 /* AccountCreateView.swift in Sources */,
+				25761D4228D58D660030C59D /* MakiAddGoalView.swift in Sources */,
 				25BF37CB28C2097A002614FE /* ImagePicker.swift in Sources */,
+				256D6C9E28D0E70B00825569 /* MakiCreateRequest.swift in Sources */,
 				25BF37C028C0AC10002614FE /* ImagePreView.swift in Sources */,
 				25645B2E2876DFE300A8B334 /* ProcessHistoryResponse.swift in Sources */,
 				256D56692861E90D00D61541 /* ApiProvider.swift in Sources */,
@@ -1600,14 +1813,19 @@
 				256D56AA286EB47F00D61541 /* DaikuFormEditor.swift in Sources */,
 				25A9D661287EC4C300F8A7EB /* CommentUpdateViewModel.swift in Sources */,
 				256D566128616ACD00D61541 /* AccountRepository.swift in Sources */,
+				25761D4E28D5A8110030C59D /* MakiAddGoalListParameter.swift in Sources */,
 				251AADA028746EE70008CFDE /* ProcessResponse.swift in Sources */,
 				25645B292876DEAD00A8B334 /* ProcessHistoryListParameter.swift in Sources */,
+				256D6CA328D0E83400825569 /* TMakiResponse.swift in Sources */,
 				251AADB7287580320008CFDE /* ProcessPriority.swift in Sources */,
 				251AADBD2875B7540008CFDE /* TProcessResponse.swift in Sources */,
 				2507F9AC285C23F900A14A51 /* HomeView.swift in Sources */,
+				256D6CC028D3217600825569 /* MakiDetailViewModel.swift in Sources */,
 				251AAD92287435820008CFDE /* GoalDetailViewModel.swift in Sources */,
 				25A05CA028919E440077A005 /* TProcessHistory.swift in Sources */,
 				2589878D28CB100B0004B3DA /* Environment.swift in Sources */,
+				2583142C28D741CF00EE8C8C /* MakiAddGoalRequest.swift in Sources */,
+				256D6CCD28D44D4500825569 /* MakiDetailGoalParts.swift in Sources */,
 				2507F9CE285DB02000A14A51 /* HomeMainViewModel.swift in Sources */,
 				259BE5E52871FB5200098DBC /* BlurView.swift in Sources */,
 				251AADAB287548BB0008CFDE /* ProcessCreateViewModel.swift in Sources */,
@@ -1620,9 +1838,11 @@
 				251AAD84287321C70008CFDE /* GoalFavoriteService.swift in Sources */,
 				256D56812868BA7900D61541 /* ApiError.swift in Sources */,
 				25A05C05288E88FB0077A005 /* ProcessCreateParameter.swift in Sources */,
+				256D6C9528D0E21600825569 /* MakiCreateViewModel.swift in Sources */,
 				2507F9BB285CD61B00A14A51 /* AuthRouter.swift in Sources */,
 				251AADA3287470660008CFDE /* ProcessRepository.swift in Sources */,
 				2507F998285C169A00A14A51 /* AccountExistView.swift in Sources */,
+				256D6CB428D30D5900825569 /* UserImageView.swift in Sources */,
 				25F41EF628AA30F300F3D163 /* GoalArchiveInfoResponse.swift in Sources */,
 				2507F97C285BAA6200A14A51 /* daiku_app_iosApp.swift in Sources */,
 			);
@@ -1643,11 +1863,14 @@
 				25A05C1D288FC34C0077A005 /* ProcessUpdateRequest.swift in Sources */,
 				25A05C1E288FC34C0077A005 /* StringExtension.swift in Sources */,
 				25A05C1F288FC34C0077A005 /* StatusUpdateRequest.swift in Sources */,
+				256D6CBD28D31AD800825569 /* MakiDetailView.swift in Sources */,
+				256D6CC528D32A6D00825569 /* MyMakiDetailParameter.swift in Sources */,
 				25A05C992891145B0077A005 /* ProcessTermUpdateViewModel.swift in Sources */,
 				25A05C91289109270077A005 /* MoreText.swift in Sources */,
 				25A05C20288FC34C0077A005 /* ProcessDetailParameter.swift in Sources */,
 				25A05C21288FC34C0077A005 /* TermsOfUseView.swift in Sources */,
 				25BD6C8628B8B0D2002085F8 /* SignInWithAppleButtonView.swift in Sources */,
+				25761D4728D5A6320030C59D /* MakiAddGoalViewModel.swift in Sources */,
 				25A05C22288FC34C0077A005 /* ProcessListParameter.swift in Sources */,
 				25A05C23288FC34C0077A005 /* GoalCreateViewModel.swift in Sources */,
 				25A05C24288FC34C0077A005 /* GoalArchiveUpdatingFlgEditRequest.swift in Sources */,
@@ -1658,6 +1881,8 @@
 				25A05C29288FC34C0077A005 /* CommentUpdateRequest.swift in Sources */,
 				25A05C2A288FC34C0077A005 /* GoalDetailView.swift in Sources */,
 				25A05C9D28919D8C0077A005 /* ProcessTermUpdateRequest.swift in Sources */,
+				256D6CB028D23FAB00825569 /* MakiSearchResponse.swift in Sources */,
+				2583143628D99C1700EE8C8C /* ProcessListItemView.swift in Sources */,
 				25A05C2B288FC34C0077A005 /* GoalResponse.swift in Sources */,
 				25A05C2C288FC34C0077A005 /* SignInView.swift in Sources */,
 				25A05C2D288FC34C0077A005 /* ApiErrorResponse.swift in Sources */,
@@ -1666,13 +1891,18 @@
 				25A05C2F288FC34C0077A005 /* TGoalsArchiveResponse.swift in Sources */,
 				25A05C30288FC34C0077A005 /* GoalFavoriteCreateRequest.swift in Sources */,
 				25BF37D428C3BCF3002614FE /* FirebaseRepository.swift in Sources */,
+				256D6CCA28D44C3200825569 /* MakiDetailTabView.swift in Sources */,
 				25A05C31288FC34C0077A005 /* StatusUpdateViewModel.swift in Sources */,
+				256D6C8C28D05FF400825569 /* GoalCreateMenuList.swift in Sources */,
+				25761D4B28D5A6820030C59D /* MakiAddGoalItem.swift in Sources */,
 				25A05C32288FC34C0077A005 /* AnyEncoder.swift in Sources */,
 				25A05C33288FC34C0077A005 /* AccountMainViewModel.swift in Sources */,
 				25A05C34288FC34C0077A005 /* HomeService.swift in Sources */,
+				256D6CA828D0E8AB00825569 /* MakiRepository.swift in Sources */,
 				25A05C35288FC34C0077A005 /* GoalRouter.swift in Sources */,
 				25A05C36288FC34C0077A005 /* GoalArchiveDetailViewModel.swift in Sources */,
 				25A05C37288FC34C0077A005 /* GoalArchiveCreateRequest.swift in Sources */,
+				2583143128D7816300EE8C8C /* MakiAddGoalResponse.swift in Sources */,
 				25A05C38288FC34C0077A005 /* DaikuPickerView.swift in Sources */,
 				25A05C39288FC34C0077A005 /* MyGoalResponse.swift in Sources */,
 				25A05C3A288FC34C0077A005 /* LoadingView.swift in Sources */,
@@ -1689,9 +1919,13 @@
 				25A05C44288FC34C0077A005 /* ProcessDetailView.swift in Sources */,
 				256A5A7128BDEB9C00E32A8D /* AccountReUpdateRequest.swift in Sources */,
 				25BF37D028C20B5C002614FE /* ImageSourceType.swift in Sources */,
+				25761D3F28D471760030C59D /* MakiGoalListParameter.swift in Sources */,
+				256D6C9A28D0E6E300825569 /* MakiService.swift in Sources */,
 				25A05C45288FC34C0077A005 /* RefreshView.swift in Sources */,
 				25A05C46288FC34C0077A005 /* GoalArchiveService.swift in Sources */,
+				256D6CB928D30F3200825569 /* ImagePlaceholderType.swift in Sources */,
 				25A05C8D2890D3E00077A005 /* DateExtention.swift in Sources */,
+				2583142928D6E89100EE8C8C /* AddGoalListParts.swift in Sources */,
 				25A05C47288FC34C0077A005 /* AccountExistViewModel.swift in Sources */,
 				25A05C48288FC34C0077A005 /* GoalArchiveEditViewModel.swift in Sources */,
 				25A05C49288FC34C0077A005 /* PrivacyPolicyView.swift in Sources */,
@@ -1709,15 +1943,20 @@
 				25A05C55288FC34C0077A005 /* DaikuWebView.swift in Sources */,
 				25A05C56288FC34C0077A005 /* GoalCreateView.swift in Sources */,
 				25A05C57288FC34C0077A005 /* GoalRepository.swift in Sources */,
+				256D6C9128D08B4200825569 /* MakiCreateView.swift in Sources */,
 				25BF37C628C11797002614FE /* ImagePreViewModel.swift in Sources */,
 				25A05C58288FC34C0077A005 /* AccountResponse.swift in Sources */,
+				256D6CAC28D23F1300825569 /* MyMakiListParameter.swift in Sources */,
 				25A05C59288FC34C0077A005 /* AccountMainView.swift in Sources */,
+				256D6CD328D4515300825569 /* GoalListParts.swift in Sources */,
 				25A05C5A288FC34C0077A005 /* GoalFavoriteSearchParameter.swift in Sources */,
 				25A05C5B288FC34C0077A005 /* ProcessService.swift in Sources */,
 				25A05C5C288FC34C0077A005 /* GoalUpdateRequest.swift in Sources */,
 				25A05C5D288FC34C0077A005 /* AccountCreateViewModel.swift in Sources */,
 				25A05C5E288FC34C0077A005 /* AccountCreateView.swift in Sources */,
+				25761D4328D58D660030C59D /* MakiAddGoalView.swift in Sources */,
 				25BF37CC28C2097A002614FE /* ImagePicker.swift in Sources */,
+				256D6C9F28D0E70B00825569 /* MakiCreateRequest.swift in Sources */,
 				25BF37C128C0AC10002614FE /* ImagePreView.swift in Sources */,
 				25A05C5F288FC34C0077A005 /* ProcessHistoryResponse.swift in Sources */,
 				25A05C60288FC34C0077A005 /* ApiProvider.swift in Sources */,
@@ -1726,14 +1965,19 @@
 				25A05C63288FC34C0077A005 /* DaikuFormEditor.swift in Sources */,
 				25A05C64288FC34C0077A005 /* CommentUpdateViewModel.swift in Sources */,
 				25A05C65288FC34C0077A005 /* AccountRepository.swift in Sources */,
+				25761D4F28D5A8110030C59D /* MakiAddGoalListParameter.swift in Sources */,
 				25A05C66288FC34C0077A005 /* ProcessResponse.swift in Sources */,
 				25A05C67288FC34C0077A005 /* ProcessHistoryListParameter.swift in Sources */,
+				256D6CA428D0E83400825569 /* TMakiResponse.swift in Sources */,
 				25A05C68288FC34C0077A005 /* ProcessPriority.swift in Sources */,
 				25A05C69288FC34C0077A005 /* TProcessResponse.swift in Sources */,
 				25A05C6A288FC34C0077A005 /* HomeView.swift in Sources */,
+				256D6CC128D3217600825569 /* MakiDetailViewModel.swift in Sources */,
 				25A05C6B288FC34C0077A005 /* GoalDetailViewModel.swift in Sources */,
 				25A05CA128919E440077A005 /* TProcessHistory.swift in Sources */,
 				2589878928CB0FE80004B3DA /* Environment.swift in Sources */,
+				2583142D28D741CF00EE8C8C /* MakiAddGoalRequest.swift in Sources */,
+				256D6CCE28D44D4500825569 /* MakiDetailGoalParts.swift in Sources */,
 				25A05C6C288FC34C0077A005 /* HomeMainViewModel.swift in Sources */,
 				25A05C6D288FC34C0077A005 /* BlurView.swift in Sources */,
 				25A05C6E288FC34C0077A005 /* ProcessCreateViewModel.swift in Sources */,
@@ -1746,9 +1990,11 @@
 				25A05C75288FC34C0077A005 /* GoalFavoriteService.swift in Sources */,
 				25A05C76288FC34C0077A005 /* ApiError.swift in Sources */,
 				25A05C77288FC34C0077A005 /* ProcessCreateParameter.swift in Sources */,
+				256D6C9628D0E21600825569 /* MakiCreateViewModel.swift in Sources */,
 				25A05C78288FC34C0077A005 /* AuthRouter.swift in Sources */,
 				25A05C79288FC34C0077A005 /* ProcessRepository.swift in Sources */,
 				25A05C7A288FC34C0077A005 /* AccountExistView.swift in Sources */,
+				256D6CB528D30D5900825569 /* UserImageView.swift in Sources */,
 				25F41EF528AA30F200F3D163 /* GoalArchiveInfoResponse.swift in Sources */,
 				25A05C7B288FC34C0077A005 /* daiku_app_iosApp.swift in Sources */,
 			);
@@ -1759,6 +2005,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25A9D691288413D700F8A7EB /* PublishLevel.swift in Sources */,
+				256D6CC828D44C3200825569 /* MakiDetailTabView.swift in Sources */,
 				251AADB0287559EA0008CFDE /* PickerBase.swift in Sources */,
 				25A05C04288E88FB0077A005 /* ProcessCreateParameter.swift in Sources */,
 				2507F9AE285C4B6F00A14A51 /* UnAuthView.swift in Sources */,
@@ -1766,6 +2013,7 @@
 				25A05BF8288E377C0077A005 /* StringExtension.swift in Sources */,
 				251AADA62874A9390008CFDE /* ProcessCreateView.swift in Sources */,
 				25A05BE52887D4800077A005 /* GoalArchiveUpdateRequest.swift in Sources */,
+				256D6CD128D4515300825569 /* GoalListParts.swift in Sources */,
 				25A05C0B288E89950077A005 /* ProcessUpdateRequest.swift in Sources */,
 				259BE5DA2870174E00098DBC /* NoBody.swift in Sources */,
 				25A9D669287FED3800F8A7EB /* StatusUpdateRequest.swift in Sources */,
@@ -1780,20 +2028,29 @@
 				2507F9A3285C238E00A14A51 /* SignInView.swift in Sources */,
 				256D567D28676BB900D61541 /* ApiErrorResponse.swift in Sources */,
 				25BF37BF28C0AB25002614FE /* ImagePreView.swift in Sources */,
+				25761D4928D5A6820030C59D /* MakiAddGoalItem.swift in Sources */,
 				25A05C08288E88FB0077A005 /* ProcessDetailParameter.swift in Sources */,
 				251AAD7E28731EEF0008CFDE /* GoalFavoriteRepository.swift in Sources */,
+				256D6C8F28D08B4200825569 /* MakiCreateView.swift in Sources */,
+				25761D4528D5A6320030C59D /* MakiAddGoalViewModel.swift in Sources */,
 				256D569B286B595E00D61541 /* GoalArchiveRequest.swift in Sources */,
 				251AAD812873204B0008CFDE /* GoalFavoriteCreateRequest.swift in Sources */,
 				256D5690286A1E1C00D61541 /* AnyEncoder.swift in Sources */,
 				25A9D64D2879E49300F8A7EB /* ProcessHistoryCommentView.swift in Sources */,
+				256D6CCC28D44D4500825569 /* MakiDetailGoalParts.swift in Sources */,
 				259BE5DD287022F600098DBC /* AccountMainViewModel.swift in Sources */,
 				259BE5D1286FFEBE00098DBC /* GoalService.swift in Sources */,
+				256D6CBF28D3217600825569 /* MakiDetailViewModel.swift in Sources */,
+				256D6CAE28D23FAB00825569 /* MakiSearchResponse.swift in Sources */,
+				25761D4128D58D660030C59D /* MakiAddGoalView.swift in Sources */,
 				25A05BE92887DF760077A005 /* TGoalsArchiveResponse.swift in Sources */,
 				256D5693286B572B00D61541 /* HomeService.swift in Sources */,
+				256D6CA628D0E8AB00825569 /* MakiRepository.swift in Sources */,
 				25BF37CE28C20B41002614FE /* ImageSourceType.swift in Sources */,
 				25A9D6802882C61600F8A7EB /* GoalArchiveDetailViewModel.swift in Sources */,
 				25A05BF5288D49650077A005 /* AccountUpdateRequest.swift in Sources */,
 				256D56832869729400D61541 /* LoadingView.swift in Sources */,
+				2583142728D6E89100EE8C8C /* AddGoalListParts.swift in Sources */,
 				251AADAD287555F90008CFDE /* DaikuPickerView.swift in Sources */,
 				256D56722862BC4400D61541 /* HttpMethod.swift in Sources */,
 				25A05C8F289109270077A005 /* MoreText.swift in Sources */,
@@ -1802,9 +2059,11 @@
 				25A05BE32887D40B0077A005 /* GoalArchiveCreateRequest.swift in Sources */,
 				25A9D67C28829E8B00F8A7EB /* GoalArchiveDetailView.swift in Sources */,
 				256D5697286B577700D61541 /* HomeResponse.swift in Sources */,
+				256D6C8A28D05FF400825569 /* GoalCreateMenuList.swift in Sources */,
 				25A9D663287FE2F100F8A7EB /* StatusUpdateView.swift in Sources */,
 				25F41EF428AA308500F3D163 /* GoalArchiveInfoResponse.swift in Sources */,
 				2507F9C6285D918600A14A51 /* HomeTabBarView.swift in Sources */,
+				256D6CA228D0E83400825569 /* TMakiResponse.swift in Sources */,
 				251AAD83287321700008CFDE /* GoalFavoriteService.swift in Sources */,
 				25645B222876DE1600A8B334 /* ProcessHistoryRepository.swift in Sources */,
 				2595829C28CB1569008ED59D /* Environment.swift in Sources */,
@@ -1817,7 +2076,9 @@
 				25645B1B2876CA9700A8B334 /* ProcessDetailViewModel.swift in Sources */,
 				25645B192876CA7900A8B334 /* ProcessDetailView.swift in Sources */,
 				251AAD8E2874064E0008CFDE /* RefreshView.swift in Sources */,
+				2583142F28D7816300EE8C8C /* MakiAddGoalResponse.swift in Sources */,
 				2507F99C285C175E00A14A51 /* AccountExistViewModel.swift in Sources */,
+				256D6CC328D32A6D00825569 /* MyMakiDetailParameter.swift in Sources */,
 				25BD6C8428B8AB24002085F8 /* SignInWithAppleButtonView.swift in Sources */,
 				25A05C972891145B0077A005 /* ProcessTermUpdateViewModel.swift in Sources */,
 				25A9D66D2880134300F8A7EB /* FavoriteMainView.swift in Sources */,
@@ -1828,6 +2089,7 @@
 				25A9D68D2883200100F8A7EB /* GoalArchiveRepository.swift in Sources */,
 				256D566528619A1B00D61541 /* AccountService.swift in Sources */,
 				25A9D67528807C8700F8A7EB /* GoalFavoriteResponse.swift in Sources */,
+				25761D3D28D471760030C59D /* MakiGoalListParameter.swift in Sources */,
 				25C2B935285BA1F20077B013 /* ContentView.swift in Sources */,
 				25A05C9B28919D8C0077A005 /* ProcessTermUpdateRequest.swift in Sources */,
 				25A9D68528831D1E00F8A7EB /* GoalArchiveService.swift in Sources */,
@@ -1842,10 +2104,14 @@
 				256D56872869899600D61541 /* AccountCreateViewModel.swift in Sources */,
 				25A9D678288080F100F8A7EB /* GoalFavoriteSearchParameter.swift in Sources */,
 				251AAD8A287355BC0008CFDE /* GoalDetailView.swift in Sources */,
+				256D6CB328D30D5900825569 /* UserImageView.swift in Sources */,
 				251AAD882873558C0008CFDE /* GoalRouter.swift in Sources */,
 				256A5A6F28BDAE4400E32A8D /* AccountReUpdateRequest.swift in Sources */,
 				25A05BE02886B29D0077A005 /* GoalUpdateRequest.swift in Sources */,
+				256D6C9428D0E21600825569 /* MakiCreateViewModel.swift in Sources */,
 				251AAD9728746DBE0008CFDE /* ProcessService.swift in Sources */,
+				256D6CBB28D31AD800825569 /* MakiDetailView.swift in Sources */,
+				2583142B28D741CF00EE8C8C /* MakiAddGoalRequest.swift in Sources */,
 				259BE5D5287013A100098DBC /* GoalRepository.swift in Sources */,
 				2507F9A8285C23DD00A14A51 /* AccountCreateView.swift in Sources */,
 				25A9D6512879F4D100F8A7EB /* ProcessHistoryCommentCreateViewModel.swift in Sources */,
@@ -1853,8 +2119,10 @@
 				25A9D6832882C74500F8A7EB /* GoalArchiveResponse.swift in Sources */,
 				25645B2D2876DFE300A8B334 /* ProcessHistoryResponse.swift in Sources */,
 				256D56682861E90D00D61541 /* ApiProvider.swift in Sources */,
+				2583143428D99C1700EE8C8C /* ProcessListItemView.swift in Sources */,
 				2507F9A0285C17BA00A14A51 /* SignInStatus.swift in Sources */,
 				256D56A9286EB47F00D61541 /* DaikuFormEditor.swift in Sources */,
+				25761D4D28D5A8110030C59D /* MakiAddGoalListParameter.swift in Sources */,
 				25A9D65D287EC15300F8A7EB /* CommentUpdateViewModel.swift in Sources */,
 				256D566028616ACD00D61541 /* AccountRepository.swift in Sources */,
 				251AAD9F28746EE70008CFDE /* ProcessResponse.swift in Sources */,
@@ -1870,13 +2138,17 @@
 				259BE5E42871FB5200098DBC /* BlurView.swift in Sources */,
 				251AADAA287548BB0008CFDE /* ProcessCreateViewModel.swift in Sources */,
 				259BE5D32870015300098DBC /* GoalCreateRequest.swift in Sources */,
+				256D6C9D28D0E70B00825569 /* MakiCreateRequest.swift in Sources */,
+				256D6C9828D0E6E300825569 /* MakiService.swift in Sources */,
 				251AAD94287438AF0008CFDE /* GoalDetailParameter.swift in Sources */,
 				256D566B2861E9D300D61541 /* ApiService.swift in Sources */,
+				256D6CAA28D23F1300825569 /* MyMakiListParameter.swift in Sources */,
 				256D56802868BA7900D61541 /* ApiError.swift in Sources */,
 				2507F9BA285CD61B00A14A51 /* AuthRouter.swift in Sources */,
 				2507F997285C168A00A14A51 /* AccountExistView.swift in Sources */,
 				251AADA2287470660008CFDE /* ProcessRepository.swift in Sources */,
 				25C2B933285BA1F20077B013 /* daiku_app_iosApp.swift in Sources */,
+				256D6CB728D30F3200825569 /* ImagePlaceholderType.swift in Sources */,
 				251AAD7A2872AA4B0008CFDE /* MyGoalResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2181,7 +2453,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "daiku-app-ios/daiku-app-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2.1;
+				CURRENT_PROJECT_VERSION = 1.3.0;
 				DEVELOPMENT_ASSET_PATHS = "\"daiku-app-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = R2XS7CKCJS;
 				ENABLE_PREVIEWS = YES;
@@ -2199,7 +2471,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.goen.daiku-app-ios";
 				PRODUCT_NAME = "D-Aic";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -2215,7 +2487,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "daiku-app-ios/daiku-app-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2.1;
+				CURRENT_PROJECT_VERSION = 1.3.0;
 				DEVELOPMENT_ASSET_PATHS = "\"daiku-app-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = R2XS7CKCJS;
 				ENABLE_PREVIEWS = YES;
@@ -2233,7 +2505,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.goen.daiku-app-ios";
 				PRODUCT_NAME = "D-Aic";
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -127,71 +127,7 @@ struct GoalDetailView: View {
             
             // ProcessList
             ForEach(goalDetailVM.processList) {process in
-                
-                NavigationLink{
-                    ProcessDetailView(
-                        processId: process.id,
-                        goalCreateDate: process.goalCreateDate,
-                        goalId: process.goalId
-                    )
-                } label: {
-                    LazyVStack(alignment: .leading, spacing: 8) {
-                        
-                            
-                        Text(process.title)
-                            .fontWeight(.bold)
-                            .multilineTextAlignment(.leading)
-                        
-                        HStack(spacing: 8) {
-                            Text("\(process.startDisp()) 〜 \(process.endDisp()) ")
-                                .foregroundColor(.gray)
-                                .multilineTextAlignment(.leading)
-                            if process.endDate().compare(goalDetailVM.goalDetail.dueDateToDate()) == .orderedDescending {
-                                Text("遅")
-                                    .fontWeight(.bold)
-                                    .padding(8)
-                                    .background(.red)
-                                    .cornerRadius(15)
-                                    .compositingGroup()
-                                    .shadow(color: .gray, radius: 3, x: 1, y: 1)
-                                
-                            }
-                            
-                        }
-                        HStack(spacing: 8) {
-                            Text(process.statusToEnum().title)
-                                .fontWeight(.bold)
-                                .padding(8)
-                                .background(process.statusToEnum().backColor())
-                                .cornerRadius(15)
-                                .compositingGroup()
-                                .shadow(color: .gray, radius: 3, x: 1, y: 1)
-                            Text(process.priorityToEnum().title)
-                                .fontWeight(.bold)
-                                .padding(8)
-                                .background(process.priorityToEnum().backColor())
-                                .cornerRadius(15)
-                                .compositingGroup()
-                                .shadow(color: .gray, radius: 3, x: 1, y: 1)
-                            Spacer()
-                        }
-                        .padding(.leading, 8)
-                        HStack {
-                            
-                            Text(process.body)
-                                .font(.body)
-                                .padding(.leading, 16)
-                                .lineLimit(3)
-                                .multilineTextAlignment(.leading)
-                            Spacer()
-                        }
-                        Divider()
-                    }
-                    .contentShape(Rectangle())
-                    .foregroundColor(.primary)
-                    
-                }
-                Divider()
+                ProcessListItemView(process: process)
             }
         }
         .navigationBarBackButtonHidden(true)
@@ -206,7 +142,7 @@ struct GoalDetailView: View {
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
-                    homeVM.createGoalSheet()
+                    homeVM.openGoalSheet()
                 }, label: {
                     Image(systemName: "pencil")
                 }).disabled(!goalDetailVM.goalDetail.editable())
@@ -228,7 +164,8 @@ struct GoalDetailView: View {
                 title: goalDetailVM.goalDetail.title,
                 purpose: goalDetailVM.goalDetail.purpose,
                 aim: goalDetailVM.goalDetail.aim,
-                dueDate: goalDetailVM.goalDetail.dueDate
+                dueDate: goalDetailVM.goalDetail.dueDate,
+                closeSheet: {homeVM.closeGoalSheet()}
             )
             .environmentObject(GoalCreateViewModel())
         }

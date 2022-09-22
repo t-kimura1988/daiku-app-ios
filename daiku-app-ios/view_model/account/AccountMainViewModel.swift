@@ -13,13 +13,15 @@ class AccountMainViewModel: ObservableObject {
     private var goalFavoriteRepository: GoalFavoriteRepository = GoalFavoriteRepository()
     private var goalArchiveRepository: GoalArchiveRepository = GoalArchiveRepository()
     private var firebaseRepository: FirebaseRepository = FirebaseRepository()
+    private var makiRepository: MakiRepository = MakiRepository()
     
     @Published var account: AccountResponse = AccountResponse()
     @Published var myGoal: [GoalResponse] = [GoalResponse]()
+    @Published var makiList: [MakiSearchResponse] = [MakiSearchResponse]()
     @Published var myGoalArchiveList: [GoalArchiveInfoResponse] = [GoalArchiveInfoResponse]()
     @Published var goalFavoriteList: [GoalFavoriteResponse] = [GoalFavoriteResponse]()
     
-    @Published var currentTab: String = TabButtonTitle.MyGoal.rawValue
+    @Published var currentTab: String = TabButtonTitle.Maki.rawValue
     @Published var isBookmark: Bool = false
     @Published var isUpdateAccount: Bool = false
     
@@ -34,6 +36,10 @@ class AccountMainViewModel: ObservableObject {
     @Published var bookMarkListPage: Int = 10
     @Published var bookMarkListLoadFlg: Bool = false
     @Published var isBookMarkListLoading: Bool = false
+    
+    @Published var makiListPage: Int = 10
+    @Published var makiListLoadFlg: Bool = false
+    @Published var isMakiListLoading: Bool = false
     
     @Published var isImagePreView: Bool = false
     @Published var userImageURL: URL?
@@ -146,6 +152,36 @@ class AccountMainViewModel: ObservableObject {
         
     }
     
+    
+    func getInitMakiList() {
+        isMakiListLoading = true
+        loadMaki()
+    }
+    
+    func getMakiList() {
+        isMakiListLoading = true
+        makiListPage += 10
+        loadMaki()
+    }
+    
+    private func loadMaki() {
+        Task {
+            let list = try await makiRepository.searchMyMaki(parameter: .init(page: String(makiListPage)))
+            DispatchQueue.main.async {
+                self.makiList = list
+                
+                if list.count == self.makiListPage {
+                    self.makiListLoadFlg = true
+                } else {
+                    self.makiListLoadFlg = false
+                }
+                
+                self.isMakiListLoading = false
+            }
+        }
+        
+    }
+    
     func changeTab(item: String) {
         DispatchQueue.main.sync {
             currentTab = item
@@ -186,6 +222,7 @@ class AccountMainViewModel: ObservableObject {
 }
 
 enum TabButtonTitle: String, CaseIterable, Identifiable {
+    case Maki = "書"
     case MyGoal = "目標"
     case Archive = "達成"
     case BookMark = "印"

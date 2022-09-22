@@ -1,149 +1,21 @@
 //
-//  GoalRepository.swift
+//  MakiRepository.swift
 //  daiku-app-ios
 //
-//  Created by 木村猛 on 2022/07/02.
+//  Created by 木村猛 on 2022/09/14.
 //
 
 import Foundation
 import Combine
 
-struct GoalRepository {
-    func saveGoal(request: GoalCreateRequest) async throws -> GoalResponse{
-        
-        var canceller: AnyCancellable?
-        let publisher: AnyPublisher<GoalResponse, ApiError> = try await ApiProvider.provider(service: GoalService.createGoal(request))
-        
-        return try await withCheckedThrowingContinuation{ continuation in
-            if Task.isCancelled {
-                continuation.resume(throwing: Error.self as! Error)
-            }
-            
-            canceller = publisher
-                .sink(receiveCompletion: {completion in
-                    switch completion {
-                        
-                    case .finished:
-                        canceller?.cancel()
-                        break
-                    case .failure(let error):
-                        let err: ApiError = error
-                        
-                        switch(err) {
-                        case .responseError(let errorCd):
-                            continuation.resume(throwing: ApiError.responseError(errorCd))
-                        case .invalidURL:
-                            continuation.resume(throwing: ApiError.invalidURL)
-                        case .parseError:
-                            continuation.resume(throwing: ApiError.parseError)
-                        case .unknown:
-                            continuation.resume(throwing: ApiError.unknown)
-                        case .httpError(let code):
-                            continuation.resume(throwing: ApiError.httpError(code))
-                        }
-                        canceller?.cancel()
-                        
-                    }
-                }, receiveValue: {accountRes in
-                    
-                    continuation.resume(returning: accountRes)
-                })
-        }
-    }
+struct MakiRepository {
     
-    func updateGoal(request: GoalUpdateRequest) async throws -> GoalResponse{
-        
-        var canceller: AnyCancellable?
-        let publisher: AnyPublisher<GoalResponse, ApiError> = try await ApiProvider.provider(service: GoalService.updateGoal(request))
-        
-        return try await withCheckedThrowingContinuation{ continuation in
-            if Task.isCancelled {
-                continuation.resume(throwing: Error.self as! Error)
-            }
-            
-            canceller = publisher
-                .sink(receiveCompletion: {completion in
-                    switch completion {
-                        
-                    case .finished:
-                        canceller?.cancel()
-                        break
-                    case .failure(let error):
-                        let err: ApiError = error
-                        
-                        switch(err) {
-                        case .responseError(let errorCd):
-                            continuation.resume(throwing: ApiError.responseError(errorCd))
-                        case .invalidURL:
-                            continuation.resume(throwing: ApiError.invalidURL)
-                        case .parseError:
-                            continuation.resume(throwing: ApiError.parseError)
-                        case .unknown:
-                            continuation.resume(throwing: ApiError.unknown)
-                        case .httpError(let code):
-                            continuation.resume(throwing: ApiError.httpError(code))
-                        }
-                        canceller?.cancel()
-                        continuation.resume(returning: GoalResponse())
-                    }
-                }, receiveValue: {goalRes in
-                    
-                    continuation.resume(returning: goalRes)
-                })
-        }
-    }
     
-    func myGoalList(parameter: MyGoalListParameter) async throws -> [GoalResponse] {
-        var canceller: AnyCancellable?
-        let publisher: AnyPublisher<[GoalResponse], ApiError> = try await ApiProvider.provider(service: GoalService.myGoalList(parameter))
-        
-        return try await withCheckedThrowingContinuation{ continuation in
-            if Task.isCancelled {
-                continuation.resume(throwing: Error.self as! Error)
-            }
-            
-            canceller = publisher
-                .sink(receiveCompletion: {completion in
-                    switch completion {
-                        
-                    case .finished:
-                        canceller?.cancel()
-                        break
-                    case .failure(let error):
-                        let err: ApiError = error
-                        switch(err) {
-                        case .responseError(let errorCd):
-                            continuation.resume(throwing: ApiError.responseError(errorCd))
-                        case .invalidURL:
-                            continuation.resume(throwing: ApiError.invalidURL)
-                        case .parseError:
-                            continuation.resume(throwing: ApiError.parseError)
-                        case .unknown:
-                            continuation.resume(throwing: ApiError.unknown)
-                        case .httpError(let code):
-                            continuation.resume(throwing: ApiError.httpError(code))
-                        }
-                        canceller?.cancel()
-                        
-                    }
-                }, receiveValue: {res in
-                    continuation.resume(returning: res)
-                })
-        }
-        
-        
-    }
-    
-    func myGoalDetail(parameter: GoalDetailParameter) async throws -> GoalResponse {
+    func createMaki(body: MakiCreateRequest) async throws -> TMakiResponse?{
         
         var canceller: AnyCancellable?
-        let publisher: AnyPublisher<GoalResponse, ApiError> = try await ApiProvider.provider(service: GoalService.goalDetail(parameter))
-        
+        let publisher: AnyPublisher<TMakiResponse, ApiError> = try await ApiProvider.provider(service: MakiService.create(body))
         return try await withCheckedThrowingContinuation{ continuation in
-            if Task.isCancelled {
-                continuation.resume(throwing: Error.self as! Error)
-            }
-            
             canceller = publisher
                 .sink(receiveCompletion: {completion in
                     switch completion {
@@ -170,10 +42,200 @@ struct GoalRepository {
                         
                     }
                 }, receiveValue: {res in
+                    
                     continuation.resume(returning: res)
                 })
         }
         
     }
     
+    
+    func searchMyMaki(parameter: MyMakiListParameter) async throws -> [MakiSearchResponse]{
+        
+        var canceller: AnyCancellable?
+        let publisher: AnyPublisher<[MakiSearchResponse], ApiError> = try await ApiProvider.provider(service: MakiService.search(parameter))
+        return try await withCheckedThrowingContinuation{ continuation in
+            canceller = publisher
+                .sink(receiveCompletion: {completion in
+                    switch completion {
+                        
+                    case .finished:
+                        canceller?.cancel()
+                        break
+                    case .failure(let error):
+                        let err: ApiError = error
+                        
+                        switch(err) {
+                        case .responseError(let errorCd):
+                            continuation.resume(throwing: ApiError.responseError(errorCd))
+                        case .invalidURL:
+                            continuation.resume(throwing: ApiError.invalidURL)
+                        case .parseError:
+                            continuation.resume(throwing: ApiError.parseError)
+                        case .unknown:
+                            continuation.resume(throwing: ApiError.unknown)
+                        case .httpError(let code):
+                            continuation.resume(throwing: ApiError.httpError(code))
+                        }
+                        canceller?.cancel()
+                        
+                    }
+                }, receiveValue: {res in
+                    
+                    continuation.resume(returning: res)
+                })
+        }
+        
+    }
+    
+    func detailMyMaki(parameter: MyMakiDetailParameter) async throws -> MakiSearchResponse{
+        
+        var canceller: AnyCancellable?
+        let publisher: AnyPublisher<MakiSearchResponse, ApiError> = try await ApiProvider.provider(service: MakiService.myDetail(parameter))
+        return try await withCheckedThrowingContinuation{ continuation in
+            canceller = publisher
+                .sink(receiveCompletion: {completion in
+                    switch completion {
+                        
+                    case .finished:
+                        canceller?.cancel()
+                        break
+                    case .failure(let error):
+                        let err: ApiError = error
+                        
+                        switch(err) {
+                        case .responseError(let errorCd):
+                            continuation.resume(throwing: ApiError.responseError(errorCd))
+                        case .invalidURL:
+                            continuation.resume(throwing: ApiError.invalidURL)
+                        case .parseError:
+                            continuation.resume(throwing: ApiError.parseError)
+                        case .unknown:
+                            continuation.resume(throwing: ApiError.unknown)
+                        case .httpError(let code):
+                            continuation.resume(throwing: ApiError.httpError(code))
+                        }
+                        canceller?.cancel()
+                        
+                    }
+                }, receiveValue: {res in
+                    
+                    continuation.resume(returning: res)
+                })
+        }
+        
+    }
+    
+    func makiGoal(parameter: MakiGoalListParameter) async throws -> [GoalResponse]{
+        
+        var canceller: AnyCancellable?
+        let publisher: AnyPublisher<[GoalResponse], ApiError> = try await ApiProvider.provider(service: MakiService.makiGoalList(parameter))
+        return try await withCheckedThrowingContinuation{ continuation in
+            canceller = publisher
+                .sink(receiveCompletion: {completion in
+                    switch completion {
+                        
+                    case .finished:
+                        canceller?.cancel()
+                        break
+                    case .failure(let error):
+                        let err: ApiError = error
+                        
+                        switch(err) {
+                        case .responseError(let errorCd):
+                            continuation.resume(throwing: ApiError.responseError(errorCd))
+                        case .invalidURL:
+                            continuation.resume(throwing: ApiError.invalidURL)
+                        case .parseError:
+                            continuation.resume(throwing: ApiError.parseError)
+                        case .unknown:
+                            continuation.resume(throwing: ApiError.unknown)
+                        case .httpError(let code):
+                            continuation.resume(throwing: ApiError.httpError(code))
+                        }
+                        canceller?.cancel()
+                        
+                    }
+                }, receiveValue: {res in
+                    
+                    continuation.resume(returning: res)
+                })
+        }
+        
+    }
+    
+    func makiAddGoalList(parameter: MakiAddGoalListParameter) async throws -> [MakiAddGoalItem]{
+        
+        var canceller: AnyCancellable?
+        let publisher: AnyPublisher<[MakiAddGoalItem], ApiError> = try await ApiProvider.provider(service: MakiService.makiAddGoalList(parameter))
+        return try await withCheckedThrowingContinuation{ continuation in
+            canceller = publisher
+                .sink(receiveCompletion: {completion in
+                    switch completion {
+                        
+                    case .finished:
+                        canceller?.cancel()
+                        break
+                    case .failure(let error):
+                        let err: ApiError = error
+                        
+                        switch(err) {
+                        case .responseError(let errorCd):
+                            continuation.resume(throwing: ApiError.responseError(errorCd))
+                        case .invalidURL:
+                            continuation.resume(throwing: ApiError.invalidURL)
+                        case .parseError:
+                            continuation.resume(throwing: ApiError.parseError)
+                        case .unknown:
+                            continuation.resume(throwing: ApiError.unknown)
+                        case .httpError(let code):
+                            continuation.resume(throwing: ApiError.httpError(code))
+                        }
+                        canceller?.cancel()
+                        
+                    }
+                }, receiveValue: {res in
+                    
+                    continuation.resume(returning: res)
+                })
+        }
+        
+    }
+    
+    func makiAddGoal(parameter: Array<MakiAddGoalRequest>) async throws -> [MakiAddGoalResponse]{
+        
+        var canceller: AnyCancellable?
+        let publisher: AnyPublisher<[MakiAddGoalResponse], ApiError> = try await ApiProvider.provider(service: MakiService.makiAddGoal(parameter))
+        return try await withCheckedThrowingContinuation{ continuation in
+            canceller = publisher
+                .sink(receiveCompletion: {completion in
+                    switch completion {
+                        
+                    case .finished:
+                        canceller?.cancel()
+                        break
+                    case .failure(let error):
+                        let err: ApiError = error
+                        switch(err) {
+                        case .responseError(let errorCd):
+                            continuation.resume(throwing: ApiError.responseError(errorCd))
+                        case .invalidURL:
+                            continuation.resume(throwing: ApiError.invalidURL)
+                        case .parseError:
+                            continuation.resume(throwing: ApiError.parseError)
+                        case .unknown:
+                            continuation.resume(throwing: ApiError.unknown)
+                        case .httpError(let code):
+                            continuation.resume(throwing: ApiError.httpError(code))
+                        }
+                        canceller?.cancel()
+                        
+                    }
+                }, receiveValue: {res in
+                    
+                    continuation.resume(returning: res)
+                })
+        }
+        
+    }
 }

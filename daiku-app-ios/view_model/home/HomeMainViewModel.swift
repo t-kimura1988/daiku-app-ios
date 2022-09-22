@@ -13,11 +13,14 @@ class HomeMainViewModel: ObservableObject {
     private var firebaseRepository: FirebaseRepository = FirebaseRepository()
     @Published var homeList: [HomeResponse] = [HomeResponse()]
     @Published var isSheet: Bool = false
+    @Published var isProjectSheet: Bool = false
     
     
     @Published var homeListPage: Int = 10
     @Published var homeListLoadFlg: Bool = false
     @Published var isHomeListLoading: Bool = false
+    
+    @Published var isGoalCreateMenuSheet: Bool = false
     
     func getInitHomeList() {
         self.isHomeListLoading = true
@@ -47,9 +50,40 @@ class HomeMainViewModel: ObservableObject {
         
     }
     
-    func createGoalSheet() {
+    func openGoalSheet() {
         DispatchQueue.main.async {
-            self.isSheet = !self.isSheet
+            self.isSheet = true
+        }
+    }
+    
+    func closeGoalSheet() {
+        DispatchQueue.main.async {
+            self.isSheet = false
+        }
+    }
+    
+    func openProjectSheet() {
+        DispatchQueue.main.async {
+            self.isProjectSheet = true
+        }
+    }
+    
+    func closeProjectSheet() {
+        DispatchQueue.main.async {
+            self.isProjectSheet = false
+        }
+    }
+    
+    func openGoalCreateMenuSheet() {
+        DispatchQueue.main.async {
+            self.isGoalCreateMenuSheet = true
+        }
+    }
+    
+    func closeGoalCreateMenuSheet(completion: @escaping () -> Void) {
+        DispatchQueue.main.async {
+            self.isGoalCreateMenuSheet = false
+            completion()
         }
     }
 }

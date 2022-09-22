@@ -19,7 +19,13 @@ enum AccountService: ApiService {
 
 extension AccountService {
     var baseURL: String {
-        return Bundle.main.object(forInfoDictionaryKey: "BASE_API") as! String
+        let baseApi = Env["BASE_API"]
+        
+        guard let baseApi = baseApi else {
+            return "http://localhost"
+        }
+        
+        return baseApi
     }
     
     var httpMethod: HttpMethod {
