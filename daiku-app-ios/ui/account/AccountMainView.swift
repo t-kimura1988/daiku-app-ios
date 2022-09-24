@@ -185,7 +185,9 @@ struct AccountMainView: View {
                         // Goal List
                         VStack(alignment: .leading, spacing: 8) {
                             ForEach(accountMainVm.myGoal) { item in
-                                GoalListParts(item: item)
+                                GoalListParts(item: item) {
+                                    accountMainVm.tapGoalItem(item: item)
+                                }
                             }
                         }
                         .onAppear{
@@ -384,6 +386,10 @@ struct AccountMainView: View {
                 uid: accountMainVm.account.uid
             )
             .environmentObject(ImagePreViewModel())
+        }
+        .sheet(isPresented: $accountMainVm.isGoaDetailSheet) {
+            let item = accountMainVm.goalItem
+            GoalDetailView(goalId: item.id, createDate: item.createDate, archiveId: item.getArchiveId(), archiveCreateDate: item.getArchiveCreateDate())
         }
     }
     

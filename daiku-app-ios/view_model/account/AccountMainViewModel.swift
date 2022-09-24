@@ -48,6 +48,9 @@ class AccountMainViewModel: ObservableObject {
     
     @Published var imagePath: String?
     
+    @Published var isGoaDetailSheet: Bool = false
+    @Published var goalItem: GoalResponse = GoalResponse()
+    
     func changeUpdateAccount() {
         DispatchQueue.main.async {
             self.isUpdateAccount = !self.isUpdateAccount
@@ -218,6 +221,11 @@ class AccountMainViewModel: ObservableObject {
     
     func closeImagePreView() {
         isImagePreView = false
+    }
+    
+    func tapGoalItem(item: GoalResponse) {
+        isGoaDetailSheet = true
+        goalItem = item
     }
 }
 

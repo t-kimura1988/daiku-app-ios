@@ -16,6 +16,7 @@ struct UserImageView: View {
     }
     
     var body: some View {
+        
         AsyncImage(url: URL(string: userImage)) { image in
             image
                 .resizable()

@@ -17,7 +17,10 @@ class AccountCreateViewModel: ObservableObject {
     
     @Published var isSaveButton: Bool = false
     @Published var isSending: Bool = false
-    @Published var isDeleteAlert: Bool = false
+    @Published var isAlert: Bool = false
+    
+    @Published var isError: Bool = false
+    @Published var errorMsm: String = ""
     
     private var accountRepository: AccountRepository = AccountRepository()
     
@@ -29,11 +32,12 @@ class AccountCreateViewModel: ObservableObject {
     }
     
     func openDeleteAlert() {
-        isDeleteAlert = true
+        print("delete alert")
+        isAlert = true
     }
     
     func closeDeleteAlert() {
-        isDeleteAlert = false
+        isAlert = false
     }
     
     func isSave() -> Bool {
@@ -42,6 +46,12 @@ class AccountCreateViewModel: ObservableObject {
     
     func createAccount(completion: @escaping (AccountResponse) -> Void) {
         isSending = true
+        if !nickName.isEmpty && !nickName.isAlpaNum() {
+            isError = true
+            errorMsm = "ニックネームは半角英数字で入力してください。"
+            return
+        }
+        
         if accountId == 0 {
             Task {
                 let account = try await accountRepository.createAccount(body: .init(familyName: familyName, givenName: givenName, nickName: nickName))
@@ -76,7 +86,7 @@ class AccountCreateViewModel: ObservableObject {
     func initVali() {
         let familyNameVali = $familyName.map({ !$0.isEmpty && !$0.moreGreater(size: 100) }).eraseToAnyPublisher()
         let givenNameVali = $givenName.map({ !$0.isEmpty && !$0.moreGreater(size: 100)}).eraseToAnyPublisher()
-        let nickNameVali = $nickName.map({ !$0.moreGreater(size: 100) }).eraseToAnyPublisher()
+        let nickNameVali = $nickName.map({ !$0.moreGreater(size: 100) && $0.isAlpaNum()} ).eraseToAnyPublisher()
         
         Publishers.CombineLatest3(familyNameVali, givenNameVali, nickNameVali)
             .map({ [$0.0, $0.1, $0.2] })
