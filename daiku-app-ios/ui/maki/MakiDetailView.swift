@@ -104,7 +104,7 @@ struct MakiDetailView: View {
             )
             .environmentObject(GoalCreateViewModel())
         }
-        .sheet(isPresented: $makiDetailVM.isGoaDetailSheet) {
+        .fullScreenCover(isPresented: $makiDetailVM.isGoaDetailSheet) {
             let item = makiDetailVM.goalItem
             GoalDetailView(goalId: item.id, createDate: item.createDate, archiveId: item.getArchiveId(), archiveCreateDate: item.getArchiveCreateDate())
         }

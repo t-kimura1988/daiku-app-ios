@@ -124,6 +124,7 @@ struct ProcessHistoryCommentView: View {
                 pHCommentCreateVM.initVali()
             }
         }
+        .navigationViewStyle(.stack)
     }
 }
 

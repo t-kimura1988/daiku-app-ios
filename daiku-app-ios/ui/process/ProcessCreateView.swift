@@ -160,6 +160,7 @@ struct ProcessCreateView: View {
                 processCreateVM.initVali()
             }
         }
+        .navigationViewStyle(.stack)
     }
 }
 

@@ -264,37 +264,8 @@ struct AccountMainView: View {
                             
                             ForEach(accountMainVm.goalFavoriteList) { item in
                                 
-                                NavigationLink {
-                                    GoalDetailView(goalId: item.goalId, createDate: item.goalCreateDate, archiveId: item.getArchiveId(), archiveCreateDate: item.getArchiveCreateDate())
-                                } label: {
-                                    HStack {
-                                        VStack(alignment: .leading) {
-                                            Text(item.title)
-                                                .fontWeight(.bold)
-                                                .lineLimit(1)
-                                                .foregroundColor(.primary)
-                                            
-                                            Text("追加日:\(item.favoriteAddDateFormat())")
-                                            .foregroundColor(Color.gray)
-                                            Text("期日:\(item.dueDateFormat())")
-                                                .foregroundColor(Color.gray)
-                                            Text(item.purpose)
-                                                .font(.body)
-                                                .lineLimit(3)
-                                                .padding(.top, 8)
-                                                .foregroundColor(.primary)
-                                                .multilineTextAlignment(.leading)
-                                            
-                                            HStack {
-                                                Spacer()
-                                                Text("目標作成:\(item.goalCreateAccount())")
-                                                    .foregroundColor(Color.gray)
-                                            }
-                                        }
-                                        .padding(8)
-                                        Spacer()
-                                    }
-                                    .contentShape(Rectangle())
+                                FavoriteGoalList(item: item) {
+                                    accountMainVm.tapGoalItem(item: item.toGoalResponse())
                                 }
                                 
                                 Divider()
@@ -387,7 +358,7 @@ struct AccountMainView: View {
             )
             .environmentObject(ImagePreViewModel())
         }
-        .sheet(isPresented: $accountMainVm.isGoaDetailSheet) {
+        .fullScreenCover(isPresented: $accountMainVm.isGoaDetailSheet) {
             let item = accountMainVm.goalItem
             GoalDetailView(goalId: item.id, createDate: item.createDate, archiveId: item.getArchiveId(), archiveCreateDate: item.getArchiveCreateDate())
         }

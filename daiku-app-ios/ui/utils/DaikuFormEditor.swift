@@ -49,5 +49,6 @@ struct DaikuFormEditor: View {
                 focus = true
             }
         }
+        .navigationViewStyle(.stack)
     }
 }

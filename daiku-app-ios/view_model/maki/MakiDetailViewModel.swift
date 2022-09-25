@@ -40,8 +40,10 @@ class MakiDetailViewModel: ObservableObject {
     }
     
     func getInitMakiGoalList() {
-        isMakiGoalListLoading = true
-        loadMakiList()
+        DispatchQueue.main.async {
+            self.isMakiGoalListLoading = true
+            self.loadMakiList()
+        }
     }
     
     func getMakiGoalList() {
