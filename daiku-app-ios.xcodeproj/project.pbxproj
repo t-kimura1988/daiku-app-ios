@@ -209,6 +209,24 @@
 		257EDCF728E01C3300DE4136 /* FavoriteGoalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EDCF628E01C3300DE4136 /* FavoriteGoalList.swift */; };
 		257EDCF828E01C3700DE4136 /* FavoriteGoalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EDCF628E01C3300DE4136 /* FavoriteGoalList.swift */; };
 		257EDCF928E01C3700DE4136 /* FavoriteGoalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EDCF628E01C3300DE4136 /* FavoriteGoalList.swift */; };
+		257EDCFF28E185D500DE4136 /* GoalSearchInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EDCFE28E185D500DE4136 /* GoalSearchInputView.swift */; };
+		257EDD0028E185D500DE4136 /* GoalSearchInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EDCFE28E185D500DE4136 /* GoalSearchInputView.swift */; };
+		257EDD0128E185D500DE4136 /* GoalSearchInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EDCFE28E185D500DE4136 /* GoalSearchInputView.swift */; };
+		257EDD0328E1867000DE4136 /* GoalSearchInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EDD0228E1867000DE4136 /* GoalSearchInputViewModel.swift */; };
+		257EDD0428E1867000DE4136 /* GoalSearchInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EDD0228E1867000DE4136 /* GoalSearchInputViewModel.swift */; };
+		257EDD0528E1867000DE4136 /* GoalSearchInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EDD0228E1867000DE4136 /* GoalSearchInputViewModel.swift */; };
+		257EDD0728E1A08700DE4136 /* DatePickerMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EDD0628E1A08700DE4136 /* DatePickerMonth.swift */; };
+		257EDD0828E1A08700DE4136 /* DatePickerMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EDD0628E1A08700DE4136 /* DatePickerMonth.swift */; };
+		257EDD0928E1A08700DE4136 /* DatePickerMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EDD0628E1A08700DE4136 /* DatePickerMonth.swift */; };
+		257EDD0B28E203C300DE4136 /* GoalArchiveListParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EDD0A28E203C300DE4136 /* GoalArchiveListParts.swift */; };
+		257EDD0C28E203C300DE4136 /* GoalArchiveListParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EDD0A28E203C300DE4136 /* GoalArchiveListParts.swift */; };
+		257EDD0D28E203C300DE4136 /* GoalArchiveListParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EDD0A28E203C300DE4136 /* GoalArchiveListParts.swift */; };
+		257EDD0F28E204B800DE4136 /* GoalArchiveSearchInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EDD0E28E204B800DE4136 /* GoalArchiveSearchInputView.swift */; };
+		257EDD1028E204B800DE4136 /* GoalArchiveSearchInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EDD0E28E204B800DE4136 /* GoalArchiveSearchInputView.swift */; };
+		257EDD1128E204B800DE4136 /* GoalArchiveSearchInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EDD0E28E204B800DE4136 /* GoalArchiveSearchInputView.swift */; };
+		257EDD1428E207CD00DE4136 /* HomeGoalArchiveSearchInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EDD1328E207CD00DE4136 /* HomeGoalArchiveSearchInputView.swift */; };
+		257EDD1528E207CD00DE4136 /* HomeGoalArchiveSearchInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EDD1328E207CD00DE4136 /* HomeGoalArchiveSearchInputView.swift */; };
+		257EDD1628E207CD00DE4136 /* HomeGoalArchiveSearchInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EDD1328E207CD00DE4136 /* HomeGoalArchiveSearchInputView.swift */; };
 		2583142728D6E89100EE8C8C /* AddGoalListParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2583142628D6E89100EE8C8C /* AddGoalListParts.swift */; };
 		2583142828D6E89100EE8C8C /* AddGoalListParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2583142628D6E89100EE8C8C /* AddGoalListParts.swift */; };
 		2583142928D6E89100EE8C8C /* AddGoalListParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2583142628D6E89100EE8C8C /* AddGoalListParts.swift */; };
@@ -595,6 +613,12 @@
 		25761D4828D5A6820030C59D /* MakiAddGoalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakiAddGoalItem.swift; sourceTree = "<group>"; };
 		25761D4C28D5A8110030C59D /* MakiAddGoalListParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakiAddGoalListParameter.swift; sourceTree = "<group>"; };
 		257EDCF628E01C3300DE4136 /* FavoriteGoalList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGoalList.swift; sourceTree = "<group>"; };
+		257EDCFE28E185D500DE4136 /* GoalSearchInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSearchInputView.swift; sourceTree = "<group>"; };
+		257EDD0228E1867000DE4136 /* GoalSearchInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSearchInputViewModel.swift; sourceTree = "<group>"; };
+		257EDD0628E1A08700DE4136 /* DatePickerMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerMonth.swift; sourceTree = "<group>"; };
+		257EDD0A28E203C300DE4136 /* GoalArchiveListParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalArchiveListParts.swift; sourceTree = "<group>"; };
+		257EDD0E28E204B800DE4136 /* GoalArchiveSearchInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalArchiveSearchInputView.swift; sourceTree = "<group>"; };
+		257EDD1328E207CD00DE4136 /* HomeGoalArchiveSearchInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGoalArchiveSearchInputView.swift; sourceTree = "<group>"; };
 		2583142628D6E89100EE8C8C /* AddGoalListParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalListParts.swift; sourceTree = "<group>"; };
 		2583142A28D741CF00EE8C8C /* MakiAddGoalRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakiAddGoalRequest.swift; sourceTree = "<group>"; };
 		2583142E28D7816300EE8C8C /* MakiAddGoalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakiAddGoalResponse.swift; sourceTree = "<group>"; };
@@ -843,6 +867,7 @@
 				25BF37CD28C20B41002614FE /* ImageSourceType.swift */,
 				256D6C8928D05FF400825569 /* GoalCreateMenuList.swift */,
 				256D6CB628D30F3200825569 /* ImagePlaceholderType.swift */,
+				257EDD0628E1A08700DE4136 /* DatePickerMonth.swift */,
 			);
 			path = enums;
 			sourceTree = "<group>";
@@ -850,6 +875,7 @@
 		2507F9A5285C23B600A14A51 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				257EDD1228E207B700DE4136 /* parts */,
 				2507F9AA285C23F900A14A51 /* HomeView.swift */,
 				2507F9C5285D918600A14A51 /* HomeTabBarView.swift */,
 			);
@@ -1103,6 +1129,7 @@
 				2583143228D99BFC00EE8C8C /* parts */,
 				256D56A1286D807D00D61541 /* GoalCreateView.swift */,
 				251AAD89287355BC0008CFDE /* GoalDetailView.swift */,
+				257EDCFE28E185D500DE4136 /* GoalSearchInputView.swift */,
 			);
 			path = goal;
 			sourceTree = "<group>";
@@ -1112,6 +1139,7 @@
 			children = (
 				256D56A5286DA72D00D61541 /* GoalCreateViewModel.swift */,
 				251AAD90287435820008CFDE /* GoalDetailViewModel.swift */,
+				257EDD0228E1867000DE4136 /* GoalSearchInputViewModel.swift */,
 			);
 			path = goal;
 			sourceTree = "<group>";
@@ -1184,6 +1212,15 @@
 			children = (
 				256D6CD028D4515300825569 /* GoalListParts.swift */,
 				257EDCF628E01C3300DE4136 /* FavoriteGoalList.swift */,
+				257EDD0A28E203C300DE4136 /* GoalArchiveListParts.swift */,
+			);
+			path = parts;
+			sourceTree = "<group>";
+		};
+		257EDD1228E207B700DE4136 /* parts */ = {
+			isa = PBXGroup;
+			children = (
+				257EDD1328E207CD00DE4136 /* HomeGoalArchiveSearchInputView.swift */,
 			);
 			path = parts;
 			sourceTree = "<group>";
@@ -1283,6 +1320,7 @@
 			children = (
 				25A9D67B28829E8B00F8A7EB /* GoalArchiveDetailView.swift */,
 				25A05BEB2887E9120077A005 /* GoalArchiveEditView.swift */,
+				257EDD0E28E204B800DE4136 /* GoalArchiveSearchInputView.swift */,
 			);
 			path = goal_archive;
 			sourceTree = "<group>";
@@ -1719,6 +1757,7 @@
 				256D6CBC28D31AD800825569 /* MakiDetailView.swift in Sources */,
 				256D6CC428D32A6D00825569 /* MyMakiDetailParameter.swift in Sources */,
 				25A05C982891145B0077A005 /* ProcessTermUpdateViewModel.swift in Sources */,
+				257EDD0828E1A08700DE4136 /* DatePickerMonth.swift in Sources */,
 				25A05C90289109270077A005 /* MoreText.swift in Sources */,
 				25A05C09288E88FB0077A005 /* ProcessDetailParameter.swift in Sources */,
 				2507F9C4285CE81200A14A51 /* TermsOfUseView.swift in Sources */,
@@ -1748,9 +1787,12 @@
 				25A9D666287FE3C100F8A7EB /* StatusUpdateViewModel.swift in Sources */,
 				256D6C8B28D05FF400825569 /* GoalCreateMenuList.swift in Sources */,
 				25761D4A28D5A6820030C59D /* MakiAddGoalItem.swift in Sources */,
+				257EDD0028E185D500DE4136 /* GoalSearchInputView.swift in Sources */,
 				256D5691286A1E1C00D61541 /* AnyEncoder.swift in Sources */,
 				259BE5DE287022F600098DBC /* AccountMainViewModel.swift in Sources */,
+				257EDD0428E1867000DE4136 /* GoalSearchInputViewModel.swift in Sources */,
 				256D5694286B572B00D61541 /* HomeService.swift in Sources */,
+				257EDD1028E204B800DE4136 /* GoalArchiveSearchInputView.swift in Sources */,
 				256D6CA728D0E8AB00825569 /* MakiRepository.swift in Sources */,
 				251AAD8C287356690008CFDE /* GoalRouter.swift in Sources */,
 				25A9D68F288322B500F8A7EB /* GoalArchiveDetailViewModel.swift in Sources */,
@@ -1798,10 +1840,12 @@
 				259BE5D6287014B000098DBC /* GoalRepository.swift in Sources */,
 				256D6C9028D08B4200825569 /* MakiCreateView.swift in Sources */,
 				25BF37C528C11796002614FE /* ImagePreViewModel.swift in Sources */,
+				257EDD0C28E203C300DE4136 /* GoalArchiveListParts.swift in Sources */,
 				256D5678286370FF00D61541 /* AccountResponse.swift in Sources */,
 				256D6CAB28D23F1300825569 /* MyMakiListParameter.swift in Sources */,
 				2507F9CA285D935400A14A51 /* AccountMainView.swift in Sources */,
 				256D6CD228D4515300825569 /* GoalListParts.swift in Sources */,
+				257EDD1528E207CD00DE4136 /* HomeGoalArchiveSearchInputView.swift in Sources */,
 				25A9D6792880813000F8A7EB /* GoalFavoriteSearchParameter.swift in Sources */,
 				251AAD9828746DBE0008CFDE /* ProcessService.swift in Sources */,
 				25A05BE12886B2DE0077A005 /* GoalUpdateRequest.swift in Sources */,
@@ -1872,6 +1916,7 @@
 				256D6CBD28D31AD800825569 /* MakiDetailView.swift in Sources */,
 				256D6CC528D32A6D00825569 /* MyMakiDetailParameter.swift in Sources */,
 				25A05C992891145B0077A005 /* ProcessTermUpdateViewModel.swift in Sources */,
+				257EDD0928E1A08700DE4136 /* DatePickerMonth.swift in Sources */,
 				25A05C91289109270077A005 /* MoreText.swift in Sources */,
 				25A05C20288FC34C0077A005 /* ProcessDetailParameter.swift in Sources */,
 				25A05C21288FC34C0077A005 /* TermsOfUseView.swift in Sources */,
@@ -1901,9 +1946,12 @@
 				25A05C31288FC34C0077A005 /* StatusUpdateViewModel.swift in Sources */,
 				256D6C8C28D05FF400825569 /* GoalCreateMenuList.swift in Sources */,
 				25761D4B28D5A6820030C59D /* MakiAddGoalItem.swift in Sources */,
+				257EDD0128E185D500DE4136 /* GoalSearchInputView.swift in Sources */,
 				25A05C32288FC34C0077A005 /* AnyEncoder.swift in Sources */,
 				25A05C33288FC34C0077A005 /* AccountMainViewModel.swift in Sources */,
+				257EDD0528E1867000DE4136 /* GoalSearchInputViewModel.swift in Sources */,
 				25A05C34288FC34C0077A005 /* HomeService.swift in Sources */,
+				257EDD1128E204B800DE4136 /* GoalArchiveSearchInputView.swift in Sources */,
 				256D6CA828D0E8AB00825569 /* MakiRepository.swift in Sources */,
 				25A05C35288FC34C0077A005 /* GoalRouter.swift in Sources */,
 				25A05C36288FC34C0077A005 /* GoalArchiveDetailViewModel.swift in Sources */,
@@ -1951,10 +1999,12 @@
 				25A05C57288FC34C0077A005 /* GoalRepository.swift in Sources */,
 				256D6C9128D08B4200825569 /* MakiCreateView.swift in Sources */,
 				25BF37C628C11797002614FE /* ImagePreViewModel.swift in Sources */,
+				257EDD0D28E203C300DE4136 /* GoalArchiveListParts.swift in Sources */,
 				25A05C58288FC34C0077A005 /* AccountResponse.swift in Sources */,
 				256D6CAC28D23F1300825569 /* MyMakiListParameter.swift in Sources */,
 				25A05C59288FC34C0077A005 /* AccountMainView.swift in Sources */,
 				256D6CD328D4515300825569 /* GoalListParts.swift in Sources */,
+				257EDD1628E207CD00DE4136 /* HomeGoalArchiveSearchInputView.swift in Sources */,
 				25A05C5A288FC34C0077A005 /* GoalFavoriteSearchParameter.swift in Sources */,
 				25A05C5B288FC34C0077A005 /* ProcessService.swift in Sources */,
 				25A05C5C288FC34C0077A005 /* GoalUpdateRequest.swift in Sources */,
@@ -2019,6 +2069,7 @@
 				256D566F28621F9700D61541 /* URLRequest.swift in Sources */,
 				25A05BF8288E377C0077A005 /* StringExtension.swift in Sources */,
 				251AADA62874A9390008CFDE /* ProcessCreateView.swift in Sources */,
+				257EDCFF28E185D500DE4136 /* GoalSearchInputView.swift in Sources */,
 				25A05BE52887D4800077A005 /* GoalArchiveUpdateRequest.swift in Sources */,
 				256D6CD128D4515300825569 /* GoalListParts.swift in Sources */,
 				25A05C0B288E89950077A005 /* ProcessUpdateRequest.swift in Sources */,
@@ -2035,7 +2086,9 @@
 				2507F9A3285C238E00A14A51 /* SignInView.swift in Sources */,
 				256D567D28676BB900D61541 /* ApiErrorResponse.swift in Sources */,
 				25BF37BF28C0AB25002614FE /* ImagePreView.swift in Sources */,
+				257EDD1428E207CD00DE4136 /* HomeGoalArchiveSearchInputView.swift in Sources */,
 				25761D4928D5A6820030C59D /* MakiAddGoalItem.swift in Sources */,
+				257EDD0728E1A08700DE4136 /* DatePickerMonth.swift in Sources */,
 				25A05C08288E88FB0077A005 /* ProcessDetailParameter.swift in Sources */,
 				251AAD7E28731EEF0008CFDE /* GoalFavoriteRepository.swift in Sources */,
 				256D6C8F28D08B4200825569 /* MakiCreateView.swift in Sources */,
@@ -2099,6 +2152,7 @@
 				25A9D67528807C8700F8A7EB /* GoalFavoriteResponse.swift in Sources */,
 				25761D3D28D471760030C59D /* MakiGoalListParameter.swift in Sources */,
 				25C2B935285BA1F20077B013 /* ContentView.swift in Sources */,
+				257EDD0F28E204B800DE4136 /* GoalArchiveSearchInputView.swift in Sources */,
 				25A05C9B28919D8C0077A005 /* ProcessTermUpdateRequest.swift in Sources */,
 				25A9D68528831D1E00F8A7EB /* GoalArchiveService.swift in Sources */,
 				256D565D286077D800D61541 /* RequestType.swift in Sources */,
@@ -2121,10 +2175,12 @@
 				256D6CBB28D31AD800825569 /* MakiDetailView.swift in Sources */,
 				2583142B28D741CF00EE8C8C /* MakiAddGoalRequest.swift in Sources */,
 				259BE5D5287013A100098DBC /* GoalRepository.swift in Sources */,
+				257EDD0B28E203C300DE4136 /* GoalArchiveListParts.swift in Sources */,
 				2507F9A8285C23DD00A14A51 /* AccountCreateView.swift in Sources */,
 				25A9D6512879F4D100F8A7EB /* ProcessHistoryCommentCreateViewModel.swift in Sources */,
 				25BF37FA28C3D62E002614FE /* AccountUploadImageRequest.swift in Sources */,
 				25A9D6832882C74500F8A7EB /* GoalArchiveResponse.swift in Sources */,
+				257EDD0328E1867000DE4136 /* GoalSearchInputViewModel.swift in Sources */,
 				25645B2D2876DFE300A8B334 /* ProcessHistoryResponse.swift in Sources */,
 				256D56682861E90D00D61541 /* ApiProvider.swift in Sources */,
 				2583143428D99C1700EE8C8C /* ProcessListItemView.swift in Sources */,

@@ -183,6 +183,19 @@ struct AccountMainView: View {
                 
                     if accountMainVm.currentTab == TabButtonTitle.MyGoal.rawValue {
                         // Goal List
+                        
+                        Button(action: {
+                            withAnimation{
+                                accountMainVm.changeGoalSearchInputSheet()
+                            }
+                        }, label: {
+                            Text("目標の絞り込み")
+                        })
+                        if accountMainVm.isGoalSearchInputSheet {
+                            GoalSearchInputView()
+                                .transition(.identity)
+                                .environmentObject(GoalSearchInputViewModel())
+                        }
                         VStack(alignment: .leading, spacing: 8) {
                             ForEach(accountMainVm.myGoal) { item in
                                 GoalListParts(item: item) {
@@ -197,47 +210,24 @@ struct AccountMainView: View {
                         }
                         
                     } else if accountMainVm.currentTab == TabButtonTitle.Archive.rawValue{
+                        Button(action: {
+                            withAnimation {
+                                accountMainVm.changeGoalArchiveSearchInputSheet()
+                            }
+                        }, label: {
+                            Text("達成の絞り込み")
+                        })
+                        if accountMainVm.isGoalArchiveSearchInputSheet {
+                            GoalArchiveSearchInputView()
+                                .transition(.identity)
+                        }
                         // goal archive list
                         VStack(alignment: .leading, spacing: 8) {
                             ForEach(accountMainVm.myGoalArchiveList) { item in
                                 NavigationLink{
                                     GoalArchiveDetailView(archiveId: item.id, archiveCreateDate: item.archivesCreateDate, goalCreateAccountId: item.goalCreateAccountId)
                                 } label: {
-                                    HStack {
-                                        VStack(alignment: .leading) {
-                                            Text(item.title)
-                                                .fontWeight(.bold)
-                                                .lineLimit(1)
-                                                .foregroundColor(.primary)
-                                            Text(item.thoughts)
-                                                .font(.body)
-                                                .lineLimit(3)
-                                                .foregroundColor(.primary)
-                                                .multilineTextAlignment(.leading)
-                                            HStack {
-                                                Text(item.getPublish().title)
-                                                    .fontWeight(.bold)
-                                                    .padding(8)
-                                                    .background(.green)
-                                                    .foregroundColor(.primary)
-                                                    .cornerRadius(15)
-                                                    .compositingGroup()
-                                                    .shadow(color: .gray, radius: 3, x: 1, y: 1)
-                                                if item.isUpdating() {
-                                                    Text("更新中")
-                                                        .fontWeight(.bold)
-                                                        .padding(8)
-                                                        .background(.red)
-                                                        .foregroundColor(.primary)
-                                                        .cornerRadius(15)
-                                                        .compositingGroup()
-                                                        .shadow(color: .gray, radius: 3, x: 1, y: 1)
-                                                }
-                                            }
-                                        }
-                                        .padding(8)
-                                        Spacer()
-                                    }
+                                    GoalArchiveListParts(item: item)
                                 }
                                 
                                 Divider()

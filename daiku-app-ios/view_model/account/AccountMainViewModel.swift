@@ -51,6 +51,16 @@ class AccountMainViewModel: ObservableObject {
     @Published var isGoaDetailSheet: Bool = false
     @Published var goalItem: GoalResponse = GoalResponse()
     
+    @Published var isGoalSearchInputSheet: Bool = false
+    @Published var isGoalArchiveSearchInputSheet: Bool = false
+    
+    
+    @Published var selectedGoalMonth: DatePickerMonth = .ALL
+    @Published var selectedGoalYear: Int = 2022
+    
+    @Published var selectedGoalArchiveMonth: DatePickerMonth = .ALL
+    @Published var selectedGoalArchiveYear: Int = 2022
+    
     func changeUpdateAccount() {
         DispatchQueue.main.async {
             self.isUpdateAccount = !self.isUpdateAccount
@@ -81,7 +91,7 @@ class AccountMainViewModel: ObservableObject {
     
     private func loadMyGoal() {
         Task {
-            let myGoalListRes = try await goalRepository.myGoalList(parameter: .init(year: "2022", page: String(goalListPage)))
+            let myGoalListRes = try await goalRepository.myGoalList(parameter: .init(year: String(self.selectedGoalYear), page: String(goalListPage), month: selectedGoalMonth.code))
             DispatchQueue.main.async {
                 self.myGoal = myGoalListRes
                 if myGoalListRes.count == self.goalListPage {
@@ -109,7 +119,7 @@ class AccountMainViewModel: ObservableObject {
     
     private func loadMyGoalArchive() {
         Task {
-            let myArchiveGoalListRes = try await goalArchiveRepository.myGoalArchive(parameter: .init(year: "2022", pageCount: String(goalArchiveListPage)))
+            let myArchiveGoalListRes = try await goalArchiveRepository.myGoalArchive(parameter: .init(year: String(selectedGoalArchiveYear), month: selectedGoalArchiveMonth.code, pageCount: String(goalArchiveListPage)))
             DispatchQueue.main.async {
                 self.myGoalArchiveList = myArchiveGoalListRes
                 
@@ -226,6 +236,14 @@ class AccountMainViewModel: ObservableObject {
     func tapGoalItem(item: GoalResponse) {
         isGoaDetailSheet = true
         goalItem = item
+    }
+    
+    func changeGoalSearchInputSheet() {
+        isGoalSearchInputSheet = !isGoalSearchInputSheet
+    }
+    
+    func changeGoalArchiveSearchInputSheet() {
+        isGoalArchiveSearchInputSheet = !isGoalArchiveSearchInputSheet
     }
 }
 

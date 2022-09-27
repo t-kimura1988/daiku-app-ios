@@ -17,6 +17,18 @@ struct HomeView: View {
                 HomeRefreshView(coodinateSpaceName: "RefreshView", onRefresh: {
                     vm.getInitHomeList()
                 })
+                
+                Button(action: {
+                    withAnimation{
+                        vm.changeGoalArchiveSearchInputSheet()
+                    }
+                }, label: {
+                    Text("達成の絞り込み")
+                })
+                if vm.isGoalArchiveSearchInputSheet {
+                    HomeGoalArchiveSearchInputView()
+                        .transition(.identity)
+                }
                 ForEach(0..<vm.homeList.count, id: \.self) { index in
                     let item = vm.homeList[index]
                     NavigationLink {

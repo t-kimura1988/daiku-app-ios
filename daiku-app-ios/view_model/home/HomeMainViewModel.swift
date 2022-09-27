@@ -22,6 +22,10 @@ class HomeMainViewModel: ObservableObject {
     
     @Published var isGoalCreateMenuSheet: Bool = false
     
+    @Published var selectedGoalArchiveMonth: DatePickerMonth = .ALL
+    @Published var selectedGoalArchiveYear: Int = 2022
+    @Published var isGoalArchiveSearchInputSheet: Bool = false
+    
     func getInitHomeList() {
         self.isHomeListLoading = true
         loadHome()
@@ -35,7 +39,7 @@ class HomeMainViewModel: ObservableObject {
     
     private func loadHome() {
         Task {
-            let list = try await homeReposiroty.getGoalArchiveList(body: .init(year: "2022", pageCount: String(homeListPage)))
+            let list = try await homeReposiroty.getGoalArchiveList(body: .init(year: String(selectedGoalArchiveYear), month: selectedGoalArchiveMonth.code, pageCount: String(homeListPage)))
             DispatchQueue.main.sync {
                 homeList = list
                 if list.count == self.homeListPage {
@@ -85,5 +89,9 @@ class HomeMainViewModel: ObservableObject {
             self.isGoalCreateMenuSheet = false
             completion()
         }
+    }
+    
+    func changeGoalArchiveSearchInputSheet() {
+        isGoalArchiveSearchInputSheet = !isGoalArchiveSearchInputSheet
     }
 }

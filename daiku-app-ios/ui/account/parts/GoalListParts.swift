@@ -36,12 +36,11 @@ struct GoalListParts: View {
                         .compositingGroup()
                         .shadow(color: .gray, radius: 3, x: 1, y: 1)
                 }
-                HStack {
-                    (
-                        Text("期日:\(item.dueDateFormat())")
-                            .foregroundColor(Color.gray)
-                    )
-                }
+                Text("完了予定日:\(item.dueDateFormat())")
+                    .foregroundColor(Color.gray)
+                
+                Text("作成日:\(item.createDateDisp())")
+                    .foregroundColor(Color.gray)
                 
                 Text("\(item.getMakiKey()) \(item.makiSort())")
                     .font(.caption)

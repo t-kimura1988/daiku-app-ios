@@ -32,7 +32,6 @@ class AccountCreateViewModel: ObservableObject {
     }
     
     func openDeleteAlert() {
-        print("delete alert")
         isAlert = true
     }
     
