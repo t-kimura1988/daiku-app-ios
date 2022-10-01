@@ -17,7 +17,36 @@ struct HomeView: View {
                 HomeRefreshView(coodinateSpaceName: "RefreshView", onRefresh: {
                     vm.getInitHomeList()
                 })
-                
+                if let homeData = vm.homeData {
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack {
+                            VStack {
+                                Text("総アカウント数")
+                                Text(homeData.getAccountCount())
+                            }
+                            .padding(8)
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                                .stroke(.red, lineWidth: 1))
+                            VStack {
+                                Text("昨日の総目標数")
+                                Text(homeData.getGoalCount())
+                            }
+                            .padding(8)
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                                .stroke(.red, lineWidth: 1))
+                            VStack {
+                                Text("昨日の総達成数")
+                                Text(homeData.getGoalArchiveCount())
+                            }
+                            .padding(8)
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                                .stroke(.red, lineWidth: 1))
+                            
+                        }
+                        .padding(8)
+                    }
+                }
                 Button(action: {
                     withAnimation{
                         vm.changeGoalArchiveSearchInputSheet()
@@ -107,6 +136,7 @@ struct HomeView: View {
                 if !vm.isHomeListLoading {
                     vm.getInitHomeList()
                 }
+                vm.getHomeData()
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

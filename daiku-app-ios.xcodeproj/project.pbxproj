@@ -461,6 +461,17 @@
 		25BD6C8628B8B0D2002085F8 /* SignInWithAppleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BD6C8328B8AB24002085F8 /* SignInWithAppleButtonView.swift */; };
 		25BD6C9028B92919002085F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25BD6C8F28B92919002085F8 /* GoogleService-Info.plist */; };
 		25BD6C9128B92919002085F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25BD6C8F28B92919002085F8 /* GoogleService-Info.plist */; };
+		25BF0AA328E60DBD00D2073C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25BF0AA228E60DBD00D2073C /* GoogleService-Info.plist */; };
+		25BF0AA528E6AE3700D2073C /* FirestoreHomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF0AA428E6AE3700D2073C /* FirestoreHomeRepository.swift */; };
+		25BF0AA628E6AE3700D2073C /* FirestoreHomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF0AA428E6AE3700D2073C /* FirestoreHomeRepository.swift */; };
+		25BF0AA728E6AE3700D2073C /* FirestoreHomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF0AA428E6AE3700D2073C /* FirestoreHomeRepository.swift */; };
+		25BF0AA928E6AEAC00D2073C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 25BF0AA828E6AEAC00D2073C /* FirebaseFirestore */; };
+		25BF0AAB28E6AEB500D2073C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 25BF0AAA28E6AEB500D2073C /* FirebaseFirestore */; };
+		25BF0AAD28E6B39700D2073C /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF0AAC28E6B39700D2073C /* HomeData.swift */; };
+		25BF0AAE28E6B39700D2073C /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF0AAC28E6B39700D2073C /* HomeData.swift */; };
+		25BF0AAF28E6B39700D2073C /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF0AAC28E6B39700D2073C /* HomeData.swift */; };
+		25BF0AB128E6B7AE00D2073C /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 25BF0AB028E6B7AE00D2073C /* FirebaseFirestoreSwift */; };
+		25BF0AB328E6B7BA00D2073C /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 25BF0AB228E6B7BA00D2073C /* FirebaseFirestoreSwift */; };
 		25BF37BF28C0AB25002614FE /* ImagePreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF37BE28C0AB25002614FE /* ImagePreView.swift */; };
 		25BF37C028C0AC10002614FE /* ImagePreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF37BE28C0AB25002614FE /* ImagePreView.swift */; };
 		25BF37C128C0AC10002614FE /* ImagePreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BF37BE28C0AB25002614FE /* ImagePreView.swift */; };
@@ -501,7 +512,6 @@
 		25C2B950285BA1F30077B013 /* daiku_app_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C2B94F285BA1F30077B013 /* daiku_app_iosUITestsLaunchTests.swift */; };
 		25C2B963285BA8290077B013 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 25C2B962285BA8290077B013 /* GoogleSignIn */; };
 		25C2B965285BA8290077B013 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 25C2B964285BA8290077B013 /* GoogleSignInSwift */; };
-		25F41EEE28A2413600F3D163 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25F41EE8289CF11400F3D163 /* GoogleService-Info.plist */; };
 		25F41EF428AA308500F3D163 /* GoalArchiveInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F41EF328AA308500F3D163 /* GoalArchiveInfoResponse.swift */; };
 		25F41EF528AA30F200F3D163 /* GoalArchiveInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F41EF328AA308500F3D163 /* GoalArchiveInfoResponse.swift */; };
 		25F41EF628AA30F300F3D163 /* GoalArchiveInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F41EF328AA308500F3D163 /* GoalArchiveInfoResponse.swift */; };
@@ -686,6 +696,9 @@
 		25BD6C8328B8AB24002085F8 /* SignInWithAppleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButtonView.swift; sourceTree = "<group>"; };
 		25BD6C8B28B91E36002085F8 /* dev-daiku-app-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "dev-daiku-app-ios.entitlements"; sourceTree = "<group>"; };
 		25BD6C8F28B92919002085F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		25BF0AA228E60DBD00D2073C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		25BF0AA428E6AE3700D2073C /* FirestoreHomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreHomeRepository.swift; sourceTree = "<group>"; };
+		25BF0AAC28E6B39700D2073C /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
 		25BF37BE28C0AB25002614FE /* ImagePreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreView.swift; sourceTree = "<group>"; };
 		25BF37C328C11779002614FE /* ImagePreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreViewModel.swift; sourceTree = "<group>"; };
 		25BF37C728C204E7002614FE /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -702,7 +715,6 @@
 		25C2B949285BA1F20077B013 /* daiku-app-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "daiku-app-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C2B94D285BA1F30077B013 /* daiku_app_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = daiku_app_iosUITests.swift; sourceTree = "<group>"; };
 		25C2B94F285BA1F30077B013 /* daiku_app_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = daiku_app_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		25F41EE8289CF11400F3D163 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		25F41EEA28A1476000F3D163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		25F41EF328AA308500F3D163 /* GoalArchiveInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalArchiveInfoResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -718,6 +730,8 @@
 				25BF37F228C3C1D3002614FE /* FirebaseStorage in Frameworks */,
 				25BF37F628C3C253002614FE /* FirebaseAppCheck in Frameworks */,
 				2507F982285BAA6200A14A51 /* GoogleSignInSwift in Frameworks */,
+				25BF0AA928E6AEAC00D2073C /* FirebaseFirestore in Frameworks */,
+				25BF0AB128E6B7AE00D2073C /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,6 +745,8 @@
 				25BF37F428C3C234002614FE /* FirebaseStorage in Frameworks */,
 				25BF37F828C3C25D002614FE /* FirebaseAppCheck in Frameworks */,
 				25A05C80288FC34C0077A005 /* GoogleSignInSwift in Frameworks */,
+				25BF0AAB28E6AEB500D2073C /* FirebaseFirestore in Frameworks */,
+				25BF0AB328E6B7BA00D2073C /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -934,6 +950,7 @@
 				25A9D68C2883200100F8A7EB /* GoalArchiveRepository.swift */,
 				25BF37D128C32BD5002614FE /* FirebaseRepository.swift */,
 				256D6CA528D0E8AB00825569 /* MakiRepository.swift */,
+				25BF0AA428E6AE3700D2073C /* FirestoreHomeRepository.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
@@ -1111,6 +1128,7 @@
 			isa = PBXGroup;
 			children = (
 				256D5696286B577700D61541 /* HomeResponse.swift */,
+				25BF0AAC28E6B39700D2073C /* HomeData.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -1453,8 +1471,8 @@
 		25F41EE7289CF0F900F3D163 /* prd */ = {
 			isa = PBXGroup;
 			children = (
+				25BF0AA228E60DBD00D2073C /* GoogleService-Info.plist */,
 				2595829B28CB1569008ED59D /* Environment.swift */,
-				25F41EE8289CF11400F3D163 /* GoogleService-Info.plist */,
 			);
 			path = prd;
 			sourceTree = "<group>";
@@ -1483,6 +1501,8 @@
 				2507F977285BAA6200A14A51 /* GoogleSignInSwift */,
 				25BF37F128C3C1D3002614FE /* FirebaseStorage */,
 				25BF37F528C3C253002614FE /* FirebaseAppCheck */,
+				25BF0AA828E6AEAC00D2073C /* FirebaseFirestore */,
+				25BF0AB028E6B7AE00D2073C /* FirebaseFirestoreSwift */,
 			);
 			productName = "daiku-app-ios";
 			productReference = 2507F98A285BAA6200A14A51 /* dev-daiku-app-ios.app */;
@@ -1509,6 +1529,8 @@
 				25A05C13288FC34C0077A005 /* GoogleSignInSwift */,
 				25BF37F328C3C234002614FE /* FirebaseStorage */,
 				25BF37F728C3C25D002614FE /* FirebaseAppCheck */,
+				25BF0AAA28E6AEB500D2073C /* FirebaseFirestore */,
+				25BF0AB228E6B7BA00D2073C /* FirebaseFirestoreSwift */,
 			);
 			productName = "daiku-app-ios";
 			productReference = 25A05C88288FC34C0077A005 /* stg-daiku-app-ios.app */;
@@ -1661,9 +1683,9 @@
 			files = (
 				2589878528CB037E0004B3DA /* .env in Resources */,
 				25C2B93A285BA1F20077B013 /* Preview Assets.xcassets in Resources */,
+				25BF0AA328E60DBD00D2073C /* GoogleService-Info.plist in Resources */,
 				2589878328CB03570004B3DA /* buildEnv.sh in Resources */,
 				25C2B937285BA1F20077B013 /* Assets.xcassets in Resources */,
-				25F41EEE28A2413600F3D163 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1775,6 +1797,7 @@
 				25A05C9C28919D8C0077A005 /* ProcessTermUpdateRequest.swift in Sources */,
 				256D6CAF28D23FAB00825569 /* MakiSearchResponse.swift in Sources */,
 				2583143528D99C1700EE8C8C /* ProcessListItemView.swift in Sources */,
+				25BF0AAE28E6B39700D2073C /* HomeData.swift in Sources */,
 				259BE5E2287075FF00098DBC /* GoalResponse.swift in Sources */,
 				2507F9A4285C238E00A14A51 /* SignInView.swift in Sources */,
 				256D567E28676BB900D61541 /* ApiErrorResponse.swift in Sources */,
@@ -1822,6 +1845,7 @@
 				25A05C8C2890D3E00077A005 /* DateExtention.swift in Sources */,
 				2583142828D6E89100EE8C8C /* AddGoalListParts.swift in Sources */,
 				2507F99D285C175E00A14A51 /* AccountExistViewModel.swift in Sources */,
+				25BF0AA628E6AE3700D2073C /* FirestoreHomeRepository.swift in Sources */,
 				25A05BEF28880B530077A005 /* GoalArchiveEditViewModel.swift in Sources */,
 				2507F9BE285CDE1000A14A51 /* PrivacyPolicyView.swift in Sources */,
 				25A9D66E2880135C00F8A7EB /* FavoriteMainView.swift in Sources */,
@@ -1934,6 +1958,7 @@
 				25A05C9D28919D8C0077A005 /* ProcessTermUpdateRequest.swift in Sources */,
 				256D6CB028D23FAB00825569 /* MakiSearchResponse.swift in Sources */,
 				2583143628D99C1700EE8C8C /* ProcessListItemView.swift in Sources */,
+				25BF0AAF28E6B39700D2073C /* HomeData.swift in Sources */,
 				25A05C2B288FC34C0077A005 /* GoalResponse.swift in Sources */,
 				25A05C2C288FC34C0077A005 /* SignInView.swift in Sources */,
 				25A05C2D288FC34C0077A005 /* ApiErrorResponse.swift in Sources */,
@@ -1981,6 +2006,7 @@
 				25A05C8D2890D3E00077A005 /* DateExtention.swift in Sources */,
 				2583142928D6E89100EE8C8C /* AddGoalListParts.swift in Sources */,
 				25A05C47288FC34C0077A005 /* AccountExistViewModel.swift in Sources */,
+				25BF0AA728E6AE3700D2073C /* FirestoreHomeRepository.swift in Sources */,
 				25A05C48288FC34C0077A005 /* GoalArchiveEditViewModel.swift in Sources */,
 				25A05C49288FC34C0077A005 /* PrivacyPolicyView.swift in Sources */,
 				25A05C4A288FC34C0077A005 /* FavoriteMainView.swift in Sources */,
@@ -2130,6 +2156,7 @@
 				2595829C28CB1569008ED59D /* Environment.swift in Sources */,
 				25A9D65F287EC2F900F8A7EB /* ProcessHistoryDetailParameter.swift in Sources */,
 				25A9D6532879F51400F8A7EB /* ProcessHistoryCommentRequest.swift in Sources */,
+				25BF0AAD28E6B39700D2073C /* HomeData.swift in Sources */,
 				25BF37C428C11779002614FE /* ImagePreViewModel.swift in Sources */,
 				25A9D6712880796700F8A7EB /* FavoriteMainViewModel.swift in Sources */,
 				251AAD782872A99C0008CFDE /* MyGoalLlistParameter.swift in Sources */,
@@ -2181,6 +2208,7 @@
 				25BF37FA28C3D62E002614FE /* AccountUploadImageRequest.swift in Sources */,
 				25A9D6832882C74500F8A7EB /* GoalArchiveResponse.swift in Sources */,
 				257EDD0328E1867000DE4136 /* GoalSearchInputViewModel.swift in Sources */,
+				25BF0AA528E6AE3700D2073C /* FirestoreHomeRepository.swift in Sources */,
 				25645B2D2876DFE300A8B334 /* ProcessHistoryResponse.swift in Sources */,
 				256D56682861E90D00D61541 /* ApiProvider.swift in Sources */,
 				2583143428D99C1700EE8C8C /* ProcessListItemView.swift in Sources */,
@@ -2517,7 +2545,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "daiku-app-ios/daiku-app-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.3.2.0;
+				CURRENT_PROJECT_VERSION = 1.4.1;
 				DEVELOPMENT_ASSET_PATHS = "\"daiku-app-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = R2XS7CKCJS;
 				ENABLE_PREVIEWS = YES;
@@ -2535,7 +2563,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.2;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.goen.daiku-app-ios";
 				PRODUCT_NAME = "D-Aic";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -2551,7 +2579,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "daiku-app-ios/daiku-app-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.3.2.0;
+				CURRENT_PROJECT_VERSION = 1.4.1;
 				DEVELOPMENT_ASSET_PATHS = "\"daiku-app-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = R2XS7CKCJS;
 				ENABLE_PREVIEWS = YES;
@@ -2569,7 +2597,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.2;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.goen.daiku-app-ios";
 				PRODUCT_NAME = "D-Aic";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -2804,6 +2832,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 25A05C12288FC34C0077A005 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		25BF0AA828E6AEAC00D2073C /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25BF37DD28C3C063002614FE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		25BF0AAA28E6AEB500D2073C /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25BF37DD28C3C063002614FE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		25BF0AB028E6B7AE00D2073C /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25BF37DD28C3C063002614FE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		25BF0AB228E6B7BA00D2073C /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25BF37DD28C3C063002614FE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
 		};
 		25BF37DE28C3C063002614FE /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
