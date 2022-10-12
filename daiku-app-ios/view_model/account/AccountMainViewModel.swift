@@ -14,14 +14,16 @@ class AccountMainViewModel: ObservableObject {
     private var goalArchiveRepository: GoalArchiveRepository = GoalArchiveRepository()
     private var firebaseRepository: FirebaseRepository = FirebaseRepository()
     private var makiRepository: MakiRepository = MakiRepository()
+    private var ideaRepository: IdeaRepository = IdeaRepository()
     
     @Published var account: AccountResponse = AccountResponse()
     @Published var myGoal: [GoalResponse] = [GoalResponse]()
     @Published var makiList: [MakiSearchResponse] = [MakiSearchResponse]()
     @Published var myGoalArchiveList: [GoalArchiveInfoResponse] = [GoalArchiveInfoResponse]()
     @Published var goalFavoriteList: [GoalFavoriteResponse] = [GoalFavoriteResponse]()
+    @Published var myIdeaList: [IdeaSearchResponse] = [IdeaSearchResponse]()
     
-    @Published var currentTab: String = TabButtonTitle.Maki.rawValue
+    @Published var currentTab: String = TabButtonTitle.Idea.rawValue
     @Published var isBookmark: Bool = false
     @Published var isUpdateAccount: Bool = false
     
@@ -40,6 +42,10 @@ class AccountMainViewModel: ObservableObject {
     @Published var makiListPage: Int = 10
     @Published var makiListLoadFlg: Bool = false
     @Published var isMakiListLoading: Bool = false
+    
+    @Published var ideaListPage: Int = 10
+    @Published var ideaListLoadFlg: Bool = false
+    @Published var isIdeaListLoading: Bool = false
     
     @Published var isImagePreView: Bool = false
     @Published var userImageURL: URL?
@@ -60,6 +66,9 @@ class AccountMainViewModel: ObservableObject {
     
     @Published var selectedGoalArchiveMonth: DatePickerMonth = .ALL
     @Published var selectedGoalArchiveYear: Int = 2022
+    
+    @Published var isIdeaDetailSheet: Bool = false
+    @Published var ideaItem: IdeaSearchResponse = IdeaSearchResponse()
     
     func changeUpdateAccount() {
         DispatchQueue.main.async {
@@ -195,6 +204,36 @@ class AccountMainViewModel: ObservableObject {
         
     }
     
+    
+    func getInitIdeaList() {
+        isIdeaListLoading = true
+        loadIdea()
+    }
+    
+    func getIdeaList() {
+        isIdeaListLoading = true
+        ideaListPage += 10
+        loadIdea()
+    }
+    
+    private func loadIdea() {
+        Task {
+            let list = try await ideaRepository.myIdeaList(param: .init(page: String(ideaListPage)))
+            DispatchQueue.main.async {
+                self.myIdeaList = list
+                
+                if list.count == self.ideaListPage {
+                    self.ideaListLoadFlg = true
+                } else {
+                    self.ideaListLoadFlg = false
+                }
+                
+                self.ideaListLoadFlg = false
+            }
+        }
+        
+    }
+    
     func changeTab(item: String) {
         DispatchQueue.main.sync {
             currentTab = item
@@ -245,12 +284,23 @@ class AccountMainViewModel: ObservableObject {
     func changeGoalArchiveSearchInputSheet() {
         isGoalArchiveSearchInputSheet = !isGoalArchiveSearchInputSheet
     }
+    
+    func openIdeaDetailSheet(item: IdeaSearchResponse) {
+        ideaItem = item
+        isIdeaDetailSheet = true
+    }
+    
+    func closeIdeaDetailSheet() {
+        isIdeaDetailSheet = true
+    }
 }
 
 enum TabButtonTitle: String, CaseIterable, Identifiable {
+    case Idea = "閃"
     case Maki = "書"
     case MyGoal = "目標"
     case Archive = "達成"
     case BookMark = "印"
+    
     var id: String { rawValue }
 }

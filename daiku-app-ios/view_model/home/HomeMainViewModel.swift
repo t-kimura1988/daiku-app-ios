@@ -55,16 +55,22 @@ class HomeMainViewModel: ObservableObject {
     
     private func loadHome() {
         Task {
-            let list = try await homeReposiroty.getGoalArchiveList(body: .init(year: String(selectedGoalArchiveYear), month: selectedGoalArchiveMonth.code, pageCount: String(homeListPage)))
-            DispatchQueue.main.sync {
-                homeList = list
-                if list.count == self.homeListPage {
-                    self.homeListLoadFlg = true
-                } else {
-                    self.homeListLoadFlg = false
+            do {
+                let list = try await homeReposiroty.getGoalArchiveList(body: .init(year: String(selectedGoalArchiveYear), month: selectedGoalArchiveMonth.code, pageCount: String(homeListPage)))
+                DispatchQueue.main.sync {
+                    homeList = list
+                    if list.count == self.homeListPage {
+                        self.homeListLoadFlg = true
+                    } else {
+                        self.homeListLoadFlg = false
+                    }
+                    
+                    self.isHomeListLoading = false
                 }
                 
-                self.isHomeListLoading = false
+            } catch ApiError.responseError(let err) {
+                print("GGGGG")
+                print(err)
             }
         }
         

@@ -158,10 +158,13 @@ struct AccountMainView: View {
                     
                     // tab button
                     VStack(spacing: 0) {
-                        HStack (spacing: 0) {
-                            ForEach(TabButtonTitle.allCases) { title in
-                                TabButton(title: title.rawValue, currentTab: $accountMainVm.currentTab, animation: animation)
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack (spacing: 0) {
+                                ForEach(TabButtonTitle.allCases) { title in
+                                    TabButton(title: title.rawValue, currentTab: $accountMainVm.currentTab, animation: animation)
+                                }
                             }
+                            
                         }
                         Divider()
                     }
@@ -209,7 +212,8 @@ struct AccountMainView: View {
                             }
                         }
                         
-                    } else if accountMainVm.currentTab == TabButtonTitle.Archive.rawValue{
+                    }
+                    else if accountMainVm.currentTab == TabButtonTitle.Archive.rawValue{
                         Button(action: {
                             withAnimation {
                                 accountMainVm.changeGoalArchiveSearchInputSheet()
@@ -248,7 +252,8 @@ struct AccountMainView: View {
                             }
                         }
                         
-                    } else if accountMainVm.currentTab == TabButtonTitle.BookMark.rawValue {
+                    }
+                    else if accountMainVm.currentTab == TabButtonTitle.BookMark.rawValue {
                         //Bookmark list
                         VStack(alignment: .leading, spacing: 8) {
                             
@@ -274,7 +279,8 @@ struct AccountMainView: View {
                                 accountMainVm.getInitBookMarkList()
                             }
                         }
-                    } else if accountMainVm.currentTab == TabButtonTitle.Maki.rawValue {
+                    }
+                    else if accountMainVm.currentTab == TabButtonTitle.Maki.rawValue {
                         // 書のリスト
                         VStack(alignment: .leading) {
                             ForEach(accountMainVm.makiList) { item in
@@ -318,6 +324,20 @@ struct AccountMainView: View {
                             }
                         }
                     }
+                    else if accountMainVm.currentTab == TabButtonTitle.Idea.rawValue {
+                        VStack(alignment: .leading, spacing: 8) {
+                            ForEach(accountMainVm.myIdeaList) { item in
+                                IdeaListItemParts(item: item) {
+                                    accountMainVm.openIdeaDetailSheet(item: item)
+                                }
+                            }
+                        }
+                        .onAppear{
+                            if !accountMainVm.isIdeaListLoading {
+                                accountMainVm.getInitIdeaList()
+                            }
+                        }
+                    }
                 }
             }
             .ignoresSafeArea(.all, edges: .top)
@@ -351,6 +371,10 @@ struct AccountMainView: View {
         .fullScreenCover(isPresented: $accountMainVm.isGoaDetailSheet) {
             let item = accountMainVm.goalItem
             GoalDetailView(goalId: item.id, createDate: item.createDate, archiveId: item.getArchiveId(), archiveCreateDate: item.getArchiveCreateDate())
+        }
+        .fullScreenCover(isPresented: $accountMainVm.isIdeaDetailSheet) {
+            IdeaDetailView(idea: accountMainVm.ideaItem)
+                .environmentObject(IdeaDetailViewModel())
         }
     }
     

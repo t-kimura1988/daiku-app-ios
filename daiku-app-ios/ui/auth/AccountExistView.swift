@@ -14,6 +14,14 @@ struct AccountExistView: View {
         case .Loading: LoadingView()
         case .SignOut: UnAuthView()
         case .SignIn: HomeTabBarView()
+                .environmentObject(IdeaCreateViewModel())
+                .environmentObject(HomeMainViewModel())
+                .environmentObject(AccountMainViewModel())
+                .environmentObject(GoalDetailViewModel())
+                .environmentObject(ProcessDetailViewModel())
+                .environmentObject(FavoriteMainViewModel())
+                .environmentObject(GoalArchiveDetailViewModel())
+                .environmentObject(MakiDetailViewModel())
         case .SignIn_NoExist: AccountCreateView().environmentObject(AccountCreateViewModel())
         }
     }

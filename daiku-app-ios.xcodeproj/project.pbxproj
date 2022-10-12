@@ -83,6 +83,69 @@
 		251AADB7287580320008CFDE /* ProcessPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AADB5287580320008CFDE /* ProcessPriority.swift */; };
 		251AADBC2875B7540008CFDE /* TProcessResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AADBB2875B7530008CFDE /* TProcessResponse.swift */; };
 		251AADBD2875B7540008CFDE /* TProcessResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251AADBB2875B7530008CFDE /* TProcessResponse.swift */; };
+		253AF88328E9583B00E4DF7C /* IdeaCreatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF88228E9583B00E4DF7C /* IdeaCreatViewModel.swift */; };
+		253AF88428E9589D00E4DF7C /* IdeaCreatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF88228E9583B00E4DF7C /* IdeaCreatViewModel.swift */; };
+		253AF88528E9589E00E4DF7C /* IdeaCreatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF88228E9583B00E4DF7C /* IdeaCreatViewModel.swift */; };
+		253AF88828E9927100E4DF7C /* IdeaCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF88728E9927100E4DF7C /* IdeaCreateView.swift */; };
+		253AF88928E9928F00E4DF7C /* IdeaCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF88728E9927100E4DF7C /* IdeaCreateView.swift */; };
+		253AF88A28E9929000E4DF7C /* IdeaCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF88728E9927100E4DF7C /* IdeaCreateView.swift */; };
+		253AF88D28E9D73000E4DF7C /* IdeaCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF88C28E9D73000E4DF7C /* IdeaCreateRequest.swift */; };
+		253AF88E28E9D73000E4DF7C /* IdeaCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF88C28E9D73000E4DF7C /* IdeaCreateRequest.swift */; };
+		253AF88F28E9D73000E4DF7C /* IdeaCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF88C28E9D73000E4DF7C /* IdeaCreateRequest.swift */; };
+		253AF89128E9D76200E4DF7C /* IdeaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF89028E9D76200E4DF7C /* IdeaService.swift */; };
+		253AF89228E9D76200E4DF7C /* IdeaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF89028E9D76200E4DF7C /* IdeaService.swift */; };
+		253AF89328E9D76200E4DF7C /* IdeaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF89028E9D76200E4DF7C /* IdeaService.swift */; };
+		253AF89628E9D7FB00E4DF7C /* IdeaSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF89528E9D7FB00E4DF7C /* IdeaSearchResponse.swift */; };
+		253AF89728E9D7FB00E4DF7C /* IdeaSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF89528E9D7FB00E4DF7C /* IdeaSearchResponse.swift */; };
+		253AF89828E9D7FB00E4DF7C /* IdeaSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF89528E9D7FB00E4DF7C /* IdeaSearchResponse.swift */; };
+		253AF89A28E9DBDB00E4DF7C /* IdeaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF89928E9DBDB00E4DF7C /* IdeaRepository.swift */; };
+		253AF89B28E9DBDB00E4DF7C /* IdeaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF89928E9DBDB00E4DF7C /* IdeaRepository.swift */; };
+		253AF89C28E9DBDB00E4DF7C /* IdeaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF89928E9DBDB00E4DF7C /* IdeaRepository.swift */; };
+		253AF89E28E9FF2500E4DF7C /* MyIdeaListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF89D28E9FF2500E4DF7C /* MyIdeaListParameter.swift */; };
+		253AF89F28E9FF2500E4DF7C /* MyIdeaListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF89D28E9FF2500E4DF7C /* MyIdeaListParameter.swift */; };
+		253AF8A028E9FF2500E4DF7C /* MyIdeaListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF89D28E9FF2500E4DF7C /* MyIdeaListParameter.swift */; };
+		253AF8A228EA9F3B00E4DF7C /* IdeaListItemParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8A128EA9F3B00E4DF7C /* IdeaListItemParts.swift */; };
+		253AF8A328EA9F3B00E4DF7C /* IdeaListItemParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8A128EA9F3B00E4DF7C /* IdeaListItemParts.swift */; };
+		253AF8A428EA9F3B00E4DF7C /* IdeaListItemParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8A128EA9F3B00E4DF7C /* IdeaListItemParts.swift */; };
+		253AF8A628EAA7F200E4DF7C /* IdeaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8A528EAA7F200E4DF7C /* IdeaDetailView.swift */; };
+		253AF8A728EAA7F200E4DF7C /* IdeaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8A528EAA7F200E4DF7C /* IdeaDetailView.swift */; };
+		253AF8A828EAA7F200E4DF7C /* IdeaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8A528EAA7F200E4DF7C /* IdeaDetailView.swift */; };
+		253AF8AA28EAAFF700E4DF7C /* IdeaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8A928EAAFF700E4DF7C /* IdeaDetailViewModel.swift */; };
+		253AF8AB28EAAFF700E4DF7C /* IdeaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8A928EAAFF700E4DF7C /* IdeaDetailViewModel.swift */; };
+		253AF8AC28EAAFF700E4DF7C /* IdeaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8A928EAAFF700E4DF7C /* IdeaDetailViewModel.swift */; };
+		253AF8AE28EAB16E00E4DF7C /* IdeaDetailParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8AD28EAB16E00E4DF7C /* IdeaDetailParameter.swift */; };
+		253AF8AF28EAB16E00E4DF7C /* IdeaDetailParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8AD28EAB16E00E4DF7C /* IdeaDetailParameter.swift */; };
+		253AF8B028EAB16E00E4DF7C /* IdeaDetailParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8AD28EAB16E00E4DF7C /* IdeaDetailParameter.swift */; };
+		253AF8B228EAC8E500E4DF7C /* IdeaDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8B128EAC8E500E4DF7C /* IdeaDrawingView.swift */; };
+		253AF8B328EAC8E500E4DF7C /* IdeaDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8B128EAC8E500E4DF7C /* IdeaDrawingView.swift */; };
+		253AF8B428EAC8E500E4DF7C /* IdeaDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8B128EAC8E500E4DF7C /* IdeaDrawingView.swift */; };
+		253AF8B728EB0BAF00E4DF7C /* StickyParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8B628EB0BAF00E4DF7C /* StickyParts.swift */; };
+		253AF8B828EB0BAF00E4DF7C /* StickyParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8B628EB0BAF00E4DF7C /* StickyParts.swift */; };
+		253AF8B928EB0BAF00E4DF7C /* StickyParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8B628EB0BAF00E4DF7C /* StickyParts.swift */; };
+		253AF8C128ED5F4C00E4DF7C /* StoryCharacterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8C028ED5F4C00E4DF7C /* StoryCharacterResponse.swift */; };
+		253AF8C228ED5F4C00E4DF7C /* StoryCharacterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8C028ED5F4C00E4DF7C /* StoryCharacterResponse.swift */; };
+		253AF8C328ED5F4C00E4DF7C /* StoryCharacterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8C028ED5F4C00E4DF7C /* StoryCharacterResponse.swift */; };
+		253AF8C528ED6BE700E4DF7C /* StoryCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8C428ED6BE700E4DF7C /* StoryCreateRequest.swift */; };
+		253AF8C628ED6BE700E4DF7C /* StoryCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8C428ED6BE700E4DF7C /* StoryCreateRequest.swift */; };
+		253AF8C728ED6BE700E4DF7C /* StoryCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8C428ED6BE700E4DF7C /* StoryCreateRequest.swift */; };
+		253AF8C928ED6D0E00E4DF7C /* StoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8C828ED6D0E00E4DF7C /* StoryResponse.swift */; };
+		253AF8CA28ED6D0E00E4DF7C /* StoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8C828ED6D0E00E4DF7C /* StoryResponse.swift */; };
+		253AF8CB28ED6D0E00E4DF7C /* StoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8C828ED6D0E00E4DF7C /* StoryResponse.swift */; };
+		253AF8CD28EDAE3900E4DF7C /* StoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8CC28EDAE3900E4DF7C /* StoryService.swift */; };
+		253AF8CE28EDAE3900E4DF7C /* StoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8CC28EDAE3900E4DF7C /* StoryService.swift */; };
+		253AF8CF28EDAE3900E4DF7C /* StoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8CC28EDAE3900E4DF7C /* StoryService.swift */; };
+		253AF8D128EDAFE000E4DF7C /* StoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8D028EDAFE000E4DF7C /* StoryRepository.swift */; };
+		253AF8D228EDAFE000E4DF7C /* StoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8D028EDAFE000E4DF7C /* StoryRepository.swift */; };
+		253AF8D328EDAFE000E4DF7C /* StoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8D028EDAFE000E4DF7C /* StoryRepository.swift */; };
+		253AF8D628EDE73900E4DF7C /* StoryCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8D528EDE73900E4DF7C /* StoryCreateView.swift */; };
+		253AF8D728EDE73900E4DF7C /* StoryCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8D528EDE73900E4DF7C /* StoryCreateView.swift */; };
+		253AF8D828EDE73900E4DF7C /* StoryCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8D528EDE73900E4DF7C /* StoryCreateView.swift */; };
+		253AF8DB28EE9FD000E4DF7C /* StoryCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8DA28EE9FD000E4DF7C /* StoryCreateViewModel.swift */; };
+		253AF8DC28EE9FD000E4DF7C /* StoryCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8DA28EE9FD000E4DF7C /* StoryCreateViewModel.swift */; };
+		253AF8DD28EE9FD000E4DF7C /* StoryCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8DA28EE9FD000E4DF7C /* StoryCreateViewModel.swift */; };
+		253AF8DF28F0899000E4DF7C /* StoryDetailParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8DE28F0899000E4DF7C /* StoryDetailParts.swift */; };
+		253AF8E028F0899000E4DF7C /* StoryDetailParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8DE28F0899000E4DF7C /* StoryDetailParts.swift */; };
+		253AF8E128F0899000E4DF7C /* StoryDetailParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8DE28F0899000E4DF7C /* StoryDetailParts.swift */; };
 		25645B192876CA7900A8B334 /* ProcessDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B182876CA7900A8B334 /* ProcessDetailView.swift */; };
 		25645B1B2876CA9700A8B334 /* ProcessDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B1A2876CA9700A8B334 /* ProcessDetailViewModel.swift */; };
 		25645B1C2876CB6900A8B334 /* ProcessDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B182876CA7900A8B334 /* ProcessDetailView.swift */; };
@@ -95,6 +158,33 @@
 		25645B292876DEAD00A8B334 /* ProcessHistoryListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B272876DEAD00A8B334 /* ProcessHistoryListParameter.swift */; };
 		25645B2D2876DFE300A8B334 /* ProcessHistoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B2C2876DFE300A8B334 /* ProcessHistoryResponse.swift */; };
 		25645B2E2876DFE300A8B334 /* ProcessHistoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B2C2876DFE300A8B334 /* ProcessHistoryResponse.swift */; };
+		2566618128F1BE41008A55AE /* CharacterCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566618028F1BE41008A55AE /* CharacterCreateView.swift */; };
+		2566618228F1BE41008A55AE /* CharacterCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566618028F1BE41008A55AE /* CharacterCreateView.swift */; };
+		2566618328F1BE41008A55AE /* CharacterCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566618028F1BE41008A55AE /* CharacterCreateView.swift */; };
+		2566618528F1C195008A55AE /* CharacterCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566618428F1C195008A55AE /* CharacterCreateViewModel.swift */; };
+		2566618628F1C195008A55AE /* CharacterCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566618428F1C195008A55AE /* CharacterCreateViewModel.swift */; };
+		2566618728F1C195008A55AE /* CharacterCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566618428F1C195008A55AE /* CharacterCreateViewModel.swift */; };
+		2566618A28F2B38B008A55AE /* StoryCharacterCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566618928F2B38B008A55AE /* StoryCharacterCreateRequest.swift */; };
+		2566618B28F2B38B008A55AE /* StoryCharacterCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566618928F2B38B008A55AE /* StoryCharacterCreateRequest.swift */; };
+		2566618C28F2B38B008A55AE /* StoryCharacterCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566618928F2B38B008A55AE /* StoryCharacterCreateRequest.swift */; };
+		2566618E28F2B42C008A55AE /* StoryCharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566618D28F2B42C008A55AE /* StoryCharacterService.swift */; };
+		2566618F28F2B42C008A55AE /* StoryCharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566618D28F2B42C008A55AE /* StoryCharacterService.swift */; };
+		2566619028F2B42C008A55AE /* StoryCharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566618D28F2B42C008A55AE /* StoryCharacterService.swift */; };
+		2566619228F2B569008A55AE /* StoryCharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566619128F2B569008A55AE /* StoryCharacterRepository.swift */; };
+		2566619328F2B569008A55AE /* StoryCharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566619128F2B569008A55AE /* StoryCharacterRepository.swift */; };
+		2566619428F2B569008A55AE /* StoryCharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566619128F2B569008A55AE /* StoryCharacterRepository.swift */; };
+		2566619A28F2CD16008A55AE /* StoryCharacterListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566619928F2CD16008A55AE /* StoryCharacterListParameter.swift */; };
+		2566619B28F2CD16008A55AE /* StoryCharacterListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566619928F2CD16008A55AE /* StoryCharacterListParameter.swift */; };
+		2566619C28F2CD16008A55AE /* StoryCharacterListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566619928F2CD16008A55AE /* StoryCharacterListParameter.swift */; };
+		2566619E28F3D474008A55AE /* StoryBodyUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566619D28F3D474008A55AE /* StoryBodyUpdateView.swift */; };
+		2566619F28F3D474008A55AE /* StoryBodyUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566619D28F3D474008A55AE /* StoryBodyUpdateView.swift */; };
+		256661A028F3D474008A55AE /* StoryBodyUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566619D28F3D474008A55AE /* StoryBodyUpdateView.swift */; };
+		256661A228F3D49C008A55AE /* StoryBodyUpdateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256661A128F3D49C008A55AE /* StoryBodyUpdateViewModel.swift */; };
+		256661A328F3D49C008A55AE /* StoryBodyUpdateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256661A128F3D49C008A55AE /* StoryBodyUpdateViewModel.swift */; };
+		256661A428F3D49C008A55AE /* StoryBodyUpdateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256661A128F3D49C008A55AE /* StoryBodyUpdateViewModel.swift */; };
+		256661A628F3DE76008A55AE /* StoryBodyUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256661A528F3DE76008A55AE /* StoryBodyUpdateRequest.swift */; };
+		256661A728F3DE76008A55AE /* StoryBodyUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256661A528F3DE76008A55AE /* StoryBodyUpdateRequest.swift */; };
+		256661A828F3DE76008A55AE /* StoryBodyUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256661A528F3DE76008A55AE /* StoryBodyUpdateRequest.swift */; };
 		256A5A6F28BDAE4400E32A8D /* AccountReUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256A5A6E28BDAE4400E32A8D /* AccountReUpdateRequest.swift */; };
 		256A5A7028BDEB9B00E32A8D /* AccountReUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256A5A6E28BDAE4400E32A8D /* AccountReUpdateRequest.swift */; };
 		256A5A7128BDEB9C00E32A8D /* AccountReUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256A5A6E28BDAE4400E32A8D /* AccountReUpdateRequest.swift */; };
@@ -571,6 +661,27 @@
 		251AADB22875773B0008CFDE /* ProcessStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessStatus.swift; sourceTree = "<group>"; };
 		251AADB5287580320008CFDE /* ProcessPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessPriority.swift; sourceTree = "<group>"; };
 		251AADBB2875B7530008CFDE /* TProcessResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TProcessResponse.swift; sourceTree = "<group>"; };
+		253AF88228E9583B00E4DF7C /* IdeaCreatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaCreatViewModel.swift; sourceTree = "<group>"; };
+		253AF88728E9927100E4DF7C /* IdeaCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaCreateView.swift; sourceTree = "<group>"; };
+		253AF88C28E9D73000E4DF7C /* IdeaCreateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaCreateRequest.swift; sourceTree = "<group>"; };
+		253AF89028E9D76200E4DF7C /* IdeaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaService.swift; sourceTree = "<group>"; };
+		253AF89528E9D7FB00E4DF7C /* IdeaSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaSearchResponse.swift; sourceTree = "<group>"; };
+		253AF89928E9DBDB00E4DF7C /* IdeaRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaRepository.swift; sourceTree = "<group>"; };
+		253AF89D28E9FF2500E4DF7C /* MyIdeaListParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIdeaListParameter.swift; sourceTree = "<group>"; };
+		253AF8A128EA9F3B00E4DF7C /* IdeaListItemParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaListItemParts.swift; sourceTree = "<group>"; };
+		253AF8A528EAA7F200E4DF7C /* IdeaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaDetailView.swift; sourceTree = "<group>"; };
+		253AF8A928EAAFF700E4DF7C /* IdeaDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaDetailViewModel.swift; sourceTree = "<group>"; };
+		253AF8AD28EAB16E00E4DF7C /* IdeaDetailParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaDetailParameter.swift; sourceTree = "<group>"; };
+		253AF8B128EAC8E500E4DF7C /* IdeaDrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaDrawingView.swift; sourceTree = "<group>"; };
+		253AF8B628EB0BAF00E4DF7C /* StickyParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyParts.swift; sourceTree = "<group>"; };
+		253AF8C028ED5F4C00E4DF7C /* StoryCharacterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCharacterResponse.swift; sourceTree = "<group>"; };
+		253AF8C428ED6BE700E4DF7C /* StoryCreateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCreateRequest.swift; sourceTree = "<group>"; };
+		253AF8C828ED6D0E00E4DF7C /* StoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryResponse.swift; sourceTree = "<group>"; };
+		253AF8CC28EDAE3900E4DF7C /* StoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryService.swift; sourceTree = "<group>"; };
+		253AF8D028EDAFE000E4DF7C /* StoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryRepository.swift; sourceTree = "<group>"; };
+		253AF8D528EDE73900E4DF7C /* StoryCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCreateView.swift; sourceTree = "<group>"; };
+		253AF8DA28EE9FD000E4DF7C /* StoryCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCreateViewModel.swift; sourceTree = "<group>"; };
+		253AF8DE28F0899000E4DF7C /* StoryDetailParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailParts.swift; sourceTree = "<group>"; };
 		254F4FAE28BFBBFA0094D206 /* stg-daiku-app-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "stg-daiku-app-ios.entitlements"; sourceTree = "<group>"; };
 		25645B182876CA7900A8B334 /* ProcessDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessDetailView.swift; sourceTree = "<group>"; };
 		25645B1A2876CA9700A8B334 /* ProcessDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessDetailViewModel.swift; sourceTree = "<group>"; };
@@ -578,6 +689,15 @@
 		25645B242876DE4900A8B334 /* ProcessHistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessHistoryService.swift; sourceTree = "<group>"; };
 		25645B272876DEAD00A8B334 /* ProcessHistoryListParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessHistoryListParameter.swift; sourceTree = "<group>"; };
 		25645B2C2876DFE300A8B334 /* ProcessHistoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessHistoryResponse.swift; sourceTree = "<group>"; };
+		2566618028F1BE41008A55AE /* CharacterCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCreateView.swift; sourceTree = "<group>"; };
+		2566618428F1C195008A55AE /* CharacterCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCreateViewModel.swift; sourceTree = "<group>"; };
+		2566618928F2B38B008A55AE /* StoryCharacterCreateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCharacterCreateRequest.swift; sourceTree = "<group>"; };
+		2566618D28F2B42C008A55AE /* StoryCharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCharacterService.swift; sourceTree = "<group>"; };
+		2566619128F2B569008A55AE /* StoryCharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCharacterRepository.swift; sourceTree = "<group>"; };
+		2566619928F2CD16008A55AE /* StoryCharacterListParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCharacterListParameter.swift; sourceTree = "<group>"; };
+		2566619D28F3D474008A55AE /* StoryBodyUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBodyUpdateView.swift; sourceTree = "<group>"; };
+		256661A128F3D49C008A55AE /* StoryBodyUpdateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBodyUpdateViewModel.swift; sourceTree = "<group>"; };
+		256661A528F3DE76008A55AE /* StoryBodyUpdateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBodyUpdateRequest.swift; sourceTree = "<group>"; };
 		256A5A6E28BDAE4400E32A8D /* AccountReUpdateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountReUpdateRequest.swift; sourceTree = "<group>"; };
 		256D565C286077D800D61541 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		256D565F28616ACD00D61541 /* AccountRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRepository.swift; sourceTree = "<group>"; };
@@ -814,18 +934,20 @@
 		2507F994285C166F00A14A51 /* ui */ = {
 			isa = PBXGroup;
 			children = (
-				256D6CB128D30D2A00825569 /* parts */,
-				256D6C8D28D08B2800825569 /* maki */,
-				25BF37BD28C0AB0E002614FE /* photo */,
-				25A9D67A28829E7400F8A7EB /* goal_archive */,
-				25A9D66B2880133300F8A7EB /* favorite */,
-				25A9D64B2879E47D00F8A7EB /* process_history */,
-				251AADA42874A9250008CFDE /* process */,
-				256D56A0286D806C00D61541 /* goal */,
-				2507F9B0285C806C00A14A51 /* utils */,
 				2507F9A6285C23BC00A14A51 /* account */,
-				2507F9A5285C23B600A14A51 /* home */,
 				2507F995285C167700A14A51 /* auth */,
+				25A9D66B2880133300F8A7EB /* favorite */,
+				256D56A0286D806C00D61541 /* goal */,
+				25A9D67A28829E7400F8A7EB /* goal_archive */,
+				2507F9A5285C23B600A14A51 /* home */,
+				253AF88628E9926200E4DF7C /* idea */,
+				256D6C8D28D08B2800825569 /* maki */,
+				256D6CB128D30D2A00825569 /* parts */,
+				25BF37BD28C0AB0E002614FE /* photo */,
+				251AADA42874A9250008CFDE /* process */,
+				25A9D64B2879E47D00F8A7EB /* process_history */,
+				253AF8D428EDE71E00E4DF7C /* story */,
+				2507F9B0285C806C00A14A51 /* utils */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -847,17 +969,19 @@
 		2507F999285C173C00A14A51 /* view_model */ = {
 			isa = PBXGroup;
 			children = (
+				256D56852869897700D61541 /* account */,
+				2507F99A285C174900A14A51 /* auth */,
+				25A05BF6288E376C0077A005 /* extensions */,
+				25A9D66F2880795400F8A7EB /* favorite */,
+				256D56A4286DA71200D61541 /* goal */,
+				25A9D67E2882C60200F8A7EB /* goal_archive */,
+				2507F9CB285DB01100A14A51 /* home */,
+				253AF88128E9582500E4DF7C /* idea */,
 				256D6C9228D0E20300825569 /* maki */,
 				25BF37C228C11757002614FE /* photo */,
-				25A05BF6288E376C0077A005 /* extensions */,
-				25A9D67E2882C60200F8A7EB /* goal_archive */,
-				25A9D66F2880795400F8A7EB /* favorite */,
-				25A9D64F2879F4BD00F8A7EB /* process_history */,
 				251AADA8287548AA0008CFDE /* process */,
-				256D56A4286DA71200D61541 /* goal */,
-				256D56852869897700D61541 /* account */,
-				2507F9CB285DB01100A14A51 /* home */,
-				2507F99A285C174900A14A51 /* auth */,
+				25A9D64F2879F4BD00F8A7EB /* process_history */,
+				253AF8D928EE9FBA00E4DF7C /* story */,
 			);
 			path = view_model;
 			sourceTree = "<group>";
@@ -951,6 +1075,9 @@
 				25BF37D128C32BD5002614FE /* FirebaseRepository.swift */,
 				256D6CA528D0E8AB00825569 /* MakiRepository.swift */,
 				25BF0AA428E6AE3700D2073C /* FirestoreHomeRepository.swift */,
+				253AF89928E9DBDB00E4DF7C /* IdeaRepository.swift */,
+				253AF8D028EDAFE000E4DF7C /* StoryRepository.swift */,
+				2566619128F2B569008A55AE /* StoryCharacterRepository.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
@@ -993,6 +1120,91 @@
 			path = process;
 			sourceTree = "<group>";
 		};
+		253AF88128E9582500E4DF7C /* idea */ = {
+			isa = PBXGroup;
+			children = (
+				253AF88228E9583B00E4DF7C /* IdeaCreatViewModel.swift */,
+				253AF8A928EAAFF700E4DF7C /* IdeaDetailViewModel.swift */,
+			);
+			path = idea;
+			sourceTree = "<group>";
+		};
+		253AF88628E9926200E4DF7C /* idea */ = {
+			isa = PBXGroup;
+			children = (
+				253AF8B528EB0B7900E4DF7C /* parts */,
+				253AF88728E9927100E4DF7C /* IdeaCreateView.swift */,
+				253AF8A528EAA7F200E4DF7C /* IdeaDetailView.swift */,
+				253AF8B128EAC8E500E4DF7C /* IdeaDrawingView.swift */,
+			);
+			path = idea;
+			sourceTree = "<group>";
+		};
+		253AF88B28E9D71A00E4DF7C /* idea */ = {
+			isa = PBXGroup;
+			children = (
+				253AF88C28E9D73000E4DF7C /* IdeaCreateRequest.swift */,
+				253AF89D28E9FF2500E4DF7C /* MyIdeaListParameter.swift */,
+				253AF8AD28EAB16E00E4DF7C /* IdeaDetailParameter.swift */,
+			);
+			path = idea;
+			sourceTree = "<group>";
+		};
+		253AF89428E9D7D500E4DF7C /* idea */ = {
+			isa = PBXGroup;
+			children = (
+				253AF89528E9D7FB00E4DF7C /* IdeaSearchResponse.swift */,
+			);
+			path = idea;
+			sourceTree = "<group>";
+		};
+		253AF8B528EB0B7900E4DF7C /* parts */ = {
+			isa = PBXGroup;
+			children = (
+				253AF8B628EB0BAF00E4DF7C /* StickyParts.swift */,
+				253AF8DE28F0899000E4DF7C /* StoryDetailParts.swift */,
+			);
+			path = parts;
+			sourceTree = "<group>";
+		};
+		253AF8BA28ED5D1F00E4DF7C /* story */ = {
+			isa = PBXGroup;
+			children = (
+				253AF8C428ED6BE700E4DF7C /* StoryCreateRequest.swift */,
+				256661A528F3DE76008A55AE /* StoryBodyUpdateRequest.swift */,
+			);
+			path = story;
+			sourceTree = "<group>";
+		};
+		253AF8BF28ED5F3A00E4DF7C /* story */ = {
+			isa = PBXGroup;
+			children = (
+				253AF8C028ED5F4C00E4DF7C /* StoryCharacterResponse.swift */,
+				253AF8C828ED6D0E00E4DF7C /* StoryResponse.swift */,
+			);
+			path = story;
+			sourceTree = "<group>";
+		};
+		253AF8D428EDE71E00E4DF7C /* story */ = {
+			isa = PBXGroup;
+			children = (
+				253AF8D528EDE73900E4DF7C /* StoryCreateView.swift */,
+				2566618028F1BE41008A55AE /* CharacterCreateView.swift */,
+				2566619D28F3D474008A55AE /* StoryBodyUpdateView.swift */,
+			);
+			path = story;
+			sourceTree = "<group>";
+		};
+		253AF8D928EE9FBA00E4DF7C /* story */ = {
+			isa = PBXGroup;
+			children = (
+				253AF8DA28EE9FD000E4DF7C /* StoryCreateViewModel.swift */,
+				2566618428F1C195008A55AE /* CharacterCreateViewModel.swift */,
+				256661A128F3D49C008A55AE /* StoryBodyUpdateViewModel.swift */,
+			);
+			path = story;
+			sourceTree = "<group>";
+		};
 		25645B2A2876DFB300A8B334 /* process_history */ = {
 			isa = PBXGroup;
 			children = (
@@ -1014,11 +1226,20 @@
 			path = process_history;
 			sourceTree = "<group>";
 		};
+		2566618828F2B373008A55AE /* story_character */ = {
+			isa = PBXGroup;
+			children = (
+				2566618928F2B38B008A55AE /* StoryCharacterCreateRequest.swift */,
+				2566619928F2CD16008A55AE /* StoryCharacterListParameter.swift */,
+			);
+			path = story_character;
+			sourceTree = "<group>";
+		};
 		256D5662286199F800D61541 /* domain */ = {
 			isa = PBXGroup;
 			children = (
-				256D566328619A0800D61541 /* service */,
 				2507F9CF285DB46600A14A51 /* repository */,
+				256D566328619A0800D61541 /* service */,
 			);
 			path = domain;
 			sourceTree = "<group>";
@@ -1026,14 +1247,14 @@
 		256D566328619A0800D61541 /* service */ = {
 			isa = PBXGroup;
 			children = (
-				256D5689286A023F00D61541 /* request */,
-				256D5674286370CD00D61541 /* response */,
-				256D566D28621F6B00D61541 /* div */,
+				256D568F286A1E1C00D61541 /* AnyEncoder.swift */,
 				256D56672861E90D00D61541 /* ApiProvider.swift */,
 				256D566A2861E9D300D61541 /* ApiService.swift */,
-				256D566E28621F9700D61541 /* URLRequest.swift */,
+				256D566D28621F6B00D61541 /* div */,
 				256D56712862BC4400D61541 /* HttpMethod.swift */,
-				256D568F286A1E1C00D61541 /* AnyEncoder.swift */,
+				256D5689286A023F00D61541 /* request */,
+				256D5674286370CD00D61541 /* response */,
+				256D566E28621F9700D61541 /* URLRequest.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -1042,13 +1263,16 @@
 			isa = PBXGroup;
 			children = (
 				256D566428619A1B00D61541 /* AccountService.swift */,
-				256D5692286B572B00D61541 /* HomeService.swift */,
-				259BE5D0286FFEBE00098DBC /* GoalService.swift */,
-				251AAD82287321700008CFDE /* GoalFavoriteService.swift */,
-				251AAD9628746DBE0008CFDE /* ProcessService.swift */,
-				25645B242876DE4900A8B334 /* ProcessHistoryService.swift */,
 				25A9D68428831D1E00F8A7EB /* GoalArchiveService.swift */,
+				251AAD82287321700008CFDE /* GoalFavoriteService.swift */,
+				259BE5D0286FFEBE00098DBC /* GoalService.swift */,
+				256D5692286B572B00D61541 /* HomeService.swift */,
+				253AF89028E9D76200E4DF7C /* IdeaService.swift */,
 				256D6C9728D0E6E300825569 /* MakiService.swift */,
+				25645B242876DE4900A8B334 /* ProcessHistoryService.swift */,
+				251AAD9628746DBE0008CFDE /* ProcessService.swift */,
+				253AF8CC28EDAE3900E4DF7C /* StoryService.swift */,
+				2566618D28F2B42C008A55AE /* StoryCharacterService.swift */,
 			);
 			path = div;
 			sourceTree = "<group>";
@@ -1056,16 +1280,18 @@
 		256D5674286370CD00D61541 /* response */ = {
 			isa = PBXGroup;
 			children = (
-				256D6CA028D0E81B00825569 /* maki */,
-				25A9D6812882C73500F8A7EB /* goal_archive */,
-				25A9D67328807C7300F8A7EB /* favorite */,
-				25645B2B2876DFCF00A8B334 /* process_history */,
-				251AAD9D28746ED60008CFDE /* process */,
-				259BE5DF287075E900098DBC /* goal */,
-				256D5695286B576900D61541 /* home */,
-				256D567C28676BB900D61541 /* ApiErrorResponse.swift */,
 				256D5675286370F000D61541 /* account */,
+				256D567C28676BB900D61541 /* ApiErrorResponse.swift */,
+				25A9D67328807C7300F8A7EB /* favorite */,
+				259BE5DF287075E900098DBC /* goal */,
+				25A9D6812882C73500F8A7EB /* goal_archive */,
+				256D5695286B576900D61541 /* home */,
+				253AF89428E9D7D500E4DF7C /* idea */,
+				256D6CA028D0E81B00825569 /* maki */,
 				259BE5D92870174E00098DBC /* NoBody.swift */,
+				251AAD9D28746ED60008CFDE /* process */,
+				25645B2B2876DFCF00A8B334 /* process_history */,
+				253AF8BF28ED5F3A00E4DF7C /* story */,
 			);
 			path = response;
 			sourceTree = "<group>";
@@ -1090,14 +1316,17 @@
 		256D5689286A023F00D61541 /* request */ = {
 			isa = PBXGroup;
 			children = (
-				256D6C9B28D0E6FD00825569 /* maki */,
-				25A05C00288E88FB0077A005 /* process */,
-				25A9D68628831D7F00F8A7EB /* goal_archive */,
-				25645B2A2876DFB300A8B334 /* process_history */,
-				251AAD7F287320330008CFDE /* goal_favorite */,
-				256D5699286B594900D61541 /* home */,
+				2566618828F2B373008A55AE /* story_character */,
 				256D568B286A024C00D61541 /* account */,
 				256D568A286A024600D61541 /* goal */,
+				25A9D68628831D7F00F8A7EB /* goal_archive */,
+				251AAD7F287320330008CFDE /* goal_favorite */,
+				256D5699286B594900D61541 /* home */,
+				253AF88B28E9D71A00E4DF7C /* idea */,
+				256D6C9B28D0E6FD00825569 /* maki */,
+				25A05C00288E88FB0077A005 /* process */,
+				25645B2A2876DFB300A8B334 /* process_history */,
+				253AF8BA28ED5D1F00E4DF7C /* story */,
 			);
 			path = request;
 			sourceTree = "<group>";
@@ -1231,6 +1460,7 @@
 				256D6CD028D4515300825569 /* GoalListParts.swift */,
 				257EDCF628E01C3300DE4136 /* FavoriteGoalList.swift */,
 				257EDD0A28E203C300DE4136 /* GoalArchiveListParts.swift */,
+				253AF8A128EA9F3B00E4DF7C /* IdeaListItemParts.swift */,
 			);
 			path = parts;
 			sourceTree = "<group>";
@@ -1427,18 +1657,18 @@
 		25C2B931285BA1F20077B013 /* daiku-app-ios */ = {
 			isa = PBXGroup;
 			children = (
-				25BD6C8228B85DCB002085F8 /* daiku-app-ios.entitlements */,
-				25F41EEA28A1476000F3D163 /* Info.plist */,
-				256D5662286199F800D61541 /* domain */,
-				2507F9B8285CD60400A14A51 /* router */,
-				2507F99E285C17A000A14A51 /* enums */,
-				2507F999285C173C00A14A51 /* view_model */,
-				2507F994285C166F00A14A51 /* ui */,
-				2507F98F285C13E600A14A51 /* config */,
-				25C2B932285BA1F20077B013 /* daiku_app_iosApp.swift */,
-				25C2B934285BA1F20077B013 /* ContentView.swift */,
 				25C2B936285BA1F20077B013 /* Assets.xcassets */,
+				2507F98F285C13E600A14A51 /* config */,
+				25C2B934285BA1F20077B013 /* ContentView.swift */,
+				25C2B932285BA1F20077B013 /* daiku_app_iosApp.swift */,
+				25BD6C8228B85DCB002085F8 /* daiku-app-ios.entitlements */,
+				256D5662286199F800D61541 /* domain */,
+				2507F99E285C17A000A14A51 /* enums */,
+				25F41EEA28A1476000F3D163 /* Info.plist */,
 				25C2B938285BA1F20077B013 /* Preview Content */,
+				2507F9B8285CD60400A14A51 /* router */,
+				2507F994285C166F00A14A51 /* ui */,
+				2507F999285C173C00A14A51 /* view_model */,
 			);
 			path = "daiku-app-ios";
 			sourceTree = "<group>";
@@ -1770,8 +2000,12 @@
 				2507F9AF285C4B6F00A14A51 /* UnAuthView.swift in Sources */,
 				256D567028621F9700D61541 /* URLRequest.swift in Sources */,
 				251AADA72874A9390008CFDE /* ProcessCreateView.swift in Sources */,
+				256661A328F3D49C008A55AE /* StoryBodyUpdateViewModel.swift in Sources */,
 				25A05BE72887D4D70077A005 /* GoalArchiveUpdateRequest.swift in Sources */,
+				253AF89228E9D76200E4DF7C /* IdeaService.swift in Sources */,
 				25A9D68928831DAE00F8A7EB /* GoalArchiveDetailParameter.swift in Sources */,
+				2566618628F1C195008A55AE /* CharacterCreateViewModel.swift in Sources */,
+				253AF88428E9589D00E4DF7C /* IdeaCreatViewModel.swift in Sources */,
 				259BE5DB2870174E00098DBC /* NoBody.swift in Sources */,
 				25A05C0C288E89950077A005 /* ProcessUpdateRequest.swift in Sources */,
 				25A05BF9288E39F80077A005 /* StringExtension.swift in Sources */,
@@ -1785,7 +2019,9 @@
 				2507F9C4285CE81200A14A51 /* TermsOfUseView.swift in Sources */,
 				25BD6C8528B8B0D1002085F8 /* SignInWithAppleButtonView.swift in Sources */,
 				25761D4628D5A6320030C59D /* MakiAddGoalViewModel.swift in Sources */,
+				253AF8B328EAC8E500E4DF7C /* IdeaDrawingView.swift in Sources */,
 				25A05C07288E88FB0077A005 /* ProcessListParameter.swift in Sources */,
+				253AF8D728EDE73900E4DF7C /* StoryCreateView.swift in Sources */,
 				256D56A7286DA72D00D61541 /* GoalCreateViewModel.swift in Sources */,
 				25A05BF32889490B0077A005 /* GoalArchiveUpdatingFlgEditRequest.swift in Sources */,
 				25A9D68B28831F2100F8A7EB /* GoalArchiveResponse.swift in Sources */,
@@ -1797,15 +2033,20 @@
 				25A05C9C28919D8C0077A005 /* ProcessTermUpdateRequest.swift in Sources */,
 				256D6CAF28D23FAB00825569 /* MakiSearchResponse.swift in Sources */,
 				2583143528D99C1700EE8C8C /* ProcessListItemView.swift in Sources */,
+				253AF8D228EDAFE000E4DF7C /* StoryRepository.swift in Sources */,
 				25BF0AAE28E6B39700D2073C /* HomeData.swift in Sources */,
+				253AF8A728EAA7F200E4DF7C /* IdeaDetailView.swift in Sources */,
+				253AF8C628ED6BE700E4DF7C /* StoryCreateRequest.swift in Sources */,
 				259BE5E2287075FF00098DBC /* GoalResponse.swift in Sources */,
 				2507F9A4285C238E00A14A51 /* SignInView.swift in Sources */,
 				256D567E28676BB900D61541 /* ApiErrorResponse.swift in Sources */,
 				256D569C286B595E00D61541 /* GoalArchiveRequest.swift in Sources */,
 				25BF37FB28C3D62E002614FE /* AccountUploadImageRequest.swift in Sources */,
+				2566619328F2B569008A55AE /* StoryCharacterRepository.swift in Sources */,
 				25A05BEA2887E00E0077A005 /* TGoalsArchiveResponse.swift in Sources */,
 				251AAD852873230D0008CFDE /* GoalFavoriteCreateRequest.swift in Sources */,
 				25BF37D328C3BCF2002614FE /* FirebaseRepository.swift in Sources */,
+				253AF8B828EB0BAF00E4DF7C /* StickyParts.swift in Sources */,
 				256D6CC928D44C3200825569 /* MakiDetailTabView.swift in Sources */,
 				25A9D666287FE3C100F8A7EB /* StatusUpdateViewModel.swift in Sources */,
 				256D6C8B28D05FF400825569 /* GoalCreateMenuList.swift in Sources */,
@@ -1813,6 +2054,7 @@
 				257EDD0028E185D500DE4136 /* GoalSearchInputView.swift in Sources */,
 				256D5691286A1E1C00D61541 /* AnyEncoder.swift in Sources */,
 				259BE5DE287022F600098DBC /* AccountMainViewModel.swift in Sources */,
+				2566618B28F2B38B008A55AE /* StoryCharacterCreateRequest.swift in Sources */,
 				257EDD0428E1867000DE4136 /* GoalSearchInputViewModel.swift in Sources */,
 				256D5694286B572B00D61541 /* HomeService.swift in Sources */,
 				257EDD1028E204B800DE4136 /* GoalArchiveSearchInputView.swift in Sources */,
@@ -1825,6 +2067,7 @@
 				251AAD7B2872AA800008CFDE /* MyGoalResponse.swift in Sources */,
 				256D56842869729400D61541 /* LoadingView.swift in Sources */,
 				25A05C94289114210077A005 /* ProcessTermUpdateView.swift in Sources */,
+				253AF8C228ED5F4C00E4DF7C /* StoryCharacterResponse.swift in Sources */,
 				25A9D67D28829EF200F8A7EB /* GoalArchiveDetailView.swift in Sources */,
 				256D56732862BC4400D61541 /* HttpMethod.swift in Sources */,
 				25A9D667287FE5D400F8A7EB /* StatusUpdateView.swift in Sources */,
@@ -1836,6 +2079,7 @@
 				25A9D6722880797800F8A7EB /* FavoriteMainViewModel.swift in Sources */,
 				25645B1C2876CB6900A8B334 /* ProcessDetailView.swift in Sources */,
 				256A5A7028BDEB9B00E32A8D /* AccountReUpdateRequest.swift in Sources */,
+				253AF88E28E9D73000E4DF7C /* IdeaCreateRequest.swift in Sources */,
 				25BF37CF28C20B5C002614FE /* ImageSourceType.swift in Sources */,
 				25761D3E28D471760030C59D /* MakiGoalListParameter.swift in Sources */,
 				256D6C9928D0E6E300825569 /* MakiService.swift in Sources */,
@@ -1843,6 +2087,7 @@
 				25A9D68A28831F1100F8A7EB /* GoalArchiveService.swift in Sources */,
 				256D6CB828D30F3200825569 /* ImagePlaceholderType.swift in Sources */,
 				25A05C8C2890D3E00077A005 /* DateExtention.swift in Sources */,
+				253AF8CA28ED6D0E00E4DF7C /* StoryResponse.swift in Sources */,
 				2583142828D6E89100EE8C8C /* AddGoalListParts.swift in Sources */,
 				2507F99D285C175E00A14A51 /* AccountExistViewModel.swift in Sources */,
 				25BF0AA628E6AE3700D2073C /* FirestoreHomeRepository.swift in Sources */,
@@ -1853,13 +2098,17 @@
 				25A9D655287B308C00F8A7EB /* ProcessHistoryCommentCreateViewModel.swift in Sources */,
 				259BE5D82870159300098DBC /* GoalService.swift in Sources */,
 				256D569F286C28E100D61541 /* HomeRepository.swift in Sources */,
+				253AF89F28E9FF2500E4DF7C /* MyIdeaListParameter.swift in Sources */,
 				251AAD8628732A740008CFDE /* GoalFavoriteRepository.swift in Sources */,
 				25A9D67628807D4F00F8A7EB /* GoalFavoriteResponse.swift in Sources */,
+				256661A728F3DE76008A55AE /* StoryBodyUpdateRequest.swift in Sources */,
 				256D566628619A1B00D61541 /* AccountService.swift in Sources */,
+				2566618228F1BE41008A55AE /* CharacterCreateView.swift in Sources */,
 				2507F97B285BAA6200A14A51 /* ContentView.swift in Sources */,
 				256D565E286077D800D61541 /* RequestType.swift in Sources */,
 				251AADB42875773B0008CFDE /* ProcessStatus.swift in Sources */,
 				2507F9B3285C808A00A14A51 /* DaikuWebView.swift in Sources */,
+				253AF89B28E9DBDB00E4DF7C /* IdeaRepository.swift in Sources */,
 				256D56A3286D807D00D61541 /* GoalCreateView.swift in Sources */,
 				259BE5D6287014B000098DBC /* GoalRepository.swift in Sources */,
 				256D6C9028D08B4200825569 /* MakiCreateView.swift in Sources */,
@@ -1870,26 +2119,36 @@
 				2507F9CA285D935400A14A51 /* AccountMainView.swift in Sources */,
 				256D6CD228D4515300825569 /* GoalListParts.swift in Sources */,
 				257EDD1528E207CD00DE4136 /* HomeGoalArchiveSearchInputView.swift in Sources */,
+				2566619B28F2CD16008A55AE /* StoryCharacterListParameter.swift in Sources */,
 				25A9D6792880813000F8A7EB /* GoalFavoriteSearchParameter.swift in Sources */,
 				251AAD9828746DBE0008CFDE /* ProcessService.swift in Sources */,
 				25A05BE12886B2DE0077A005 /* GoalUpdateRequest.swift in Sources */,
+				253AF88928E9928F00E4DF7C /* IdeaCreateView.swift in Sources */,
 				256D56882869899600D61541 /* AccountCreateViewModel.swift in Sources */,
 				2507F9A9285C23DD00A14A51 /* AccountCreateView.swift in Sources */,
 				25761D4228D58D660030C59D /* MakiAddGoalView.swift in Sources */,
 				25BF37CB28C2097A002614FE /* ImagePicker.swift in Sources */,
 				256D6C9E28D0E70B00825569 /* MakiCreateRequest.swift in Sources */,
 				25BF37C028C0AC10002614FE /* ImagePreView.swift in Sources */,
+				253AF8CE28EDAE3900E4DF7C /* StoryService.swift in Sources */,
 				25645B2E2876DFE300A8B334 /* ProcessHistoryResponse.swift in Sources */,
+				253AF8AB28EAAFF700E4DF7C /* IdeaDetailViewModel.swift in Sources */,
 				256D56692861E90D00D61541 /* ApiProvider.swift in Sources */,
 				25A9D64E2879E4B900F8A7EB /* ProcessHistoryCommentView.swift in Sources */,
+				2566618F28F2B42C008A55AE /* StoryCharacterService.swift in Sources */,
 				2507F9A1285C17BA00A14A51 /* SignInStatus.swift in Sources */,
 				256D56AA286EB47F00D61541 /* DaikuFormEditor.swift in Sources */,
 				25A9D661287EC4C300F8A7EB /* CommentUpdateViewModel.swift in Sources */,
+				253AF8A328EA9F3B00E4DF7C /* IdeaListItemParts.swift in Sources */,
 				256D566128616ACD00D61541 /* AccountRepository.swift in Sources */,
 				25761D4E28D5A8110030C59D /* MakiAddGoalListParameter.swift in Sources */,
+				2566619F28F3D474008A55AE /* StoryBodyUpdateView.swift in Sources */,
 				251AADA028746EE70008CFDE /* ProcessResponse.swift in Sources */,
 				25645B292876DEAD00A8B334 /* ProcessHistoryListParameter.swift in Sources */,
+				253AF8AF28EAB16E00E4DF7C /* IdeaDetailParameter.swift in Sources */,
 				256D6CA328D0E83400825569 /* TMakiResponse.swift in Sources */,
+				253AF89728E9D7FB00E4DF7C /* IdeaSearchResponse.swift in Sources */,
+				253AF8DC28EE9FD000E4DF7C /* StoryCreateViewModel.swift in Sources */,
 				251AADB7287580320008CFDE /* ProcessPriority.swift in Sources */,
 				251AADBD2875B7540008CFDE /* TProcessResponse.swift in Sources */,
 				2507F9AC285C23F900A14A51 /* HomeView.swift in Sources */,
@@ -1919,6 +2178,7 @@
 				256D6CB428D30D5900825569 /* UserImageView.swift in Sources */,
 				25F41EF628AA30F300F3D163 /* GoalArchiveInfoResponse.swift in Sources */,
 				2507F97C285BAA6200A14A51 /* daiku_app_iosApp.swift in Sources */,
+				253AF8E028F0899000E4DF7C /* StoryDetailParts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1931,8 +2191,12 @@
 				25A05C17288FC34C0077A005 /* UnAuthView.swift in Sources */,
 				25A05C18288FC34C0077A005 /* URLRequest.swift in Sources */,
 				25A05C19288FC34C0077A005 /* ProcessCreateView.swift in Sources */,
+				256661A428F3D49C008A55AE /* StoryBodyUpdateViewModel.swift in Sources */,
 				25A05C1A288FC34C0077A005 /* GoalArchiveUpdateRequest.swift in Sources */,
+				253AF89328E9D76200E4DF7C /* IdeaService.swift in Sources */,
 				25A05C1B288FC34C0077A005 /* GoalArchiveDetailParameter.swift in Sources */,
+				2566618728F1C195008A55AE /* CharacterCreateViewModel.swift in Sources */,
+				253AF88528E9589E00E4DF7C /* IdeaCreatViewModel.swift in Sources */,
 				25A05C1C288FC34C0077A005 /* NoBody.swift in Sources */,
 				25A05C1D288FC34C0077A005 /* ProcessUpdateRequest.swift in Sources */,
 				25A05C1E288FC34C0077A005 /* StringExtension.swift in Sources */,
@@ -1946,7 +2210,9 @@
 				25A05C21288FC34C0077A005 /* TermsOfUseView.swift in Sources */,
 				25BD6C8628B8B0D2002085F8 /* SignInWithAppleButtonView.swift in Sources */,
 				25761D4728D5A6320030C59D /* MakiAddGoalViewModel.swift in Sources */,
+				253AF8B428EAC8E500E4DF7C /* IdeaDrawingView.swift in Sources */,
 				25A05C22288FC34C0077A005 /* ProcessListParameter.swift in Sources */,
+				253AF8D828EDE73900E4DF7C /* StoryCreateView.swift in Sources */,
 				25A05C23288FC34C0077A005 /* GoalCreateViewModel.swift in Sources */,
 				25A05C24288FC34C0077A005 /* GoalArchiveUpdatingFlgEditRequest.swift in Sources */,
 				25A05C25288FC34C0077A005 /* GoalArchiveResponse.swift in Sources */,
@@ -1958,15 +2224,20 @@
 				25A05C9D28919D8C0077A005 /* ProcessTermUpdateRequest.swift in Sources */,
 				256D6CB028D23FAB00825569 /* MakiSearchResponse.swift in Sources */,
 				2583143628D99C1700EE8C8C /* ProcessListItemView.swift in Sources */,
+				253AF8D328EDAFE000E4DF7C /* StoryRepository.swift in Sources */,
 				25BF0AAF28E6B39700D2073C /* HomeData.swift in Sources */,
+				253AF8A828EAA7F200E4DF7C /* IdeaDetailView.swift in Sources */,
+				253AF8C728ED6BE700E4DF7C /* StoryCreateRequest.swift in Sources */,
 				25A05C2B288FC34C0077A005 /* GoalResponse.swift in Sources */,
 				25A05C2C288FC34C0077A005 /* SignInView.swift in Sources */,
 				25A05C2D288FC34C0077A005 /* ApiErrorResponse.swift in Sources */,
 				25A05C2E288FC34C0077A005 /* GoalArchiveRequest.swift in Sources */,
 				25BF37FC28C3D62E002614FE /* AccountUploadImageRequest.swift in Sources */,
+				2566619428F2B569008A55AE /* StoryCharacterRepository.swift in Sources */,
 				25A05C2F288FC34C0077A005 /* TGoalsArchiveResponse.swift in Sources */,
 				25A05C30288FC34C0077A005 /* GoalFavoriteCreateRequest.swift in Sources */,
 				25BF37D428C3BCF3002614FE /* FirebaseRepository.swift in Sources */,
+				253AF8B928EB0BAF00E4DF7C /* StickyParts.swift in Sources */,
 				256D6CCA28D44C3200825569 /* MakiDetailTabView.swift in Sources */,
 				25A05C31288FC34C0077A005 /* StatusUpdateViewModel.swift in Sources */,
 				256D6C8C28D05FF400825569 /* GoalCreateMenuList.swift in Sources */,
@@ -1974,6 +2245,7 @@
 				257EDD0128E185D500DE4136 /* GoalSearchInputView.swift in Sources */,
 				25A05C32288FC34C0077A005 /* AnyEncoder.swift in Sources */,
 				25A05C33288FC34C0077A005 /* AccountMainViewModel.swift in Sources */,
+				2566618C28F2B38B008A55AE /* StoryCharacterCreateRequest.swift in Sources */,
 				257EDD0528E1867000DE4136 /* GoalSearchInputViewModel.swift in Sources */,
 				25A05C34288FC34C0077A005 /* HomeService.swift in Sources */,
 				257EDD1128E204B800DE4136 /* GoalArchiveSearchInputView.swift in Sources */,
@@ -1986,6 +2258,7 @@
 				25A05C39288FC34C0077A005 /* MyGoalResponse.swift in Sources */,
 				25A05C3A288FC34C0077A005 /* LoadingView.swift in Sources */,
 				25A05C95289114210077A005 /* ProcessTermUpdateView.swift in Sources */,
+				253AF8C328ED5F4C00E4DF7C /* StoryCharacterResponse.swift in Sources */,
 				25A05C3B288FC34C0077A005 /* GoalArchiveDetailView.swift in Sources */,
 				25A05C3C288FC34C0077A005 /* HttpMethod.swift in Sources */,
 				25A05C3D288FC34C0077A005 /* StatusUpdateView.swift in Sources */,
@@ -1997,6 +2270,7 @@
 				25A05C43288FC34C0077A005 /* FavoriteMainViewModel.swift in Sources */,
 				25A05C44288FC34C0077A005 /* ProcessDetailView.swift in Sources */,
 				256A5A7128BDEB9C00E32A8D /* AccountReUpdateRequest.swift in Sources */,
+				253AF88F28E9D73000E4DF7C /* IdeaCreateRequest.swift in Sources */,
 				25BF37D028C20B5C002614FE /* ImageSourceType.swift in Sources */,
 				25761D3F28D471760030C59D /* MakiGoalListParameter.swift in Sources */,
 				256D6C9A28D0E6E300825569 /* MakiService.swift in Sources */,
@@ -2004,6 +2278,7 @@
 				25A05C46288FC34C0077A005 /* GoalArchiveService.swift in Sources */,
 				256D6CB928D30F3200825569 /* ImagePlaceholderType.swift in Sources */,
 				25A05C8D2890D3E00077A005 /* DateExtention.swift in Sources */,
+				253AF8CB28ED6D0E00E4DF7C /* StoryResponse.swift in Sources */,
 				2583142928D6E89100EE8C8C /* AddGoalListParts.swift in Sources */,
 				25A05C47288FC34C0077A005 /* AccountExistViewModel.swift in Sources */,
 				25BF0AA728E6AE3700D2073C /* FirestoreHomeRepository.swift in Sources */,
@@ -2014,13 +2289,17 @@
 				25A05C4C288FC34C0077A005 /* ProcessHistoryCommentCreateViewModel.swift in Sources */,
 				25A05C4D288FC34C0077A005 /* GoalService.swift in Sources */,
 				25A05C4E288FC34C0077A005 /* HomeRepository.swift in Sources */,
+				253AF8A028E9FF2500E4DF7C /* MyIdeaListParameter.swift in Sources */,
 				25A05C4F288FC34C0077A005 /* GoalFavoriteRepository.swift in Sources */,
 				25A05C50288FC34C0077A005 /* GoalFavoriteResponse.swift in Sources */,
+				256661A828F3DE76008A55AE /* StoryBodyUpdateRequest.swift in Sources */,
 				25A05C51288FC34C0077A005 /* AccountService.swift in Sources */,
+				2566618328F1BE41008A55AE /* CharacterCreateView.swift in Sources */,
 				25A05C52288FC34C0077A005 /* ContentView.swift in Sources */,
 				25A05C53288FC34C0077A005 /* RequestType.swift in Sources */,
 				25A05C54288FC34C0077A005 /* ProcessStatus.swift in Sources */,
 				25A05C55288FC34C0077A005 /* DaikuWebView.swift in Sources */,
+				253AF89C28E9DBDB00E4DF7C /* IdeaRepository.swift in Sources */,
 				25A05C56288FC34C0077A005 /* GoalCreateView.swift in Sources */,
 				25A05C57288FC34C0077A005 /* GoalRepository.swift in Sources */,
 				256D6C9128D08B4200825569 /* MakiCreateView.swift in Sources */,
@@ -2031,26 +2310,36 @@
 				25A05C59288FC34C0077A005 /* AccountMainView.swift in Sources */,
 				256D6CD328D4515300825569 /* GoalListParts.swift in Sources */,
 				257EDD1628E207CD00DE4136 /* HomeGoalArchiveSearchInputView.swift in Sources */,
+				2566619C28F2CD16008A55AE /* StoryCharacterListParameter.swift in Sources */,
 				25A05C5A288FC34C0077A005 /* GoalFavoriteSearchParameter.swift in Sources */,
 				25A05C5B288FC34C0077A005 /* ProcessService.swift in Sources */,
 				25A05C5C288FC34C0077A005 /* GoalUpdateRequest.swift in Sources */,
+				253AF88A28E9929000E4DF7C /* IdeaCreateView.swift in Sources */,
 				25A05C5D288FC34C0077A005 /* AccountCreateViewModel.swift in Sources */,
 				25A05C5E288FC34C0077A005 /* AccountCreateView.swift in Sources */,
 				25761D4328D58D660030C59D /* MakiAddGoalView.swift in Sources */,
 				25BF37CC28C2097A002614FE /* ImagePicker.swift in Sources */,
 				256D6C9F28D0E70B00825569 /* MakiCreateRequest.swift in Sources */,
 				25BF37C128C0AC10002614FE /* ImagePreView.swift in Sources */,
+				253AF8CF28EDAE3900E4DF7C /* StoryService.swift in Sources */,
 				25A05C5F288FC34C0077A005 /* ProcessHistoryResponse.swift in Sources */,
+				253AF8AC28EAAFF700E4DF7C /* IdeaDetailViewModel.swift in Sources */,
 				25A05C60288FC34C0077A005 /* ApiProvider.swift in Sources */,
 				25A05C61288FC34C0077A005 /* ProcessHistoryCommentView.swift in Sources */,
+				2566619028F2B42C008A55AE /* StoryCharacterService.swift in Sources */,
 				25A05C62288FC34C0077A005 /* SignInStatus.swift in Sources */,
 				25A05C63288FC34C0077A005 /* DaikuFormEditor.swift in Sources */,
 				25A05C64288FC34C0077A005 /* CommentUpdateViewModel.swift in Sources */,
+				253AF8A428EA9F3B00E4DF7C /* IdeaListItemParts.swift in Sources */,
 				25A05C65288FC34C0077A005 /* AccountRepository.swift in Sources */,
 				25761D4F28D5A8110030C59D /* MakiAddGoalListParameter.swift in Sources */,
+				256661A028F3D474008A55AE /* StoryBodyUpdateView.swift in Sources */,
 				25A05C66288FC34C0077A005 /* ProcessResponse.swift in Sources */,
 				25A05C67288FC34C0077A005 /* ProcessHistoryListParameter.swift in Sources */,
+				253AF8B028EAB16E00E4DF7C /* IdeaDetailParameter.swift in Sources */,
 				256D6CA428D0E83400825569 /* TMakiResponse.swift in Sources */,
+				253AF89828E9D7FB00E4DF7C /* IdeaSearchResponse.swift in Sources */,
+				253AF8DD28EE9FD000E4DF7C /* StoryCreateViewModel.swift in Sources */,
 				25A05C68288FC34C0077A005 /* ProcessPriority.swift in Sources */,
 				25A05C69288FC34C0077A005 /* TProcessResponse.swift in Sources */,
 				25A05C6A288FC34C0077A005 /* HomeView.swift in Sources */,
@@ -2080,6 +2369,7 @@
 				256D6CB528D30D5900825569 /* UserImageView.swift in Sources */,
 				25F41EF528AA30F200F3D163 /* GoalArchiveInfoResponse.swift in Sources */,
 				25A05C7B288FC34C0077A005 /* daiku_app_iosApp.swift in Sources */,
+				253AF8E128F0899000E4DF7C /* StoryDetailParts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2098,6 +2388,7 @@
 				257EDCFF28E185D500DE4136 /* GoalSearchInputView.swift in Sources */,
 				25A05BE52887D4800077A005 /* GoalArchiveUpdateRequest.swift in Sources */,
 				256D6CD128D4515300825569 /* GoalListParts.swift in Sources */,
+				253AF89628E9D7FB00E4DF7C /* IdeaSearchResponse.swift in Sources */,
 				25A05C0B288E89950077A005 /* ProcessUpdateRequest.swift in Sources */,
 				259BE5DA2870174E00098DBC /* NoBody.swift in Sources */,
 				25A9D669287FED3800F8A7EB /* StatusUpdateRequest.swift in Sources */,
@@ -2108,17 +2399,24 @@
 				259BE5E1287075FF00098DBC /* GoalResponse.swift in Sources */,
 				25A9D657287EBC7600F8A7EB /* CommentUpdateRequest.swift in Sources */,
 				25BF37C828C204E7002614FE /* ImagePicker.swift in Sources */,
+				253AF8DB28EE9FD000E4DF7C /* StoryCreateViewModel.swift in Sources */,
+				2566618528F1C195008A55AE /* CharacterCreateViewModel.swift in Sources */,
 				25A05C8B2890D3E00077A005 /* DateExtention.swift in Sources */,
 				2507F9A3285C238E00A14A51 /* SignInView.swift in Sources */,
 				256D567D28676BB900D61541 /* ApiErrorResponse.swift in Sources */,
+				256661A628F3DE76008A55AE /* StoryBodyUpdateRequest.swift in Sources */,
 				25BF37BF28C0AB25002614FE /* ImagePreView.swift in Sources */,
+				253AF89A28E9DBDB00E4DF7C /* IdeaRepository.swift in Sources */,
 				257EDD1428E207CD00DE4136 /* HomeGoalArchiveSearchInputView.swift in Sources */,
 				25761D4928D5A6820030C59D /* MakiAddGoalItem.swift in Sources */,
 				257EDD0728E1A08700DE4136 /* DatePickerMonth.swift in Sources */,
 				25A05C08288E88FB0077A005 /* ProcessDetailParameter.swift in Sources */,
 				251AAD7E28731EEF0008CFDE /* GoalFavoriteRepository.swift in Sources */,
+				2566618E28F2B42C008A55AE /* StoryCharacterService.swift in Sources */,
 				256D6C8F28D08B4200825569 /* MakiCreateView.swift in Sources */,
+				253AF8AE28EAB16E00E4DF7C /* IdeaDetailParameter.swift in Sources */,
 				25761D4528D5A6320030C59D /* MakiAddGoalViewModel.swift in Sources */,
+				253AF8AA28EAAFF700E4DF7C /* IdeaDetailViewModel.swift in Sources */,
 				256D569B286B595E00D61541 /* GoalArchiveRequest.swift in Sources */,
 				251AAD812873204B0008CFDE /* GoalFavoriteCreateRequest.swift in Sources */,
 				256D5690286A1E1C00D61541 /* AnyEncoder.swift in Sources */,
@@ -2126,12 +2424,15 @@
 				256D6CCC28D44D4500825569 /* MakiDetailGoalParts.swift in Sources */,
 				259BE5DD287022F600098DBC /* AccountMainViewModel.swift in Sources */,
 				259BE5D1286FFEBE00098DBC /* GoalService.swift in Sources */,
+				2566619E28F3D474008A55AE /* StoryBodyUpdateView.swift in Sources */,
 				256D6CBF28D3217600825569 /* MakiDetailViewModel.swift in Sources */,
 				256D6CAE28D23FAB00825569 /* MakiSearchResponse.swift in Sources */,
+				253AF8B728EB0BAF00E4DF7C /* StickyParts.swift in Sources */,
 				257EDCF728E01C3300DE4136 /* FavoriteGoalList.swift in Sources */,
 				25761D4128D58D660030C59D /* MakiAddGoalView.swift in Sources */,
 				25A05BE92887DF760077A005 /* TGoalsArchiveResponse.swift in Sources */,
 				256D5693286B572B00D61541 /* HomeService.swift in Sources */,
+				253AF88328E9583B00E4DF7C /* IdeaCreatViewModel.swift in Sources */,
 				256D6CA628D0E8AB00825569 /* MakiRepository.swift in Sources */,
 				25BF37CE28C20B41002614FE /* ImageSourceType.swift in Sources */,
 				25A9D6802882C61600F8A7EB /* GoalArchiveDetailViewModel.swift in Sources */,
@@ -2139,6 +2440,8 @@
 				256D56832869729400D61541 /* LoadingView.swift in Sources */,
 				2583142728D6E89100EE8C8C /* AddGoalListParts.swift in Sources */,
 				251AADAD287555F90008CFDE /* DaikuPickerView.swift in Sources */,
+				253AF8C928ED6D0E00E4DF7C /* StoryResponse.swift in Sources */,
+				256661A228F3D49C008A55AE /* StoryBodyUpdateViewModel.swift in Sources */,
 				256D56722862BC4400D61541 /* HttpMethod.swift in Sources */,
 				25A05C8F289109270077A005 /* MoreText.swift in Sources */,
 				256D568D286A026800D61541 /* AccountCreateRequest.swift in Sources */,
@@ -2155,14 +2458,19 @@
 				25645B222876DE1600A8B334 /* ProcessHistoryRepository.swift in Sources */,
 				2595829C28CB1569008ED59D /* Environment.swift in Sources */,
 				25A9D65F287EC2F900F8A7EB /* ProcessHistoryDetailParameter.swift in Sources */,
+				253AF8C128ED5F4C00E4DF7C /* StoryCharacterResponse.swift in Sources */,
 				25A9D6532879F51400F8A7EB /* ProcessHistoryCommentRequest.swift in Sources */,
 				25BF0AAD28E6B39700D2073C /* HomeData.swift in Sources */,
 				25BF37C428C11779002614FE /* ImagePreViewModel.swift in Sources */,
+				253AF89E28E9FF2500E4DF7C /* MyIdeaListParameter.swift in Sources */,
 				25A9D6712880796700F8A7EB /* FavoriteMainViewModel.swift in Sources */,
 				251AAD782872A99C0008CFDE /* MyGoalLlistParameter.swift in Sources */,
+				253AF8D628EDE73900E4DF7C /* StoryCreateView.swift in Sources */,
 				25A05C06288E88FB0077A005 /* ProcessListParameter.swift in Sources */,
 				25645B1B2876CA9700A8B334 /* ProcessDetailViewModel.swift in Sources */,
+				253AF89128E9D76200E4DF7C /* IdeaService.swift in Sources */,
 				25645B192876CA7900A8B334 /* ProcessDetailView.swift in Sources */,
+				253AF8CD28EDAE3900E4DF7C /* StoryService.swift in Sources */,
 				251AAD8E2874064E0008CFDE /* RefreshView.swift in Sources */,
 				2583142F28D7816300EE8C8C /* MakiAddGoalResponse.swift in Sources */,
 				2507F99C285C175E00A14A51 /* AccountExistViewModel.swift in Sources */,
@@ -2178,6 +2486,7 @@
 				256D566528619A1B00D61541 /* AccountService.swift in Sources */,
 				25A9D67528807C8700F8A7EB /* GoalFavoriteResponse.swift in Sources */,
 				25761D3D28D471760030C59D /* MakiGoalListParameter.swift in Sources */,
+				253AF88828E9927100E4DF7C /* IdeaCreateView.swift in Sources */,
 				25C2B935285BA1F20077B013 /* ContentView.swift in Sources */,
 				257EDD0F28E204B800DE4136 /* GoalArchiveSearchInputView.swift in Sources */,
 				25A05C9B28919D8C0077A005 /* ProcessTermUpdateRequest.swift in Sources */,
@@ -2193,10 +2502,16 @@
 				256D56872869899600D61541 /* AccountCreateViewModel.swift in Sources */,
 				25A9D678288080F100F8A7EB /* GoalFavoriteSearchParameter.swift in Sources */,
 				251AAD8A287355BC0008CFDE /* GoalDetailView.swift in Sources */,
+				2566618128F1BE41008A55AE /* CharacterCreateView.swift in Sources */,
 				256D6CB328D30D5900825569 /* UserImageView.swift in Sources */,
 				251AAD882873558C0008CFDE /* GoalRouter.swift in Sources */,
 				256A5A6F28BDAE4400E32A8D /* AccountReUpdateRequest.swift in Sources */,
+				253AF8DF28F0899000E4DF7C /* StoryDetailParts.swift in Sources */,
+				253AF8B228EAC8E500E4DF7C /* IdeaDrawingView.swift in Sources */,
 				25A05BE02886B29D0077A005 /* GoalUpdateRequest.swift in Sources */,
+				253AF8A628EAA7F200E4DF7C /* IdeaDetailView.swift in Sources */,
+				253AF88D28E9D73000E4DF7C /* IdeaCreateRequest.swift in Sources */,
+				253AF8D128EDAFE000E4DF7C /* StoryRepository.swift in Sources */,
 				256D6C9428D0E21600825569 /* MakiCreateViewModel.swift in Sources */,
 				251AAD9728746DBE0008CFDE /* ProcessService.swift in Sources */,
 				256D6CBB28D31AD800825569 /* MakiDetailView.swift in Sources */,
@@ -2206,6 +2521,7 @@
 				2507F9A8285C23DD00A14A51 /* AccountCreateView.swift in Sources */,
 				25A9D6512879F4D100F8A7EB /* ProcessHistoryCommentCreateViewModel.swift in Sources */,
 				25BF37FA28C3D62E002614FE /* AccountUploadImageRequest.swift in Sources */,
+				253AF8C528ED6BE700E4DF7C /* StoryCreateRequest.swift in Sources */,
 				25A9D6832882C74500F8A7EB /* GoalArchiveResponse.swift in Sources */,
 				257EDD0328E1867000DE4136 /* GoalSearchInputViewModel.swift in Sources */,
 				25BF0AA528E6AE3700D2073C /* FirestoreHomeRepository.swift in Sources */,
@@ -2219,9 +2535,12 @@
 				256D566028616ACD00D61541 /* AccountRepository.swift in Sources */,
 				251AAD9F28746EE70008CFDE /* ProcessResponse.swift in Sources */,
 				25645B282876DEAD00A8B334 /* ProcessHistoryListParameter.swift in Sources */,
+				2566619A28F2CD16008A55AE /* StoryCharacterListParameter.swift in Sources */,
 				251AADB6287580320008CFDE /* ProcessPriority.swift in Sources */,
+				253AF8A228EA9F3B00E4DF7C /* IdeaListItemParts.swift in Sources */,
 				25A05BEE2887F8920077A005 /* GoalArchiveEditViewModel.swift in Sources */,
 				251AADBC2875B7540008CFDE /* TProcessResponse.swift in Sources */,
+				2566619228F2B569008A55AE /* StoryCharacterRepository.swift in Sources */,
 				25A05C9F28919E440077A005 /* TProcessHistory.swift in Sources */,
 				2507F9AB285C23F900A14A51 /* HomeView.swift in Sources */,
 				251AAD91287435820008CFDE /* GoalDetailViewModel.swift in Sources */,
@@ -2229,6 +2548,7 @@
 				25BF37D228C32BD5002614FE /* FirebaseRepository.swift in Sources */,
 				259BE5E42871FB5200098DBC /* BlurView.swift in Sources */,
 				251AADAA287548BB0008CFDE /* ProcessCreateViewModel.swift in Sources */,
+				2566618A28F2B38B008A55AE /* StoryCharacterCreateRequest.swift in Sources */,
 				259BE5D32870015300098DBC /* GoalCreateRequest.swift in Sources */,
 				256D6C9D28D0E70B00825569 /* MakiCreateRequest.swift in Sources */,
 				256D6C9828D0E6E300825569 /* MakiService.swift in Sources */,
@@ -2299,8 +2619,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2336,8 +2656,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2372,8 +2692,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2407,8 +2727,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2557,8 +2877,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2591,8 +2911,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

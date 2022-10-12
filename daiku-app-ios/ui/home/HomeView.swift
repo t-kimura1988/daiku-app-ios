@@ -160,7 +160,6 @@ struct HomeView: View {
             .sheet(isPresented: $vm.isGoalCreateMenuSheet) {
                 
                 GoalCreateMenuView()
-//                    .presentationDetents([.medium])
             }
             .navigationTitle("みんなの目標")
         }
