@@ -146,6 +146,9 @@
 		253AF8DF28F0899000E4DF7C /* StoryDetailParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8DE28F0899000E4DF7C /* StoryDetailParts.swift */; };
 		253AF8E028F0899000E4DF7C /* StoryDetailParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8DE28F0899000E4DF7C /* StoryDetailParts.swift */; };
 		253AF8E128F0899000E4DF7C /* StoryDetailParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF8DE28F0899000E4DF7C /* StoryDetailParts.swift */; };
+		25473FF128F7EAE2008960E9 /* IdeaUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25473FF028F7EAE2008960E9 /* IdeaUpdateRequest.swift */; };
+		25473FF228F7EAE2008960E9 /* IdeaUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25473FF028F7EAE2008960E9 /* IdeaUpdateRequest.swift */; };
+		25473FF328F7EAE2008960E9 /* IdeaUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25473FF028F7EAE2008960E9 /* IdeaUpdateRequest.swift */; };
 		25645B192876CA7900A8B334 /* ProcessDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B182876CA7900A8B334 /* ProcessDetailView.swift */; };
 		25645B1B2876CA9700A8B334 /* ProcessDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B1A2876CA9700A8B334 /* ProcessDetailViewModel.swift */; };
 		25645B1C2876CB6900A8B334 /* ProcessDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645B182876CA7900A8B334 /* ProcessDetailView.swift */; };
@@ -682,6 +685,7 @@
 		253AF8D528EDE73900E4DF7C /* StoryCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCreateView.swift; sourceTree = "<group>"; };
 		253AF8DA28EE9FD000E4DF7C /* StoryCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCreateViewModel.swift; sourceTree = "<group>"; };
 		253AF8DE28F0899000E4DF7C /* StoryDetailParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailParts.swift; sourceTree = "<group>"; };
+		25473FF028F7EAE2008960E9 /* IdeaUpdateRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeaUpdateRequest.swift; sourceTree = "<group>"; };
 		254F4FAE28BFBBFA0094D206 /* stg-daiku-app-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "stg-daiku-app-ios.entitlements"; sourceTree = "<group>"; };
 		25645B182876CA7900A8B334 /* ProcessDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessDetailView.swift; sourceTree = "<group>"; };
 		25645B1A2876CA9700A8B334 /* ProcessDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessDetailViewModel.swift; sourceTree = "<group>"; };
@@ -1144,6 +1148,7 @@
 			isa = PBXGroup;
 			children = (
 				253AF88C28E9D73000E4DF7C /* IdeaCreateRequest.swift */,
+				25473FF028F7EAE2008960E9 /* IdeaUpdateRequest.swift */,
 				253AF89D28E9FF2500E4DF7C /* MyIdeaListParameter.swift */,
 				253AF8AD28EAB16E00E4DF7C /* IdeaDetailParameter.swift */,
 			);
@@ -2108,6 +2113,7 @@
 				256D565E286077D800D61541 /* RequestType.swift in Sources */,
 				251AADB42875773B0008CFDE /* ProcessStatus.swift in Sources */,
 				2507F9B3285C808A00A14A51 /* DaikuWebView.swift in Sources */,
+				25473FF228F7EAE2008960E9 /* IdeaUpdateRequest.swift in Sources */,
 				253AF89B28E9DBDB00E4DF7C /* IdeaRepository.swift in Sources */,
 				256D56A3286D807D00D61541 /* GoalCreateView.swift in Sources */,
 				259BE5D6287014B000098DBC /* GoalRepository.swift in Sources */,
@@ -2299,6 +2305,7 @@
 				25A05C53288FC34C0077A005 /* RequestType.swift in Sources */,
 				25A05C54288FC34C0077A005 /* ProcessStatus.swift in Sources */,
 				25A05C55288FC34C0077A005 /* DaikuWebView.swift in Sources */,
+				25473FF328F7EAE2008960E9 /* IdeaUpdateRequest.swift in Sources */,
 				253AF89C28E9DBDB00E4DF7C /* IdeaRepository.swift in Sources */,
 				25A05C56288FC34C0077A005 /* GoalCreateView.swift in Sources */,
 				25A05C57288FC34C0077A005 /* GoalRepository.swift in Sources */,
@@ -2386,6 +2393,7 @@
 				25A05BF8288E377C0077A005 /* StringExtension.swift in Sources */,
 				251AADA62874A9390008CFDE /* ProcessCreateView.swift in Sources */,
 				257EDCFF28E185D500DE4136 /* GoalSearchInputView.swift in Sources */,
+				25473FF128F7EAE2008960E9 /* IdeaUpdateRequest.swift in Sources */,
 				25A05BE52887D4800077A005 /* GoalArchiveUpdateRequest.swift in Sources */,
 				256D6CD128D4515300825569 /* GoalListParts.swift in Sources */,
 				253AF89628E9D7FB00E4DF7C /* IdeaSearchResponse.swift in Sources */,
@@ -2865,7 +2873,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "daiku-app-ios/daiku-app-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.4.1;
+				CURRENT_PROJECT_VERSION = 1.5.1;
 				DEVELOPMENT_ASSET_PATHS = "\"daiku-app-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = R2XS7CKCJS;
 				ENABLE_PREVIEWS = YES;
@@ -2883,7 +2891,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.goen.daiku-app-ios";
 				PRODUCT_NAME = "D-Aic";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -2899,7 +2907,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "daiku-app-ios/daiku-app-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.4.1;
+				CURRENT_PROJECT_VERSION = 1.5.1;
 				DEVELOPMENT_ASSET_PATHS = "\"daiku-app-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = R2XS7CKCJS;
 				ENABLE_PREVIEWS = YES;
@@ -2917,7 +2925,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.goen.daiku-app-ios";
 				PRODUCT_NAME = "D-Aic";
 				SWIFT_EMIT_LOC_STRINGS = YES;

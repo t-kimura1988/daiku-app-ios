@@ -9,6 +9,7 @@ import SwiftUI
 
 struct IdeaDetailView: View {
     @EnvironmentObject var ideaDetailVM: IdeaDetailViewModel
+    @EnvironmentObject var ideaCreateVM: IdeaCreateViewModel
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
     private var idea: IdeaSearchResponse = IdeaSearchResponse()
@@ -39,6 +40,9 @@ struct IdeaDetailView: View {
                             .font(.title3)
                             .multilineTextAlignment(.leading)
                             .frame(minHeight: 50)
+                            .onTapGesture {
+                                ideaCreateVM.openIdeaUpdateSheet()
+                            }
                         Divider()
                         if ideaDetailVM.idea.isStory() {
                             StoryDetailParts()
@@ -73,6 +77,13 @@ struct IdeaDetailView: View {
                     charaDesc: ideaDetailVM.chara.charaDesc
                 )
                     .environmentObject(CharacterCreateViewModel())
+            }
+            .sheet(isPresented: $ideaCreateVM.isIdeaUpdateSheet) {
+                IdeaCreateView(comp: {
+                    ideaDetailVM.getDetail(ideaId: idea.id)
+                    ideaCreateVM.closeIdeaUpdateSheet()
+                })
+                .environmentObject(IdeaCreateViewModel(body: ideaDetailVM.idea.body, ideaId: ideaDetailVM.idea.id))
             }
             .sheet(isPresented: $ideaDetailVM.isStoryBodySheet) {
                 StoryBodyUpdateView()

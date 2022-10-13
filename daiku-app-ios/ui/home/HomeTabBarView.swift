@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct HomeTabBarView: View {
-    @EnvironmentObject private var ideaCreateVM: IdeaCreateViewModel
+    @State private var isSheet: Bool = false
+    @EnvironmentObject var accountMainVM: AccountMainViewModel
     var body: some View {
         ZStack {
             TabView {
@@ -31,7 +32,7 @@ struct HomeTabBarView: View {
                 HStack {
                     Spacer()
                     Button(action: {
-                        ideaCreateVM.openIdeaCreateSheet()
+                        isSheet = true
                     }, label: {
                         Text("閃")
                             .foregroundColor(.white)
@@ -43,8 +44,11 @@ struct HomeTabBarView: View {
                 }
             }
         }
-        .sheet(isPresented: $ideaCreateVM.isIdeaCreateSheet) {
-            IdeaCreateView()
+        .sheet(isPresented: $isSheet) {
+            IdeaCreateView(comp: {
+                accountMainVM.getInitIdeaList()
+                isSheet = false
+            })
         }
     }
 }
