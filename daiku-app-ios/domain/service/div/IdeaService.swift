@@ -9,6 +9,7 @@ import Foundation
 
 enum IdeaService: ApiService {
     case createIdea(IdeaCreateRequest)
+    case updateIdea(IdeaUpdateRequest)
     case myIdeaList(MyIdeaListParameter)
     case ideaDetail(IdeaDetailParameter)
 }
@@ -19,6 +20,8 @@ extension IdeaService {
     var requestType: RequestType {
         switch self {
         case let .createIdea(encodable):
+            return .requestBodyToJson(body: encodable)
+        case let .updateIdea(encodable):
             return .requestBodyToJson(body: encodable)
         case let .myIdeaList(param):
             return .requestParametes(parameters: param.params())
@@ -37,7 +40,7 @@ extension IdeaService {
     }
     var httpMethod: HttpMethod {
         switch self {
-        case .createIdea:
+        case .createIdea, .updateIdea:
             return .POST
         case .myIdeaList, .ideaDetail:
             return .GET
@@ -52,6 +55,8 @@ extension IdeaService {
         switch self {
         case .createIdea:
             return "/api/idea/create"
+        case .updateIdea:
+            return "/api/idea/update"
         case .myIdeaList:
             return "/api/idea/my-search"
         case .ideaDetail:
@@ -60,7 +65,7 @@ extension IdeaService {
     }
     var responseType: Decodable? {
         switch self {
-        case .createIdea, .myIdeaList, .ideaDetail:
+        case .createIdea, .myIdeaList, .ideaDetail, .updateIdea:
             return IdeaSearchResponse.self as! Codable
         }
     }

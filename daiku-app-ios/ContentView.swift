@@ -11,6 +11,14 @@ struct ContentView: View {
     var body: some View {
         AccountExistView()
             .environmentObject(AccountExistViewModel())
+            .environmentObject(IdeaCreateViewModel())
+            .environmentObject(HomeMainViewModel())
+            .environmentObject(AccountMainViewModel())
+            .environmentObject(GoalDetailViewModel())
+            .environmentObject(ProcessDetailViewModel())
+            .environmentObject(FavoriteMainViewModel())
+            .environmentObject(GoalArchiveDetailViewModel())
+            .environmentObject(MakiDetailViewModel())
     }
 }
 
