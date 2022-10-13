@@ -12,52 +12,52 @@ struct GoalListParts: View {
     @EnvironmentObject var accountMainVM: AccountMainViewModel
     @Environment(\.colorScheme) var colorScheme
     
-    init(item: GoalResponse) {
+    private var tapItem: () -> Void
+    
+    init(item: GoalResponse, tapItem: @escaping () -> Void) {
         self.item = item
+        self.tapItem = tapItem
     }
     
     var body: some View {
-            
-        NavigationLink{
-            GoalDetailView(goalId: item.id, createDate: item.createDate, archiveId: item.getArchiveId(), archiveCreateDate: item.getArchiveCreateDate())
-        } label: {
-            HStack {
-                VStack(alignment: .leading) {
-                    Text(item.title)
+        HStack {
+            VStack(alignment: .leading) {
+                Text(item.title)
+                    .fontWeight(.bold)
+                    .lineLimit(1)
+                    .foregroundColor(.primary)
+                if item.isArchive() {
+                    Text("達成済")
                         .fontWeight(.bold)
-                        .lineLimit(1)
+                        .padding(8)
+                        .background(.green)
                         .foregroundColor(.primary)
-                    if item.isArchive() {
-                        Text("達成済")
-                            .fontWeight(.bold)
-                            .padding(8)
-                            .background(.green)
-                            .foregroundColor(.primary)
-                            .cornerRadius(15)
-                            .compositingGroup()
-                            .shadow(color: .gray, radius: 3, x: 1, y: 1)
-                    }
-                    HStack {
-                        (
-                            Text("期日:\(item.dueDateFormat())")
-                                .foregroundColor(Color.gray)
-                        )
-                    }
-                    
-                    Text("\(item.getMakiKey()) \(item.makiSort())")
-                        .font(.caption)
-                        .foregroundColor(.gray)
-                    Text(item.purpose)
-                        .font(.body)
-                        .lineLimit(5)
-                        .padding(.top, 8)
-                        .foregroundColor(.primary)
-                        .multilineTextAlignment(.leading)
+                        .cornerRadius(15)
+                        .compositingGroup()
+                        .shadow(color: .gray, radius: 3, x: 1, y: 1)
                 }
-                .padding(8)
-                Spacer()
+                Text("完了予定日:\(item.dueDateFormat())")
+                    .foregroundColor(Color.gray)
+                
+                Text("作成日:\(item.createDateDisp())")
+                    .foregroundColor(Color.gray)
+                
+                Text("\(item.getMakiKey()) \(item.makiSort())")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                Text(item.purpose)
+                    .font(.body)
+                    .lineLimit(5)
+                    .padding(.top, 8)
+                    .foregroundColor(.primary)
+                    .multilineTextAlignment(.leading)
             }
-            .contentShape(Rectangle())
+            .padding(8)
+            Spacer()
+        }
+        .contentShape(Rectangle())
+        .onTapGesture {
+            tapItem()
         }
         
         
@@ -79,6 +79,6 @@ struct GoalListParts: View {
 
 struct GoalListParts_Previews: PreviewProvider {
     static var previews: some View {
-        GoalListParts(item: GoalResponse())
+        GoalListParts(item: GoalResponse(), tapItem: {})
     }
 }

@@ -50,6 +50,10 @@ struct AccountCreateView: View {
                 }
             }
             Form{
+                if createViewModel.isError {
+                    Text(createViewModel.errorMsm)
+                        .foregroundColor(.red)
+                }
                 TextField("氏名(姓)", text: $createViewModel.familyName)
                     .onReceive(Just($createViewModel.familyName)) {_ in
                         createViewModel.chkFamilyNameText(text: createViewModel.familyName)
@@ -62,6 +66,9 @@ struct AccountCreateView: View {
                     .onReceive(Just($createViewModel.nickName)) {_ in
                         createViewModel.chkNickNameText(text: createViewModel.nickName)
                     }
+                Text("※ニックネームは半角英数字で入力してください。")
+                    .font(.caption)
+                    .foregroundColor(.gray)
             }
             Button(action: {
                 createAccount()
@@ -77,7 +84,7 @@ struct AccountCreateView: View {
             createViewModel.initItem(accountId: accountId, familyName: familyName, givenName: givenName, nickName: nickName)
             createViewModel.initVali()
         }
-        .alert(isPresented: $createViewModel.isDeleteAlert) {
+        .alert(isPresented: $createViewModel.isAlert) {
             Alert(
                 title: Text("アカウント削除"),
                 message: Text("アカウントを削除します。本当によろしいでしょうか？\n・削除してから１ヶ月以内に再ログインいただけましたら、データは復旧します。\n・削除してから1ヶ月を過ぎますと、今まで作成したデータを参照できなくなりますのでご注意ください。")

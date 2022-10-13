@@ -46,7 +46,6 @@ struct ApiProvider {
             .receive(on: DispatchQueue.main)
             .tryMap { element -> Data in
                 guard let httpResponse = element.response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-                    
                     let errorObj = try decoder.decode(ApiErrorResponse.self, from: element.data)
                     if let error = errorObj.errorCd {
                         throw ApiError.responseError(error)

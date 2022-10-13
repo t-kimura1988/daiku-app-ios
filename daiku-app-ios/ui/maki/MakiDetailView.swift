@@ -64,7 +64,9 @@ struct MakiDetailView: View {
                         .contentShape(Rectangle())
                         Divider()
                             .padding(.leading, 4)
-                        GoalListParts(item: item)
+                        GoalListParts(item: item) {
+                            makiDetailVM.tapGoalItem(item: item)
+                        }
                     }
                 }
                 .onAppear{
@@ -101,6 +103,10 @@ struct MakiDetailView: View {
                 }
             )
             .environmentObject(GoalCreateViewModel())
+        }
+        .fullScreenCover(isPresented: $makiDetailVM.isGoaDetailSheet) {
+            let item = makiDetailVM.goalItem
+            GoalDetailView(goalId: item.id, createDate: item.createDate, archiveId: item.getArchiveId(), archiveCreateDate: item.getArchiveCreateDate())
         }
     }
 }

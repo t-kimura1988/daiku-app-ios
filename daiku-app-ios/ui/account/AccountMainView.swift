@@ -158,10 +158,13 @@ struct AccountMainView: View {
                     
                     // tab button
                     VStack(spacing: 0) {
-                        HStack (spacing: 0) {
-                            ForEach(TabButtonTitle.allCases) { title in
-                                TabButton(title: title.rawValue, currentTab: $accountMainVm.currentTab, animation: animation)
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack (spacing: 0) {
+                                ForEach(TabButtonTitle.allCases) { title in
+                                    TabButton(title: title.rawValue, currentTab: $accountMainVm.currentTab, animation: animation)
+                                }
                             }
+                            
                         }
                         Divider()
                     }
@@ -183,9 +186,24 @@ struct AccountMainView: View {
                 
                     if accountMainVm.currentTab == TabButtonTitle.MyGoal.rawValue {
                         // Goal List
+                        
+                        Button(action: {
+                            withAnimation{
+                                accountMainVm.changeGoalSearchInputSheet()
+                            }
+                        }, label: {
+                            Text("目標の絞り込み")
+                        })
+                        if accountMainVm.isGoalSearchInputSheet {
+                            GoalSearchInputView()
+                                .transition(.identity)
+                                .environmentObject(GoalSearchInputViewModel())
+                        }
                         VStack(alignment: .leading, spacing: 8) {
                             ForEach(accountMainVm.myGoal) { item in
-                                GoalListParts(item: item)
+                                GoalListParts(item: item) {
+                                    accountMainVm.tapGoalItem(item: item)
+                                }
                             }
                         }
                         .onAppear{
@@ -194,48 +212,26 @@ struct AccountMainView: View {
                             }
                         }
                         
-                    } else if accountMainVm.currentTab == TabButtonTitle.Archive.rawValue{
+                    }
+                    else if accountMainVm.currentTab == TabButtonTitle.Archive.rawValue{
+                        Button(action: {
+                            withAnimation {
+                                accountMainVm.changeGoalArchiveSearchInputSheet()
+                            }
+                        }, label: {
+                            Text("達成の絞り込み")
+                        })
+                        if accountMainVm.isGoalArchiveSearchInputSheet {
+                            GoalArchiveSearchInputView()
+                                .transition(.identity)
+                        }
                         // goal archive list
                         VStack(alignment: .leading, spacing: 8) {
                             ForEach(accountMainVm.myGoalArchiveList) { item in
                                 NavigationLink{
                                     GoalArchiveDetailView(archiveId: item.id, archiveCreateDate: item.archivesCreateDate, goalCreateAccountId: item.goalCreateAccountId)
                                 } label: {
-                                    HStack {
-                                        VStack(alignment: .leading) {
-                                            Text(item.title)
-                                                .fontWeight(.bold)
-                                                .lineLimit(1)
-                                                .foregroundColor(.primary)
-                                            Text(item.thoughts)
-                                                .font(.body)
-                                                .lineLimit(3)
-                                                .foregroundColor(.primary)
-                                                .multilineTextAlignment(.leading)
-                                            HStack {
-                                                Text(item.getPublish().title)
-                                                    .fontWeight(.bold)
-                                                    .padding(8)
-                                                    .background(.green)
-                                                    .foregroundColor(.primary)
-                                                    .cornerRadius(15)
-                                                    .compositingGroup()
-                                                    .shadow(color: .gray, radius: 3, x: 1, y: 1)
-                                                if item.isUpdating() {
-                                                    Text("更新中")
-                                                        .fontWeight(.bold)
-                                                        .padding(8)
-                                                        .background(.red)
-                                                        .foregroundColor(.primary)
-                                                        .cornerRadius(15)
-                                                        .compositingGroup()
-                                                        .shadow(color: .gray, radius: 3, x: 1, y: 1)
-                                                }
-                                            }
-                                        }
-                                        .padding(8)
-                                        Spacer()
-                                    }
+                                    GoalArchiveListParts(item: item)
                                 }
                                 
                                 Divider()
@@ -256,43 +252,15 @@ struct AccountMainView: View {
                             }
                         }
                         
-                    } else if accountMainVm.currentTab == TabButtonTitle.BookMark.rawValue {
+                    }
+                    else if accountMainVm.currentTab == TabButtonTitle.BookMark.rawValue {
                         //Bookmark list
                         VStack(alignment: .leading, spacing: 8) {
                             
                             ForEach(accountMainVm.goalFavoriteList) { item in
                                 
-                                NavigationLink {
-                                    GoalDetailView(goalId: item.goalId, createDate: item.goalCreateDate, archiveId: item.getArchiveId(), archiveCreateDate: item.getArchiveCreateDate())
-                                } label: {
-                                    HStack {
-                                        VStack(alignment: .leading) {
-                                            Text(item.title)
-                                                .fontWeight(.bold)
-                                                .lineLimit(1)
-                                                .foregroundColor(.primary)
-                                            
-                                            Text("追加日:\(item.favoriteAddDateFormat())")
-                                            .foregroundColor(Color.gray)
-                                            Text("期日:\(item.dueDateFormat())")
-                                                .foregroundColor(Color.gray)
-                                            Text(item.purpose)
-                                                .font(.body)
-                                                .lineLimit(3)
-                                                .padding(.top, 8)
-                                                .foregroundColor(.primary)
-                                                .multilineTextAlignment(.leading)
-                                            
-                                            HStack {
-                                                Spacer()
-                                                Text("目標作成:\(item.goalCreateAccount())")
-                                                    .foregroundColor(Color.gray)
-                                            }
-                                        }
-                                        .padding(8)
-                                        Spacer()
-                                    }
-                                    .contentShape(Rectangle())
+                                FavoriteGoalList(item: item) {
+                                    accountMainVm.tapGoalItem(item: item.toGoalResponse())
                                 }
                                 
                                 Divider()
@@ -311,7 +279,8 @@ struct AccountMainView: View {
                                 accountMainVm.getInitBookMarkList()
                             }
                         }
-                    } else if accountMainVm.currentTab == TabButtonTitle.Maki.rawValue {
+                    }
+                    else if accountMainVm.currentTab == TabButtonTitle.Maki.rawValue {
                         // 書のリスト
                         VStack(alignment: .leading) {
                             ForEach(accountMainVm.makiList) { item in
@@ -355,6 +324,20 @@ struct AccountMainView: View {
                             }
                         }
                     }
+                    else if accountMainVm.currentTab == TabButtonTitle.Idea.rawValue {
+                        VStack(alignment: .leading, spacing: 8) {
+                            ForEach(accountMainVm.myIdeaList) { item in
+                                IdeaListItemParts(item: item) {
+                                    accountMainVm.openIdeaDetailSheet(item: item)
+                                }
+                            }
+                        }
+                        .onAppear{
+                            if !accountMainVm.isIdeaListLoading {
+                                accountMainVm.getInitIdeaList()
+                            }
+                        }
+                    }
                 }
             }
             .ignoresSafeArea(.all, edges: .top)
@@ -384,6 +367,14 @@ struct AccountMainView: View {
                 uid: accountMainVm.account.uid
             )
             .environmentObject(ImagePreViewModel())
+        }
+        .fullScreenCover(isPresented: $accountMainVm.isGoaDetailSheet) {
+            let item = accountMainVm.goalItem
+            GoalDetailView(goalId: item.id, createDate: item.createDate, archiveId: item.getArchiveId(), archiveCreateDate: item.getArchiveCreateDate())
+        }
+        .fullScreenCover(isPresented: $accountMainVm.isIdeaDetailSheet) {
+            IdeaDetailView(idea: accountMainVm.ideaItem)
+                .environmentObject(IdeaDetailViewModel())
         }
     }
     

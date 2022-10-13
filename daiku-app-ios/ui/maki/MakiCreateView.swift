@@ -34,7 +34,7 @@ struct MakiCreateView: View {
                 
                 ZStack(alignment: .leading) {
                     if makiCreateVM.makiDesc.isEmpty {
-                        Text("題名を入力しましょう")
+                        Text("巻の説明を入力しましょう")
                             .foregroundColor(.gray)
                     }else {
                         Text(makiCreateVM.makiDesc)
@@ -57,6 +57,7 @@ struct MakiCreateView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
                         makiCreateVM.createMaki(completion: {
+                            print("create goal")
                             vm.closeProjectSheet()
                         })
                     }, label: {Text("保存")})

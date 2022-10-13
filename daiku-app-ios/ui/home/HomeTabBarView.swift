@@ -8,29 +8,44 @@
 import SwiftUI
 
 struct HomeTabBarView: View {
+    @EnvironmentObject private var ideaCreateVM: IdeaCreateViewModel
     var body: some View {
-        TabView {
-            HomeView()
-                .tabItem{
-                    Image(systemName: "house")
-                    Text("達成")
+        ZStack {
+            TabView {
+                HomeView()
+                    .tabItem{
+                        Image(systemName: "house")
+                        Text("達成")
+                    }
+                    .tag(1)
+                
+                AccountMainView()
+                    .tabItem{
+                        Image(systemName: "person")
+                        Text("アカウント")
+                    }
+                    .tag(2)
+            }
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        ideaCreateVM.openIdeaCreateSheet()
+                    }, label: {
+                        Text("閃")
+                            .foregroundColor(.white)
+                    })
+                    .frame(width: 50, height: 50)
+                    .background(.orange)
+                    .clipShape(Circle())
+                    .offset(x: -40, y: -70)
                 }
-                .tag(1)
-            
-            AccountMainView()
-                .tabItem{
-                    Image(systemName: "person")
-                    Text("アカウント")
-                }
-                .tag(2)
+            }
         }
-        .environmentObject(HomeMainViewModel())
-        .environmentObject(AccountMainViewModel())
-        .environmentObject(GoalDetailViewModel())
-        .environmentObject(ProcessDetailViewModel())
-        .environmentObject(FavoriteMainViewModel())
-        .environmentObject(GoalArchiveDetailViewModel())
-        .environmentObject(MakiDetailViewModel())
+        .sheet(isPresented: $ideaCreateVM.isIdeaCreateSheet) {
+            IdeaCreateView()
+        }
     }
 }
 

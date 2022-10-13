@@ -94,6 +94,7 @@ struct ProcessTermUpdateView: View {
         .onAppear{
             processTermUpdateVM.initItem(start: start, end: end, processId: processId, goalCreateDate: goalCreateDate, goalId: goalId)
         }
+        .navigationViewStyle(.stack)
     }
 }
 

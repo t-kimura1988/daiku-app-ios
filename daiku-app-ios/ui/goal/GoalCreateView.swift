@@ -153,6 +153,7 @@ struct GoalCreateView: View {
             }
             
         }
+        .navigationViewStyle(.stack)
     }
 }
 

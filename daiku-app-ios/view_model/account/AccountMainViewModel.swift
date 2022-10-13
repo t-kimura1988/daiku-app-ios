@@ -14,14 +14,16 @@ class AccountMainViewModel: ObservableObject {
     private var goalArchiveRepository: GoalArchiveRepository = GoalArchiveRepository()
     private var firebaseRepository: FirebaseRepository = FirebaseRepository()
     private var makiRepository: MakiRepository = MakiRepository()
+    private var ideaRepository: IdeaRepository = IdeaRepository()
     
     @Published var account: AccountResponse = AccountResponse()
     @Published var myGoal: [GoalResponse] = [GoalResponse]()
     @Published var makiList: [MakiSearchResponse] = [MakiSearchResponse]()
     @Published var myGoalArchiveList: [GoalArchiveInfoResponse] = [GoalArchiveInfoResponse]()
     @Published var goalFavoriteList: [GoalFavoriteResponse] = [GoalFavoriteResponse]()
+    @Published var myIdeaList: [IdeaSearchResponse] = [IdeaSearchResponse]()
     
-    @Published var currentTab: String = TabButtonTitle.Maki.rawValue
+    @Published var currentTab: String = TabButtonTitle.Idea.rawValue
     @Published var isBookmark: Bool = false
     @Published var isUpdateAccount: Bool = false
     
@@ -41,12 +43,32 @@ class AccountMainViewModel: ObservableObject {
     @Published var makiListLoadFlg: Bool = false
     @Published var isMakiListLoading: Bool = false
     
+    @Published var ideaListPage: Int = 10
+    @Published var ideaListLoadFlg: Bool = false
+    @Published var isIdeaListLoading: Bool = false
+    
     @Published var isImagePreView: Bool = false
     @Published var userImageURL: URL?
     @Published var profileBackURL: URL?
     @Published var imagePreViewScreenType: ImagePreType = .accountMain
     
     @Published var imagePath: String?
+    
+    @Published var isGoaDetailSheet: Bool = false
+    @Published var goalItem: GoalResponse = GoalResponse()
+    
+    @Published var isGoalSearchInputSheet: Bool = false
+    @Published var isGoalArchiveSearchInputSheet: Bool = false
+    
+    
+    @Published var selectedGoalMonth: DatePickerMonth = .ALL
+    @Published var selectedGoalYear: Int = 2022
+    
+    @Published var selectedGoalArchiveMonth: DatePickerMonth = .ALL
+    @Published var selectedGoalArchiveYear: Int = 2022
+    
+    @Published var isIdeaDetailSheet: Bool = false
+    @Published var ideaItem: IdeaSearchResponse = IdeaSearchResponse()
     
     func changeUpdateAccount() {
         DispatchQueue.main.async {
@@ -78,7 +100,7 @@ class AccountMainViewModel: ObservableObject {
     
     private func loadMyGoal() {
         Task {
-            let myGoalListRes = try await goalRepository.myGoalList(parameter: .init(year: "2022", page: String(goalListPage)))
+            let myGoalListRes = try await goalRepository.myGoalList(parameter: .init(year: String(self.selectedGoalYear), page: String(goalListPage), month: selectedGoalMonth.code))
             DispatchQueue.main.async {
                 self.myGoal = myGoalListRes
                 if myGoalListRes.count == self.goalListPage {
@@ -106,7 +128,7 @@ class AccountMainViewModel: ObservableObject {
     
     private func loadMyGoalArchive() {
         Task {
-            let myArchiveGoalListRes = try await goalArchiveRepository.myGoalArchive(parameter: .init(year: "2022", pageCount: String(goalArchiveListPage)))
+            let myArchiveGoalListRes = try await goalArchiveRepository.myGoalArchive(parameter: .init(year: String(selectedGoalArchiveYear), month: selectedGoalArchiveMonth.code, pageCount: String(goalArchiveListPage)))
             DispatchQueue.main.async {
                 self.myGoalArchiveList = myArchiveGoalListRes
                 
@@ -182,6 +204,36 @@ class AccountMainViewModel: ObservableObject {
         
     }
     
+    
+    func getInitIdeaList() {
+        isIdeaListLoading = true
+        loadIdea()
+    }
+    
+    func getIdeaList() {
+        isIdeaListLoading = true
+        ideaListPage += 10
+        loadIdea()
+    }
+    
+    private func loadIdea() {
+        Task {
+            let list = try await ideaRepository.myIdeaList(param: .init(page: String(ideaListPage)))
+            DispatchQueue.main.async {
+                self.myIdeaList = list
+                
+                if list.count == self.ideaListPage {
+                    self.ideaListLoadFlg = true
+                } else {
+                    self.ideaListLoadFlg = false
+                }
+                
+                self.ideaListLoadFlg = false
+            }
+        }
+        
+    }
+    
     func changeTab(item: String) {
         DispatchQueue.main.sync {
             currentTab = item
@@ -219,12 +271,36 @@ class AccountMainViewModel: ObservableObject {
     func closeImagePreView() {
         isImagePreView = false
     }
+    
+    func tapGoalItem(item: GoalResponse) {
+        isGoaDetailSheet = true
+        goalItem = item
+    }
+    
+    func changeGoalSearchInputSheet() {
+        isGoalSearchInputSheet = !isGoalSearchInputSheet
+    }
+    
+    func changeGoalArchiveSearchInputSheet() {
+        isGoalArchiveSearchInputSheet = !isGoalArchiveSearchInputSheet
+    }
+    
+    func openIdeaDetailSheet(item: IdeaSearchResponse) {
+        ideaItem = item
+        isIdeaDetailSheet = true
+    }
+    
+    func closeIdeaDetailSheet() {
+        isIdeaDetailSheet = true
+    }
 }
 
 enum TabButtonTitle: String, CaseIterable, Identifiable {
+    case Idea = "閃"
     case Maki = "書"
     case MyGoal = "目標"
     case Archive = "達成"
     case BookMark = "印"
+    
     var id: String { rawValue }
 }

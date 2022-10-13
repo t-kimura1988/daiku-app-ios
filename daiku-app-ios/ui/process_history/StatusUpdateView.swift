@@ -93,6 +93,7 @@ struct StatusUpdateView: View {
         .onAppear{
             statusUpdateVM.initItem(currentStatus: status, currentPriority: priority, processId: processDetailVM.process.id)
         }
+        .navigationViewStyle(.stack)
     }
 }
 
