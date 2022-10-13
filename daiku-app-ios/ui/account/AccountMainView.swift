@@ -331,6 +331,13 @@ struct AccountMainView: View {
                                     accountMainVm.openIdeaDetailSheet(item: item)
                                 }
                             }
+                            if accountMainVm.ideaListLoadFlg {
+                                Button(action: {
+                                    accountMainVm.getIdeaList()
+                                }, label: {
+                                    Text("もっと見る")
+                                })
+                            }
                         }
                         .onAppear{
                             if !accountMainVm.isIdeaListLoading {
