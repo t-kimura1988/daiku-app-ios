@@ -91,6 +91,7 @@ struct CommentUpdateFormView: View {
                 commentUpdateVM.initVali()
             }
         }
+        .navigationViewStyle(.stack)
     }
 }
 

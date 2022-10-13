@@ -73,4 +73,8 @@ struct GoalFavoriteResponse: Decodable, Identifiable {
     func goalCreateAccount() -> String {
         return goalCreatedAccountFamilyName + " " + goalCreatedAccountGivenName + "(" + goalCreatedAccountNickName + ")"
     }
+    
+    func toGoalResponse() -> GoalResponse {
+        return GoalResponse(id: goalId, createDate: goalCreateDate, accountId: accountId, archiveId: getArchiveId(), archivesCreateDate: getArchiveCreateDate())
+    }
 }

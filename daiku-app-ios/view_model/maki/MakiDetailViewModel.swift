@@ -23,9 +23,11 @@ class MakiDetailViewModel: ObservableObject {
     @Published var isMakiGoalListLoading: Bool = false
     @Published var isMakiGoalCreateSheet: Bool = false
     
+    @Published var isGoaDetailSheet: Bool = false
+    @Published var goalItem: GoalResponse = GoalResponse()
+    
     func initItem(makiId: Int) {
         self.makiId = makiId
-        makiGoalList = [GoalResponse]()
     }
     
     func detail() {
@@ -38,14 +40,18 @@ class MakiDetailViewModel: ObservableObject {
     }
     
     func getInitMakiGoalList() {
-        isMakiGoalListLoading = true
-        loadMakiList()
+        DispatchQueue.main.async {
+            self.isMakiGoalListLoading = true
+            self.loadMakiList()
+        }
     }
     
     func getMakiGoalList() {
-        isMakiGoalListLoading = true
-        self.makiGoalListPage += 10
-        loadMakiList()
+        DispatchQueue.main.async {
+            self.isMakiGoalListLoading = true
+            self.makiGoalListPage += 10
+            self.loadMakiList()
+        }
     }
     
     func loadMakiList() {
@@ -96,6 +102,11 @@ class MakiDetailViewModel: ObservableObject {
         DispatchQueue.main.async {
             self.isMakiGoalCreateSheet = false
         }
+    }
+    
+    func tapGoalItem(item: GoalResponse) {
+        isGoaDetailSheet = true
+        goalItem = item
     }
 }
 

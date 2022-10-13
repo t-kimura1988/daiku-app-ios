@@ -26,7 +26,7 @@ class MakiCreateViewModel: ObservableObject {
     
     func createMaki(completion: @escaping () -> Void) {
         isSaveButton = false
-        if !makiKey.isAlpaNumSym() {
+        if !makiKey.isAlpaNum() {
             makiKeyErrMsg = "巻キーは半角英数字記号で記載してください。"
             isSaveButton = true
             return
@@ -74,7 +74,7 @@ class MakiCreateViewModel: ObservableObject {
     func initValidate() {
         
         let makiTitleVali = $makiTitle.map({ !$0.isEmpty }).eraseToAnyPublisher()
-        let makiKeyVali = $makiKey.map({ !$0.isEmpty && $0.isAlpaNumSym() }).eraseToAnyPublisher()
+        let makiKeyVali = $makiKey.map({ !$0.isEmpty && $0.isAlpaNum() }).eraseToAnyPublisher()
         let makiDescVali = $makiDesc.map({ !$0.isEmpty }).eraseToAnyPublisher()
         
         Publishers.CombineLatest3(makiTitleVali, makiKeyVali,makiDescVali)

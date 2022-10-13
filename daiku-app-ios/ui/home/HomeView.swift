@@ -17,6 +17,47 @@ struct HomeView: View {
                 HomeRefreshView(coodinateSpaceName: "RefreshView", onRefresh: {
                     vm.getInitHomeList()
                 })
+                if let homeData = vm.homeData {
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack {
+                            VStack {
+                                Text("総アカウント数")
+                                Text(homeData.getAccountCount())
+                            }
+                            .padding(8)
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                                .stroke(.red, lineWidth: 1))
+                            VStack {
+                                Text("昨日の総目標数")
+                                Text(homeData.getGoalCount())
+                            }
+                            .padding(8)
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                                .stroke(.red, lineWidth: 1))
+                            VStack {
+                                Text("昨日の総達成数")
+                                Text(homeData.getGoalArchiveCount())
+                            }
+                            .padding(8)
+                            .overlay(RoundedRectangle(cornerRadius: 10)
+                                .stroke(.red, lineWidth: 1))
+                            
+                        }
+                        .padding(8)
+                    }
+                }
+                Button(action: {
+                    withAnimation{
+                        vm.changeGoalArchiveSearchInputSheet()
+                    }
+                }, label: {
+                    Text("達成の絞り込み")
+                })
+                if vm.isGoalArchiveSearchInputSheet {
+                    HomeGoalArchiveSearchInputView()
+                        .transition(.identity)
+                }
                 ForEach(0..<vm.homeList.count, id: \.self) { index in
                     let item = vm.homeList[index]
                     NavigationLink {
@@ -95,6 +136,7 @@ struct HomeView: View {
                 if !vm.isHomeListLoading {
                     vm.getInitHomeList()
                 }
+                vm.getHomeData()
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -118,7 +160,6 @@ struct HomeView: View {
             .sheet(isPresented: $vm.isGoalCreateMenuSheet) {
                 
                 GoalCreateMenuView()
-//                    .presentationDetents([.medium])
             }
             .navigationTitle("みんなの目標")
         }
@@ -136,12 +177,17 @@ struct HomeView_Previews: PreviewProvider {
 fileprivate struct GoalCreateMenuView: View {
     @EnvironmentObject var homeMainViewModel: HomeMainViewModel
     var body: some View {
-        List {
+        ScrollView(.vertical, showsIndicators: false) {
+            
             ForEach(GoalCreateMenuList.allCases, id: \.self) { item in
                 HStack {
                     Text(item.title)
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .foregroundColor(.blue)
                     Spacer()
                 }
+                .padding(18)
                 .contentShape(Rectangle())
                 .onTapGesture {
                     switch item {
@@ -155,6 +201,23 @@ fileprivate struct GoalCreateMenuView: View {
                         })
                     }
                 }
+                Divider()
+            }
+            VStack {
+                Text("目標とは...")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .padding(8)
+                Text("何か行動を起こすとき目指すべき地点です。地点を定めることができれば、行動する時に進むべき道がわかります。地点までに何が必要で、何をすべきか考えましょう。")
+                    .font(.body)
+                    .foregroundColor(.gray)
+                Text("巻とは...")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .padding(8)
+                Text("目標を１つの書としてまとめる機能です。１つの目標を終わりではなく、さらに次の目標が出てきます。物語を作るように、目標達成を楽しむための機能です。")
+                    .font(.body)
+                    .foregroundColor(.gray)
             }
         }
     }

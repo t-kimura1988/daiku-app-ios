@@ -62,6 +62,24 @@ struct GoalResponse: Decodable, Identifiable, Hashable {
         return true
     }
     
+    private func createDateToDate() -> Date {
+        let formatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .iso8601)
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter.date(from: createDate)!
+        
+    }
+    
+    func createDateDisp() -> String {
+        let date = createDateToDate()
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy年MM月dd日"
+        
+        return formatter.string(from: date)
+        
+    }
+    
     func dueDateToDate() -> Date {
         if dueDate.isEmpty {
             return Date()
