@@ -34,7 +34,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     
     func requestIDFA() {
         if #available(iOS 15, *) {
-            print("ios15....")
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 
               ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
@@ -42,8 +41,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
               })
             }
             
-        } else if #available(iOS 14, *) {
-            print("ios14....")
+        } else {
             
             ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
               // Tracking authorization completed. Start loading ads here.

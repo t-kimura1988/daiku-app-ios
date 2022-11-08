@@ -1,0 +1,37 @@
+{
+  "identifier" : "12CBAEA6",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "160",
+      "familyShareable" : false,
+      "internalID" : "9E329D1B",
+      "localizations" : [
+        {
+          "description" : "TEST:予定機能の制限を解除します。購入いただくと予定機能を無制限にご使用いただけます。",
+          "displayName" : "予定機能拡張",
+          "locale" : "ja"
+        }
+      ],
+      "productID" : "ScheduleFeature",
+      "referenceName" : "予定機能拡張",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_askToBuyEnabled" : true,
+    "_failTransactionsEnabled" : true,
+    "_renewalBillingIssuesEnabled" : false,
+    "_storefront" : "JPN",
+    "_storeKitError" : 0
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}

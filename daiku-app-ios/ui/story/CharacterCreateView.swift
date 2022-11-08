@@ -23,7 +23,6 @@ struct CharacterCreateView: View {
         self.storyId = storyId
         self.charaName = charaName
         self.charaDesc = charaDesc
-        print(self.charaName)
     }
     var body: some View {
         VStack {

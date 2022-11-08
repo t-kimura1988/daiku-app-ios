@@ -21,7 +21,6 @@ struct FirestoreHomeRepository {
             return res
         } catch {
             let error = error
-            print(error)
             throw ApiError.responseError("Firestore Get Ducument Error")
         }
     }

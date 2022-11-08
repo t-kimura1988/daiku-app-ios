@@ -8,6 +8,9 @@
 import SwiftUI
 import WebKit
 
+/**
+ WebView画面
+ */
 struct DaikuWebView: UIViewRepresentable {
     
     let url: String
