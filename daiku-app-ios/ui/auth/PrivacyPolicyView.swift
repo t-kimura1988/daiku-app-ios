@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+/**
+ プライバシーポリシー画面
+ 
+ 
+ プライバシーポリシー画面　WebView
+ */
 struct PrivacyPolicyView: View {
     var daikuHomePageUrl: String = Env["HOME_PAGE_URL"]!
     

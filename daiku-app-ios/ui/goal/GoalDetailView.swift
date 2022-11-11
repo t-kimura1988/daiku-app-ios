@@ -12,6 +12,7 @@ struct GoalDetailView: View {
     var createDate: String = ""
     var archiveId: Int = 0
     var archiveCreateDate: String = ""
+    var duringProcessId: Int = 0
     
     @EnvironmentObject var goalDetailVM: GoalDetailViewModel
     @EnvironmentObject var homeVM: HomeMainViewModel
@@ -20,11 +21,12 @@ struct GoalDetailView: View {
     
     @State var buttonOffset: CGFloat = 0
     
-    init(goalId: Int, createDate: String, archiveId: Int, archiveCreateDate: String) {
+    init(goalId: Int, createDate: String, archiveId: Int, archiveCreateDate: String, duringProcessId: Int = 0) {
         self.goalId = goalId
         self.createDate = createDate
         self.archiveId = archiveId
         self.archiveCreateDate = archiveCreateDate
+        self.duringProcessId = duringProcessId
     }
     
     var body: some View {
@@ -128,7 +130,7 @@ struct GoalDetailView: View {
                 
                 // ProcessList
                 ForEach(goalDetailVM.processList) {process in
-                    ProcessListItemView(process: process)
+                    ProcessListItemView(process: process, duringProcessId: duringProcessId)
                 }
             }
             .navigationBarBackButtonHidden(true)

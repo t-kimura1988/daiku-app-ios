@@ -19,6 +19,7 @@ struct ContentView: View {
             .environmentObject(FavoriteMainViewModel())
             .environmentObject(GoalArchiveDetailViewModel())
             .environmentObject(MakiDetailViewModel())
+            .environmentObject(ScheduleMainViewModel())
     }
 }
 

@@ -13,6 +13,7 @@ enum ProcessHistoryService: ApiService {
     case processHisotryComment(ProcessHisotryCommentRequest)
     case updateComment(CommentUpdateRequest)
     case updateStatus(StatusUpdateRequest)
+    case duringProcess(DuringProcessListParameter)
 }
 
 extension ProcessHistoryService {
@@ -29,6 +30,8 @@ extension ProcessHistoryService {
             return .requestBodyToJson(body: request)
         case .updateStatus(let request):
             return .requestBodyToJson(body: request)
+        case .duringProcess(let parameters):
+            return .requestParametes(parameters: parameters.params())
         }
     }
     var baseURL: String {
@@ -42,7 +45,7 @@ extension ProcessHistoryService {
     }
     var httpMethod: HttpMethod {
         switch self {
-        case .processHistoryList, .detail:
+        case .processHistoryList, .detail, .duringProcess:
             return .GET
         case .processHisotryComment, .updateComment, .updateStatus:
             return .POST
@@ -63,6 +66,8 @@ extension ProcessHistoryService {
             return "/api/process-history/update/comment"
         case .updateStatus:
             return "/api/process-history/update/status"
+        case .duringProcess:
+            return "/api/process-history/during-process/list"
         }
     }
     var responseType: Decodable? {
@@ -71,6 +76,8 @@ extension ProcessHistoryService {
             return ProcessHistoryResponse.self as! Codable
         case .processHisotryComment, .updateComment, .updateStatus:
             return ProcessHistoryResponse.self as! Codable
+        case .duringProcess:
+            return DuringProcess.self as! Codable
         }
     }
 }

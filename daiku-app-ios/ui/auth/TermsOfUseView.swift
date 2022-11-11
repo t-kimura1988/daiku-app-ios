@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/**
+ 利用規約画面
+ */
 struct TermsOfUseView: View {
     var daikuHomePageUrl: String = Env["HOME_PAGE_URL"]!
     

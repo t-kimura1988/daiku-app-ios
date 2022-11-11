@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+/**
+ ログイン画面
+
+ 
+ ログイン画面が表示されます。[Google Sign In, Apple Sign In]
+ */
 struct SignInView: View {
     @EnvironmentObject var vm: AccountExistViewModel
     var route: AuthRouter = AuthRouter()
