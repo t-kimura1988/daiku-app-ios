@@ -43,7 +43,6 @@ class MakiCreateViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     self.isSaveButton = true
                 }
-                print(errorCode)
             }
         }
     }

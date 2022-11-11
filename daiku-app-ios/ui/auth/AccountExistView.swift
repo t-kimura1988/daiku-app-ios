@@ -7,6 +7,18 @@
 
 import SwiftUI
 
+/**
+ 認証確認View
+ 
+ 
+ 認証がない場合：　サインイン画面
+ 
+ ローディング中：　ローディング画面
+ 
+ 認証中の場合    :     ホーム画面
+ 
+ アカウント未登録:  アカウント登録画面
+ */
 struct AccountExistView: View {
     @EnvironmentObject var vm: AccountExistViewModel
     var body: some View {

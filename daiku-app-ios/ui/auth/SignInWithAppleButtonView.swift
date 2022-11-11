@@ -7,7 +7,12 @@
 import SwiftUI
 import AuthenticationServices
 
-
+/**
+ Apple SignIn Button View
+ 
+ 
+ アップルログインボタンの部品  SignInWithAppleButtonを使用
+ */
 struct SignInWithAppleButtonView: View {
     @EnvironmentObject var vm: AccountExistViewModel
     @Environment(\.colorScheme) var colorScheme

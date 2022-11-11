@@ -10,9 +10,11 @@ import SwiftUI
 struct ProcessListItemView: View {
     @EnvironmentObject var goalDetailVM: GoalDetailViewModel
     private var process: ProcessResponse = ProcessResponse()
+    private var duringProcessId: Int = 0
     
-    init(process: ProcessResponse) {
+    init(process: ProcessResponse, duringProcessId: Int = 0) {
         self.process = process
+        self.duringProcessId = duringProcessId
     }
     
     var body: some View {
@@ -77,8 +79,10 @@ struct ProcessListItemView: View {
             }
             .contentShape(Rectangle())
             .foregroundColor(.primary)
+            .background(process.id == duringProcessId ? .yellow : .white)
             
         }
+        .background(.primary)
     }
 }
 

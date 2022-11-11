@@ -57,7 +57,6 @@ struct MakiCreateView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
                         makiCreateVM.createMaki(completion: {
-                            print("create goal")
                             vm.closeProjectSheet()
                         })
                     }, label: {Text("保存")})

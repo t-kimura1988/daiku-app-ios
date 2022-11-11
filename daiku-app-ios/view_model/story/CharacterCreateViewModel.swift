@@ -22,14 +22,11 @@ class CharacterCreateViewModel: ObservableObject {
     
     func initItem(storyCharaId: Int = 0, ideaId: Int = 0, storyId: Int = 0, charaName: String = "", charaDesc: String = "") {
         
-        print(self.characterName)
         self.storyCharaId = storyCharaId
         self.ideaId = ideaId
         self.storyId = storyId
         self.characterName = charaName
         self.characterDesc = charaDesc
-        
-        print(self.characterName)
     }
     
     func createChara(compilate: @escaping (Int) -> Void) {
@@ -42,11 +39,6 @@ class CharacterCreateViewModel: ObservableObject {
             }
         } else {
             Task {
-                print(self.storyCharaId)
-                print(self.ideaId)
-                print(self.storyId)
-                print(self.characterName)
-                print(self.characterDesc)
             }
         }
     }
@@ -68,7 +60,6 @@ class CharacterCreateViewModel: ObservableObject {
     }
     
     func initValidate() {
-        print("init validate")
         
         let charanameVali = $characterName.map({ !$0.isEmpty }).eraseToAnyPublisher()
         let charaDescVali = $characterDesc.map({ !$0.isEmpty }).eraseToAnyPublisher()

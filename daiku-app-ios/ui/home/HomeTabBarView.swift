@@ -26,6 +26,14 @@ struct HomeTabBarView: View {
                         Text("アカウント")
                     }
                     .tag(2)
+                
+                ScheduleMainView()
+                    .tabItem{
+                        Image(systemName: "calendar")
+                        Text("予定")
+                    }
+                    .environmentObject(StoreViewModel())
+                    .tag(2)
             }
             VStack {
                 Spacer()

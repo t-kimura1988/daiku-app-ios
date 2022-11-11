@@ -223,7 +223,6 @@ class AccountMainViewModel: ObservableObject {
             let list = try await ideaRepository.myIdeaList(param: .init(page: String(ideaListPage)))
             DispatchQueue.main.async {
                 self.myIdeaList = list
-                print(list.count)
                 if list.count == self.ideaListPage {
                     self.ideaListLoadFlg = true
                 } else {

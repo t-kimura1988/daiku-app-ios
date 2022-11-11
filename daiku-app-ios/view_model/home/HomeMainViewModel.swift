@@ -69,7 +69,6 @@ class HomeMainViewModel: ObservableObject {
                 }
                 
             } catch ApiError.responseError(let err) {
-                print("GGGGG")
                 print(err)
             }
         }
